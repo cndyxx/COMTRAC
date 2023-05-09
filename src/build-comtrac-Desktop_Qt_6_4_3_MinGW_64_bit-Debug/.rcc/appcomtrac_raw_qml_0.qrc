@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/comtrac/">
+    <file alias="Main.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Main.qml</file>
+  </qresource>
+</RCC>
+
