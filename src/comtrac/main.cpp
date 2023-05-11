@@ -2,7 +2,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
-#include "login.h"
+#include "Controllers/login.h"
 
 int main(int argc, char *argv[])
 {

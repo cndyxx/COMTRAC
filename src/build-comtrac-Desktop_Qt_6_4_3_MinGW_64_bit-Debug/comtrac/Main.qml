@@ -1,36 +1,26 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Layouts
 import QtQuick.Window
 
-ApplicationWindow {
-    width: 300
-    height: 600
+
+
+Window {
+    id: root
+    width: 250
+    height: 500
     visible: true
     title: qsTr("COMTRAC")
-    Column{
-        spacing: 2
+
+    property string stack_view: "Ui/StackViewPage.qml"
+
+
+    Loader{
         anchors.centerIn: parent
-        Rectangle{
+        source: stack_view
 
-        }
-
-        TextField{
-            id: txtUserName
-            placeholderText: "Benutzername"
-
-        }
-        TextField{
-            id: txtPassword
-            placeholderText: "Passwort"
-        }
-
-
-        Button{
-            id: buttonLogin
-            text: "Login"
-            onClicked:{
-                login.checkLoginData(txtUserName.text, txtPassword.text);
-            }
-        }
     }
+
+
+
 }

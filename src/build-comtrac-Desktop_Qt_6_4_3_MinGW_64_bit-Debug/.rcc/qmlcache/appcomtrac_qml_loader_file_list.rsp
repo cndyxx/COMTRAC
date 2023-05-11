@@ -1,1 +1,17 @@
 /comtrac/Main.qml
+/comtrac/Ui/HomeScreen.qml
+/comtrac/Ui/Login.qml
+/comtrac/Ui/Medication.qml
+/comtrac/Ui/Chat.qml
+/comtrac/Ui/VideoTelephony.qml
+/comtrac/Ui/SymptomDiary.qml
+/comtrac/Ui/editSymptom.qml
+/comtrac/Ui/findSymptom.qml
+/comtrac/Ui/StackViewPage.qml
+/comtrac/Ui/TextFieldTemplate.qml
+/comtrac/Ui/ButtonTemplate.qml
+/comtrac/Ui/SideMenu.qml
+/comtrac/Ui/header.qml
+/comtrac/Ui/RadioButtonTemplate.qml
+/comtrac/Ui/SwitchTemplate.qml
+/comtrac/Ui/SliderTemplate.qml

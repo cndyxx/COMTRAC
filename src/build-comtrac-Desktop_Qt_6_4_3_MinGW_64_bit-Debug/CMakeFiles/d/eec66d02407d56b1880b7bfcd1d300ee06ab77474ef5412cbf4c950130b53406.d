@@ -711,9 +711,13 @@ appcomtrac_autogen/timestamp: \
   CMakeFiles/3.24.2/CMakeSystem.cmake \
   appcomtrac_autogen/moc_predefs.h \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/CMakeLists.txt \
-  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/login.cpp \
-  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/login.h \
-  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/loginmodel.cpp \
-  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/loginmodel.h \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/login.cpp \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/login.h \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/medication.cpp \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/medication.h \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/symptomdiary.cpp \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/symptomdiary.h \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/loginmodel.cpp \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/loginmodel.h \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/main.cpp \
   C:/Qt/Tools/CMake_64/bin/cmake.exe

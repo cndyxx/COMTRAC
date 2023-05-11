@@ -6,20 +6,48 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 6.4 REQUIRED COMPONENTS Quick)
 
+
 qt_standard_project_setup()
 
 qt_add_executable(appcomtrac
     main.cpp
-    login.cpp
-    login.h
-    loginModel.cpp
-    loginModel.h
+    #Controllers
+    Controllers/symptomdiary.cpp
+    Controllers/symptomdiary.h
+    Controllers/login.cpp
+    Controllers/login.h
+    Controllers/medication.cpp
+    Controllers/medication.h
+    #Models
+    Models/loginModel.cpp
+    Models/loginModel.h
+
 )
 
 qt_add_qml_module(appcomtrac
     URI comtrac
     VERSION 1.0
     QML_FILES Main.qml
+    #Pages
+    Ui/HomeScreen.qml
+    Ui/Login.qml
+    Ui/Medication.qml
+    Ui/Chat.qml
+    Ui/VideoTelephony.qml
+    Ui/SymptomDiary.qml
+    Ui/editSymptom.qml
+    Ui/findSymptom.qml
+    #elements
+    Ui/StackViewPage.qml
+    Ui/TextFieldTemplate.qml
+    Ui/ButtonTemplate.qml
+    Ui/SideMenu.qml
+    Ui/header.qml
+    Ui/RadioButtonTemplate.qml
+    Ui/SwitchTemplate.qml
+    Ui/SliderTemplate.qml
+
+
 )
 
 set_target_properties(appcomtrac PROPERTIES
@@ -37,3 +65,6 @@ target_link_libraries(appcomtrac
 install(TARGETS appcomtrac
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
+
+
+

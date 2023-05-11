@@ -47,7 +47,7 @@ cmake_ninja_workdir = C$:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac
 #############################################
 # Order-only phony target for appcomtrac
 
-build cmake_object_order_depends_target_appcomtrac: phony || .rcc/qmlcache/appcomtrac_Main_qml.cpp .rcc/qmlcache/appcomtrac_qmlcache_loader.cpp .rcc/qrc_appcomtrac_raw_qml_0.cpp .rcc/qrc_qmake_comtrac.cpp appcomtrac_autogen appcomtrac_autogen/mocs_compilation.cpp appcomtrac_autogen/timestamp appcomtrac_autogen_timestamp_deps appcomtrac_qmlimportscan appcomtrac_qmltyperegistrations.cpp appcomtrac_tooling comtrac/appcomtrac.qmltypes meta_types/appcomtrac_json_file_list.txt meta_types/appcomtrac_json_file_list.txt.timestamp meta_types/qt6appcomtrac_debug_metatypes.json meta_types/qt6appcomtrac_debug_metatypes.json.gen
+build cmake_object_order_depends_target_appcomtrac: phony || .rcc/qmlcache/appcomtrac_Main_qml.cpp .rcc/qmlcache/appcomtrac_Ui/ButtonTemplate_qml.cpp .rcc/qmlcache/appcomtrac_Ui/Chat_qml.cpp .rcc/qmlcache/appcomtrac_Ui/Header_qml.cpp .rcc/qmlcache/appcomtrac_Ui/HomeScreen_qml.cpp .rcc/qmlcache/appcomtrac_Ui/Login_qml.cpp .rcc/qmlcache/appcomtrac_Ui/Medication_qml.cpp .rcc/qmlcache/appcomtrac_Ui/RadioButtonTemplate_qml.cpp .rcc/qmlcache/appcomtrac_Ui/SideMenu_qml.cpp .rcc/qmlcache/appcomtrac_Ui/SliderTemplate_qml.cpp .rcc/qmlcache/appcomtrac_Ui/StackViewPage_qml.cpp .rcc/qmlcache/appcomtrac_Ui/SwitchTemplate_qml.cpp .rcc/qmlcache/appcomtrac_Ui/SymptomDiary_qml.cpp .rcc/qmlcache/appcomtrac_Ui/TextFieldTemplate_qml.cpp .rcc/qmlcache/appcomtrac_Ui/VideoTelephony_qml.cpp .rcc/qmlcache/appcomtrac_Ui/editSymptom_qml.cpp .rcc/qmlcache/appcomtrac_Ui/findSymptom_qml.cpp .rcc/qmlcache/appcomtrac_qmlcache_loader.cpp .rcc/qrc_appcomtrac_raw_qml_0.cpp .rcc/qrc_qmake_comtrac.cpp appcomtrac_autogen appcomtrac_autogen/mocs_compilation.cpp appcomtrac_autogen/timestamp appcomtrac_autogen_timestamp_deps appcomtrac_qmlimportscan appcomtrac_qmltyperegistrations.cpp appcomtrac_tooling comtrac/appcomtrac.qmltypes meta_types/appcomtrac_json_file_list.txt meta_types/appcomtrac_json_file_list.txt.timestamp meta_types/qt6appcomtrac_debug_metatypes.json meta_types/qt6appcomtrac_debug_metatypes.json.gen
 
 build CMakeFiles/appcomtrac.dir/appcomtrac_autogen/mocs_compilation.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_appcomtrac
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
@@ -65,21 +65,37 @@ build CMakeFiles/appcomtrac.dir/main.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:
   OBJECT_DIR = CMakeFiles\appcomtrac.dir
   OBJECT_FILE_DIR = CMakeFiles\appcomtrac.dir
 
-build CMakeFiles/appcomtrac.dir/login.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/login.cpp || cmake_object_order_depends_target_appcomtrac
+build CMakeFiles/appcomtrac.dir/Controllers/symptomdiary.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/symptomdiary.cpp || cmake_object_order_depends_target_appcomtrac
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\appcomtrac.dir\login.cpp.obj.d
+  DEP_FILE = CMakeFiles\appcomtrac.dir\Controllers\symptomdiary.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g
   INCLUDES = -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/include -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3/QtCore -isystem C:/Qt/6.4.3/mingw_64/include/QtCore -isystem C:/Qt/6.4.3/mingw_64/include -isystem C:/Qt/6.4.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.3/mingw_64/include/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlIntegration -isystem C:/Qt/6.4.3/mingw_64/include/QtNetwork -isystem C:/Qt/6.4.3/mingw_64/include/QtQuick -isystem C:/Qt/6.4.3/mingw_64/include/QtGui -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlModels -isystem C:/Qt/6.4.3/mingw_64/include/QtOpenGL
   OBJECT_DIR = CMakeFiles\appcomtrac.dir
-  OBJECT_FILE_DIR = CMakeFiles\appcomtrac.dir
+  OBJECT_FILE_DIR = CMakeFiles\appcomtrac.dir\Controllers
 
-build CMakeFiles/appcomtrac.dir/loginmodel.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/loginmodel.cpp || cmake_object_order_depends_target_appcomtrac
+build CMakeFiles/appcomtrac.dir/Controllers/login.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/login.cpp || cmake_object_order_depends_target_appcomtrac
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\appcomtrac.dir\loginmodel.cpp.obj.d
+  DEP_FILE = CMakeFiles\appcomtrac.dir\Controllers\login.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g
   INCLUDES = -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/include -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3/QtCore -isystem C:/Qt/6.4.3/mingw_64/include/QtCore -isystem C:/Qt/6.4.3/mingw_64/include -isystem C:/Qt/6.4.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.3/mingw_64/include/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlIntegration -isystem C:/Qt/6.4.3/mingw_64/include/QtNetwork -isystem C:/Qt/6.4.3/mingw_64/include/QtQuick -isystem C:/Qt/6.4.3/mingw_64/include/QtGui -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlModels -isystem C:/Qt/6.4.3/mingw_64/include/QtOpenGL
   OBJECT_DIR = CMakeFiles\appcomtrac.dir
-  OBJECT_FILE_DIR = CMakeFiles\appcomtrac.dir
+  OBJECT_FILE_DIR = CMakeFiles\appcomtrac.dir\Controllers
+
+build CMakeFiles/appcomtrac.dir/Controllers/medication.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/medication.cpp || cmake_object_order_depends_target_appcomtrac
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\appcomtrac.dir\Controllers\medication.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g
+  INCLUDES = -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/include -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3/QtCore -isystem C:/Qt/6.4.3/mingw_64/include/QtCore -isystem C:/Qt/6.4.3/mingw_64/include -isystem C:/Qt/6.4.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.3/mingw_64/include/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlIntegration -isystem C:/Qt/6.4.3/mingw_64/include/QtNetwork -isystem C:/Qt/6.4.3/mingw_64/include/QtQuick -isystem C:/Qt/6.4.3/mingw_64/include/QtGui -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlModels -isystem C:/Qt/6.4.3/mingw_64/include/QtOpenGL
+  OBJECT_DIR = CMakeFiles\appcomtrac.dir
+  OBJECT_FILE_DIR = CMakeFiles\appcomtrac.dir\Controllers
+
+build CMakeFiles/appcomtrac.dir/Models/loginmodel.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/loginmodel.cpp || cmake_object_order_depends_target_appcomtrac
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\appcomtrac.dir\Models\loginmodel.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g
+  INCLUDES = -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/include -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3/QtCore -isystem C:/Qt/6.4.3/mingw_64/include/QtCore -isystem C:/Qt/6.4.3/mingw_64/include -isystem C:/Qt/6.4.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.3/mingw_64/include/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlIntegration -isystem C:/Qt/6.4.3/mingw_64/include/QtNetwork -isystem C:/Qt/6.4.3/mingw_64/include/QtQuick -isystem C:/Qt/6.4.3/mingw_64/include/QtGui -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlModels -isystem C:/Qt/6.4.3/mingw_64/include/QtOpenGL
+  OBJECT_DIR = CMakeFiles\appcomtrac.dir
+  OBJECT_FILE_DIR = CMakeFiles\appcomtrac.dir\Models
 
 build CMakeFiles/appcomtrac.dir/appcomtrac_qmltyperegistrations.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_qmltyperegistrations.cpp || cmake_object_order_depends_target_appcomtrac
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
@@ -113,6 +129,134 @@ build CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Main_qml.cpp.obj: CXX_C
   OBJECT_DIR = CMakeFiles\appcomtrac.dir
   OBJECT_FILE_DIR = CMakeFiles\appcomtrac.dir\.rcc\qmlcache
 
+build CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/HomeScreen_qml.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/HomeScreen_qml.cpp || cmake_object_order_depends_target_appcomtrac
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui\HomeScreen_qml.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g
+  INCLUDES = -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/include -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3/QtCore -isystem C:/Qt/6.4.3/mingw_64/include/QtCore -isystem C:/Qt/6.4.3/mingw_64/include -isystem C:/Qt/6.4.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.3/mingw_64/include/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlIntegration -isystem C:/Qt/6.4.3/mingw_64/include/QtNetwork -isystem C:/Qt/6.4.3/mingw_64/include/QtQuick -isystem C:/Qt/6.4.3/mingw_64/include/QtGui -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlModels -isystem C:/Qt/6.4.3/mingw_64/include/QtOpenGL
+  OBJECT_DIR = CMakeFiles\appcomtrac.dir
+  OBJECT_FILE_DIR = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui
+
+build CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/Login_qml.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Login_qml.cpp || cmake_object_order_depends_target_appcomtrac
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui\Login_qml.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g
+  INCLUDES = -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/include -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3/QtCore -isystem C:/Qt/6.4.3/mingw_64/include/QtCore -isystem C:/Qt/6.4.3/mingw_64/include -isystem C:/Qt/6.4.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.3/mingw_64/include/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlIntegration -isystem C:/Qt/6.4.3/mingw_64/include/QtNetwork -isystem C:/Qt/6.4.3/mingw_64/include/QtQuick -isystem C:/Qt/6.4.3/mingw_64/include/QtGui -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlModels -isystem C:/Qt/6.4.3/mingw_64/include/QtOpenGL
+  OBJECT_DIR = CMakeFiles\appcomtrac.dir
+  OBJECT_FILE_DIR = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui
+
+build CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/Medication_qml.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Medication_qml.cpp || cmake_object_order_depends_target_appcomtrac
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui\Medication_qml.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g
+  INCLUDES = -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/include -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3/QtCore -isystem C:/Qt/6.4.3/mingw_64/include/QtCore -isystem C:/Qt/6.4.3/mingw_64/include -isystem C:/Qt/6.4.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.3/mingw_64/include/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlIntegration -isystem C:/Qt/6.4.3/mingw_64/include/QtNetwork -isystem C:/Qt/6.4.3/mingw_64/include/QtQuick -isystem C:/Qt/6.4.3/mingw_64/include/QtGui -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlModels -isystem C:/Qt/6.4.3/mingw_64/include/QtOpenGL
+  OBJECT_DIR = CMakeFiles\appcomtrac.dir
+  OBJECT_FILE_DIR = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui
+
+build CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/Chat_qml.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Chat_qml.cpp || cmake_object_order_depends_target_appcomtrac
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui\Chat_qml.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g
+  INCLUDES = -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/include -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3/QtCore -isystem C:/Qt/6.4.3/mingw_64/include/QtCore -isystem C:/Qt/6.4.3/mingw_64/include -isystem C:/Qt/6.4.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.3/mingw_64/include/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlIntegration -isystem C:/Qt/6.4.3/mingw_64/include/QtNetwork -isystem C:/Qt/6.4.3/mingw_64/include/QtQuick -isystem C:/Qt/6.4.3/mingw_64/include/QtGui -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlModels -isystem C:/Qt/6.4.3/mingw_64/include/QtOpenGL
+  OBJECT_DIR = CMakeFiles\appcomtrac.dir
+  OBJECT_FILE_DIR = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui
+
+build CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/VideoTelephony_qml.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/VideoTelephony_qml.cpp || cmake_object_order_depends_target_appcomtrac
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui\VideoTelephony_qml.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g
+  INCLUDES = -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/include -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3/QtCore -isystem C:/Qt/6.4.3/mingw_64/include/QtCore -isystem C:/Qt/6.4.3/mingw_64/include -isystem C:/Qt/6.4.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.3/mingw_64/include/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlIntegration -isystem C:/Qt/6.4.3/mingw_64/include/QtNetwork -isystem C:/Qt/6.4.3/mingw_64/include/QtQuick -isystem C:/Qt/6.4.3/mingw_64/include/QtGui -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlModels -isystem C:/Qt/6.4.3/mingw_64/include/QtOpenGL
+  OBJECT_DIR = CMakeFiles\appcomtrac.dir
+  OBJECT_FILE_DIR = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui
+
+build CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/SymptomDiary_qml.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/SymptomDiary_qml.cpp || cmake_object_order_depends_target_appcomtrac
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui\SymptomDiary_qml.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g
+  INCLUDES = -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/include -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3/QtCore -isystem C:/Qt/6.4.3/mingw_64/include/QtCore -isystem C:/Qt/6.4.3/mingw_64/include -isystem C:/Qt/6.4.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.3/mingw_64/include/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlIntegration -isystem C:/Qt/6.4.3/mingw_64/include/QtNetwork -isystem C:/Qt/6.4.3/mingw_64/include/QtQuick -isystem C:/Qt/6.4.3/mingw_64/include/QtGui -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlModels -isystem C:/Qt/6.4.3/mingw_64/include/QtOpenGL
+  OBJECT_DIR = CMakeFiles\appcomtrac.dir
+  OBJECT_FILE_DIR = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui
+
+build CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/editSymptom_qml.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/editSymptom_qml.cpp || cmake_object_order_depends_target_appcomtrac
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui\editSymptom_qml.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g
+  INCLUDES = -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/include -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3/QtCore -isystem C:/Qt/6.4.3/mingw_64/include/QtCore -isystem C:/Qt/6.4.3/mingw_64/include -isystem C:/Qt/6.4.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.3/mingw_64/include/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlIntegration -isystem C:/Qt/6.4.3/mingw_64/include/QtNetwork -isystem C:/Qt/6.4.3/mingw_64/include/QtQuick -isystem C:/Qt/6.4.3/mingw_64/include/QtGui -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlModels -isystem C:/Qt/6.4.3/mingw_64/include/QtOpenGL
+  OBJECT_DIR = CMakeFiles\appcomtrac.dir
+  OBJECT_FILE_DIR = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui
+
+build CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/findSymptom_qml.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/findSymptom_qml.cpp || cmake_object_order_depends_target_appcomtrac
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui\findSymptom_qml.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g
+  INCLUDES = -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/include -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3/QtCore -isystem C:/Qt/6.4.3/mingw_64/include/QtCore -isystem C:/Qt/6.4.3/mingw_64/include -isystem C:/Qt/6.4.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.3/mingw_64/include/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlIntegration -isystem C:/Qt/6.4.3/mingw_64/include/QtNetwork -isystem C:/Qt/6.4.3/mingw_64/include/QtQuick -isystem C:/Qt/6.4.3/mingw_64/include/QtGui -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlModels -isystem C:/Qt/6.4.3/mingw_64/include/QtOpenGL
+  OBJECT_DIR = CMakeFiles\appcomtrac.dir
+  OBJECT_FILE_DIR = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui
+
+build CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/StackViewPage_qml.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/StackViewPage_qml.cpp || cmake_object_order_depends_target_appcomtrac
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui\StackViewPage_qml.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g
+  INCLUDES = -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/include -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3/QtCore -isystem C:/Qt/6.4.3/mingw_64/include/QtCore -isystem C:/Qt/6.4.3/mingw_64/include -isystem C:/Qt/6.4.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.3/mingw_64/include/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlIntegration -isystem C:/Qt/6.4.3/mingw_64/include/QtNetwork -isystem C:/Qt/6.4.3/mingw_64/include/QtQuick -isystem C:/Qt/6.4.3/mingw_64/include/QtGui -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlModels -isystem C:/Qt/6.4.3/mingw_64/include/QtOpenGL
+  OBJECT_DIR = CMakeFiles\appcomtrac.dir
+  OBJECT_FILE_DIR = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui
+
+build CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/TextFieldTemplate_qml.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/TextFieldTemplate_qml.cpp || cmake_object_order_depends_target_appcomtrac
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui\TextFieldTemplate_qml.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g
+  INCLUDES = -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/include -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3/QtCore -isystem C:/Qt/6.4.3/mingw_64/include/QtCore -isystem C:/Qt/6.4.3/mingw_64/include -isystem C:/Qt/6.4.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.3/mingw_64/include/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlIntegration -isystem C:/Qt/6.4.3/mingw_64/include/QtNetwork -isystem C:/Qt/6.4.3/mingw_64/include/QtQuick -isystem C:/Qt/6.4.3/mingw_64/include/QtGui -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlModels -isystem C:/Qt/6.4.3/mingw_64/include/QtOpenGL
+  OBJECT_DIR = CMakeFiles\appcomtrac.dir
+  OBJECT_FILE_DIR = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui
+
+build CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/ButtonTemplate_qml.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/ButtonTemplate_qml.cpp || cmake_object_order_depends_target_appcomtrac
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui\ButtonTemplate_qml.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g
+  INCLUDES = -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/include -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3/QtCore -isystem C:/Qt/6.4.3/mingw_64/include/QtCore -isystem C:/Qt/6.4.3/mingw_64/include -isystem C:/Qt/6.4.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.3/mingw_64/include/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlIntegration -isystem C:/Qt/6.4.3/mingw_64/include/QtNetwork -isystem C:/Qt/6.4.3/mingw_64/include/QtQuick -isystem C:/Qt/6.4.3/mingw_64/include/QtGui -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlModels -isystem C:/Qt/6.4.3/mingw_64/include/QtOpenGL
+  OBJECT_DIR = CMakeFiles\appcomtrac.dir
+  OBJECT_FILE_DIR = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui
+
+build CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/SideMenu_qml.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/SideMenu_qml.cpp || cmake_object_order_depends_target_appcomtrac
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui\SideMenu_qml.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g
+  INCLUDES = -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/include -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3/QtCore -isystem C:/Qt/6.4.3/mingw_64/include/QtCore -isystem C:/Qt/6.4.3/mingw_64/include -isystem C:/Qt/6.4.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.3/mingw_64/include/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlIntegration -isystem C:/Qt/6.4.3/mingw_64/include/QtNetwork -isystem C:/Qt/6.4.3/mingw_64/include/QtQuick -isystem C:/Qt/6.4.3/mingw_64/include/QtGui -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlModels -isystem C:/Qt/6.4.3/mingw_64/include/QtOpenGL
+  OBJECT_DIR = CMakeFiles\appcomtrac.dir
+  OBJECT_FILE_DIR = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui
+
+build CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/Header_qml.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Header_qml.cpp || cmake_object_order_depends_target_appcomtrac
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui\Header_qml.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g
+  INCLUDES = -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/include -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3/QtCore -isystem C:/Qt/6.4.3/mingw_64/include/QtCore -isystem C:/Qt/6.4.3/mingw_64/include -isystem C:/Qt/6.4.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.3/mingw_64/include/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlIntegration -isystem C:/Qt/6.4.3/mingw_64/include/QtNetwork -isystem C:/Qt/6.4.3/mingw_64/include/QtQuick -isystem C:/Qt/6.4.3/mingw_64/include/QtGui -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlModels -isystem C:/Qt/6.4.3/mingw_64/include/QtOpenGL
+  OBJECT_DIR = CMakeFiles\appcomtrac.dir
+  OBJECT_FILE_DIR = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui
+
+build CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/RadioButtonTemplate_qml.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/RadioButtonTemplate_qml.cpp || cmake_object_order_depends_target_appcomtrac
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui\RadioButtonTemplate_qml.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g
+  INCLUDES = -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/include -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3/QtCore -isystem C:/Qt/6.4.3/mingw_64/include/QtCore -isystem C:/Qt/6.4.3/mingw_64/include -isystem C:/Qt/6.4.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.3/mingw_64/include/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlIntegration -isystem C:/Qt/6.4.3/mingw_64/include/QtNetwork -isystem C:/Qt/6.4.3/mingw_64/include/QtQuick -isystem C:/Qt/6.4.3/mingw_64/include/QtGui -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlModels -isystem C:/Qt/6.4.3/mingw_64/include/QtOpenGL
+  OBJECT_DIR = CMakeFiles\appcomtrac.dir
+  OBJECT_FILE_DIR = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui
+
+build CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/SwitchTemplate_qml.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/SwitchTemplate_qml.cpp || cmake_object_order_depends_target_appcomtrac
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui\SwitchTemplate_qml.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g
+  INCLUDES = -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/include -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3/QtCore -isystem C:/Qt/6.4.3/mingw_64/include/QtCore -isystem C:/Qt/6.4.3/mingw_64/include -isystem C:/Qt/6.4.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.3/mingw_64/include/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlIntegration -isystem C:/Qt/6.4.3/mingw_64/include/QtNetwork -isystem C:/Qt/6.4.3/mingw_64/include/QtQuick -isystem C:/Qt/6.4.3/mingw_64/include/QtGui -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlModels -isystem C:/Qt/6.4.3/mingw_64/include/QtOpenGL
+  OBJECT_DIR = CMakeFiles\appcomtrac.dir
+  OBJECT_FILE_DIR = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui
+
+build CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/SliderTemplate_qml.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/SliderTemplate_qml.cpp || cmake_object_order_depends_target_appcomtrac
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui\SliderTemplate_qml.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g
+  INCLUDES = -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/include -IC:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtQml/6.4.3/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3 -isystem C:/Qt/6.4.3/mingw_64/include/QtCore/6.4.3/QtCore -isystem C:/Qt/6.4.3/mingw_64/include/QtCore -isystem C:/Qt/6.4.3/mingw_64/include -isystem C:/Qt/6.4.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.4.3/mingw_64/include/QtQml -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlIntegration -isystem C:/Qt/6.4.3/mingw_64/include/QtNetwork -isystem C:/Qt/6.4.3/mingw_64/include/QtQuick -isystem C:/Qt/6.4.3/mingw_64/include/QtGui -isystem C:/Qt/6.4.3/mingw_64/include/QtQmlModels -isystem C:/Qt/6.4.3/mingw_64/include/QtOpenGL
+  OBJECT_DIR = CMakeFiles\appcomtrac.dir
+  OBJECT_FILE_DIR = CMakeFiles\appcomtrac.dir\.rcc\qmlcache\appcomtrac_Ui
+
 build CMakeFiles/appcomtrac.dir/.rcc/qrc_appcomtrac_raw_qml_0.cpp.obj: CXX_COMPILER__appcomtrac_Debug C$:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qrc_appcomtrac_raw_qml_0.cpp || cmake_object_order_depends_target_appcomtrac
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\appcomtrac.dir\.rcc\qrc_appcomtrac_raw_qml_0.cpp.obj.d
@@ -129,7 +273,7 @@ build CMakeFiles/appcomtrac.dir/.rcc/qrc_appcomtrac_raw_qml_0.cpp.obj: CXX_COMPI
 #############################################
 # Link the executable appcomtrac.exe
 
-build appcomtrac.exe: CXX_EXECUTABLE_LINKER__appcomtrac_Debug CMakeFiles/appcomtrac.dir/appcomtrac_autogen/mocs_compilation.cpp.obj CMakeFiles/appcomtrac.dir/main.cpp.obj CMakeFiles/appcomtrac.dir/login.cpp.obj CMakeFiles/appcomtrac.dir/loginmodel.cpp.obj CMakeFiles/appcomtrac.dir/appcomtrac_qmltyperegistrations.cpp.obj CMakeFiles/appcomtrac.dir/.rcc/qrc_qmake_comtrac.cpp.obj CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_qmlcache_loader.cpp.obj CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Main_qml.cpp.obj CMakeFiles/appcomtrac.dir/.rcc/qrc_appcomtrac_raw_qml_0.cpp.obj | C$:/Qt/6.4.3/mingw_64/lib/libQt6Quick.a C$:/Qt/6.4.3/mingw_64/lib/libQt6QmlModels.a C$:/Qt/6.4.3/mingw_64/lib/libQt6Qml.a C$:/Qt/6.4.3/mingw_64/lib/libQt6Network.a C$:/Qt/6.4.3/mingw_64/lib/libQt6OpenGL.a C$:/Qt/6.4.3/mingw_64/lib/libQt6Gui.a C$:/Qt/6.4.3/mingw_64/lib/libQt6Core.a C$:/Qt/6.4.3/mingw_64/lib/libQt6EntryPoint.a || appcomtrac_autogen appcomtrac_autogen_timestamp_deps appcomtrac_qmlimportscan appcomtrac_tooling
+build appcomtrac.exe: CXX_EXECUTABLE_LINKER__appcomtrac_Debug CMakeFiles/appcomtrac.dir/appcomtrac_autogen/mocs_compilation.cpp.obj CMakeFiles/appcomtrac.dir/main.cpp.obj CMakeFiles/appcomtrac.dir/Controllers/symptomdiary.cpp.obj CMakeFiles/appcomtrac.dir/Controllers/login.cpp.obj CMakeFiles/appcomtrac.dir/Controllers/medication.cpp.obj CMakeFiles/appcomtrac.dir/Models/loginmodel.cpp.obj CMakeFiles/appcomtrac.dir/appcomtrac_qmltyperegistrations.cpp.obj CMakeFiles/appcomtrac.dir/.rcc/qrc_qmake_comtrac.cpp.obj CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_qmlcache_loader.cpp.obj CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Main_qml.cpp.obj CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/HomeScreen_qml.cpp.obj CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/Login_qml.cpp.obj CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/Medication_qml.cpp.obj CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/Chat_qml.cpp.obj CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/VideoTelephony_qml.cpp.obj CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/SymptomDiary_qml.cpp.obj CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/editSymptom_qml.cpp.obj CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/findSymptom_qml.cpp.obj CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/StackViewPage_qml.cpp.obj CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/TextFieldTemplate_qml.cpp.obj CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/ButtonTemplate_qml.cpp.obj CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/SideMenu_qml.cpp.obj CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/Header_qml.cpp.obj CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/RadioButtonTemplate_qml.cpp.obj CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/SwitchTemplate_qml.cpp.obj CMakeFiles/appcomtrac.dir/.rcc/qmlcache/appcomtrac_Ui/SliderTemplate_qml.cpp.obj CMakeFiles/appcomtrac.dir/.rcc/qrc_appcomtrac_raw_qml_0.cpp.obj | C$:/Qt/6.4.3/mingw_64/lib/libQt6Quick.a C$:/Qt/6.4.3/mingw_64/lib/libQt6QmlModels.a C$:/Qt/6.4.3/mingw_64/lib/libQt6Qml.a C$:/Qt/6.4.3/mingw_64/lib/libQt6Network.a C$:/Qt/6.4.3/mingw_64/lib/libQt6OpenGL.a C$:/Qt/6.4.3/mingw_64/lib/libQt6Gui.a C$:/Qt/6.4.3/mingw_64/lib/libQt6Core.a C$:/Qt/6.4.3/mingw_64/lib/libQt6EntryPoint.a || appcomtrac_autogen appcomtrac_autogen_timestamp_deps appcomtrac_qmlimportscan appcomtrac_tooling
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.4.3/mingw_64/lib/libQt6Quick.a  C:/Qt/6.4.3/mingw_64/lib/libQt6QmlModels.a  C:/Qt/6.4.3/mingw_64/lib/libQt6Qml.a  C:/Qt/6.4.3/mingw_64/lib/libQt6Network.a  -lws2_32  C:/Qt/6.4.3/mingw_64/lib/libQt6OpenGL.a  C:/Qt/6.4.3/mingw_64/lib/libQt6Gui.a  C:/Qt/6.4.3/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.4.3/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -luser32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
@@ -186,7 +330,7 @@ build all_qmllint_json: phony appcomtrac_qmllint_json
 #############################################
 # Utility command for appcomtrac_tooling
 
-build appcomtrac_tooling: phony comtrac/Main.qml
+build appcomtrac_tooling: phony comtrac/Main.qml comtrac/Ui/HomeScreen.qml comtrac/Ui/Login.qml comtrac/Ui/Medication.qml comtrac/Ui/Chat.qml comtrac/Ui/VideoTelephony.qml comtrac/Ui/SymptomDiary.qml comtrac/Ui/editSymptom.qml comtrac/Ui/findSymptom.qml comtrac/Ui/StackViewPage.qml comtrac/Ui/TextFieldTemplate.qml comtrac/Ui/ButtonTemplate.qml comtrac/Ui/SideMenu.qml comtrac/Ui/header.qml comtrac/Ui/RadioButtonTemplate.qml comtrac/Ui/SwitchTemplate.qml comtrac/Ui/SliderTemplate.qml
 
 
 #############################################
@@ -319,9 +463,153 @@ build .rcc/qmlcache/appcomtrac_Main_qml.cpp | ${cmake_ninja_workdir}.rcc/qmlcach
 
 
 #############################################
+# Custom command for .rcc\qmlcache\appcomtrac_Ui\HomeScreen_qml.cpp
+
+build .rcc/qmlcache/appcomtrac_Ui/HomeScreen_qml.cpp | ${cmake_ninja_workdir}.rcc/qmlcache/appcomtrac_Ui/HomeScreen_qml.cpp: CUSTOM_COMMAND C$:/Qt/6.4.3/mingw_64/bin/qmlcachegen.exe C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/HomeScreen.qml .rcc/qmake_comtrac.qrc .rcc/appcomtrac_raw_qml_0.qrc comtrac/appcomtrac.qmltypes comtrac/qmldir || appcomtrac_autogen appcomtrac_autogen_timestamp_deps appcomtrac_qmlimportscan appcomtrac_tooling
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui && C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.4.3/mingw_64/./bin/qmlcachegen.exe --bare --resource-path /comtrac/Ui/HomeScreen.qml -I C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug -I C:/Qt/6.4.3/mingw_64/./qml -i C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/qmldir --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmake_comtrac.qrc --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/appcomtrac_raw_qml_0.qrc -o C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/HomeScreen_qml.cpp C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/HomeScreen.qml"
+  DESC = Generating .rcc/qmlcache/appcomtrac_Ui/HomeScreen_qml.cpp
+  restat = 1
+
+
+#############################################
+# Custom command for .rcc\qmlcache\appcomtrac_Ui\Login_qml.cpp
+
+build .rcc/qmlcache/appcomtrac_Ui/Login_qml.cpp | ${cmake_ninja_workdir}.rcc/qmlcache/appcomtrac_Ui/Login_qml.cpp: CUSTOM_COMMAND C$:/Qt/6.4.3/mingw_64/bin/qmlcachegen.exe C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Login.qml .rcc/qmake_comtrac.qrc .rcc/appcomtrac_raw_qml_0.qrc comtrac/appcomtrac.qmltypes comtrac/qmldir || appcomtrac_autogen appcomtrac_autogen_timestamp_deps appcomtrac_qmlimportscan appcomtrac_tooling
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui && C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.4.3/mingw_64/./bin/qmlcachegen.exe --bare --resource-path /comtrac/Ui/Login.qml -I C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug -I C:/Qt/6.4.3/mingw_64/./qml -i C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/qmldir --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmake_comtrac.qrc --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/appcomtrac_raw_qml_0.qrc -o C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Login_qml.cpp C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Login.qml"
+  DESC = Generating .rcc/qmlcache/appcomtrac_Ui/Login_qml.cpp
+  restat = 1
+
+
+#############################################
+# Custom command for .rcc\qmlcache\appcomtrac_Ui\Medication_qml.cpp
+
+build .rcc/qmlcache/appcomtrac_Ui/Medication_qml.cpp | ${cmake_ninja_workdir}.rcc/qmlcache/appcomtrac_Ui/Medication_qml.cpp: CUSTOM_COMMAND C$:/Qt/6.4.3/mingw_64/bin/qmlcachegen.exe C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Medication.qml .rcc/qmake_comtrac.qrc .rcc/appcomtrac_raw_qml_0.qrc comtrac/appcomtrac.qmltypes comtrac/qmldir || appcomtrac_autogen appcomtrac_autogen_timestamp_deps appcomtrac_qmlimportscan appcomtrac_tooling
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui && C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.4.3/mingw_64/./bin/qmlcachegen.exe --bare --resource-path /comtrac/Ui/Medication.qml -I C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug -I C:/Qt/6.4.3/mingw_64/./qml -i C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/qmldir --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmake_comtrac.qrc --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/appcomtrac_raw_qml_0.qrc -o C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Medication_qml.cpp C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Medication.qml"
+  DESC = Generating .rcc/qmlcache/appcomtrac_Ui/Medication_qml.cpp
+  restat = 1
+
+
+#############################################
+# Custom command for .rcc\qmlcache\appcomtrac_Ui\Chat_qml.cpp
+
+build .rcc/qmlcache/appcomtrac_Ui/Chat_qml.cpp | ${cmake_ninja_workdir}.rcc/qmlcache/appcomtrac_Ui/Chat_qml.cpp: CUSTOM_COMMAND C$:/Qt/6.4.3/mingw_64/bin/qmlcachegen.exe C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Chat.qml .rcc/qmake_comtrac.qrc .rcc/appcomtrac_raw_qml_0.qrc comtrac/appcomtrac.qmltypes comtrac/qmldir || appcomtrac_autogen appcomtrac_autogen_timestamp_deps appcomtrac_qmlimportscan appcomtrac_tooling
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui && C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.4.3/mingw_64/./bin/qmlcachegen.exe --bare --resource-path /comtrac/Ui/Chat.qml -I C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug -I C:/Qt/6.4.3/mingw_64/./qml -i C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/qmldir --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmake_comtrac.qrc --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/appcomtrac_raw_qml_0.qrc -o C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Chat_qml.cpp C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Chat.qml"
+  DESC = Generating .rcc/qmlcache/appcomtrac_Ui/Chat_qml.cpp
+  restat = 1
+
+
+#############################################
+# Custom command for .rcc\qmlcache\appcomtrac_Ui\VideoTelephony_qml.cpp
+
+build .rcc/qmlcache/appcomtrac_Ui/VideoTelephony_qml.cpp | ${cmake_ninja_workdir}.rcc/qmlcache/appcomtrac_Ui/VideoTelephony_qml.cpp: CUSTOM_COMMAND C$:/Qt/6.4.3/mingw_64/bin/qmlcachegen.exe C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/VideoTelephony.qml .rcc/qmake_comtrac.qrc .rcc/appcomtrac_raw_qml_0.qrc comtrac/appcomtrac.qmltypes comtrac/qmldir || appcomtrac_autogen appcomtrac_autogen_timestamp_deps appcomtrac_qmlimportscan appcomtrac_tooling
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui && C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.4.3/mingw_64/./bin/qmlcachegen.exe --bare --resource-path /comtrac/Ui/VideoTelephony.qml -I C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug -I C:/Qt/6.4.3/mingw_64/./qml -i C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/qmldir --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmake_comtrac.qrc --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/appcomtrac_raw_qml_0.qrc -o C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/VideoTelephony_qml.cpp C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/VideoTelephony.qml"
+  DESC = Generating .rcc/qmlcache/appcomtrac_Ui/VideoTelephony_qml.cpp
+  restat = 1
+
+
+#############################################
+# Custom command for .rcc\qmlcache\appcomtrac_Ui\SymptomDiary_qml.cpp
+
+build .rcc/qmlcache/appcomtrac_Ui/SymptomDiary_qml.cpp | ${cmake_ninja_workdir}.rcc/qmlcache/appcomtrac_Ui/SymptomDiary_qml.cpp: CUSTOM_COMMAND C$:/Qt/6.4.3/mingw_64/bin/qmlcachegen.exe C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SymptomDiary.qml .rcc/qmake_comtrac.qrc .rcc/appcomtrac_raw_qml_0.qrc comtrac/appcomtrac.qmltypes comtrac/qmldir || appcomtrac_autogen appcomtrac_autogen_timestamp_deps appcomtrac_qmlimportscan appcomtrac_tooling
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui && C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.4.3/mingw_64/./bin/qmlcachegen.exe --bare --resource-path /comtrac/Ui/SymptomDiary.qml -I C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug -I C:/Qt/6.4.3/mingw_64/./qml -i C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/qmldir --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmake_comtrac.qrc --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/appcomtrac_raw_qml_0.qrc -o C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/SymptomDiary_qml.cpp C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SymptomDiary.qml"
+  DESC = Generating .rcc/qmlcache/appcomtrac_Ui/SymptomDiary_qml.cpp
+  restat = 1
+
+
+#############################################
+# Custom command for .rcc\qmlcache\appcomtrac_Ui\editSymptom_qml.cpp
+
+build .rcc/qmlcache/appcomtrac_Ui/editSymptom_qml.cpp | ${cmake_ninja_workdir}.rcc/qmlcache/appcomtrac_Ui/editSymptom_qml.cpp: CUSTOM_COMMAND C$:/Qt/6.4.3/mingw_64/bin/qmlcachegen.exe C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/editSymptom.qml .rcc/qmake_comtrac.qrc .rcc/appcomtrac_raw_qml_0.qrc comtrac/appcomtrac.qmltypes comtrac/qmldir || appcomtrac_autogen appcomtrac_autogen_timestamp_deps appcomtrac_qmlimportscan appcomtrac_tooling
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui && C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.4.3/mingw_64/./bin/qmlcachegen.exe --bare --resource-path /comtrac/Ui/editSymptom.qml -I C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug -I C:/Qt/6.4.3/mingw_64/./qml -i C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/qmldir --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmake_comtrac.qrc --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/appcomtrac_raw_qml_0.qrc -o C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/editSymptom_qml.cpp C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/editSymptom.qml"
+  DESC = Generating .rcc/qmlcache/appcomtrac_Ui/editSymptom_qml.cpp
+  restat = 1
+
+
+#############################################
+# Custom command for .rcc\qmlcache\appcomtrac_Ui\findSymptom_qml.cpp
+
+build .rcc/qmlcache/appcomtrac_Ui/findSymptom_qml.cpp | ${cmake_ninja_workdir}.rcc/qmlcache/appcomtrac_Ui/findSymptom_qml.cpp: CUSTOM_COMMAND C$:/Qt/6.4.3/mingw_64/bin/qmlcachegen.exe C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/findSymptom.qml .rcc/qmake_comtrac.qrc .rcc/appcomtrac_raw_qml_0.qrc comtrac/appcomtrac.qmltypes comtrac/qmldir || appcomtrac_autogen appcomtrac_autogen_timestamp_deps appcomtrac_qmlimportscan appcomtrac_tooling
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui && C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.4.3/mingw_64/./bin/qmlcachegen.exe --bare --resource-path /comtrac/Ui/findSymptom.qml -I C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug -I C:/Qt/6.4.3/mingw_64/./qml -i C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/qmldir --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmake_comtrac.qrc --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/appcomtrac_raw_qml_0.qrc -o C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/findSymptom_qml.cpp C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/findSymptom.qml"
+  DESC = Generating .rcc/qmlcache/appcomtrac_Ui/findSymptom_qml.cpp
+  restat = 1
+
+
+#############################################
+# Custom command for .rcc\qmlcache\appcomtrac_Ui\StackViewPage_qml.cpp
+
+build .rcc/qmlcache/appcomtrac_Ui/StackViewPage_qml.cpp | ${cmake_ninja_workdir}.rcc/qmlcache/appcomtrac_Ui/StackViewPage_qml.cpp: CUSTOM_COMMAND C$:/Qt/6.4.3/mingw_64/bin/qmlcachegen.exe C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/StackViewPage.qml .rcc/qmake_comtrac.qrc .rcc/appcomtrac_raw_qml_0.qrc comtrac/appcomtrac.qmltypes comtrac/qmldir || appcomtrac_autogen appcomtrac_autogen_timestamp_deps appcomtrac_qmlimportscan appcomtrac_tooling
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui && C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.4.3/mingw_64/./bin/qmlcachegen.exe --bare --resource-path /comtrac/Ui/StackViewPage.qml -I C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug -I C:/Qt/6.4.3/mingw_64/./qml -i C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/qmldir --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmake_comtrac.qrc --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/appcomtrac_raw_qml_0.qrc -o C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/StackViewPage_qml.cpp C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/StackViewPage.qml"
+  DESC = Generating .rcc/qmlcache/appcomtrac_Ui/StackViewPage_qml.cpp
+  restat = 1
+
+
+#############################################
+# Custom command for .rcc\qmlcache\appcomtrac_Ui\TextFieldTemplate_qml.cpp
+
+build .rcc/qmlcache/appcomtrac_Ui/TextFieldTemplate_qml.cpp | ${cmake_ninja_workdir}.rcc/qmlcache/appcomtrac_Ui/TextFieldTemplate_qml.cpp: CUSTOM_COMMAND C$:/Qt/6.4.3/mingw_64/bin/qmlcachegen.exe C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/TextFieldTemplate.qml .rcc/qmake_comtrac.qrc .rcc/appcomtrac_raw_qml_0.qrc comtrac/appcomtrac.qmltypes comtrac/qmldir || appcomtrac_autogen appcomtrac_autogen_timestamp_deps appcomtrac_qmlimportscan appcomtrac_tooling
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui && C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.4.3/mingw_64/./bin/qmlcachegen.exe --bare --resource-path /comtrac/Ui/TextFieldTemplate.qml -I C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug -I C:/Qt/6.4.3/mingw_64/./qml -i C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/qmldir --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmake_comtrac.qrc --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/appcomtrac_raw_qml_0.qrc -o C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/TextFieldTemplate_qml.cpp C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/TextFieldTemplate.qml"
+  DESC = Generating .rcc/qmlcache/appcomtrac_Ui/TextFieldTemplate_qml.cpp
+  restat = 1
+
+
+#############################################
+# Custom command for .rcc\qmlcache\appcomtrac_Ui\ButtonTemplate_qml.cpp
+
+build .rcc/qmlcache/appcomtrac_Ui/ButtonTemplate_qml.cpp | ${cmake_ninja_workdir}.rcc/qmlcache/appcomtrac_Ui/ButtonTemplate_qml.cpp: CUSTOM_COMMAND C$:/Qt/6.4.3/mingw_64/bin/qmlcachegen.exe C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/ButtonTemplate.qml .rcc/qmake_comtrac.qrc .rcc/appcomtrac_raw_qml_0.qrc comtrac/appcomtrac.qmltypes comtrac/qmldir || appcomtrac_autogen appcomtrac_autogen_timestamp_deps appcomtrac_qmlimportscan appcomtrac_tooling
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui && C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.4.3/mingw_64/./bin/qmlcachegen.exe --bare --resource-path /comtrac/Ui/ButtonTemplate.qml -I C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug -I C:/Qt/6.4.3/mingw_64/./qml -i C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/qmldir --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmake_comtrac.qrc --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/appcomtrac_raw_qml_0.qrc -o C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/ButtonTemplate_qml.cpp C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/ButtonTemplate.qml"
+  DESC = Generating .rcc/qmlcache/appcomtrac_Ui/ButtonTemplate_qml.cpp
+  restat = 1
+
+
+#############################################
+# Custom command for .rcc\qmlcache\appcomtrac_Ui\SideMenu_qml.cpp
+
+build .rcc/qmlcache/appcomtrac_Ui/SideMenu_qml.cpp | ${cmake_ninja_workdir}.rcc/qmlcache/appcomtrac_Ui/SideMenu_qml.cpp: CUSTOM_COMMAND C$:/Qt/6.4.3/mingw_64/bin/qmlcachegen.exe C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SideMenu.qml .rcc/qmake_comtrac.qrc .rcc/appcomtrac_raw_qml_0.qrc comtrac/appcomtrac.qmltypes comtrac/qmldir || appcomtrac_autogen appcomtrac_autogen_timestamp_deps appcomtrac_qmlimportscan appcomtrac_tooling
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui && C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.4.3/mingw_64/./bin/qmlcachegen.exe --bare --resource-path /comtrac/Ui/SideMenu.qml -I C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug -I C:/Qt/6.4.3/mingw_64/./qml -i C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/qmldir --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmake_comtrac.qrc --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/appcomtrac_raw_qml_0.qrc -o C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/SideMenu_qml.cpp C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SideMenu.qml"
+  DESC = Generating .rcc/qmlcache/appcomtrac_Ui/SideMenu_qml.cpp
+  restat = 1
+
+
+#############################################
+# Custom command for .rcc\qmlcache\appcomtrac_Ui\Header_qml.cpp
+
+build .rcc/qmlcache/appcomtrac_Ui/Header_qml.cpp | ${cmake_ninja_workdir}.rcc/qmlcache/appcomtrac_Ui/Header_qml.cpp: CUSTOM_COMMAND C$:/Qt/6.4.3/mingw_64/bin/qmlcachegen.exe C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Header.qml .rcc/qmake_comtrac.qrc .rcc/appcomtrac_raw_qml_0.qrc comtrac/appcomtrac.qmltypes comtrac/qmldir || appcomtrac_autogen appcomtrac_autogen_timestamp_deps appcomtrac_qmlimportscan appcomtrac_tooling
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui && C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.4.3/mingw_64/./bin/qmlcachegen.exe --bare --resource-path /comtrac/Ui/header.qml -I C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug -I C:/Qt/6.4.3/mingw_64/./qml -i C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/qmldir --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmake_comtrac.qrc --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/appcomtrac_raw_qml_0.qrc -o C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Header_qml.cpp C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Header.qml"
+  DESC = Generating .rcc/qmlcache/appcomtrac_Ui/Header_qml.cpp
+  restat = 1
+
+
+#############################################
+# Custom command for .rcc\qmlcache\appcomtrac_Ui\RadioButtonTemplate_qml.cpp
+
+build .rcc/qmlcache/appcomtrac_Ui/RadioButtonTemplate_qml.cpp | ${cmake_ninja_workdir}.rcc/qmlcache/appcomtrac_Ui/RadioButtonTemplate_qml.cpp: CUSTOM_COMMAND C$:/Qt/6.4.3/mingw_64/bin/qmlcachegen.exe C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/RadioButtonTemplate.qml .rcc/qmake_comtrac.qrc .rcc/appcomtrac_raw_qml_0.qrc comtrac/appcomtrac.qmltypes comtrac/qmldir || appcomtrac_autogen appcomtrac_autogen_timestamp_deps appcomtrac_qmlimportscan appcomtrac_tooling
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui && C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.4.3/mingw_64/./bin/qmlcachegen.exe --bare --resource-path /comtrac/Ui/RadioButtonTemplate.qml -I C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug -I C:/Qt/6.4.3/mingw_64/./qml -i C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/qmldir --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmake_comtrac.qrc --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/appcomtrac_raw_qml_0.qrc -o C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/RadioButtonTemplate_qml.cpp C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/RadioButtonTemplate.qml"
+  DESC = Generating .rcc/qmlcache/appcomtrac_Ui/RadioButtonTemplate_qml.cpp
+  restat = 1
+
+
+#############################################
+# Custom command for .rcc\qmlcache\appcomtrac_Ui\SwitchTemplate_qml.cpp
+
+build .rcc/qmlcache/appcomtrac_Ui/SwitchTemplate_qml.cpp | ${cmake_ninja_workdir}.rcc/qmlcache/appcomtrac_Ui/SwitchTemplate_qml.cpp: CUSTOM_COMMAND C$:/Qt/6.4.3/mingw_64/bin/qmlcachegen.exe C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SwitchTemplate.qml .rcc/qmake_comtrac.qrc .rcc/appcomtrac_raw_qml_0.qrc comtrac/appcomtrac.qmltypes comtrac/qmldir || appcomtrac_autogen appcomtrac_autogen_timestamp_deps appcomtrac_qmlimportscan appcomtrac_tooling
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui && C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.4.3/mingw_64/./bin/qmlcachegen.exe --bare --resource-path /comtrac/Ui/SwitchTemplate.qml -I C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug -I C:/Qt/6.4.3/mingw_64/./qml -i C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/qmldir --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmake_comtrac.qrc --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/appcomtrac_raw_qml_0.qrc -o C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/SwitchTemplate_qml.cpp C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SwitchTemplate.qml"
+  DESC = Generating .rcc/qmlcache/appcomtrac_Ui/SwitchTemplate_qml.cpp
+  restat = 1
+
+
+#############################################
+# Custom command for .rcc\qmlcache\appcomtrac_Ui\SliderTemplate_qml.cpp
+
+build .rcc/qmlcache/appcomtrac_Ui/SliderTemplate_qml.cpp | ${cmake_ninja_workdir}.rcc/qmlcache/appcomtrac_Ui/SliderTemplate_qml.cpp: CUSTOM_COMMAND C$:/Qt/6.4.3/mingw_64/bin/qmlcachegen.exe C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SliderTemplate.qml .rcc/qmake_comtrac.qrc .rcc/appcomtrac_raw_qml_0.qrc comtrac/appcomtrac.qmltypes comtrac/qmldir || appcomtrac_autogen appcomtrac_autogen_timestamp_deps appcomtrac_qmlimportscan appcomtrac_tooling
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui && C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.4.3/mingw_64/./bin/qmlcachegen.exe --bare --resource-path /comtrac/Ui/SliderTemplate.qml -I C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug -I C:/Qt/6.4.3/mingw_64/./qml -i C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/qmldir --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmake_comtrac.qrc --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/appcomtrac_raw_qml_0.qrc -o C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/SliderTemplate_qml.cpp C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SliderTemplate.qml"
+  DESC = Generating .rcc/qmlcache/appcomtrac_Ui/SliderTemplate_qml.cpp
+  restat = 1
+
+
+#############################################
 # Custom command for .rcc\qrc_appcomtrac_raw_qml_0.cpp
 
-build .rcc/qrc_appcomtrac_raw_qml_0.cpp | ${cmake_ninja_workdir}.rcc/qrc_appcomtrac_raw_qml_0.cpp: CUSTOM_COMMAND C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Main.qml .rcc/appcomtrac_raw_qml_0.qrc C$:/Qt/6.4.3/mingw_64/./bin/rcc.exe || appcomtrac_autogen appcomtrac_autogen_timestamp_deps appcomtrac_qmlimportscan appcomtrac_tooling
+build .rcc/qrc_appcomtrac_raw_qml_0.cpp | ${cmake_ninja_workdir}.rcc/qrc_appcomtrac_raw_qml_0.cpp: CUSTOM_COMMAND C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Main.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/HomeScreen.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Login.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Medication.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Chat.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/VideoTelephony.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SymptomDiary.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/editSymptom.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/findSymptom.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/StackViewPage.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/TextFieldTemplate.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/ButtonTemplate.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SideMenu.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Header.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/RadioButtonTemplate.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SwitchTemplate.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SliderTemplate.qml .rcc/appcomtrac_raw_qml_0.qrc C$:/Qt/6.4.3/mingw_64/./bin/rcc.exe || appcomtrac_autogen appcomtrac_autogen_timestamp_deps appcomtrac_qmlimportscan appcomtrac_tooling
   COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug && C:\Qt\6.4.3\mingw_64\.\bin\rcc.exe --output C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qrc_appcomtrac_raw_qml_0.cpp --name appcomtrac_raw_qml_0 C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/appcomtrac_raw_qml_0.qrc --no-zstd"
   DESC = Running rcc for resource appcomtrac_raw_qml_0
   restat = 1
@@ -355,15 +643,15 @@ build CMakeFiles/appcomtrac_qmltyperegistration | ${cmake_ninja_workdir}CMakeFil
 #############################################
 # Custom command for CMakeFiles\appcomtrac_qmllint
 
-build CMakeFiles/appcomtrac_qmllint | ${cmake_ninja_workdir}CMakeFiles/appcomtrac_qmllint: CUSTOM_COMMAND C$:/Qt/6.4.3/mingw_64/bin/qmllint.exe C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Main.qml || all_qmltyperegistrations appcomtrac_autogen_timestamp_deps appcomtrac_qmltyperegistration
-  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\comtrac && C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.4.3/mingw_64/bin/qmllint.exe --bare -I C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug -I C:/Qt/6.4.3/mingw_64/./qml --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmake_comtrac.qrc --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/appcomtrac_raw_qml_0.qrc C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Main.qml"
+build CMakeFiles/appcomtrac_qmllint | ${cmake_ninja_workdir}CMakeFiles/appcomtrac_qmllint: CUSTOM_COMMAND C$:/Qt/6.4.3/mingw_64/bin/qmllint.exe C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Main.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/HomeScreen.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Login.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Medication.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Chat.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/VideoTelephony.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SymptomDiary.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/editSymptom.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/findSymptom.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/StackViewPage.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/TextFieldTemplate.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/ButtonTemplate.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SideMenu.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Header.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/RadioButtonTemplate.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SwitchTemplate.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SliderTemplate.qml || all_qmltyperegistrations appcomtrac_autogen_timestamp_deps appcomtrac_qmltyperegistration
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\comtrac && C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.4.3/mingw_64/bin/qmllint.exe --bare -I C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug -I C:/Qt/6.4.3/mingw_64/./qml --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmake_comtrac.qrc --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/appcomtrac_raw_qml_0.qrc C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Main.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/HomeScreen.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Login.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Medication.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Chat.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/VideoTelephony.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SymptomDiary.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/editSymptom.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/findSymptom.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/StackViewPage.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/TextFieldTemplate.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/ButtonTemplate.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SideMenu.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Header.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/RadioButtonTemplate.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SwitchTemplate.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SliderTemplate.qml"
 
 
 #############################################
 # Custom command for CMakeFiles\appcomtrac_qmllint_json
 
-build CMakeFiles/appcomtrac_qmllint_json | ${cmake_ninja_workdir}CMakeFiles/appcomtrac_qmllint_json: CUSTOM_COMMAND C$:/Qt/6.4.3/mingw_64/bin/qmllint.exe C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Main.qml || all_qmltyperegistrations appcomtrac_autogen_timestamp_deps appcomtrac_qmltyperegistration
-  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\comtrac && C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.4.3/mingw_64/bin/qmllint.exe --bare -I C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug -I C:/Qt/6.4.3/mingw_64/./qml --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmake_comtrac.qrc --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/appcomtrac_raw_qml_0.qrc C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Main.qml --json C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_qmllint.json"
+build CMakeFiles/appcomtrac_qmllint_json | ${cmake_ninja_workdir}CMakeFiles/appcomtrac_qmllint_json: CUSTOM_COMMAND C$:/Qt/6.4.3/mingw_64/bin/qmllint.exe C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Main.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/HomeScreen.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Login.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Medication.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Chat.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/VideoTelephony.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SymptomDiary.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/editSymptom.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/findSymptom.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/StackViewPage.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/TextFieldTemplate.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/ButtonTemplate.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SideMenu.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Header.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/RadioButtonTemplate.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SwitchTemplate.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SliderTemplate.qml || all_qmltyperegistrations appcomtrac_autogen_timestamp_deps appcomtrac_qmltyperegistration
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\comtrac && C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.4.3/mingw_64/bin/qmllint.exe --bare -I C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug -I C:/Qt/6.4.3/mingw_64/./qml --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmake_comtrac.qrc --resource C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/appcomtrac_raw_qml_0.qrc C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Main.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/HomeScreen.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Login.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Medication.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Chat.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/VideoTelephony.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SymptomDiary.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/editSymptom.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/findSymptom.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/StackViewPage.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/TextFieldTemplate.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/ButtonTemplate.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SideMenu.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Header.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/RadioButtonTemplate.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SwitchTemplate.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SliderTemplate.qml --json C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_qmllint.json"
 
 
 #############################################
@@ -376,6 +664,150 @@ build comtrac/Main.qml | ${cmake_ninja_workdir}comtrac/Main.qml: CUSTOM_COMMAND 
 
 
 #############################################
+# Custom command for comtrac\Ui\HomeScreen.qml
+
+build comtrac/Ui/HomeScreen.qml | ${cmake_ninja_workdir}comtrac/Ui/HomeScreen.qml: CUSTOM_COMMAND C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/HomeScreen.qml
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\comtrac && C:\Qt\Tools\CMake_64\bin\cmake.exe -E copy C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/HomeScreen.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/Ui/HomeScreen.qml"
+  DESC = Generating comtrac/Ui/HomeScreen.qml
+  restat = 1
+
+
+#############################################
+# Custom command for comtrac\Ui\Login.qml
+
+build comtrac/Ui/Login.qml | ${cmake_ninja_workdir}comtrac/Ui/Login.qml: CUSTOM_COMMAND C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Login.qml
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\comtrac && C:\Qt\Tools\CMake_64\bin\cmake.exe -E copy C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Login.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/Ui/Login.qml"
+  DESC = Generating comtrac/Ui/Login.qml
+  restat = 1
+
+
+#############################################
+# Custom command for comtrac\Ui\Medication.qml
+
+build comtrac/Ui/Medication.qml | ${cmake_ninja_workdir}comtrac/Ui/Medication.qml: CUSTOM_COMMAND C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Medication.qml
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\comtrac && C:\Qt\Tools\CMake_64\bin\cmake.exe -E copy C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Medication.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/Ui/Medication.qml"
+  DESC = Generating comtrac/Ui/Medication.qml
+  restat = 1
+
+
+#############################################
+# Custom command for comtrac\Ui\Chat.qml
+
+build comtrac/Ui/Chat.qml | ${cmake_ninja_workdir}comtrac/Ui/Chat.qml: CUSTOM_COMMAND C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Chat.qml
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\comtrac && C:\Qt\Tools\CMake_64\bin\cmake.exe -E copy C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Chat.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/Ui/Chat.qml"
+  DESC = Generating comtrac/Ui/Chat.qml
+  restat = 1
+
+
+#############################################
+# Custom command for comtrac\Ui\VideoTelephony.qml
+
+build comtrac/Ui/VideoTelephony.qml | ${cmake_ninja_workdir}comtrac/Ui/VideoTelephony.qml: CUSTOM_COMMAND C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/VideoTelephony.qml
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\comtrac && C:\Qt\Tools\CMake_64\bin\cmake.exe -E copy C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/VideoTelephony.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/Ui/VideoTelephony.qml"
+  DESC = Generating comtrac/Ui/VideoTelephony.qml
+  restat = 1
+
+
+#############################################
+# Custom command for comtrac\Ui\SymptomDiary.qml
+
+build comtrac/Ui/SymptomDiary.qml | ${cmake_ninja_workdir}comtrac/Ui/SymptomDiary.qml: CUSTOM_COMMAND C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SymptomDiary.qml
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\comtrac && C:\Qt\Tools\CMake_64\bin\cmake.exe -E copy C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SymptomDiary.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/Ui/SymptomDiary.qml"
+  DESC = Generating comtrac/Ui/SymptomDiary.qml
+  restat = 1
+
+
+#############################################
+# Custom command for comtrac\Ui\editSymptom.qml
+
+build comtrac/Ui/editSymptom.qml | ${cmake_ninja_workdir}comtrac/Ui/editSymptom.qml: CUSTOM_COMMAND C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/editSymptom.qml
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\comtrac && C:\Qt\Tools\CMake_64\bin\cmake.exe -E copy C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/editSymptom.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/Ui/editSymptom.qml"
+  DESC = Generating comtrac/Ui/editSymptom.qml
+  restat = 1
+
+
+#############################################
+# Custom command for comtrac\Ui\findSymptom.qml
+
+build comtrac/Ui/findSymptom.qml | ${cmake_ninja_workdir}comtrac/Ui/findSymptom.qml: CUSTOM_COMMAND C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/findSymptom.qml
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\comtrac && C:\Qt\Tools\CMake_64\bin\cmake.exe -E copy C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/findSymptom.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/Ui/findSymptom.qml"
+  DESC = Generating comtrac/Ui/findSymptom.qml
+  restat = 1
+
+
+#############################################
+# Custom command for comtrac\Ui\StackViewPage.qml
+
+build comtrac/Ui/StackViewPage.qml | ${cmake_ninja_workdir}comtrac/Ui/StackViewPage.qml: CUSTOM_COMMAND C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/StackViewPage.qml
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\comtrac && C:\Qt\Tools\CMake_64\bin\cmake.exe -E copy C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/StackViewPage.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/Ui/StackViewPage.qml"
+  DESC = Generating comtrac/Ui/StackViewPage.qml
+  restat = 1
+
+
+#############################################
+# Custom command for comtrac\Ui\TextFieldTemplate.qml
+
+build comtrac/Ui/TextFieldTemplate.qml | ${cmake_ninja_workdir}comtrac/Ui/TextFieldTemplate.qml: CUSTOM_COMMAND C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/TextFieldTemplate.qml
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\comtrac && C:\Qt\Tools\CMake_64\bin\cmake.exe -E copy C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/TextFieldTemplate.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/Ui/TextFieldTemplate.qml"
+  DESC = Generating comtrac/Ui/TextFieldTemplate.qml
+  restat = 1
+
+
+#############################################
+# Custom command for comtrac\Ui\ButtonTemplate.qml
+
+build comtrac/Ui/ButtonTemplate.qml | ${cmake_ninja_workdir}comtrac/Ui/ButtonTemplate.qml: CUSTOM_COMMAND C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/ButtonTemplate.qml
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\comtrac && C:\Qt\Tools\CMake_64\bin\cmake.exe -E copy C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/ButtonTemplate.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/Ui/ButtonTemplate.qml"
+  DESC = Generating comtrac/Ui/ButtonTemplate.qml
+  restat = 1
+
+
+#############################################
+# Custom command for comtrac\Ui\SideMenu.qml
+
+build comtrac/Ui/SideMenu.qml | ${cmake_ninja_workdir}comtrac/Ui/SideMenu.qml: CUSTOM_COMMAND C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SideMenu.qml
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\comtrac && C:\Qt\Tools\CMake_64\bin\cmake.exe -E copy C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SideMenu.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/Ui/SideMenu.qml"
+  DESC = Generating comtrac/Ui/SideMenu.qml
+  restat = 1
+
+
+#############################################
+# Custom command for comtrac\Ui\header.qml
+
+build comtrac/Ui/header.qml | ${cmake_ninja_workdir}comtrac/Ui/header.qml: CUSTOM_COMMAND C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Header.qml
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\comtrac && C:\Qt\Tools\CMake_64\bin\cmake.exe -E copy C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Header.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/Ui/header.qml"
+  DESC = Generating comtrac/Ui/header.qml
+  restat = 1
+
+
+#############################################
+# Custom command for comtrac\Ui\RadioButtonTemplate.qml
+
+build comtrac/Ui/RadioButtonTemplate.qml | ${cmake_ninja_workdir}comtrac/Ui/RadioButtonTemplate.qml: CUSTOM_COMMAND C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/RadioButtonTemplate.qml
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\comtrac && C:\Qt\Tools\CMake_64\bin\cmake.exe -E copy C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/RadioButtonTemplate.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/Ui/RadioButtonTemplate.qml"
+  DESC = Generating comtrac/Ui/RadioButtonTemplate.qml
+  restat = 1
+
+
+#############################################
+# Custom command for comtrac\Ui\SwitchTemplate.qml
+
+build comtrac/Ui/SwitchTemplate.qml | ${cmake_ninja_workdir}comtrac/Ui/SwitchTemplate.qml: CUSTOM_COMMAND C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SwitchTemplate.qml
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\comtrac && C:\Qt\Tools\CMake_64\bin\cmake.exe -E copy C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SwitchTemplate.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/Ui/SwitchTemplate.qml"
+  DESC = Generating comtrac/Ui/SwitchTemplate.qml
+  restat = 1
+
+
+#############################################
+# Custom command for comtrac\Ui\SliderTemplate.qml
+
+build comtrac/Ui/SliderTemplate.qml | ${cmake_ninja_workdir}comtrac/Ui/SliderTemplate.qml: CUSTOM_COMMAND C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SliderTemplate.qml
+  COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\comtrac && C:\Qt\Tools\CMake_64\bin\cmake.exe -E copy C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SliderTemplate.qml C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/comtrac/Ui/SliderTemplate.qml"
+  DESC = Generating comtrac/Ui/SliderTemplate.qml
+  restat = 1
+
+
+#############################################
 # Phony custom command for CMakeFiles\appcomtrac_qmlimportscan
 
 build CMakeFiles/appcomtrac_qmlimportscan | ${cmake_ninja_workdir}CMakeFiles/appcomtrac_qmlimportscan: phony .qt_plugins/Qt6_QmlPlugins_Imports_appcomtrac.cmake
@@ -384,7 +816,7 @@ build CMakeFiles/appcomtrac_qmlimportscan | ${cmake_ninja_workdir}CMakeFiles/app
 #############################################
 # Custom command for .qt_plugins\Qt6_QmlPlugins_Imports_appcomtrac.cmake
 
-build .qt_plugins/Qt6_QmlPlugins_Imports_appcomtrac.cmake | ${cmake_ninja_workdir}.qt_plugins/Qt6_QmlPlugins_Imports_appcomtrac.cmake: CUSTOM_COMMAND C$:/Qt/6.4.3/mingw_64/bin/qmlimportscanner.exe .rcc/qmake_comtrac.qrc .rcc/appcomtrac_raw_qml_0.qrc C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Main.qml
+build .qt_plugins/Qt6_QmlPlugins_Imports_appcomtrac.cmake | ${cmake_ninja_workdir}.qt_plugins/Qt6_QmlPlugins_Imports_appcomtrac.cmake: CUSTOM_COMMAND C$:/Qt/6.4.3/mingw_64/bin/qmlimportscanner.exe .rcc/qmake_comtrac.qrc .rcc/appcomtrac_raw_qml_0.qrc C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Main.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/HomeScreen.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Login.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Medication.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Chat.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/VideoTelephony.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SymptomDiary.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/editSymptom.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/findSymptom.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/StackViewPage.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/TextFieldTemplate.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/ButtonTemplate.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SideMenu.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Header.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/RadioButtonTemplate.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SwitchTemplate.qml C$:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SliderTemplate.qml
   COMMAND = cmd.exe /C "cd /D C:\Users\cindy\Documents\GitHub\COMTRAC\src\comtrac && C:\Users\cindy\Documents\GitHub\COMTRAC\src\build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.4.3/mingw_64/./bin/qmlimportscanner.exe @C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.qt_plugins/Qt6_QmlPlugins_Imports_appcomtrac.rsp"
   DESC = Running qmlimportscanner for appcomtrac
   restat = 1

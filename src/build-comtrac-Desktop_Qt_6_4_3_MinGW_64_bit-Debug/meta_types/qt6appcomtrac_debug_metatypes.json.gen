@@ -39,5 +39,65 @@
         ],
         "inputFile": "login.h",
         "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "Medication",
+                "object": true,
+                "qualifiedClassName": "Medication",
+                "slots": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "medication",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "readMedication",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "medication.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "SymptomDiary",
+                "object": true,
+                "qualifiedClassName": "SymptomDiary",
+                "slots": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "symptom",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "readSymptom",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "symptomdiary.h",
+        "outputRevision": 68
     }
 ]
