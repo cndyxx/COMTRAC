@@ -4,7 +4,7 @@ import QtQuick.Controls
 
 Button {
     id: root
-    property color backgroundDefaultColor: "#4E5BF2"
+    property color backgroundDefaultColor: "grey"
     property color backgroundPressedColor: Qt.darker(backgroundDefaultColor, 1.2)
     property color contentItemTextColor: "white"
 
@@ -13,7 +13,7 @@ Button {
     contentItem: Text {
         text: root.text
         color: root.contentItemTextColor
-        font.pixelSize: 15
+        font.pixelSize: 17
         font.family: "Arial"
         font.weight: Font.Thin
         horizontalAlignment: Text.AlignHCenter

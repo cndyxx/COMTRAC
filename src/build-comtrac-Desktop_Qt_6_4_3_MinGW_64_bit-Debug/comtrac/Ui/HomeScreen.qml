@@ -1,4 +1,5 @@
 import QtQuick
+import QtQuick.Layouts
 import QtQuick.Controls 2.5
 
 Item {
@@ -8,19 +9,20 @@ Item {
     property string vidoe_telephony: "VideoTelephony.qml"
 
 
-    Column{
-        spacing: 4
+    ColumnLayout{
         anchors.centerIn: parent
         Rectangle{
+            Layout.alignment: Qt.AlignCenter
             id: orangeRec
             color: "orange"
-            width: 100
-            height: 100
+            width: 150
+            height: 150
 
         }
         ButtonTemplate{
             id: symptomDiaryButton
             text: "Symptomtagebuch"
+            Layout.topMargin: 10
             onClicked: {
                 stackView.replace(symptom_diary)
             }

@@ -37,6 +37,8 @@ qt_add_qml_module(appcomtrac
     Ui/SymptomDiary.qml
     Ui/editSymptom.qml
     Ui/findSymptom.qml
+    Ui/editMedication.qml
+    Ui/findMedication.qml
     #elements
     Ui/StackViewPage.qml
     Ui/TextFieldTemplate.qml
@@ -46,6 +48,7 @@ qt_add_qml_module(appcomtrac
     Ui/RadioButtonTemplate.qml
     Ui/SwitchTemplate.qml
     Ui/SliderTemplate.qml
+
 
 
 )

@@ -68,6 +68,20 @@ namespace _comtrac_Ui_findSymptom_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _comtrac_Ui_editMedication_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _comtrac_Ui_findMedication_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 namespace _comtrac_Ui_StackViewPage_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
@@ -147,6 +161,8 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/SymptomDiary.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_SymptomDiary_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/editSymptom.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_editSymptom_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/findSymptom.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_findSymptom_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/editMedication.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_editMedication_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/findMedication.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_findMedication_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/StackViewPage.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_StackViewPage_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/TextFieldTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_TextFieldTemplate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/ButtonTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_ButtonTemplate_qml::unit);

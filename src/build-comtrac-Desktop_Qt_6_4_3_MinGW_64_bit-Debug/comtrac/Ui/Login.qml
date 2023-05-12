@@ -1,4 +1,5 @@
 import QtQuick
+import QtQuick.Layouts
 import QtQuick.Controls
 
 
@@ -7,24 +8,24 @@ Item{
    // anchors.fill: parent
     property string home_screen: "HomeScreen.qml"
 
-    Loader{
-        id: loader
-    }
 
-    Column{
+    ColumnLayout{
         id: column
         spacing: 4
         anchors.centerIn: parent
-        Rectangle{
 
+
+        Rectangle{
+            Layout.alignment: Qt.AlignCenter
             id: orangeRec
             color: "orange"
-            width: 100
-            height: 100
+            width: 150
+            height: 150
 
         }
 
         TextFieldTemplate{
+            Layout.topMargin: 10
             id: txtUserName
             placeholderText: "Benutzername"
 
@@ -32,6 +33,7 @@ Item{
 
         TextFieldTemplate{
             id: txtPassword
+            echoMode: TextInput.Password
             placeholderText: "Passwort"
 
         }
@@ -48,10 +50,7 @@ Item{
 
 
 
-
     }
-
-
 
 }
 
