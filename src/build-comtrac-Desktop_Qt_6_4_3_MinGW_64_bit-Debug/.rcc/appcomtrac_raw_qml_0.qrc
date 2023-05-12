@@ -19,6 +19,8 @@
     <file alias="Ui/RadioButtonTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/RadioButtonTemplate.qml</file>
     <file alias="Ui/SwitchTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SwitchTemplate.qml</file>
     <file alias="Ui/SliderTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SliderTemplate.qml</file>
+    <file alias="Ui/TimePickerTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/TimePickerTemplate.qml</file>
+    <file alias="Ui/CalendarTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/CalendarTemplate.qml</file>
   </qresource>
 </RCC>
 

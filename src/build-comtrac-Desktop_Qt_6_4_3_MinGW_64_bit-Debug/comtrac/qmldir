@@ -15,4 +15,6 @@ SideMenu 1.0 Ui/SideMenu.qml
 RadioButtonTemplate 1.0 Ui/RadioButtonTemplate.qml
 SwitchTemplate 1.0 Ui/SwitchTemplate.qml
 SliderTemplate 1.0 Ui/SliderTemplate.qml
+TimePickerTemplate 1.0 Ui/TimePickerTemplate.qml
+CalendarTemplate 1.0 Ui/CalendarTemplate.qml
 

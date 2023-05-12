@@ -6,9 +6,8 @@ import QtQuick.Controls
 Item {
     property string find_symptom: "findSymptom.qml"
     //Placeholder for Calendar
-    Rectangle {
-        width: 300
-        height: 300
+    CalendarTemplate{
+        anchors.centerIn: parent
     }
     //nur als Probe
     Button{

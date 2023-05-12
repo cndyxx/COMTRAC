@@ -48,6 +48,8 @@ qt_add_qml_module(appcomtrac
     Ui/RadioButtonTemplate.qml
     Ui/SwitchTemplate.qml
     Ui/SliderTemplate.qml
+    Ui/TimePickerTemplate.qml
+    Ui/CalendarTemplate.qml
 
 
 

@@ -138,6 +138,20 @@ namespace _comtrac_Ui_SliderTemplate_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _comtrac_Ui_TimePickerTemplate_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _comtrac_Ui_CalendarTemplate_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 
 }
 namespace {
@@ -171,6 +185,8 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/RadioButtonTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_RadioButtonTemplate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/SwitchTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_SwitchTemplate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/SliderTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_SliderTemplate_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/TimePickerTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_TimePickerTemplate_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/CalendarTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_CalendarTemplate_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;

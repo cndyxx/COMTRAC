@@ -17,3 +17,5 @@
 /comtrac/Ui/RadioButtonTemplate.qml
 /comtrac/Ui/SwitchTemplate.qml
 /comtrac/Ui/SliderTemplate.qml
+/comtrac/Ui/TimePickerTemplate.qml
+/comtrac/Ui/CalendarTemplate.qml
