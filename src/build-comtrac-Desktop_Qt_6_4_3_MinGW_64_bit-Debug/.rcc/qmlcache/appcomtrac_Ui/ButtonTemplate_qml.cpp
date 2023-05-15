@@ -483,8 +483,8 @@ Q_UNUSED(aotContext)
 Q_UNUSED(argumentsPtr)
 double r11_1;
 QObject *r7_1;
-QJSValue r2_2;
 QVariant r2_3;
+QJSValue r2_2;
 QObject *r2_1;
 QJSValue r10_1;
 // generate_LoadQmlContextPropertyLookup

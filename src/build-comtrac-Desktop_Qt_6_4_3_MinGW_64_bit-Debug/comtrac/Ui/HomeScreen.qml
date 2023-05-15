@@ -3,6 +3,7 @@ import QtQuick.Layouts
 import QtQuick.Controls 2.5
 
 Item {
+
     property string symptom_diary: "SymptomDiary.qml"
     property string medication: "Medication.qml"
     property string chat: "chat.qml"

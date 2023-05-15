@@ -16,6 +16,7 @@ Window {
 
 
     Loader{
+        id: loader
         anchors.centerIn: parent
         source: stack_view
 

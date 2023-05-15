@@ -5,6 +5,7 @@ project(comtrac VERSION 0.1 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 6.4 REQUIRED COMPONENTS Quick)
+find_package(Qt6 REQUIRED COMPONENTS Sql)
 
 
 qt_standard_project_setup()
@@ -21,6 +22,8 @@ qt_add_executable(appcomtrac
     #Models
     Models/loginModel.cpp
     Models/loginModel.h
+    Models/dbManager.h
+    Models/dbManager.cpp
 
 )
 
@@ -66,6 +69,7 @@ set_target_properties(appcomtrac PROPERTIES
 target_link_libraries(appcomtrac
     PRIVATE Qt6::Quick
 )
+target_link_libraries(appcomtrac PRIVATE Qt6::Sql)
 
 install(TARGETS appcomtrac
     BUNDLE DESTINATION .

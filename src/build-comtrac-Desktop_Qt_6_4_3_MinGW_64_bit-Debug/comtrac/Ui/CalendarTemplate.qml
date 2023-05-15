@@ -1,9 +1,47 @@
-import QtQuick 2.15
-import QtQuick.Controls 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Controls.Material 2.15
+//import QtQuick 2.15
+//import QtQuick.Controls 2.15
+//import QtQuick.Layouts 1.15
+//import QtQuick.Controls.Material 2.15
 
 
+import QtQuick 2.0
+import QtQuick.Controls 2.0
+import QtQuick.Layouts 1.0
+
+Rectangle {
+
+
+    GridLayout {
+        id: calendarLayout
+        anchors.top: parent.top
+        columns: 7
+       // spacing: 2
+
+        Repeater {
+            id: daysOfWeek
+            model: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+            Text {
+                text: modelData
+                font.bold: true
+                horizontalAlignment: Text.AlignHCenter
+            }
+        }
+
+        Repeater {
+            id: calendarDays
+            model: 31 // oder die Anzahl der Tage des aktuellen Monats
+            Text {
+                text: modelData
+                Layout.fillWidth: true
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                color: "#000000"
+                opacity: enabled ? 1.0 : 0.3
+            }
+        }
+    }
+}
+/*
 Rectangle {
     id: root
 
@@ -63,11 +101,7 @@ Rectangle {
 
                 RoundButton {
                     id: monthButton
-//                    contentItem: /*MIcon {
-//                        icon: "expand_more"
-//                        color: "black"
-//                        size: 16
-//                    }*/
+//
                     Material.elevation: 0
                     onClicked: {
                         monthMenu.open()
@@ -245,4 +279,4 @@ Rectangle {
         day = Math.min(day, daysInMonth)
         selectedDate = new Date(year, month, day)
     }
-}
+} */

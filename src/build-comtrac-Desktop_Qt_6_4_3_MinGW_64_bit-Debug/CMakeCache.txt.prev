@@ -300,6 +300,9 @@ QT_QMAKE_EXECUTABLE:FILEPATH=C:/Qt/6.4.3/mingw_64/bin/qmake.exe
 //The directory containing a CMake configuration file for Qt5QuickControls2.
 Qt5QuickControls2_DIR:PATH=Qt5QuickControls2_DIR-NOTFOUND
 
+//The directory containing a CMake configuration file for Qt5.
+Qt5_DIR:PATH=Qt5_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for Qt6CoreTools.
 Qt6CoreTools_DIR:PATH=C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6CoreTools
 
@@ -338,6 +341,9 @@ Qt6Qml_DIR:PATH=C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Qml
 
 //The directory containing a CMake configuration file for Qt6Quick.
 Qt6Quick_DIR:PATH=C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Quick
+
+//The directory containing a CMake configuration file for Qt6Sql.
+Qt6Sql_DIR:PATH=C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql
 
 //The directory containing a CMake configuration file for Qt6ZlibPrivate.
 Qt6ZlibPrivate_DIR:PATH=C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6ZlibPrivate
@@ -1072,6 +1078,8 @@ QT_FEATURE_socks5:INTERNAL=ON
 QT_FEATURE_sortfilterproxymodel:INTERNAL=ON
 //Qt feature: sql (from target Qt6::Core)
 QT_FEATURE_sql:INTERNAL=ON
+//Qt feature: sqlmodel (from target Qt6::Sql)
+QT_FEATURE_sqlmodel:INTERNAL=ON
 //Qt feature: sse2 (from target Qt6::Core)
 QT_FEATURE_sse2:INTERNAL=ON
 //Qt feature: sse3 (from target Qt6::Core)

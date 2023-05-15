@@ -3,6 +3,7 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include "Controllers/login.h"
+#include "Models/dbmanager.h"
 
 int main(int argc, char *argv[])
 {
@@ -17,6 +18,8 @@ int main(int argc, char *argv[])
     Login login;
     QQmlContext *ctx = engine.rootContext();
     ctx->setContextProperty("login", &login);
+
+    DbManager database;
 
     engine.load(url);
 
