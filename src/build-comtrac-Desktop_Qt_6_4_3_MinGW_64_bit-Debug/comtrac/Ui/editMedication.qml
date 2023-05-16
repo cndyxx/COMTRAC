@@ -2,7 +2,10 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 
+
+
 Item {
+
 
 
     ColumnLayout {
@@ -28,7 +31,7 @@ Item {
             anchors.topMargin: 10
             anchors.left: parent.left
             font.family: "Arial"
-            font.pixelSize: 17
+            font.pixelSize: 15
             Layout.fillWidth: true
             text: qsTr("Beispiel Medikament")
         }
@@ -39,66 +42,52 @@ Item {
             anchors.left: parent.left
             text: qsTr("Einnahme")
             font.family: "Arial"
-            font.pixelSize: 17
+            font.pixelSize: 23
         }
-        Popup {
-               id: popUpTimePicker
-               width: 200
-               height: 200
-               contentItem:
-                   Text{
-                   id: txtReminderTime
-                   anchors.bottom: row.top
-                   anchors.bottomMargin: 10
-                   text: "Erinnerungszeit"
-                   font.family: "Arial"
-                   font.pixelSize: 17
+        PopupTemplate{
+            id: popup
+        }
 
-               }
-               Row {
-                   id: row
-
-                   anchors.centerIn: popUpTimePicker.centerIn
-                   Tumbler {
-                       id: hoursTumbler
-                       model: 24
-                       delegate: delegateComponent
-                   }
-
-                   Tumbler {
-                       id: minutesTumbler
-                       model: 60
-                       delegate: delegateComponent
-                   }
-               }
-               closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutsideParent
-           }
-        ComboBox{
+        ComboBoxTemplate{
             id: dropDownIntake
             model: ["Einmal am Tag", "Zweimal am Tag", "Dreimal am Tag", "Viermal am Tag"]
             anchors.top: txtIntake.bottom
             anchors.topMargin: 10
             anchors.left: parent.left
-            onActivated: popUpTimePicker.open()
+            onCurrentIndexChanged: {
+               //do something
+            }
 
 
         }
-
+        //Muss sich ändern sobald ein Feld aus der ComboBox geänder hat. Dynamisch erstellen
+        TextFieldTemplate{
+            id: timerOne
+            anchors.top: dropDownIntake.bottom
+            anchors.topMargin: 10
+            anchors.left: parent.left
+        }
+        TextFieldTemplate{
+            id: timerTwo
+            anchors.top: timerOne.bottom
+            anchors.topMargin: 10
+            anchors.left: parent.left
+        }
 
         Text {
             id: txtReminder
-            anchors.top: txtFieldTimer.bottom
+            anchors.top: timerTwo.bottom
             anchors.topMargin: 10
             anchors.left: parent.left
             text: qsTr("Erinnerung")
             font.family: "Arial"
-            font.pixelSize: 17
+            font.pixelSize: 23
         }
         SwitchTemplate{
-            anchors.left: txtFieldTimer.right
+            anchors.left: txtReminder.right
             anchors.top: txtFieldTimer.bottom
             anchors.topMargin: 10
-            anchors.leftMargin: 60
+            anchors.leftMargin: 55
         }
 
         RadioButton{
@@ -126,7 +115,7 @@ Item {
         Button{
             id: buttonAdd
             width: 50
-            font.pixelSize: 12
+            font.pixelSize: 15
             anchors.top: radioButtonTenMinutesBefore.bottom
             anchors.topMargin: 10
             anchors.left: buttonBack.right

@@ -17,4 +17,6 @@ SwitchTemplate 1.0 Ui/SwitchTemplate.qml
 SliderTemplate 1.0 Ui/SliderTemplate.qml
 TimePickerTemplate 1.0 Ui/TimePickerTemplate.qml
 CalendarTemplate 1.0 Ui/CalendarTemplate.qml
+PopupTemplate 1.0 Ui/PopupTemplate.qml
+ComboBoxTemplate 1.0 Ui/ComboBoxTemplate.qml
 

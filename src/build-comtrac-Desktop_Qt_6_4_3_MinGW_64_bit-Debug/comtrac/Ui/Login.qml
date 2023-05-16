@@ -48,7 +48,7 @@ Item{
             onClicked: {
                 login.checkLoginData(txtUserName.text, txtPassword.text)
                 //loader.setSource(home_screen)
-                stackView.replace(home_screen)
+                stackView.push(home_screen)
             }
         }
 

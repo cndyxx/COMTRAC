@@ -19,3 +19,5 @@
 /comtrac/Ui/SliderTemplate.qml
 /comtrac/Ui/TimePickerTemplate.qml
 /comtrac/Ui/CalendarTemplate.qml
+/comtrac/Ui/PopupTemplate.qml
+/comtrac/Ui/ComboBoxTemplate.qml

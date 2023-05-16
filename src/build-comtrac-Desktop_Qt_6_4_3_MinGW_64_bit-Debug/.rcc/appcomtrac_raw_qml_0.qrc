@@ -21,6 +21,8 @@
     <file alias="Ui/SliderTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SliderTemplate.qml</file>
     <file alias="Ui/TimePickerTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/TimePickerTemplate.qml</file>
     <file alias="Ui/CalendarTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/CalendarTemplate.qml</file>
+    <file alias="Ui/PopupTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/PopupTemplate.qml</file>
+    <file alias="Ui/ComboBoxTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/ComboBoxTemplate.qml</file>
   </qresource>
 </RCC>
 
