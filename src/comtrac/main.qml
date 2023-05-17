@@ -5,13 +5,12 @@ import QtQuick.Window
 
 
 
-Window {
+ApplicationWindow {
     id: root
     width: 250
     height: 500
     visible: true
     title: qsTr("COMTRAC")
-
     property string stack_view: "Ui/StackViewPage.qml"
 
 

@@ -6,6 +6,8 @@ import QtQuick.Controls
 Item {
     property string find_symptom: "findSymptom.qml"
     //Placeholder for Calendar
+    Header{
+    }
     CalendarTemplate{
         anchors.centerIn: parent
     }
