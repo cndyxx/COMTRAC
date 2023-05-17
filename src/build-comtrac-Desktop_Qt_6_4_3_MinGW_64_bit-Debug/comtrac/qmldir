@@ -1,7 +1,7 @@
 module comtrac
 typeinfo appcomtrac.qmltypes
 prefer :/comtrac/
-Main 1.0 Main.qml
+Main 1.0 Ui/Main.qml
 HomeScreen 1.0 Ui/HomeScreen.qml
 Login 1.0 Ui/Login.qml
 Medication 1.0 Ui/Medication.qml
@@ -12,6 +12,7 @@ StackViewPage 1.0 Ui/StackViewPage.qml
 TextFieldTemplate 1.0 Ui/TextFieldTemplate.qml
 ButtonTemplate 1.0 Ui/ButtonTemplate.qml
 SideMenu 1.0 Ui/SideMenu.qml
+HeaderTemplate 1.0 Ui/HeaderTemplate.qml
 RadioButtonTemplate 1.0 Ui/RadioButtonTemplate.qml
 SwitchTemplate 1.0 Ui/SwitchTemplate.qml
 SliderTemplate 1.0 Ui/SliderTemplate.qml
@@ -19,4 +20,5 @@ TimePickerTemplate 1.0 Ui/TimePickerTemplate.qml
 CalendarTemplate 1.0 Ui/CalendarTemplate.qml
 PopupTemplate 1.0 Ui/PopupTemplate.qml
 ComboBoxTemplate 1.0 Ui/ComboBoxTemplate.qml
+RoundButtonTemplate 1.0 Ui/RoundButtonTemplate.qml
 

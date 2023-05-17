@@ -5,7 +5,7 @@
 #include <QtCore/qstring.h>
 
 namespace QmlCacheGeneratedCode {
-namespace _comtrac_Main_qml { 
+namespace _comtrac_Ui_Main_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
     const QQmlPrivate::CachedQmlUnit unit = {
@@ -110,7 +110,7 @@ namespace _comtrac_Ui_SideMenu_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
-namespace _comtrac_Ui_header_qml { 
+namespace _comtrac_Ui_HeaderTemplate_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
     const QQmlPrivate::CachedQmlUnit unit = {
@@ -166,6 +166,13 @@ namespace _comtrac_Ui_ComboBoxTemplate_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _comtrac_Ui_RoundButtonTemplate_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 
 }
 namespace {
@@ -180,7 +187,7 @@ Q_GLOBAL_STATIC(Registry, unitRegistry)
 
 
 Registry::Registry() {
-    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Main.qml"), &QmlCacheGeneratedCode::_comtrac_Main_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Main.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Main_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/HomeScreen.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_HomeScreen_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Login.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Login_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Medication.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Medication_qml::unit);
@@ -195,7 +202,7 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/TextFieldTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_TextFieldTemplate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/ButtonTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_ButtonTemplate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/SideMenu.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_SideMenu_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/header.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_header_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/HeaderTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_HeaderTemplate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/RadioButtonTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_RadioButtonTemplate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/SwitchTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_SwitchTemplate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/SliderTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_SliderTemplate_qml::unit);
@@ -203,6 +210,7 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/CalendarTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_CalendarTemplate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/PopupTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_PopupTemplate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/ComboBoxTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_ComboBoxTemplate_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/RoundButtonTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_RoundButtonTemplate_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;

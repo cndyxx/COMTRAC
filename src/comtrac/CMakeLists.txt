@@ -32,7 +32,8 @@ qt_add_executable(appcomtrac
 qt_add_qml_module(appcomtrac
     URI comtrac
     VERSION 1.0
-    QML_FILES Main.qml
+    QML_FILES
+    Ui/Main.qml
     #Pages
     Ui/HomeScreen.qml
     Ui/Login.qml
@@ -49,7 +50,7 @@ qt_add_qml_module(appcomtrac
     Ui/TextFieldTemplate.qml
     Ui/ButtonTemplate.qml
     Ui/SideMenu.qml
-    Ui/header.qml
+    Ui/HeaderTemplate.qml
     Ui/RadioButtonTemplate.qml
     Ui/SwitchTemplate.qml
     Ui/SliderTemplate.qml
@@ -57,6 +58,10 @@ qt_add_qml_module(appcomtrac
     Ui/CalendarTemplate.qml
     Ui/PopupTemplate.qml
     Ui/ComboBoxTemplate.qml
+    Ui/RoundButtonTemplate.qml
+
+    RESOURCES
+    assets/menu.png
 
 
 

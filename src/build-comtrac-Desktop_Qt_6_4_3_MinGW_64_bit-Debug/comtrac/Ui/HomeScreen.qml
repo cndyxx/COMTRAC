@@ -6,8 +6,6 @@ import QtQuick.Controls
 
 Page {
     id: homeScreen
-    height: parent.height
-    width: parent.width
 
     property string symptom_diary: "SymptomDiary.qml"
     property string medication: "Medication.qml"
@@ -32,14 +30,14 @@ Page {
             text: "Symptomtagebuch"
             Layout.topMargin: 10
             onClicked: {
-                stackView.replace(symptom_diary)
+                stackView.push(symptom_diary)
             }
         }
         ButtonTemplate{
             id: medicationButton
             text: "Medikation"
             onClicked: {
-                stackView.replace(medication)
+                stackView.push(medication)
             }
 
         }

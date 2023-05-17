@@ -1,6 +1,6 @@
 <RCC>
   <qresource prefix="/comtrac/">
-    <file alias="Main.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Main.qml</file>
+    <file alias="Ui/Main.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Main.qml</file>
     <file alias="Ui/HomeScreen.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/HomeScreen.qml</file>
     <file alias="Ui/Login.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Login.qml</file>
     <file alias="Ui/Medication.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Medication.qml</file>
@@ -15,7 +15,7 @@
     <file alias="Ui/TextFieldTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/TextFieldTemplate.qml</file>
     <file alias="Ui/ButtonTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/ButtonTemplate.qml</file>
     <file alias="Ui/SideMenu.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SideMenu.qml</file>
-    <file alias="Ui/header.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/header.qml</file>
+    <file alias="Ui/HeaderTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/HeaderTemplate.qml</file>
     <file alias="Ui/RadioButtonTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/RadioButtonTemplate.qml</file>
     <file alias="Ui/SwitchTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SwitchTemplate.qml</file>
     <file alias="Ui/SliderTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SliderTemplate.qml</file>
@@ -23,6 +23,8 @@
     <file alias="Ui/CalendarTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/CalendarTemplate.qml</file>
     <file alias="Ui/PopupTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/PopupTemplate.qml</file>
     <file alias="Ui/ComboBoxTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/ComboBoxTemplate.qml</file>
+    <file alias="Ui/RoundButtonTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/RoundButtonTemplate.qml</file>
+    <file alias="assets/menu.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/menu.png</file>
   </qresource>
 </RCC>
 

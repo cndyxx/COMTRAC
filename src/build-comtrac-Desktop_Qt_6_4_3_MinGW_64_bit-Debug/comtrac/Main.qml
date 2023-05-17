@@ -13,6 +13,17 @@ ApplicationWindow {
     title: qsTr("COMTRAC")
     property string stack_view: "Ui/StackViewPage.qml"
 
+    header: Rectangle{
+        color: "green"
+        width: parent.width
+        height: parent.height / 12
+
+    }
+    footer: Rectangle{
+        color: "dimgrey"
+        width: parent.width
+        height: parent.height / 12
+    }
 
     Loader{
         id: loader

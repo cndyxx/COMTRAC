@@ -1,4 +1,4 @@
-/comtrac/Main.qml
+/comtrac/Ui/Main.qml
 /comtrac/Ui/HomeScreen.qml
 /comtrac/Ui/Login.qml
 /comtrac/Ui/Medication.qml
@@ -13,7 +13,7 @@
 /comtrac/Ui/TextFieldTemplate.qml
 /comtrac/Ui/ButtonTemplate.qml
 /comtrac/Ui/SideMenu.qml
-/comtrac/Ui/header.qml
+/comtrac/Ui/HeaderTemplate.qml
 /comtrac/Ui/RadioButtonTemplate.qml
 /comtrac/Ui/SwitchTemplate.qml
 /comtrac/Ui/SliderTemplate.qml
@@ -21,3 +21,4 @@
 /comtrac/Ui/CalendarTemplate.qml
 /comtrac/Ui/PopupTemplate.qml
 /comtrac/Ui/ComboBoxTemplate.qml
+/comtrac/Ui/RoundButtonTemplate.qml

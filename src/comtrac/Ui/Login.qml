@@ -4,10 +4,10 @@ import QtQuick.Controls
 
 
 
-Item{
-
+Page {
 
     property string home_screen: "HomeScreen.qml"
+
 
 
     ColumnLayout{

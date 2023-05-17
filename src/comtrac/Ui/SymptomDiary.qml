@@ -3,20 +3,45 @@ import QtQuick.Controls
 
 
 
-Item {
+Page {
+    width: 250
+    height: 500
     property string find_symptom: "findSymptom.qml"
     //Placeholder for Calendar
-    Header{
+    HeaderTemplate{
+        header.txtHeader.text: "Test"
+//        Text {
+//            id: txtHeader
+//            text: "Symptomtagebuch"
+//            font.pixelSize: 17
+//            font.family: "Arial"
+//            font.weight: Font.Thin
+//            color: "dimgrey"
+//        }
+    }
 
-    }
-    CalendarTemplate{
-        anchors.centerIn: parent
-    }
     //nur als Probe
-    Button{
-        text: "Symptom hinzufügen"
+    RoundButton{
+        text: "\u254B" //unicode Character '+'
+        anchors {
+            bottom: parent.bottom
+            bottomMargin: 50
+            right: parent.right
+            rightMargin: 10
+        }
         onClicked: {
-            stackView.replace(find_symptom)
+            stackView.push(find_symptom)
+        }
+    }
+    RoundButton{
+        anchors {
+            bottom: parent.bottom
+            bottomMargin: 50
+            left: parent.left
+            leftMargin: 10
+        }
+        onClicked: {
+
         }
     }
     //Symptom list

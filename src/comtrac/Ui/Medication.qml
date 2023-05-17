@@ -2,14 +2,24 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 
-Item {
-
+Page {
+    id: medication
+    width: 250
+    height: 500
+    anchors.centerIn: parent
     property string find_medication: "findMedication.qml"
-    ColumnLayout{
+
+    HeaderTemplate{
+        id: headerMedication
+        pageTitle: "Medikation"
+        anchors.top: parent.top
         anchors.horizontalCenter: parent.horizontalCenter
-        anchors.top: parent.bottom
-        anchors.topMargin: -200
-        anchors.bottomMargin: 60
+
+    }
+    ColumnLayout {
+        anchors.centerIn: parent
+        anchors.top: headerMedication.bottom
+        anchors.topMargin: 10
         spacing: 4
 
         Rectangle{
@@ -18,25 +28,20 @@ Item {
             color: "orange"
             width: 200
             height: 200
+            radius: 20
         }
         ButtonTemplate{
-            Layout.topMargin: 100
+            Layout.topMargin: 80
             id: addMedication
             text: "Medikament hinzufügen"
-            Layout.alignment: Qt.AlignBottom
-
-            //anchors.bottom: parent
-           // anchors.horizontalCenter: parent.horizontalCenter
             onClicked: {
-                stackView.replace(find_medication)
+                stackView.push(find_medication)
             }
         }
 
         ButtonTemplate{
             id: medicationPlan
             text: "Mediaktionsplan"
-            anchors.bottom: parent
-            anchors.horizontalCenter: parent.horizontalCenter
             onClicked: {
 
             }
