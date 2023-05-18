@@ -7,6 +7,7 @@ Item {
     StackView {
         id: stackView
         anchors.fill: parent     
-        initialItem: login_page
+        initialItem: login_page       
+
     }
 }

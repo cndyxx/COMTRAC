@@ -641,6 +641,18 @@
 			"MU",
 			"25IR5XJDBU/moc_loginmodel.cpp",
 			null
+		],
+		[
+			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medicationmodel.h",
+			"MU",
+			"25IR5XJDBU/moc_medicationmodel.cpp",
+			null
+		],
+		[
+			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptommodel.h",
+			"MU",
+			"25IR5XJDBU/moc_symptommodel.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -728,6 +740,7 @@
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/HomeScreen_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Login_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Main_qml.cpp",
+		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/MedicationPlan_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Medication_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/PopupTemplate_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/RadioButtonTemplate_qml.cpp",
@@ -789,6 +802,16 @@
 			null
 		],
 		[
+			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medicationmodel.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptommodel.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/main.cpp",
 			"MU",
 			null
@@ -806,6 +829,7 @@
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/HomeScreen_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Login_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Main_qml.cpp",
+		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/MedicationPlan_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Medication_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/PopupTemplate_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/RadioButtonTemplate_qml.cpp",

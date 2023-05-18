@@ -9,7 +9,7 @@ Page {
     property string find_symptom: "findSymptom.qml"
     //Placeholder for Calendar
     HeaderTemplate{
-        header.txtHeader.text: "Test"
+
 //        Text {
 //            id: txtHeader
 //            text: "Symptomtagebuch"

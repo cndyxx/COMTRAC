@@ -43,6 +43,7 @@ Page {
             id: medicationPlan
             text: "Mediaktionsplan"
             onClicked: {
+                stackView.push("MedicationPlan.qml")
 
             }
         }

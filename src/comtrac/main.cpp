@@ -2,8 +2,12 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <QQmlComponent>
 #include "Controllers/login.h"
 #include "Models/dbmanager.h"
+
+#include "Models/medicationmodel.h"
+#include "Controllers/medication.h"
 
 int main(int argc, char *argv[])
 {
@@ -15,9 +19,18 @@ int main(int argc, char *argv[])
         &app, []() { QCoreApplication::exit(-1); },
         Qt::QueuedConnection);
 
+    //Verknüpfung zwischen QML und C++-Model
+
+   // qmlRegisterType<MedicationModel>("Medication", 1, 0, "MedicationModel");
+    qmlRegisterUncreatableType<Medication>("Medication", 1, 0, "MedicationList",
+                                           QStringLiteral("MedicationList should not be created in QML"));
+
     Login login;
     QQmlContext *ctx = engine.rootContext();
     ctx->setContextProperty("login", &login);
+
+    MedicationModel *model = new MedicationModel();
+    engine.rootContext()->setContextProperty("medModel", model);
 
     DbManager database;
 

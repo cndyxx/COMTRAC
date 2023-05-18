@@ -9,6 +9,7 @@
 /comtrac/Ui/findSymptom.qml
 /comtrac/Ui/editMedication.qml
 /comtrac/Ui/findMedication.qml
+/comtrac/Ui/MedicationPlan.qml
 /comtrac/Ui/StackViewPage.qml
 /comtrac/Ui/TextFieldTemplate.qml
 /comtrac/Ui/ButtonTemplate.qml

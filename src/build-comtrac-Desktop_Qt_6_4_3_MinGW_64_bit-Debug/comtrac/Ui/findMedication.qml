@@ -4,12 +4,13 @@ import QtQuick.Controls
 Page {
     property string edit_medication: "editMedication.qml"
 
-    HeaderTemplate{
-        pageTitle: "Medikation"
-        anchors.top: parent.top
-        anchors.horizontalCenter: parent.horizontalCenter
+//    HeaderTemplate{
+//        pageTitle: "Medikation"
+//        anchors.top: parent.top
+//        anchors.horizontalCenter: parent.horizontalCenter
 
-    }
+//    }
+    header.visible: true
     TextFieldTemplate{
         anchors.topMargin: 5
         anchors.centerIn: parent

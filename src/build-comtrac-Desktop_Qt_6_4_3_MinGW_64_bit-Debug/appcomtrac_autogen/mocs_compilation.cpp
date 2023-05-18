@@ -2,3 +2,5 @@
 #include "XUX5SSWLF5/moc_login.cpp"
 #include "XUX5SSWLF5/moc_medication.cpp"
 #include "XUX5SSWLF5/moc_symptomdiary.cpp"
+#include "25IR5XJDBU/moc_medicationmodel.cpp"
+#include "25IR5XJDBU/moc_symptommodel.cpp"

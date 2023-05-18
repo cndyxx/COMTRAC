@@ -11,6 +11,7 @@
     <file alias="Ui/findSymptom.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/findSymptom.qml</file>
     <file alias="Ui/editMedication.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/editMedication.qml</file>
     <file alias="Ui/findMedication.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/findMedication.qml</file>
+    <file alias="Ui/MedicationPlan.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/MedicationPlan.qml</file>
     <file alias="Ui/StackViewPage.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/StackViewPage.qml</file>
     <file alias="Ui/TextFieldTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/TextFieldTemplate.qml</file>
     <file alias="Ui/ButtonTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/ButtonTemplate.qml</file>

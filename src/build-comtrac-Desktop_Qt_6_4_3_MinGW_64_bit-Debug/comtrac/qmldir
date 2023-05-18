@@ -8,6 +8,7 @@ Medication 1.0 Ui/Medication.qml
 Chat 1.0 Ui/Chat.qml
 VideoTelephony 1.0 Ui/VideoTelephony.qml
 SymptomDiary 1.0 Ui/SymptomDiary.qml
+MedicationPlan 1.0 Ui/MedicationPlan.qml
 StackViewPage 1.0 Ui/StackViewPage.qml
 TextFieldTemplate 1.0 Ui/TextFieldTemplate.qml
 ButtonTemplate 1.0 Ui/ButtonTemplate.qml

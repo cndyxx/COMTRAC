@@ -26,6 +26,10 @@ qt_add_executable(appcomtrac
     Models/loginModel.h
     Models/dbManager.h
     Models/dbManager.cpp
+    Models/medicationModel.cpp
+    Models/medicationModel.h
+    Models/symptommodel.h
+    Models/symptommodel.cpp
 
 )
 
@@ -45,6 +49,7 @@ qt_add_qml_module(appcomtrac
     Ui/findSymptom.qml
     Ui/editMedication.qml
     Ui/findMedication.qml
+    Ui/MedicationPlan.qml
     #elements
     Ui/StackViewPage.qml
     Ui/TextFieldTemplate.qml
