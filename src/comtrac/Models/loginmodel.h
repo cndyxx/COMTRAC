@@ -3,7 +3,7 @@
 #define LOGINMODEL_H
 
 
-
+#include <QtSql/QSql>
 
 class LoginModel
 {

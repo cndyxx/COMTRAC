@@ -1,0 +1,17 @@
+{
+    "classes": [
+        {
+            "className": "SymptomModel",
+            "object": true,
+            "qualifiedClassName": "SymptomModel",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QSqlQueryModel"
+                }
+            ]
+        }
+    ],
+    "inputFile": "symptommodel.h",
+    "outputRevision": 68
+}

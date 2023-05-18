@@ -5,17 +5,28 @@ import QtQuick.Window
 
 
 
-Window {
+ApplicationWindow {
     id: root
     width: 250
     height: 500
     visible: true
     title: qsTr("COMTRAC")
-
     property string stack_view: "Ui/StackViewPage.qml"
 
+    header: Rectangle{
+        color: "green"
+        width: parent.width
+        height: parent.height / 12
+
+    }
+    footer: Rectangle{
+        color: "dimgrey"
+        width: parent.width
+        height: parent.height / 12
+    }
 
     Loader{
+        id: loader
         anchors.centerIn: parent
         source: stack_view
 

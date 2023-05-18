@@ -4,6 +4,23 @@
             "className": "Medication",
             "object": true,
             "qualifiedClassName": "Medication",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "medicationAdded",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "medicationRemoved",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "medicationUpdated",
+                    "returnType": "void"
+                }
+            ],
             "slots": [
                 {
                     "access": "public",
@@ -14,6 +31,29 @@
                         }
                     ],
                     "name": "readMedication",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "name",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "intakePerDay",
+                            "type": "int"
+                        },
+                        {
+                            "name": "intakeTimes",
+                            "type": "QList<QTime>"
+                        },
+                        {
+                            "name": "reminderTime",
+                            "type": "QTime"
+                        }
+                    ],
+                    "name": "addMedication",
                     "returnType": "void"
                 }
             ],

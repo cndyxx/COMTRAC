@@ -1,0 +1,58 @@
+{
+    "classes": [
+        {
+            "className": "MedicationModel",
+            "object": true,
+            "qualifiedClassName": "MedicationModel",
+            "slots": [
+                {
+                    "access": "public",
+                    "name": "updateModel",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "row",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "getId",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "name",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "intakePerDay",
+                            "type": "int"
+                        },
+                        {
+                            "name": "intakeTimes",
+                            "type": "QList<QTime>"
+                        },
+                        {
+                            "name": "reminderTime",
+                            "type": "QTime"
+                        }
+                    ],
+                    "name": "addMedication",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QSqlQueryModel"
+                }
+            ]
+        }
+    ],
+    "inputFile": "medicationmodel.h",
+    "outputRevision": 68
+}

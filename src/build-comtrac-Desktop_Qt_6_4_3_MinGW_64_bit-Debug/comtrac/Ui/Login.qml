@@ -4,15 +4,19 @@ import QtQuick.Controls
 
 
 
-Item{
-   // anchors.fill: parent
+Page {
+
     property string home_screen: "HomeScreen.qml"
+
 
 
     ColumnLayout{
         id: column
         spacing: 4
-        anchors.centerIn: parent
+        anchors {
+            horizontalCenter: parent.horizontalCenter
+            verticalCenter: parent.verticalCenter
+        }
 
 
         Rectangle{
@@ -44,7 +48,7 @@ Item{
             onClicked: {
                 login.checkLoginData(txtUserName.text, txtPassword.text)
                 //loader.setSource(home_screen)
-                stackView.replace(home_screen)
+                stackView.push(home_screen)
             }
         }
 

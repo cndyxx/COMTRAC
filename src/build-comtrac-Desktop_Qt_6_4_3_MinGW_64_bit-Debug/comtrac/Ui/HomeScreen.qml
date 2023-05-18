@@ -1,12 +1,18 @@
+import QtCore
 import QtQuick
 import QtQuick.Layouts
-import QtQuick.Controls 2.5
+import QtQuick.Controls
 
-Item {
+
+Page {
+    id: homeScreen
+
     property string symptom_diary: "SymptomDiary.qml"
     property string medication: "Medication.qml"
     property string chat: "chat.qml"
     property string vidoe_telephony: "VideoTelephony.qml"
+
+    property string stack_view: "Ui/StackViewPage.qml"
 
 
     ColumnLayout{
@@ -24,14 +30,14 @@ Item {
             text: "Symptomtagebuch"
             Layout.topMargin: 10
             onClicked: {
-                stackView.replace(symptom_diary)
+                stackView.push(symptom_diary)
             }
         }
         ButtonTemplate{
             id: medicationButton
             text: "Medikation"
             onClicked: {
-                stackView.replace(medication)
+                stackView.push(medication)
             }
 
         }
@@ -51,5 +57,6 @@ Item {
 
         }
     }
+
 
 }

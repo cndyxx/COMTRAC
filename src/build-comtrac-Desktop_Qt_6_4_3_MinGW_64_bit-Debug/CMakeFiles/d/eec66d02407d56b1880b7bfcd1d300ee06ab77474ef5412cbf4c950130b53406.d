@@ -1,6 +1,10 @@
 appcomtrac_autogen/timestamp: \
+  C:/Qt/6.4.3/mingw_64/include/QtCore/QDateTime \
   C:/Qt/6.4.3/mingw_64/include/QtCore/QDebug \
   C:/Qt/6.4.3/mingw_64/include/QtCore/QObject \
+  C:/Qt/6.4.3/mingw_64/include/QtCore/QTime \
+  C:/Qt/6.4.3/mingw_64/include/QtCore/QVector \
+  C:/Qt/6.4.3/mingw_64/include/QtCore/qabstractitemmodel.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qalgorithms.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qanystringview.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qarraydata.h \
@@ -14,6 +18,7 @@ appcomtrac_autogen/timestamp: \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qbytearrayalgorithms.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qbytearraylist.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qbytearrayview.h \
+  C:/Qt/6.4.3/mingw_64/include/QtCore/qcalendar.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qchar.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qcompare.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qcompare_impl.h \
@@ -24,6 +29,7 @@ appcomtrac_autogen/timestamp: \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qcontainertools_impl.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qcontiguouscache.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qdatastream.h \
+  C:/Qt/6.4.3/mingw_64/include/QtCore/qdatetime.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qdebug.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qflags.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qforeach.h \
@@ -36,6 +42,7 @@ appcomtrac_autogen/timestamp: \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qiterable.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qiterator.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qlist.h \
+  C:/Qt/6.4.3/mingw_64/include/QtCore/qlocale.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qlogging.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qmap.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qmath.h \
@@ -76,8 +83,19 @@ appcomtrac_autogen/timestamp: \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qtmetamacros.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qtypeinfo.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qutf8stringview.h \
+  C:/Qt/6.4.3/mingw_64/include/QtCore/qvariant.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qvarlengtharray.h \
+  C:/Qt/6.4.3/mingw_64/include/QtCore/qvector.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qversiontagging.h \
+  C:/Qt/6.4.3/mingw_64/include/QtSql/QSqlDatabase \
+  C:/Qt/6.4.3/mingw_64/include/QtSql/QSqlQuery \
+  C:/Qt/6.4.3/mingw_64/include/QtSql/QSqlQueryModel \
+  C:/Qt/6.4.3/mingw_64/include/QtSql/qsqldatabase.h \
+  C:/Qt/6.4.3/mingw_64/include/QtSql/qsqlquery.h \
+  C:/Qt/6.4.3/mingw_64/include/QtSql/qsqlquerymodel.h \
+  C:/Qt/6.4.3/mingw_64/include/QtSql/qtsql-config.h \
+  C:/Qt/6.4.3/mingw_64/include/QtSql/qtsqlexports.h \
+  C:/Qt/6.4.3/mingw_64/include/QtSql/qtsqlglobal.h \
   C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6/FindWrapAtomic.cmake \
   C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake \
   C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6/Qt6Config.cmake \
@@ -452,6 +470,27 @@ appcomtrac_autogen/timestamp: \
   C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Quick/Qt6QuickTargets-relwithdebinfo.cmake \
   C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Quick/Qt6QuickTargets.cmake \
   C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Quick/Qt6QuickVersionlessTargets.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginAdditionalTargetInfo.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginConfig.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets-relwithdebinfo.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginAdditionalTargetInfo.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginConfig.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets-relwithdebinfo.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginAdditionalTargetInfo.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginConfig.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets-relwithdebinfo.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlAdditionalTargetInfo.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlConfig.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlConfigVersion.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlConfigVersionImpl.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlDependencies.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlPlugins.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlTargets-relwithdebinfo.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlTargets.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlVersionlessTargets.cmake \
   C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateAdditionalTargetInfo.cmake \
   C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateConfig.cmake \
   C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateConfigVersion.cmake \
@@ -717,7 +756,13 @@ appcomtrac_autogen/timestamp: \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/medication.h \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/symptomdiary.cpp \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/symptomdiary.h \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/dbmanager.cpp \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/dbmanager.h \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/loginmodel.cpp \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/loginmodel.h \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medicationmodel.cpp \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medicationmodel.h \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptommodel.cpp \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptommodel.h \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/main.cpp \
   C:/Qt/Tools/CMake_64/bin/cmake.exe

@@ -3,9 +3,11 @@ import QtQuick.Controls
 
 Item {
     property string login_page: "Login.qml"
-    StackView{
+
+    StackView {
         id: stackView
-        initialItem: login_page
+        anchors.fill: parent     
+        initialItem: login_page       
 
     }
 }
