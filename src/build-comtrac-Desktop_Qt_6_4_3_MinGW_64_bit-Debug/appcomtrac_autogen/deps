@@ -754,8 +754,6 @@ appcomtrac_autogen/timestamp: \
 	C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/login.h \
 	C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/medication.cpp \
 	C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/medication.h \
-	C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/symptomdiary.cpp \
-	C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/symptomdiary.h \
 	C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/dbmanager.cpp \
 	C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/dbmanager.h \
 	C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/loginmodel.cpp \

@@ -15,8 +15,6 @@ qt_standard_project_setup()
 qt_add_executable(appcomtrac
     main.cpp
     #Controllers
-    Controllers/symptomdiary.cpp
-    Controllers/symptomdiary.h
     Controllers/login.cpp
     Controllers/login.h
     Controllers/medication.cpp
@@ -42,8 +40,6 @@ qt_add_qml_module(appcomtrac
     Ui/HomeScreen.qml
     Ui/Login.qml
     Ui/Medication.qml
-    Ui/Chat.qml
-    Ui/VideoTelephony.qml
     Ui/SymptomDiary.qml
     Ui/editSymptom.qml
     Ui/findSymptom.qml
@@ -51,26 +47,26 @@ qt_add_qml_module(appcomtrac
     Ui/findMedication.qml
     Ui/MedicationPlan.qml
     #elements
-    Ui/StackViewPage.qml
-    Ui/TextFieldTemplate.qml
-    Ui/ButtonTemplate.qml
-    Ui/SideMenu.qml
-    Ui/HeaderTemplate.qml
-    Ui/RadioButtonTemplate.qml
-    Ui/SwitchTemplate.qml
-    Ui/SliderTemplate.qml
-    Ui/TimePickerTemplate.qml
-    Ui/CalendarTemplate.qml
-    Ui/PopupTemplate.qml
-    Ui/ComboBoxTemplate.qml
-    Ui/RoundButtonTemplate.qml
+    Ui/Components/StackViewPage.qml
+    Ui/Components/Background.qml
+    Ui/Components/TextFieldTemplate.qml
+    Ui/Components/ButtonTemplate.qml
+    Ui/Components/SideMenu.qml
+    Ui/Components/RadioButtonTemplate.qml
+    Ui/Components/SwitchTemplate.qml
+    Ui/Components/SliderTemplate.qml
+    Ui/Components/HeaderTemplate.qml
+    Ui/Components/TimePickerTemplate.qml
+    Ui/Components/CalendarTemplate.qml
+    Ui/Components/PopupTemplate.qml
+    Ui/Components/ComboBoxTemplate.qml
+    Ui/Components/RoundButtonTemplate.qml
+    Ui/Components/IconButton.qml
 
     RESOURCES
     assets/menu.png
-
-
-
 )
+
 
 set_target_properties(appcomtrac PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com

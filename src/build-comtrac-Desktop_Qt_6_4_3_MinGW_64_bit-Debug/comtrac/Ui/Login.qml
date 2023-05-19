@@ -1,14 +1,10 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
+import "./Components"
 
 
-
-Page {
-
-    property string home_screen: "HomeScreen.qml"
-
-
+Item {
 
     ColumnLayout{
         id: column
@@ -17,7 +13,6 @@ Page {
             horizontalCenter: parent.horizontalCenter
             verticalCenter: parent.verticalCenter
         }
-
 
         Rectangle{
             Layout.alignment: Qt.AlignCenter
@@ -48,13 +43,13 @@ Page {
             onClicked: {
                 login.checkLoginData(txtUserName.text, txtPassword.text)
                 //loader.setSource(home_screen)
-                stackView.push(home_screen)
+                stackView.push("HomeScreen.qml")
             }
         }
 
-
-
     }
+
+
 
 }
 

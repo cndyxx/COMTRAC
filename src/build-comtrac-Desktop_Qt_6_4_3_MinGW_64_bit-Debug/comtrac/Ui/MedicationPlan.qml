@@ -3,17 +3,19 @@ import QtQuick.Controls
 import QtQuick.Layouts
 
 //import Medication 1.0
+import "./Components"
 
-
-Page {
-    width: 250
-    height: 500
+Item {
+    width: parent.width
+    height: parent.height
     title: "Medikationsplan"
 
     function test(){
         console.log(medModel.name + " - " + medModel.intakePerDay);
     }
 
+    Background { id: background}
+    HeaderTemplate { id: header; pageTitle: "Medikationsplan"}
 
     ListView {
         width: parent.width

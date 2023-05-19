@@ -1,20 +1,14 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import "./Components"
 
 Page {
     id: medication
-    width: 250
-    height: 500
-    anchors.centerIn: parent
-    property string find_medication: "findMedication.qml"
-
+    Background { id: background}
     HeaderTemplate{
         id: headerMedication
         pageTitle: "Medikation"
-        anchors.top: parent.top
-        anchors.horizontalCenter: parent.horizontalCenter
-
     }
     ColumnLayout {
         anchors.centerIn: parent
@@ -35,7 +29,7 @@ Page {
             id: addMedication
             text: "Medikament hinzufügen"
             onClicked: {
-                stackView.push(find_medication)
+                stackView.push("findMedication.qml")
             }
         }
 

@@ -3,7 +3,7 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 
-
+import "./Components"
 Page {
     id: homeScreen
 
@@ -14,7 +14,6 @@ Page {
 
     property string stack_view: "Ui/StackViewPage.qml"
 
-
     ColumnLayout{
         anchors.centerIn: parent
         Rectangle{
@@ -23,7 +22,6 @@ Page {
             color: "orange"
             width: 150
             height: 150
-
         }
         ButtonTemplate{
             id: symptomDiaryButton
