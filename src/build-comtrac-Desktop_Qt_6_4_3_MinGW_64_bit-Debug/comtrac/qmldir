@@ -22,4 +22,5 @@ PopupTemplate 1.0 Ui/Components/PopupTemplate.qml
 ComboBoxTemplate 1.0 Ui/Components/ComboBoxTemplate.qml
 RoundButtonTemplate 1.0 Ui/Components/RoundButtonTemplate.qml
 IconButton 1.0 Ui/Components/IconButton.qml
+IntakeTimeList 1.0 Ui/Components/IntakeTimeList.qml
 

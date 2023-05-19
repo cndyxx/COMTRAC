@@ -180,6 +180,13 @@ namespace _comtrac_Ui_Components_IconButton_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _comtrac_Ui_Components_IntakeTimeList_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 
 }
 namespace {
@@ -219,6 +226,7 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/ComboBoxTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_ComboBoxTemplate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/RoundButtonTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_RoundButtonTemplate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/IconButton.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_IconButton_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/IntakeTimeList.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_IntakeTimeList_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;

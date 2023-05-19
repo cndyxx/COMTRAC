@@ -14,6 +14,7 @@ Page {
 
     property string stack_view: "Ui/StackViewPage.qml"
 
+    Background{ id: background}
     ColumnLayout{
         anchors.centerIn: parent
         Rectangle{

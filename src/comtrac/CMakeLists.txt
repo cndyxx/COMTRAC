@@ -62,6 +62,7 @@ qt_add_qml_module(appcomtrac
     Ui/Components/ComboBoxTemplate.qml
     Ui/Components/RoundButtonTemplate.qml
     Ui/Components/IconButton.qml
+    Ui/Components/IntakeTimeList.qml
 
     RESOURCES
     assets/menu.png

@@ -25,6 +25,7 @@
     <file alias="Ui/Components/ComboBoxTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/ComboBoxTemplate.qml</file>
     <file alias="Ui/Components/RoundButtonTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/RoundButtonTemplate.qml</file>
     <file alias="Ui/Components/IconButton.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/IconButton.qml</file>
+    <file alias="Ui/Components/IntakeTimeList.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/IntakeTimeList.qml</file>
     <file alias="assets/menu.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/menu.png</file>
   </qresource>
 </RCC>
