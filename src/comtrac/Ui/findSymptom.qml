@@ -1,16 +1,14 @@
 import QtQuick
 import "./Components"
+
 Item {
-    property string edit_symptom: "editSymptom.qml"
-    TextFieldTemplate{
-        anchors.centerIn: parent
-        placeholderText: "Hier eingeben"
+    anchors.centerIn: parent.centerIn
+    SearchTemplate {
 
-        //***ÄNDERN ANDERES SIGNAL***
-
-        onTextEdited: {
-            //Function that pass value from textField to the next page
-            stackView.replace(edit_symptom)
-        }
+        width: parent.width
+        height: parent.height
+        nextPage: "../editSymptom.qml"
+        headerTitle: "Symptom hinzufügen"
+        title: "Symptom"
     }
 }

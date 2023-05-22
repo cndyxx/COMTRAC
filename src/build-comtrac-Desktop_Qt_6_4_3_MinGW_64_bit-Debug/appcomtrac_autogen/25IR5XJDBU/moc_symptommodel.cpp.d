@@ -1,8 +1,10 @@
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/25IR5XJDBU/moc_symptommodel.cpp: C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptommodel.h \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/moc_predefs.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/QDateTime \
+  C:/Qt/6.4.3/mingw_64/include/QtCore/QDebug \
   C:/Qt/6.4.3/mingw_64/include/QtCore/QObject \
   C:/Qt/6.4.3/mingw_64/include/QtCore/QTime \
+  C:/Qt/6.4.3/mingw_64/include/QtCore/QVector \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qabstractitemmodel.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qalgorithms.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qanystringview.h \
@@ -84,11 +86,14 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW
   C:/Qt/6.4.3/mingw_64/include/QtCore/qutf8stringview.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qvariant.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qvarlengtharray.h \
+  C:/Qt/6.4.3/mingw_64/include/QtCore/qvector.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.4.3/mingw_64/include/QtSql/QSqlDatabase \
+  C:/Qt/6.4.3/mingw_64/include/QtSql/QSqlError \
   C:/Qt/6.4.3/mingw_64/include/QtSql/QSqlQuery \
   C:/Qt/6.4.3/mingw_64/include/QtSql/QSqlQueryModel \
   C:/Qt/6.4.3/mingw_64/include/QtSql/qsqldatabase.h \
+  C:/Qt/6.4.3/mingw_64/include/QtSql/qsqlerror.h \
   C:/Qt/6.4.3/mingw_64/include/QtSql/qsqlquery.h \
   C:/Qt/6.4.3/mingw_64/include/QtSql/qsqlquerymodel.h \
   C:/Qt/6.4.3/mingw_64/include/QtSql/qtsql-config.h \
@@ -308,4 +313,5 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h
+  C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/Symptom.h

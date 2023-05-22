@@ -7,6 +7,8 @@ Button {
     property color backgroundDefaultColor: "grey"
     property color backgroundPressedColor: Qt.darker(backgroundDefaultColor, 1.2)
     property color contentItemTextColor: "white"
+    property int buttonWidth: 213
+    property int buttonHeight: 50
 
 
    // text: "Button"
@@ -22,8 +24,8 @@ Button {
     }
 
     background: Rectangle {
-        implicitWidth: 213
-        implicitHeight: 50
+        implicitWidth: buttonWidth
+        implicitHeight: buttonHeight
         color: root.down ? root.backgroundPressedColor : root.backgroundDefaultColor
         radius: 15
         //layer.enabled: true

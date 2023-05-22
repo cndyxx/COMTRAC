@@ -3,7 +3,31 @@
         {
             "className": "SymptomModel",
             "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "symptoms",
+                    "notify": "symptomsChanged",
+                    "read": "symptoms",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QList<Symptom*>",
+                    "user": false,
+                    "write": "setSymptoms"
+                }
+            ],
             "qualifiedClassName": "SymptomModel",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "symptomsChanged",
+                    "returnType": "void"
+                }
+            ],
             "superClasses": [
                 {
                     "access": "public",

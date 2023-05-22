@@ -26,8 +26,12 @@
     <file alias="Ui/Components/RoundButtonTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/RoundButtonTemplate.qml</file>
     <file alias="Ui/Components/IconButton.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/IconButton.qml</file>
     <file alias="Ui/Components/IntakeTimeList.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/IntakeTimeList.qml</file>
-    <file alias="Ui/Components/MedicationField.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/MedicationField.qml</file>
+    <file alias="Ui/Components/MedicationEntry.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/MedicationEntry.qml</file>
+    <file alias="Ui/Components/SearchTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/SearchTemplate.qml</file>
+    <file alias="Ui/Components/ListViewTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/ListViewTemplate.qml</file>
+    <file alias="Ui/Components/SymptomEntry.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/SymptomEntry.qml</file>
     <file alias="assets/menu.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/menu.png</file>
+    <file alias="assets/x_Button.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/x_Button.png</file>
   </qresource>
 </RCC>
 

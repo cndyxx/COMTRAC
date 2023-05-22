@@ -3,23 +3,34 @@ import QtQuick.Controls
 import "./Components"
 
 
-Page {
-    width: 250
-    height: 500
-    property string find_symptom: "findSymptom.qml"
-    //Placeholder for Calendar
-    HeaderTemplate{
+Item {
 
-//        Text {
-//            id: txtHeader
-//            text: "Symptomtagebuch"
-//            font.pixelSize: 17
-//            font.family: "Arial"
-//            font.weight: Font.Thin
-//            color: "dimgrey"
-//        }
+    Background { id: background}
+    HeaderTemplate {
+        id: header
+        pageTitle: "Symptomtagebuch"
     }
 
+    ListView {
+        spacing: 15
+        anchors.top: header.bottom
+        anchors.topMargin: 30
+        anchors.bottom: parent.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+
+        width: parent.width
+        height: parent.height
+        model: symptomModel.symptoms
+
+        delegate: SymptomEntry {
+            width: header.width
+            height: 40
+            symptomName:  symptomModel.symptoms[index].name
+//            intakeTime: medModel.medications[index].intakeTime
+        }
+
+
+    }
     //nur als Probe
     RoundButton{
         text: "\u254B" //unicode Character '+'

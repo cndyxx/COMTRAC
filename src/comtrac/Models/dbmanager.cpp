@@ -7,7 +7,7 @@ DbManager *DbManager::instanz = NULL;
 
 DbManager::DbManager()
 {
-    QString path= "C:/Users/cindy/Documents/GitHub/COMTRAC/database/dbComtrac";
+    QString path= "C:\\Users\\cindy\\Documents\\GitHub\\COMTRAC\\src\\comtrac\\database\\dbComtrac.db";
     m_db = QSqlDatabase::addDatabase("QSQLITE");
     m_db.setDatabaseName(path);
     m_db.open();

@@ -4,55 +4,22 @@
 #include <QVariant>
 #include <QTime>
 #include <QDebug>
-#include "dbmanager.h"
+
+#include <iostream>
 
 
 
 MedicationModel::MedicationModel(QObject *parent) : QSqlQueryModel(parent)
 {
     getMedication();
-    QTime intakeTime(11,0);
-    QTime reminderTime(11,0);
-    m_medications.push_back(new Medication(1, "Asperin 1", 2, intakeTime, reminderTime, this));
-    m_medications.push_back(new Medication(1, "Asperin 2", 2, intakeTime, reminderTime, this));
-    m_medications.push_back(new Medication(1, "Asperin 3", 2, intakeTime, reminderTime, this));
-
-    //    m_users.append(new User(2, "Novak", "Djokovic", "https://pbs.twimg.com/profile_images/1219965365226065920/EBF8Rd9v_400x400.jpg", this));
-    //    m_users.append(new User(3, "Elon", "Musk", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/1200px-Elon_Musk_Royal_Society_%28crop2%29.jpg", this));
-    //    m_users.append(new User(4, "Felix", "Kjellberg", "https://staticg.sportskeeda.com/editor/2021/08/b701f-16294304565102-800.jpg", this));
-    //    m_users.append(new User(5, "Mom", "", "", this));
-    //    m_users.append(new User(6, "Leonardo", "DiCaprio", "https://assets.weforum.org/sf_account/image/GpsMwgoVb5muWo9s5p8Z4XjTRfGnvtUtmQTqJ7dYEJA.jpg", this));
-    //    m_users.append(new User(7, "Alexis", "Ren",  "https://media.glamour.com/photos/6165d7aa4beb8802a4c2d7ea/master/pass/unnamed%20(6).jpeg", this));
 }
 
 
 void MedicationModel::getMedication()
 {
-    QSqlDatabase db;
-    const QString DRIVER("QSQLITE");
-    if(QSqlDatabase::isDriverAvailable(DRIVER)){
-        qDebug("Driver disponible");
-        db = QSqlDatabase::addDatabase(DRIVER);
-        db.setDatabaseName("C:\\Users\\cindy\\Documents\\GitHub\\COMTRAC\\database\\dbComtrac");
-    }
-    else {
-        qDebug() << "false";
-    }
-//    QString path= "C:/Users/cindy/Documents/GitHub/COMTRAC/database/dbComtrac";
-//    QSqlDatabase m_db = QSqlDatabase::addDatabase("QSQLITE");
-//    m_db.setDatabaseName(path);
-//    m_db.open();
-    if (!db.open())
-    {
-
-        qDebug() <<"Datenbank konnte nicht geöffnet werden";
-    }
-    else
-    {
-        qDebug() << "Database: connection ok";
-    }
     QSqlQuery query;
     query.prepare("SELECT * FROM Medications");
+
     if(query.exec()){
         while(query.next()){
             int id = query.value(0).toInt();

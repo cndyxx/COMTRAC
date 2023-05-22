@@ -6,25 +6,9 @@ Item {
     ListView {
         implicitWidth: parent.width
         implicitHeight: 50
-        model: ListModel {
-            ListElement {
-
-            }
-            ListElement {
-
-            }
-            ListElement {
-
-            }
-            ListElement {
-
-            }
-        }
-
+        model: ComboBoxTemplate.intke
         delegate: Button {
-            width: header.width
-            height: 40
-            text: model
+
         }
 
         spacing: 5

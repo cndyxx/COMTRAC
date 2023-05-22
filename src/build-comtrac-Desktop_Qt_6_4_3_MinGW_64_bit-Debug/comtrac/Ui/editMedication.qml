@@ -5,7 +5,7 @@ import QtQuick.Layouts
 import "./Components"
 
 Item {
-
+    property alias medicationName : medicationInput.text
     Background { id: background
 
     }
@@ -13,6 +13,7 @@ Item {
     HeaderTemplate {
         id: header
         pageTitle: "Medikamente"
+
     }
 
     ColumnLayout {
@@ -37,7 +38,7 @@ Item {
             font.pixelSize: 17
             font.family: "Arial"
             color: "black"
-            text: qsTr("Ibuprofen 600mg")
+            text: medicationName
             focus: true
             Rectangle {
                 width: header.width
@@ -118,15 +119,20 @@ Item {
         RowLayout {
             ButtonTemplate {
                 text: qsTr("Abbrechen")
-               // onClicked: toDoList.appendItem()
-                width: parent.width / 2
+                // onClicked: toDoList.appendItem()
+                buttonWidth: parent.width/2
                 Layout.fillWidth: true
+                onClicked: {
+                    stackView.pop();
+                    stackView.pop()
+                }
             }
             ButtonTemplate {
                 text: qsTr("Eintragen")
                 //onClicked: toDoList.removeCompletedItems()
                 Layout.fillWidth: true
-                width: parent.width / 2
+                buttonWidth: parent.width / 2
+                // onClicked: medModel.addMedication(medicationInput.text,intakePerDayInput,  )
             }
         }
 

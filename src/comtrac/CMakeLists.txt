@@ -19,6 +19,8 @@ qt_add_executable(appcomtrac
     Controllers/login.h
     Controllers/medication.cpp
     Controllers/medication.h
+    Controllers/symptom.cpp
+    Controllers/symptom.h
     #Models
     Models/loginModel.cpp
     Models/loginModel.h
@@ -28,6 +30,7 @@ qt_add_executable(appcomtrac
     Models/medicationModel.h
     Models/symptommodel.h
     Models/symptommodel.cpp
+
 
 )
 
@@ -63,10 +66,16 @@ qt_add_qml_module(appcomtrac
     Ui/Components/RoundButtonTemplate.qml
     Ui/Components/IconButton.qml
     Ui/Components/IntakeTimeList.qml
-    Ui/Components/MedicationField.qml
+    Ui/Components/MedicationEntry.qml
+    Ui/Components/SearchTemplate.qml
+    Ui/Components/ListViewTemplate.qml
+    Ui/Components/SymptomEntry.qml
+
+
 
     RESOURCES
     assets/menu.png
+    assets/x_Button.png
 )
 
 

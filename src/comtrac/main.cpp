@@ -8,6 +8,7 @@
 
 #include "Models/medicationmodel.h"
 #include "Controllers/medication.h"
+#include "Models/symptommodel.h"
 
 
 int main(int argc, char *argv[])
@@ -15,8 +16,8 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     //Datenbank-Verbinung herstellen
-//    DbManager* database;
-//    database = DbManager::holeInstanz();
+    DbManager* database;
+    database = DbManager::holeInstanz();
     QQmlApplicationEngine engine;
     const QUrl url(u"qrc:/comtrac/Ui/Main.qml"_qs);
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreationFailed,
@@ -33,11 +34,12 @@ int main(int argc, char *argv[])
     QQmlContext *ctx = engine.rootContext();
     ctx->setContextProperty("login", &login);
 
-    MedicationModel *model = new MedicationModel();
-    engine.rootContext()->setContextProperty("medModel", model);
+    MedicationModel *medModel = new MedicationModel();
+    engine.rootContext()->setContextProperty("medModel", medModel);
 
 
-
+    SymptomModel *symptomModel = new SymptomModel();
+    engine.rootContext()->setContextProperty("symptomModel", symptomModel);
 
     engine.load(url);
 

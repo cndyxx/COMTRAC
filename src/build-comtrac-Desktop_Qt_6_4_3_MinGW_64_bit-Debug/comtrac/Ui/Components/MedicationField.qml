@@ -21,8 +21,6 @@ Item {
                 Layout.fillWidth: true
                 font.family: "Arial"
                 lineHeight: 0.5
-                anchors.left: parent.left
-                anchors.leftMargin: 5
             }
             Text {
                 text: "Einnahme: " + intakeTime
@@ -31,8 +29,6 @@ Item {
                 Layout.fillWidth: true
                 font.family: "Arial"
                 lineHeight: 0.5
-                anchors.left: parent.left
-                anchors.leftMargin: 5
             }
         }
 
