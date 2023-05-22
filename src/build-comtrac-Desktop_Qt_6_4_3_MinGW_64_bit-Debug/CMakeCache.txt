@@ -35,13 +35,13 @@ CMAKE_CXX_COMPILER_AR:FILEPATH=C:/Qt/Tools/mingw1120_64/bin/gcc-ar.exe
 CMAKE_CXX_COMPILER_RANLIB:FILEPATH=C:/Qt/Tools/mingw1120_64/bin/gcc-ranlib.exe
 
 //Flags used by the CXX compiler during all build types.
-CMAKE_CXX_FLAGS:STRING=-DQT_QML_DEBUG
+CMAKE_CXX_FLAGS:STRING=
 
 //Flags used by the CXX compiler during DEBUG builds.
 CMAKE_CXX_FLAGS_DEBUG:STRING=-g
 
 //No help, variable specified on the command line.
-CMAKE_CXX_FLAGS_INIT:STRING=-DQT_QML_DEBUG
+CMAKE_CXX_FLAGS_INIT:STRING=
 
 //Flags used by the CXX compiler during MINSIZEREL builds.
 CMAKE_CXX_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
@@ -297,12 +297,6 @@ QT_CREATOR_SKIP_PACKAGE_MANAGER_SETUP:BOOL=OFF
 //No help, variable specified on the command line.
 QT_QMAKE_EXECUTABLE:FILEPATH=C:/Qt/6.4.3/mingw_64/bin/qmake.exe
 
-//The directory containing a CMake configuration file for Qt5QuickControls2.
-Qt5QuickControls2_DIR:PATH=Qt5QuickControls2_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for Qt5.
-Qt5_DIR:PATH=Qt5_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for Qt6CoreTools.
 Qt6CoreTools_DIR:PATH=C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6CoreTools
 
@@ -311,9 +305,6 @@ Qt6Core_DIR:PATH=C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Core
 
 //The directory containing a CMake configuration file for Qt6EntryPointPrivate.
 Qt6EntryPointPrivate_DIR:PATH=C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6EntryPointPrivate
-
-//The directory containing a CMake configuration file for Qt6GraphicalEffects.
-Qt6GraphicalEffects_DIR:PATH=Qt6GraphicalEffects_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for Qt6GuiTools.
 Qt6GuiTools_DIR:PATH=C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6GuiTools

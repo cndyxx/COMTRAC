@@ -3,23 +3,41 @@
         {
             "className": "MedicationModel",
             "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "medications",
+                    "notify": "medicationsChanged",
+                    "read": "medications",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QList<Medication*>",
+                    "user": false,
+                    "write": "setMedications"
+                }
+            ],
             "qualifiedClassName": "MedicationModel",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "medicationChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "medicationsChanged",
+                    "returnType": "void"
+                }
+            ],
             "slots": [
                 {
                     "access": "public",
                     "name": "updateModel",
                     "returnType": "void"
-                },
-                {
-                    "access": "public",
-                    "arguments": [
-                        {
-                            "name": "row",
-                            "type": "int"
-                        }
-                    ],
-                    "name": "getId",
-                    "returnType": "int"
                 },
                 {
                     "access": "public",

@@ -6,32 +6,33 @@ import QtQuick.Layouts
 import "./Components"
 
 Item {
-    width: parent.width
-    height: parent.height
-    title: "Medikationsplan"
 
-    function test(){
-        console.log(medModel.name + " - " + medModel.intakePerDay);
-    }
 
     Background { id: background}
-    HeaderTemplate { id: header; pageTitle: "Medikationsplan"}
+    HeaderTemplate {
+        id: header
+        pageTitle: "Medikationsplan"
+    }
 
     ListView {
+        spacing: 15
+        anchors.top: header.bottom
+        anchors.topMargin: 30
+        anchors.bottom: parent.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+
         width: parent.width
-        model: medModel // Verwenden Sie das registrierte SQL-Modell
+        height: parent.height
+        model: medModel.medications
 
-        delegate: Text {
-            text: medModel.name + " - " + medModel.intakePerDay
-
-
-
+        delegate: MedicationField {
+            width: header.width
+            height: 40
+            medicationName:  medModel.medications[index].name
+//            intakeTime: medModel.medications[index].intakeTime
         }
 
+
     }
-    Button{
-        anchors.top: parent.top
-        text: "TEst"
-        onClicked: test();
-    }
+
 }

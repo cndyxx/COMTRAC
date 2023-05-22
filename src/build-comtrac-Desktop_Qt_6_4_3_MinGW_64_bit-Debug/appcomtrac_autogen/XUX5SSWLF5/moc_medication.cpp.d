@@ -3,7 +3,6 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW
   C:/Qt/6.4.3/mingw_64/include/QtCore/QObject \
   C:/Qt/6.4.3/mingw_64/include/QtCore/QTime \
   C:/Qt/6.4.3/mingw_64/include/QtCore/QVector \
-  C:/Qt/6.4.3/mingw_64/include/QtCore/qabstractitemmodel.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qalgorithms.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qanystringview.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qarraydata.h \
@@ -86,13 +85,6 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW
   C:/Qt/6.4.3/mingw_64/include/QtCore/qvarlengtharray.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qvector.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qversiontagging.h \
-  C:/Qt/6.4.3/mingw_64/include/QtSql/QSqlDatabase \
-  C:/Qt/6.4.3/mingw_64/include/QtSql/QSqlQueryModel \
-  C:/Qt/6.4.3/mingw_64/include/QtSql/qsqldatabase.h \
-  C:/Qt/6.4.3/mingw_64/include/QtSql/qsqlquerymodel.h \
-  C:/Qt/6.4.3/mingw_64/include/QtSql/qtsql-config.h \
-  C:/Qt/6.4.3/mingw_64/include/QtSql/qtsqlexports.h \
-  C:/Qt/6.4.3/mingw_64/include/QtSql/qtsqlglobal.h \
   C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h \
   C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h \
   C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/algorithm \
@@ -307,5 +299,4 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h \
-  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medicationmodel.h
+  C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h

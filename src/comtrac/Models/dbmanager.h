@@ -11,9 +11,12 @@ class DbManager
 {
 public:
     DbManager();
+    static DbManager* holeInstanz();
 
 private:
     QSqlDatabase m_db;
+    static bool instanceFlag;
+    static DbManager* instanz;
 
 };
 

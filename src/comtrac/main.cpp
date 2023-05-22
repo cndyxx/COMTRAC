@@ -9,10 +9,14 @@
 #include "Models/medicationmodel.h"
 #include "Controllers/medication.h"
 
+
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
+    //Datenbank-Verbinung herstellen
+//    DbManager* database;
+//    database = DbManager::holeInstanz();
     QQmlApplicationEngine engine;
     const QUrl url(u"qrc:/comtrac/Ui/Main.qml"_qs);
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreationFailed,
@@ -32,7 +36,8 @@ int main(int argc, char *argv[])
     MedicationModel *model = new MedicationModel();
     engine.rootContext()->setContextProperty("medModel", model);
 
-    DbManager database;
+
+
 
     engine.load(url);
 

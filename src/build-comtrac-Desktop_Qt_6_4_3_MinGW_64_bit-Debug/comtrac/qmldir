@@ -23,4 +23,5 @@ ComboBoxTemplate 1.0 Ui/Components/ComboBoxTemplate.qml
 RoundButtonTemplate 1.0 Ui/Components/RoundButtonTemplate.qml
 IconButton 1.0 Ui/Components/IconButton.qml
 IntakeTimeList 1.0 Ui/Components/IntakeTimeList.qml
+MedicationField 1.0 Ui/Components/MedicationField.qml
 

@@ -1,6 +1,8 @@
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/25IR5XJDBU/moc_medicationmodel.cpp: C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medicationmodel.h \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/moc_predefs.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/QObject \
+  C:/Qt/6.4.3/mingw_64/include/QtCore/QTime \
+  C:/Qt/6.4.3/mingw_64/include/QtCore/QVector \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qabstractitemmodel.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qalgorithms.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qanystringview.h \
@@ -15,6 +17,7 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW
   C:/Qt/6.4.3/mingw_64/include/QtCore/qbytearrayalgorithms.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qbytearraylist.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qbytearrayview.h \
+  C:/Qt/6.4.3/mingw_64/include/QtCore/qcalendar.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qchar.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qcompare.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qcompare_impl.h \
@@ -25,6 +28,7 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW
   C:/Qt/6.4.3/mingw_64/include/QtCore/qcontainertools_impl.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qcontiguouscache.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qdatastream.h \
+  C:/Qt/6.4.3/mingw_64/include/QtCore/qdatetime.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qdebug.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qflags.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qforeach.h \
@@ -37,6 +41,7 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW
   C:/Qt/6.4.3/mingw_64/include/QtCore/qiterable.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qiterator.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qlist.h \
+  C:/Qt/6.4.3/mingw_64/include/QtCore/qlocale.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qlogging.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qmap.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qmath.h \
@@ -79,6 +84,7 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW
   C:/Qt/6.4.3/mingw_64/include/QtCore/qutf8stringview.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qvariant.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qvarlengtharray.h \
+  C:/Qt/6.4.3/mingw_64/include/QtCore/qvector.h \
   C:/Qt/6.4.3/mingw_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.4.3/mingw_64/include/QtSql/QSqlDatabase \
   C:/Qt/6.4.3/mingw_64/include/QtSql/QSqlQueryModel \
@@ -301,4 +307,5 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h
+  C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/medication.h

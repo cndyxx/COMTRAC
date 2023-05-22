@@ -63,6 +63,7 @@ qt_add_qml_module(appcomtrac
     Ui/Components/RoundButtonTemplate.qml
     Ui/Components/IconButton.qml
     Ui/Components/IntakeTimeList.qml
+    Ui/Components/MedicationField.qml
 
     RESOURCES
     assets/menu.png

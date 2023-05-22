@@ -1,19 +1,40 @@
 
 #include "Dbmanager.h"
 
+bool DbManager::instanceFlag = false;
+DbManager *DbManager::instanz = NULL;
+
+
 DbManager::DbManager()
 {
     QString path= "C:/Users/cindy/Documents/GitHub/COMTRAC/database/dbComtrac";
     m_db = QSqlDatabase::addDatabase("QSQLITE");
     m_db.setDatabaseName(path);
+    m_db.open();
 
     if (!m_db.open())
     {
-        qDebug() << "Error: connection with database failed";
+
+        qDebug() <<"Datenbank konnte nicht geöffnet werden";
     }
     else
     {
         qDebug() << "Database: connection ok";
     }
+}
+
+
+
+
+DbManager* DbManager::holeInstanz()
+{
+    if(!instanceFlag){
+        instanz = new DbManager();
+        instanceFlag = true;
+        return instanz;
+    } else {
+        return instanz;
+    }
+
 }
 
