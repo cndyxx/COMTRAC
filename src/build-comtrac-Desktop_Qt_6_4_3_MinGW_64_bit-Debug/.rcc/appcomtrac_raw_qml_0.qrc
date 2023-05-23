@@ -30,6 +30,7 @@
     <file alias="Ui/Components/SearchTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/SearchTemplate.qml</file>
     <file alias="Ui/Components/ListViewTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/ListViewTemplate.qml</file>
     <file alias="Ui/Components/SymptomEntry.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/SymptomEntry.qml</file>
+    <file alias="Ui/Components/MonthgridDelegate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/MonthgridDelegate.qml</file>
     <file alias="assets/menu.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/menu.png</file>
     <file alias="assets/x_Button.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/x_Button.png</file>
   </qresource>

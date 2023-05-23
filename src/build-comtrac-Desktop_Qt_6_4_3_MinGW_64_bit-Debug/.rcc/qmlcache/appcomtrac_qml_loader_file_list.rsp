@@ -28,3 +28,4 @@
 /comtrac/Ui/Components/SearchTemplate.qml
 /comtrac/Ui/Components/ListViewTemplate.qml
 /comtrac/Ui/Components/SymptomEntry.qml
+/comtrac/Ui/Components/MonthgridDelegate.qml

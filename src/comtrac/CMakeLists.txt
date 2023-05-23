@@ -70,6 +70,7 @@ qt_add_qml_module(appcomtrac
     Ui/Components/SearchTemplate.qml
     Ui/Components/ListViewTemplate.qml
     Ui/Components/SymptomEntry.qml
+    Ui/Components/MonthGridDelegate.qml
 
 
 

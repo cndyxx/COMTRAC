@@ -297,9 +297,9 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/login.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h
-C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/symptom.h
+C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/medication.h
  mmc:Q_OBJECT
- mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/symptom.h
+ mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/medication.h
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/moc_predefs.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/QObject
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/QTime
@@ -601,9 +601,9 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/symptom.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h
-C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/medication.h
+C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/symptom.h
  mmc:Q_OBJECT
- mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/medication.h
+ mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/symptom.h
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/moc_predefs.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/QObject
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/QTime
@@ -1542,8 +1542,8 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptommodel.h
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/symptom.h
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/login.cpp
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/loginmodel.cpp
-C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/medication.cpp
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/symptom.cpp
+C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/medication.cpp
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/dbmanager.cpp
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medicationmodel.cpp
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptommodel.cpp

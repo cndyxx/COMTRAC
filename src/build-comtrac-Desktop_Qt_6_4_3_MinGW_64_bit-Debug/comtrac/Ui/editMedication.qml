@@ -6,8 +6,7 @@ import "./Components"
 
 Item {
     property alias medicationName : medicationInput.text
-    Background { id: background
-
+    Background { id: backgroung
     }
 
     HeaderTemplate {
@@ -137,96 +136,6 @@ Item {
         }
 
     }
-
-
-
-
-
-
-
-    //    ColumnLayout {
-    //        id: gridLayout
-    //        x: 7
-    //        anchors.topMargin: 10
-    //        spacing: 5
-
-    //        Text {
-    //            Layout.alignment: parent.left
-    //           // anchors.left: parent.left
-    //            id: txtMedication
-    //            text: qsTr("Medikament")
-    //            font.family: "Arial"
-    //            font.pixelSize: 23
-    //        }
-
-    //        Text{
-    //            id: txtFieldMedication
-    //            font.family: "Arial"
-    //            font.pixelSize: 17
-    //            Layout.fillWidth: true
-    //            text: qsTr("Ibuprofen")
-    //            color: "black"
-
-    //        }
-    //        Rectangle {
-    //            id: line
-    //            width: parent.width
-    //            height: 2
-    //            anchors.top: txtFieldMedication.bottom
-    //            anchors.topMargin: 3
-    //            color: "dimgrey"
-    //        }
-    //        Text {
-    //            id: txtIntake
-    //            text: qsTr("Einnahme")
-    //            font.family: "Arial"
-    //            font.pixelSize: 23
-
-    //        }
-    //        PopupTemplate{
-    //            id: popup
-    //        }
-
-    //        ComboBoxTemplate{
-    //            id: dropDownIntake
-    //            model: ["Einmal am Tag", "Zweimal am Tag", "Dreimal am Tag", "Viermal am Tag"]
-    //            onCurrentIndexChanged: {
-    //               //do something
-    //            }
-
-
-    //        }
-    //        //Muss sich ändern sobald ein Feld aus der ComboBox geänder hat. Dynamisch erstellen
-    //        TextFieldTemplate{
-    //            id: timerOne
-
-    //        }
-    //        TextFieldTemplate{
-    //            id: timerTwo
-
-    //        }
-    //
-    //        ButtonTemplate{
-    //            id: buttonBack
-    //            text: qsTr("Zurück")
-    //            width: 80
-    //            height: 40
-
-    //        }
-    //        ButtonTemplate{
-    //            id: buttonAdd
-    //            anchors.left: buttonBack.right
-    //            anchors.top: radioButtonAddReminder.bottom
-    //            anchors.topMargin: 5
-    //            anchors.leftMargin: 10
-    //            text: qsTr("Eintragen")
-    //            width: 80
-    //            height: 40
-    //        }
-
-
-    //    }
-
 
 
 }

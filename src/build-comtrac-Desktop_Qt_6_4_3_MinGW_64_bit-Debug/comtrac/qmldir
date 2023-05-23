@@ -27,4 +27,5 @@ MedicationEntry 1.0 Ui/Components/MedicationEntry.qml
 SearchTemplate 1.0 Ui/Components/SearchTemplate.qml
 ListViewTemplate 1.0 Ui/Components/ListViewTemplate.qml
 SymptomEntry 1.0 Ui/Components/SymptomEntry.qml
+MonthgridDelegate 1.0 Ui/Components/MonthgridDelegate.qml
 
