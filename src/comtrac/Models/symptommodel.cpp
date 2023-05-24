@@ -8,24 +8,49 @@ SymptomModel::SymptomModel(QObject *parent) : QSqlQueryModel(parent)
     getSymptoms();
 }
 
-void SymptomModel::addSymptom(const QString &name, const QString &intensity,const int& frequency, const QString &duration)
+void SymptomModel::addSymptom(const QString &name, const QString &intensity,const int& frequency, const QString &duration, QString entry_date, QString entry_time)
 {
-    QDateTime currentDateTime = QDateTime::currentDateTime();
-    QString entryDate = currentDateTime.date().toString(Qt::ISODate);
-    QString entryTime = currentDateTime.time().toString(Qt::ISODateWithMs);
+    qDebug() << "Symptommodel";
+
+    QDate entryDate = QDate::fromString(entry_date,"dd.MM.yyyy");
+    QTime entryTime = QTime::fromString(entry_time, "hh:mm");
 
     QSqlQuery query;
-    query.prepare("INSERT INTO symptoms (name, intensity, frequency, duration, entry_date, entry_time) "
-                  "VALUES (:name, :intensity, :frequency, :duration, :entry_date, :entry_time)");
+    query.prepare("INSERT INTO symptoms (name, intensity, frequency, duration, entryDate, entryTime) "
+                  "VALUES (:name, :intensity, :frequency, :duration, :entryDate, :entryTime)");
     query.bindValue(":name", name);
     query.bindValue(":intensity", intensity);
     query.bindValue(":frequency", frequency);
     query.bindValue(":duration", duration);
-    query.bindValue(":entry_date", entryDate);
-    query.bindValue(":entry_time", entryTime);
-    query.exec();
+    query.bindValue(":entryDate", entryDate);
+    query.bindValue(":entryTime", entryTime);
+    qDebug() << query.exec() << query.lastError().text();
 
-    updateModel();
+
+}
+
+void SymptomModel::setCurrentSymptom(int id)
+{
+    currentSymptom = id;
+}
+
+int SymptomModel::getCurrentSymptom()
+{
+    return currentSymptom;
+}
+
+void SymptomModel::setSymptom(int targetID)
+{
+    Symptom * foundSymptom;
+    // Suche nach dem Symptom anhand der ID
+    foreach (Symptom* symptom, m_symptoms) {
+        if(symptom->id() == targetID){
+            foundSymptom = symptom;
+            break;
+        }
+    }
+    setSingleSymptom(foundSymptom);
+
 }
 
 void SymptomModel::updateModel()
@@ -34,6 +59,19 @@ void SymptomModel::updateModel()
 
     // Aktualisiere die ListView im QML
     emit layoutChanged();
+}
+
+Symptom *SymptomModel::singleSymptom() const
+{
+    return m_singleSymptom;
+}
+
+void SymptomModel::setSingleSymptom(Symptom *newSingleSymptom)
+{
+    if (m_singleSymptom == newSingleSymptom)
+        return;
+    m_singleSymptom = newSingleSymptom;
+    emit singleSymptomChanged();
 }
 
 QList<Symptom *> SymptomModel::symptoms() const
@@ -70,4 +108,6 @@ void SymptomModel::getSymptoms()
         qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
     }
 }
+
+
 

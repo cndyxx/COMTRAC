@@ -2,6 +2,47 @@
     {
         "classes": [
             {
+                "className": "ApplicationManager",
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "pageState",
+                        "notify": "pageStateChanged",
+                        "read": "getPageState",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false,
+                        "write": "setPageState"
+                    }
+                ],
+                "qualifiedClassName": "ApplicationManager",
+                "signals": [
+                    {
+                        "access": "public",
+                        "name": "pageStateChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "applicationmanager.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
                 "className": "MedicationModel",
                 "object": true,
                 "properties": [
@@ -95,6 +136,21 @@
                         "type": "QList<Symptom*>",
                         "user": false,
                         "write": "setSymptoms"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "singleSymptom",
+                        "notify": "singleSymptomChanged",
+                        "read": "singleSymptom",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "Symptom*",
+                        "user": false,
+                        "write": "setSingleSymptom"
                     }
                 ],
                 "qualifiedClassName": "SymptomModel",
@@ -102,6 +158,71 @@
                     {
                         "access": "public",
                         "name": "symptomsChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "singleSymptomChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "intensity",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "frequency",
+                                "type": "int"
+                            },
+                            {
+                                "name": "duration",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "entryDate",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "entryTime",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "addSymptom",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "id",
+                                "type": "int"
+                            }
+                        ],
+                        "name": "setCurrentSymptom",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "getCurrentSymptom",
+                        "returnType": "int"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "id",
+                                "type": "int"
+                            }
+                        ],
+                        "name": "setSymptom",
                         "returnType": "void"
                     }
                 ],

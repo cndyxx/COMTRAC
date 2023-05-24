@@ -3,41 +3,36 @@ import QtQuick.Layouts
 import QtQuick.Controls
 
 
-Item {
+Rectangle {
     id: header
-    width: parent.width
-
     property string pageTitle
-    anchors.top: parent.top
-    anchors.left: parent.left; anchors.right: parent.right
-    anchors.margins: 14
+    width: parent.width
+    height: parent.height * 0.10
+    color: "white"
 
-    ColumnLayout{
-        anchors.top: parent.top
+    Text{
+        id: txtPageTitle
+        text: pageTitle
         anchors.horizontalCenter: parent.horizontalCenter
-        spacing: 20
-
-        Text{
-            id: txtPageTitle
-            text: pageTitle
-
+        anchors.verticalCenter: parent.verticalCenter
+        color: "dimgrey"
+        font.pixelSize: 16
+        Layout.fillWidth: true
+        opacity: 0.8
+        font.family: "Arial"
+        lineHeight: 0.5
+        Rectangle {
+            anchors.top: parent.bottom
+            anchors.topMargin: 10
+            anchors.horizontalCenter: parent.horizontalCenter
             color: "dimgrey"
-            font.pixelSize: 16
-            Layout.fillWidth: true
-            opacity: 0.8
-            font.family: "Arial"
-            lineHeight: 0.5
-            Rectangle {
-                anchors.top: txtPageTitle.bottom
-                anchors.horizontalCenter: txtPageTitle.horizontalCenter
-                color: "dimgrey"
-                height: 2
-                width: header.width
+            height: 2
+            width: header.width
 
 
-            }
         }
-
     }
+
 }
+
 

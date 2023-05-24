@@ -43,7 +43,7 @@ GridLayout {
         Layout.fillWidth: true
 //        Layout.fillHeight: true
 
-        delegate: MonthgridDelegate {
+        delegate: MonthGridDelegate {
             id: gridDelegate
             visibleMonth: grid.month
             //eventDatabase: window.eventDatabase -> Datenbank: Symptome verbinden

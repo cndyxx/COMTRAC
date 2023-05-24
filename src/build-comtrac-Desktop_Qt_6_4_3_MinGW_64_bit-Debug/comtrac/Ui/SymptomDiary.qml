@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import "./Components"
+
 //☰“ (U+2630)
 //„☓“ (U+2613)
 //„📈“ (U+1F4C8)
@@ -13,42 +14,24 @@ Item {
         id: header
         pageTitle: "Symptomtagebuch"
     }
-    CalendarTemplate {
-        id: calendar
-        anchors.top: header.bottom
-        anchors.topMargin: 50
-        anchors.left: parent.left; anchors.right: parent.right
-        anchors.leftMargin: 20; anchors.rightMargin: 20
-    }
-
-//    ColumnLayout {
-//        id: column
-//        anchors.centerIn: parent
+//    CalendarTemplate {
+//        id: calendar
 //        anchors.top: header.bottom
-//        anchors.topMargin: 10
-
-//        spacing: 4
-//        //KALENDER
-
-
-//        //Symptomliste
-//        ListView {
-
-//            width: parent.width
-//            height: parent.height
-//            model: symptomModel.symptoms
-
-//            delegate: SymptomEntry {
-//                width: header.width
-//                height: 40
-//                symptomName:  symptomModel.symptoms[index].name
-//                //            intakeTime: medModel.medications[index].intakeTime
-//            }
-
-
-//        }
-
+//        anchors.topMargin: 50
+//        anchors.left: parent.left; anchors.right: parent.right
+//        anchors.leftMargin: 20; anchors.rightMargin: 20
 //    }
+
+
+    //List View
+    SymptomList {
+        id: symptomListView
+        spacing: 15
+        anchors.top: header.bottom
+        anchors.topMargin: 30
+        width: parent.width
+        height: parent.height * 0.25
+    }
 
     //Button
     RoundButtonTemplate {
@@ -57,13 +40,16 @@ Item {
        anchors.bottom: parent.bottom
        anchors.margins: 14
        buttonIcon: "\u2630" //muss noch geändert werden in eine Graphik
+
     }
     RoundButtonTemplate {
         buttonIcon: "\u254B"
         anchors.right: parent.right
         anchors.bottom: parent.bottom
         anchors.margins: 14
-
+        onClicked: stackView.push("findSymptom.qml")
 
     }
+
+
 }

@@ -5,71 +5,123 @@ import QtQuick.Layouts
 import "./Components"
 
 Item {
-    property string symptomName
-    Background { id: background}
 
+    id: root
+
+    property var symptomData: symptomListView.model[index]
+
+    Background { id: background}
     HeaderTemplate {
         id: header
         pageTitle: "Symptom hinzufügen"
 
     }
-
+    // 0: Leer (Eingabe)
+    // 1: Datenanzeige
+    // 2: Datenanzeige mit aktivierten Feldern
+    property int pageState
     ColumnLayout {
-        id: grid
         anchors.top: header.bottom
-        anchors.left: parent.left
-        anchors.leftMargin: 10
-        //Abstand zum Header
-        anchors.margins: 30
-        spacing: 10
+
+        RowLayout {
+            TextTemplate {
+                id: entryDate
+                titleText: "Datum"
+                Layout.fillWidth: true
+                inputText: "25.05.2023" //muss automatisch eingetragen werde
+            }
+
+            TextTemplate {
+                id: entryTime
+                Layout.fillWidth: true
+                titleText: "Uhrzeit"
+                inputText: "13:37" //muss automatisch eingetragen werden
+            }
+        }
 
         Text {
             text: "Symptom"
             color: "black"
             font.pixelSize: 23
-            Layout.fillWidth: true
             font.family: "Arial"
         }
-        TextInput {
+        TextEdit {
             id: symptomInput
             Layout.fillWidth: true
-            font.pixelSize: 17
+            font.pixelSize:17
             font.family: "Arial"
             color: "black"
-            text: symptomName
+//            text: symptomName
+            text: symptomModel.singleSymptom.name
             focus: true
+            enabled: pageState === 0 || pageState === 2
             Rectangle {
                 width: header.width
                 height: 2
                 color: "grey"
-                anchors.top: symptomInput.bottom
-                anchors.topMargin: 5
+                anchors.top: parent.bottom
+
+            }
+        }
+        RowLayout {
+            Text {
+                text: "Intensität: "
+                color: "black"
+                font.pixelSize: 17
+                Layout.fillWidth: true
+                font.family: "Arial"
+            }
+            Text {
+                Layout.fillWidth: true
+                text: {
+                    if (sliderIntensity.value === 0)
+                        return "leicht";
+                    else if (sliderIntensity.value === 1)
+                        return "mäßig";
+                    else if (sliderIntensity.value === 2)
+                        return "schwer";
+                }
+                font.pixelSize: 16
             }
         }
 
-        Text {
-            text: "Intensität: "
-            Layout.topMargin: 20
-            color: "black"
-            font.pixelSize: 17
+        SliderTemplate {
+            id: sliderIntensity
+            width: parent.width
+            from: 0
+            to: 2
+            stepSize: 1
             Layout.fillWidth: true
-            font.family: "Arial"
+            value: 1
+
+        }
+
+
+
+
+        RowLayout {
+            Text {
+                text: "Häufigkeit pro Tag: "
+                color: "black"
+                font.pixelSize: 17
+                Layout.fillWidth: true
+                font.family: "Arial"
+            }
+            Text {
+                text: sliderFrequency.value.toFixed(0)
+                font.pixelSize: 16
+                Layout.fillWidth: true
+            }
         }
         SliderTemplate {
-
-        }
-
-        Text {
-            text: "Häufigkeit pro Tag: "
-            Layout.topMargin: 20
-            color: "black"
-            font.pixelSize: 17
+            id: sliderFrequency
+            from: 0
+            to: 9
+            stepSize: 1
             Layout.fillWidth: true
-            font.family: "Arial"
-        }
-        SliderTemplate {
 
         }
+
         Text {
             text: "Dauer des Auftretens: "
             Layout.topMargin: 20
@@ -80,11 +132,12 @@ Item {
         }
 
         RadioButtonTemplate{
+            id: radioButtonLessThen
             text: qsTr("Seit weniger als 24 Stunden")
             font.pixelSize: 15
         }
         RadioButtonTemplate{
-            id: radioButtonTenMinutesBefore
+            id: radioButtonMoreThen
             text: qsTr("Seit mehr als 24 Stunden")
             font.pixelSize: 15
         }
@@ -102,9 +155,27 @@ Item {
                 text: qsTr("Eintragen")
                 Layout.fillWidth: true
                 buttonWidth: parent.width / 2
-                // onClicked:
+                onClicked: {
+                    console.log("Wert: " + symptomData.id);
+                    //Überpüfe welcher RadioButton ausgewählt
+                    if (radioButtonMoreThen.checked) {
+                        var radioButtonValue = radioButtonMoreThen.text
+                    } else {
+                        radioButtonValue = radioButtonLessThen.text
+                    }
+                    symptomModel.addSymptom(symptomInput.text, sliderIntensity.value, sliderFrequency.value, radioButtonValue, "25.05.2023", "11:24")
+                }
             }
         }
     }
+
 }
+
+
+
+
+
+
+
+
 

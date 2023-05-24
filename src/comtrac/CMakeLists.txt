@@ -30,6 +30,8 @@ qt_add_executable(appcomtrac
     Models/medicationModel.h
     Models/symptommodel.h
     Models/symptommodel.cpp
+    Models/ApplicationManager.cpp
+    Models/ApplicationManager.h
 
 
 )
@@ -69,8 +71,11 @@ qt_add_qml_module(appcomtrac
     Ui/Components/MedicationEntry.qml
     Ui/Components/SearchTemplate.qml
     Ui/Components/ListViewTemplate.qml
-    Ui/Components/SymptomEntry.qml
+    Ui/Components/SymptomDelegate.qml
     Ui/Components/MonthGridDelegate.qml
+    Ui/Components/TextTemplate.qml
+    Ui/Components/EditSymptomDelegate.qml
+    Ui/Components/SymptomList.qml
 
 
 

@@ -27,5 +27,8 @@
 /comtrac/Ui/Components/MedicationEntry.qml
 /comtrac/Ui/Components/SearchTemplate.qml
 /comtrac/Ui/Components/ListViewTemplate.qml
-/comtrac/Ui/Components/SymptomEntry.qml
-/comtrac/Ui/Components/MonthgridDelegate.qml
+/comtrac/Ui/Components/SymptomDelegate.qml
+/comtrac/Ui/Components/MonthGridDelegate.qml
+/comtrac/Ui/Components/TextTemplate.qml
+/comtrac/Ui/Components/EditSymptomDelegate.qml
+/comtrac/Ui/Components/SymptomList.qml

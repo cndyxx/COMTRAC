@@ -18,6 +18,21 @@
                     "type": "QList<Symptom*>",
                     "user": false,
                     "write": "setSymptoms"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "singleSymptom",
+                    "notify": "singleSymptomChanged",
+                    "read": "singleSymptom",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "Symptom*",
+                    "user": false,
+                    "write": "setSingleSymptom"
                 }
             ],
             "qualifiedClassName": "SymptomModel",
@@ -25,6 +40,71 @@
                 {
                     "access": "public",
                     "name": "symptomsChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "singleSymptomChanged",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "name",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "intensity",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "frequency",
+                            "type": "int"
+                        },
+                        {
+                            "name": "duration",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "entryDate",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "entryTime",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "addSymptom",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "id",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "setCurrentSymptom",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "getCurrentSymptom",
+                    "returnType": "int"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "id",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "setSymptom",
                     "returnType": "void"
                 }
             ],

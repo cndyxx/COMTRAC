@@ -208,14 +208,35 @@ namespace _comtrac_Ui_Components_ListViewTemplate_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
-namespace _comtrac_Ui_Components_SymptomEntry_qml { 
+namespace _comtrac_Ui_Components_SymptomDelegate_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
     const QQmlPrivate::CachedQmlUnit unit = {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
-namespace _comtrac_Ui_Components_MonthgridDelegate_qml { 
+namespace _comtrac_Ui_Components_MonthGridDelegate_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _comtrac_Ui_Components_TextTemplate_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _comtrac_Ui_Components_EditSymptomDelegate_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _comtrac_Ui_Components_SymptomList_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
     const QQmlPrivate::CachedQmlUnit unit = {
@@ -265,8 +286,11 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/MedicationEntry.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_MedicationEntry_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/SearchTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_SearchTemplate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/ListViewTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_ListViewTemplate_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/SymptomEntry.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_SymptomEntry_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/MonthgridDelegate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_MonthgridDelegate_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/SymptomDelegate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_SymptomDelegate_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/MonthGridDelegate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_MonthGridDelegate_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/TextTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_TextTemplate_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/EditSymptomDelegate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_EditSymptomDelegate_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/SymptomList.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_SymptomList_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;

@@ -4,52 +4,48 @@ import QtQuick.Controls 2.0
 
 
 Slider {
-    id: root
-
-
-    property color checkedColor: "#3498DB"
-
+    property color checkedColor: "grey"
 
     value: 0.5
 
 
     background: Rectangle {
-        x: root.leftPadding
-        y: root.topPadding + root.availableHeight / 2 - height / 2
+        x: parent.leftPadding
+        y: parent.topPadding + parent.availableHeight / 2 - height / 2
         implicitWidth: 200
         implicitHeight: 12
-        width: root.availableWidth
+        width: parent.availableWidth
         height: implicitHeight
         radius: height / 2
         color: "#EBEDEF"
 
 
         Rectangle {
-            width: root.visualPosition = 0 ? 0 : root.handle.x + root.handle.width / 2
+            width: parent.visualPosition = 0 ? 0 : parent.handle.x + parent.handle.width / 2
             height: parent.height
-            color: root.checkedColor
+            color: parent.checkedColor
             radius: height / 2
 
 
 
 
-            layer.enabled: root.hovered | root.pressed
+            layer.enabled: parent.hovered | parent.pressed
 
         }
     }
 
 
     handle: Rectangle {
-        x: root.leftPadding + root.visualPosition * (root.availableWidth - width)
-        y: root.topPadding + root.availableHeight / 2 - height / 2
-        implicitWidth: root.background.implicitHeight + 6
+        x: parent.leftPadding + parent.visualPosition * (parent.availableWidth - width)
+        y: parent.topPadding + parent.availableHeight / 2 - height / 2
+        implicitWidth: parent.background.implicitHeight + 6
         implicitHeight: implicitWidth
         radius: implicitWidth / 2
-        color: root.pressed ? Qt.darker(root.checkedColor, 1.2) : root.checkedColor
-        border.color: Qt.darker(root.checkedColor, 0.93)
+        color: parent.pressed ? Qt.darker(parent.checkedColor, 1.2) : parent.checkedColor
+        border.color: Qt.darker(parent.checkedColor, 0.93)
 
 
-        layer.enabled: root.hovered | root.pressed
+        layer.enabled: parent.hovered | parent.pressed
 
     }
 }
