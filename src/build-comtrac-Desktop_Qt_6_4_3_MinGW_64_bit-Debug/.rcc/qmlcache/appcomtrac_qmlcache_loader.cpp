@@ -40,7 +40,7 @@ namespace _comtrac_Ui_SymptomDiary_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
-namespace _comtrac_Ui_editSymptom_qml { 
+namespace _comtrac_Ui_EditSymptom_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
     const QQmlPrivate::CachedQmlUnit unit = {
@@ -152,13 +152,6 @@ namespace _comtrac_Ui_Components_CalendarTemplate_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
-namespace _comtrac_Ui_Components_PopupTemplate_qml { 
-    extern const unsigned char qmlData[];
-    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
-    const QQmlPrivate::CachedQmlUnit unit = {
-        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
-    };
-}
 namespace _comtrac_Ui_Components_ComboBoxTemplate_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
@@ -243,6 +236,13 @@ namespace _comtrac_Ui_Components_SymptomList_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _comtrac_Ui_Components_DialogTemplate_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 
 }
 namespace {
@@ -262,7 +262,7 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Login.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Login_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Medication.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Medication_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/SymptomDiary.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_SymptomDiary_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/editSymptom.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_editSymptom_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/EditSymptom.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_EditSymptom_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/findSymptom.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_findSymptom_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/editMedication.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_editMedication_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/findMedication.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_findMedication_qml::unit);
@@ -278,7 +278,6 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/HeaderTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_HeaderTemplate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/TimePickerTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_TimePickerTemplate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/CalendarTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_CalendarTemplate_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/PopupTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_PopupTemplate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/ComboBoxTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_ComboBoxTemplate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/RoundButtonTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_RoundButtonTemplate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/IconButton.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_IconButton_qml::unit);
@@ -291,6 +290,7 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/TextTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_TextTemplate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/EditSymptomDelegate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_EditSymptomDelegate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/SymptomList.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_SymptomList_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/DialogTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_DialogTemplate_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;

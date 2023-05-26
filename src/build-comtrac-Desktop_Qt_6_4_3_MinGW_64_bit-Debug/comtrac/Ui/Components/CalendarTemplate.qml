@@ -1,26 +1,21 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import "../"
+
 
 GridLayout {
-
     readonly property date currentDate: new Date()
-    anchors.fill: parent
+    width: parent.width * 0.9
+    height: parent.height * 0.25
     columns: 2
 
     DayOfWeekRow {
         id: dayOfWeekRow
         locale: grid.locale
-        font.bold: false
-        delegate: Label {
-            text: model.shortName
-            font: dayOfWeekRow.font
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignVCenter
-        }
-
-        Layout.column: 1
         Layout.fillWidth: true
+        Layout.column: 1
+        font.bold: false
     }
 
     WeekNumberColumn {
@@ -28,89 +23,57 @@ GridLayout {
         year: grid.year
         locale: grid.locale
         font.bold: false
-
-//        Layout.fillHeight: true
+        Layout.fillHeight: true
+        spacing: grid.spacing
     }
 
     MonthGrid {
         id: grid
+        title: parent.currentDate.getMonth()
         month: parent.currentDate.getMonth()
         year: parent.currentDate.getFullYear()
-        spacing: 0
-
-        readonly property int gridLineThickness: 0
-
+        Layout.fillHeight: true
         Layout.fillWidth: true
-//        Layout.fillHeight: true
+        spacing: 10
+        // Markiert den aktuellen Tag im Kalender
+        delegate: Item {
+            //            width: grid.cellWidth
+            //            height: grid.cellWidth
+            width: date.width
+            height: date.height
 
-        delegate: MonthGridDelegate {
-            id: gridDelegate
-            visibleMonth: grid.month
-            //eventDatabase: window.eventDatabase -> Datenbank: Symptome verbinden
+            Rectangle {
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                width: parent.width
+                height: parent.height
+                color: model.today ? "grey" : "transparent" // Farbe des aktuellen Tages
+                radius: 5
+
+                Text {
+                    id: date
+                    text: model.date.getDate().toString()
+                    anchors.centerIn: parent
+                    font.pixelSize: 12
+                    font.family: "Arial"
+                }
+            }
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    console.log("Day: " + model.date.getDate())
+                    console.log("Month: " + model.date.getMonth())
+                    console.log("Selected Year "+ model.date.getFullYear())
+                   // SymptomDiary.symptomData =
+                }
+            }
+
+
+
+
+
+
+
         }
-
-//        background: Item {
-//            x: grid.leftPadding
-//            y: grid.topPadding
-//            width: grid.availableWidth
-//            height: grid.availableHeight
-
-//            // Vertical lines
-////            Row {
-//////                spacing: (parent.width - (grid.gridLineThickness * rowRepeater.model)) / rowRepeater.model
-
-////                Repeater {
-////                    id: rowRepeater
-////                    model: 7
-////                    delegate: Rectangle {
-////                        width: 1
-////                        height: grid.height
-////                        color: "#ccc"
-////                    }
-////                }
-////            }
-
-//            // Horizontal lines
-////            Column {
-//////                spacing: (parent.height - (grid.gridLineThickness * columnRepeater.model)) / columnRepeater.model
-
-////                Repeater {
-////                    id: columnRepeater
-////                    model: 6
-////                    delegate: Rectangle {
-////                        width: grid.width
-////                        height: 1
-////                        color: "#ccc"
-////                    }
-////                }
-////            }
-//        }
     }
 }
-
-//ColumnLayout {
-//    width: parent.width
-//    height: parent.height * 0.25
-//    DayOfWeekRow {
-//        locale: grid.locale
-//        Layout.fillWidth: true
-//    }
-
-//    MonthGrid {
-//        id: grid
-//        month: Calendar.December // this is how the Calendar can be used
-//        year: 2022
-//        locale: Qt.locale("de_DE")
-//        Layout.fillWidth: true
-//        delegate: Text {
-//            horizontalAlignment: Text.AlignHCenter
-//            verticalAlignment: Text.AlignVCenter
-//            opacity: model.month === control.month ? 1 : 0
-//            text: model.day
-//            font: control.font
-
-//            required property var model
-//        }
-
-//    }
-//}

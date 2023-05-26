@@ -1,6 +1,6 @@
 
 #include "symptommodel.h"
-
+#include <iostream>
 
 SymptomModel::SymptomModel(QObject *parent) : QSqlQueryModel(parent)
 {
@@ -8,12 +8,9 @@ SymptomModel::SymptomModel(QObject *parent) : QSqlQueryModel(parent)
     getSymptoms();
 }
 
-void SymptomModel::addSymptom(const QString &name, const QString &intensity,const int& frequency, const QString &duration, QString entry_date, QString entry_time)
+int SymptomModel::addSymptom(QString name, QString intensity, int frequency,  QString duration, QDate entryDate, QTime entryTime)
 {
-    qDebug() << "Symptommodel";
-
-    QDate entryDate = QDate::fromString(entry_date,"dd.MM.yyyy");
-    QTime entryTime = QTime::fromString(entry_time, "hh:mm");
+    int newSymptomID;
 
     QSqlQuery query;
     query.prepare("INSERT INTO symptoms (name, intensity, frequency, duration, entryDate, entryTime) "
@@ -24,34 +21,58 @@ void SymptomModel::addSymptom(const QString &name, const QString &intensity,cons
     query.bindValue(":duration", duration);
     query.bindValue(":entryDate", entryDate);
     query.bindValue(":entryTime", entryTime);
-    qDebug() << query.exec() << query.lastError().text();
 
+    if(query.exec()) {
+        newSymptomID = query.lastInsertId().toInt();
+        std::cout << "LETZTE ID: " + newSymptomID << std::endl;
+    }
+
+    return newSymptomID;
 
 }
 
-void SymptomModel::setCurrentSymptom(int id)
+void SymptomModel::deleteSymptom(int id)
 {
-    currentSymptom = id;
-}
 
-int SymptomModel::getCurrentSymptom()
-{
-    return currentSymptom;
-}
+    std::cout << "ID die gelöscht wird: " << id << std::endl;
 
-void SymptomModel::setSymptom(int targetID)
-{
-    Symptom * foundSymptom;
-    // Suche nach dem Symptom anhand der ID
-    foreach (Symptom* symptom, m_symptoms) {
-        if(symptom->id() == targetID){
-            foundSymptom = symptom;
+    //Symptom aus der Datenbank entfernen
+    QSqlQuery query;
+    query.prepare("DELETE FROM symptoms WHERE id = ?");
+    query.bindValue(0, id);
+    qDebug() << query.exec();
+
+    //Symptom aus der Symptom Liste entfernen
+    for (int i = 0; i < m_symptoms.size(); i++)
+    {
+        Symptom* symptom = m_symptoms.at(i);
+        if (symptom->id() == id)
+        {
+            m_symptoms.removeAt(i);
+            delete symptom; // Speicher freigeben
             break;
         }
     }
-    setSingleSymptom(foundSymptom);
 
+    emit symptomsChanged();
 }
+
+void SymptomModel::updateSymptom()
+{
+    int id = m_singleSymptom->id();
+    QSqlQuery query;
+    query.prepare("UPDATE symptoms set name = ?, intensity = ?, frequeny = ?, duration = ?, entryDate = ?, entryTime = ? WHERE id = ?");
+
+    query.bindValue(0, m_singleSymptom->name());
+    query.bindValue(1, m_singleSymptom->intensity());
+    query.bindValue(2, m_singleSymptom->frequency());
+    query.bindValue(3, m_singleSymptom->duration());
+    query.bindValue(4, m_singleSymptom->entryDate());
+    query.bindValue(5, m_singleSymptom->entryTime());
+    query.bindValue(6, id);
+    qDebug() << query.exec();
+}
+
 
 void SymptomModel::updateModel()
 {
@@ -59,6 +80,38 @@ void SymptomModel::updateModel()
 
     // Aktualisiere die ListView im QML
     emit layoutChanged();
+}
+
+SymptomModel::~SymptomModel()
+{
+    delete m_singleSymptom;
+    m_singleSymptom = nullptr;
+
+    for (Symptom *symptom : m_symptoms) {
+        delete symptom;
+    }
+
+    for (Symptom *symptom : m_weekSymptoms) {
+        delete symptom;
+    }
+
+    for (Symptom *symptom : m_daySymptoms) {
+        delete symptom;
+    }
+}
+
+
+QList<Symptom *> SymptomModel::daySymptoms() const
+{
+    return m_daySymptoms;
+}
+
+void SymptomModel::setDaySymptoms(const QList<Symptom *> &newDaySymptoms)
+{
+    if (m_daySymptoms == newDaySymptoms)
+        return;
+    m_daySymptoms = newDaySymptoms;
+    emit daySymptomsChanged();
 }
 
 Symptom *SymptomModel::singleSymptom() const
@@ -87,8 +140,28 @@ void SymptomModel::setSymptoms(const QList<Symptom *> &newSymptoms)
     emit symptomsChanged();
 }
 
+//Neues Symptom zur Liste hinzufügen und in die Datenbank einpflegen
+void SymptomModel::setSymptoms(QString name, QString intensity, int frequency, QString duration, QString entry_date, QString entry_time)
+{
+    QDate entryDate = QDate::fromString(entry_date,"dd.MM.yyyy");
+    QTime entryTime = QTime::fromString(entry_time, "hh:mm");
+
+    //Symptom in die Datenbank einpflegen
+    int newID = addSymptom(name, intensity, frequency, duration, entryDate, entryTime);
+
+    //Symptom zur Symptomliste hinzufügen
+    m_symptoms.push_back(new Symptom(newID, name, intensity, frequency, duration, entryDate, entryTime, this));
+    emit symptomsChanged();
+
+}
+
+
+
 void SymptomModel::getSymptoms()
 {
+    if(! m_symptoms.isEmpty()){
+        m_symptoms.clear();
+    }
     QSqlQuery query;
     query.prepare("SELECT * FROM Symptoms");
 
@@ -107,6 +180,7 @@ void SymptomModel::getSymptoms()
     } else {
         qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
     }
+
 }
 
 

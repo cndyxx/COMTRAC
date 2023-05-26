@@ -6,6 +6,7 @@ HomeScreen 1.0 Ui/HomeScreen.qml
 Login 1.0 Ui/Login.qml
 Medication 1.0 Ui/Medication.qml
 SymptomDiary 1.0 Ui/SymptomDiary.qml
+EditSymptom 1.0 Ui/EditSymptom.qml
 MedicationPlan 1.0 Ui/MedicationPlan.qml
 StackViewPage 1.0 Ui/Components/StackViewPage.qml
 Background 1.0 Ui/Components/Background.qml
@@ -18,7 +19,6 @@ SliderTemplate 1.0 Ui/Components/SliderTemplate.qml
 HeaderTemplate 1.0 Ui/Components/HeaderTemplate.qml
 TimePickerTemplate 1.0 Ui/Components/TimePickerTemplate.qml
 CalendarTemplate 1.0 Ui/Components/CalendarTemplate.qml
-PopupTemplate 1.0 Ui/Components/PopupTemplate.qml
 ComboBoxTemplate 1.0 Ui/Components/ComboBoxTemplate.qml
 RoundButtonTemplate 1.0 Ui/Components/RoundButtonTemplate.qml
 IconButton 1.0 Ui/Components/IconButton.qml
@@ -31,4 +31,5 @@ MonthGridDelegate 1.0 Ui/Components/MonthGridDelegate.qml
 TextTemplate 1.0 Ui/Components/TextTemplate.qml
 EditSymptomDelegate 1.0 Ui/Components/EditSymptomDelegate.qml
 SymptomList 1.0 Ui/Components/SymptomList.qml
+DialogTemplate 1.0 Ui/Components/DialogTemplate.qml
 

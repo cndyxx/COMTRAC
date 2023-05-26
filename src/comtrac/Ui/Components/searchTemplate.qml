@@ -2,9 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 
-
 Item {
-
     //property für die nächste Seite die geöffnet werden soll
     property string nextPage
 
@@ -13,35 +11,20 @@ Item {
 
     //Überschrift über TextFeld "Hier eingeben"
     property string title
-
-    clip: true
-    anchors.centerIn: parent.centerIn
     Background {id: background}
     HeaderTemplate {
         id: header
         pageTitle: headerTitle
-        Button {
-            flat: true
-            width: 15
-            height: 15
-            anchors.left: parent.left
-            anchors.leftMargin: 10
-
-            Image {
-                width: parent.width
-                height: parent.height
-                source: "../assets/x_Button.png"
-            }
-            onClicked: stackView.pop()
-        }
     }
 
     ColumnLayout {
+
         y: 212
         anchors.horizontalCenterOffset: 0
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.left: parent.left
         anchors.leftMargin: 10
+
         Text {
             text: title
             color: "black"
@@ -71,10 +54,9 @@ Item {
                 }
             }
             onAccepted: {
-                stackView.push(nextPage)
-
-
+                stackView.push(nextPage, {"name" :input.text, "pageState": 0});
             }
         }
     }
+
 }

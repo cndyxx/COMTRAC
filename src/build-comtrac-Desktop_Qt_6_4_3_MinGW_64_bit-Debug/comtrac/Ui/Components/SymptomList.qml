@@ -10,11 +10,7 @@ ListView {
         height: 40
         property int symptomId: symptomModel.symptoms[index].id
 
-        onClicked: {
-            stackView.push("editSymptom.qml")
-            symptomModel.setSymptom(symptomId)
-            console.log("NEUES SYMPTOM: " + symptomModel.singleSymptom.name );
-        }
+//
 
 //
     }

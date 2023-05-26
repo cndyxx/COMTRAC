@@ -8,38 +8,56 @@ import "./Components"
 //„📈“ (U+1F4C8)
 
 Item {
-
+    property var symptomData: symptomModel.symptoms
     Background { id: background}
     HeaderTemplate {
         id: header
         pageTitle: "Symptomtagebuch"
     }
-//    CalendarTemplate {
-//        id: calendar
-//        anchors.top: header.bottom
-//        anchors.topMargin: 50
-//        anchors.left: parent.left; anchors.right: parent.right
-//        anchors.leftMargin: 20; anchors.rightMargin: 20
-//    }
+    CalendarTemplate {
+        id: calendar
+        anchors.top: header.bottom
+        anchors.margins: 10
+    }
 
-
-    //List View
-    SymptomList {
+    ListView {
         id: symptomListView
         spacing: 15
-        anchors.top: header.bottom
-        anchors.topMargin: 30
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: graphicButton.height * 2.2
         width: parent.width
         height: parent.height * 0.25
+        model: symptomData
+        anchors.horizontalCenter: parent.horizontalCenter
+        delegate: SymptomDelegate {
+            anchors.margins: 10
+            width: parent.width * 0.9
+            height: 40
+            property int symptomId: symptomListView.model[index].id
+
+            onClicked: {
+                console.log(symptomListView.model[index].name)
+                EditSymptom.symptom = symptomListView.model[index]
+                stackView.push("EditSymptom.qml", {"symptom" : symptomListView.model[index], "pageState" : 1})
+            }
+        }
+    }
+    Connections {
+        target: symptomModel  // Das Symptom-Modellobjekt in QML
+        function onSymptomsChanged() {
+            // Aktualisiere das Modell der ListView
+            symptomListView.model.clear();
+            symptomListView.model.append(symptomModel.symptoms);
+        }
     }
 
     //Button
     RoundButtonTemplate {
-       id: graphicButton
-       anchors.left: parent.left
-       anchors.bottom: parent.bottom
-       anchors.margins: 14
-       buttonIcon: "\u2630" //muss noch geändert werden in eine Graphik
+        id: graphicButton
+        anchors.left: parent.left
+        anchors.bottom: parent.bottom
+        anchors.margins: 14
+        buttonIcon: "\u2630" //muss noch geändert werden in eine Graphik
 
     }
     RoundButtonTemplate {

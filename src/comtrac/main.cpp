@@ -9,15 +9,15 @@
 #include "Models/medicationmodel.h"
 #include "Controllers/medication.h"
 #include "Models/symptommodel.h"
-
+#include <QQmlDebuggingEnabler>
 
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
     //Datenbank-Verbinung herstellen
-    DbManager* database;
-    database = DbManager::holeInstanz();
+    DbManager* database = DbManager::holeInstanz();
+
     QQmlApplicationEngine engine;
     const QUrl url(u"qrc:/comtrac/Ui/Main.qml"_qs);
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreationFailed,
@@ -26,20 +26,20 @@ int main(int argc, char *argv[])
 
     //Verknüpfung zwischen QML und C++-Model
 
-   // qmlRegisterType<MedicationModel>("Medication", 1, 0, "MedicationModel");
-    qmlRegisterUncreatableType<Medication>("Medication", 1, 0, "MedicationList",
-                                           QStringLiteral("MedicationList should not be created in QML"));
-
     Login login;
     QQmlContext *ctx = engine.rootContext();
     ctx->setContextProperty("login", &login);
 
-    MedicationModel *medModel = new MedicationModel();
-    engine.rootContext()->setContextProperty("medModel", medModel);
+//    MedicationModel *medModel = new MedicationModel();
+    MedicationModel medModel;
+    ctx->setContextProperty("medModel", &medModel);
+//    engine.rootContext()->setContextProperty("medModel", medModel);
 
 
-    SymptomModel *symptomModel = new SymptomModel();
-    engine.rootContext()->setContextProperty("symptomModel", symptomModel);
+//    SymptomModel *symptomModel = new SymptomModel();
+    SymptomModel symptomModel;
+    ctx->setContextProperty("symptomModel", &symptomModel);
+//    engine.rootContext()->setContextProperty("symptomModel", symptomModel);
 
     engine.load(url);
 

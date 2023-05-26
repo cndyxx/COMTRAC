@@ -46,7 +46,7 @@ qt_add_qml_module(appcomtrac
     Ui/Login.qml
     Ui/Medication.qml
     Ui/SymptomDiary.qml
-    Ui/editSymptom.qml
+    Ui/EditSymptom.qml
     Ui/findSymptom.qml
     Ui/editMedication.qml
     Ui/findMedication.qml
@@ -63,7 +63,6 @@ qt_add_qml_module(appcomtrac
     Ui/Components/HeaderTemplate.qml
     Ui/Components/TimePickerTemplate.qml
     Ui/Components/CalendarTemplate.qml
-    Ui/Components/PopupTemplate.qml
     Ui/Components/ComboBoxTemplate.qml
     Ui/Components/RoundButtonTemplate.qml
     Ui/Components/IconButton.qml
@@ -76,6 +75,7 @@ qt_add_qml_module(appcomtrac
     Ui/Components/TextTemplate.qml
     Ui/Components/EditSymptomDelegate.qml
     Ui/Components/SymptomList.qml
+    Ui/Components/DialogTemplate.qml
 
 
 
@@ -98,7 +98,7 @@ target_link_libraries(appcomtrac
 )
 target_link_libraries(appcomtrac PRIVATE Qt6::Sql)
 
-
+target_compile_definitions(appcomtrac PRIVATE QT_QML_DEBUG)
 
 
 install(TARGETS appcomtrac

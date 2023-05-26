@@ -7,39 +7,81 @@ import "./Components"
 Item {
 
     id: root
+    // 0: Leer (Eingabe)
+    // 1: Datenanzeige
+    // 2: Datenanzeige mit aktivierten Feldern
+    property int pageState
+    property var symptom: symptomModel.singleSymptom
+    property string name: symptom.name
+    property string intensity: symptom.intensity
+    property int frequency: symptom.frequency
+    property string duration: symptom.duration
+    property date entryTime: symptom.entryTime
+    property date entryDate: symptom.entryDate
 
-    property var symptomData: symptomListView.model[index]
+
+    property date currentTime: new Date()
+
+
 
     Background { id: background}
+
     HeaderTemplate {
         id: header
         pageTitle: "Symptom hinzufügen"
 
     }
-    // 0: Leer (Eingabe)
-    // 1: Datenanzeige
-    // 2: Datenanzeige mit aktivierten Feldern
-    property int pageState
-    ColumnLayout {
-        anchors.top: header.bottom
+    DialogTemplate {
+        id: dialog
+        dialogVisible: false
+    }
 
-        RowLayout {
-            TextTemplate {
-                id: entryDate
-                titleText: "Datum"
-                Layout.fillWidth: true
-                inputText: "25.05.2023" //muss automatisch eingetragen werde
+    ColumnLayout {
+        anchors.fill: parent
+        anchors.top: header.bottom
+        anchors.topMargin: header.height
+        anchors.margins: 15
+
+        spacing: 10
+
+        //Auslagern !!
+        GridLayout {
+            columns: 2
+            rows: 2
+            Label {
+                text: "Datum"
+                color: "grey"
+                font.pixelSize: 12
+            }
+            Label {
+                text: "Uhrzeit"
+                color: "grey"
+                font.pixelSize: 12
+            }
+            Text {
+                text: "22.05.2023"
+                color: "grey"
+                font.pixelSize: 15
             }
 
-            TextTemplate {
-                id: entryTime
-                Layout.fillWidth: true
-                titleText: "Uhrzeit"
-                inputText: "13:37" //muss automatisch eingetragen werden
+            Text {
+                id: txtTime
+                text: currentTime.toLocaleTimeString(Locale.ShortFormat)/*{  ----------> ÄNDERN
+                    if(pageState !== 0)
+                        return entryDate;
+                    else
+                        return currentTime.toLocaleTimeString(Locale.ShortFormat);
+                }*/
+                color: "grey"
+                font.pixelSize: 15
             }
         }
 
-        Text {
+
+
+
+        Label {
+            id: txtSymptom
             text: "Symptom"
             color: "black"
             font.pixelSize: 23
@@ -51,18 +93,20 @@ Item {
             font.pixelSize:17
             font.family: "Arial"
             color: "black"
-//            text: symptomName
-            text: symptomModel.singleSymptom.name
+            //            text: symptomName
+            text: name
             focus: true
-            enabled: pageState === 0 || pageState === 2
+            enabled: pageState === 0 || pageState === 2 //aktiviert wenn status 0 und 2
             Rectangle {
-                width: header.width
+                width: header.width * 0.9
                 height: 2
                 color: "grey"
                 anchors.top: parent.bottom
 
             }
+
         }
+
         RowLayout {
             Text {
                 text: "Intensität: "
@@ -92,12 +136,22 @@ Item {
             to: 2
             stepSize: 1
             Layout.fillWidth: true
-            value: 1
+            enabled: pageState === 0 || pageState === 2 //aktiviert wenn status 0 und 2
+            value: {
+                var intensityValue = intensity;
+                if (pageState !== 0) {
+                    if (intensityValue === "leicht")
+                        return 0;
+                    else if (intensityValue === "mäßig")
+                        return 1;
+                    else if (intensityValue === "schwer")
+                        return 2;
+                }
+                else
+                    return 1;
+            }
 
         }
-
-
-
 
         RowLayout {
             Text {
@@ -119,6 +173,13 @@ Item {
             to: 9
             stepSize: 1
             Layout.fillWidth: true
+            enabled: pageState === 0 || pageState === 2 //aktiviert wenn status 0 und 2
+            value: {
+                if (pageState !== 0)
+                    return frequency;
+                else
+                    return 1;
+            }
 
         }
 
@@ -135,35 +196,89 @@ Item {
             id: radioButtonLessThen
             text: qsTr("Seit weniger als 24 Stunden")
             font.pixelSize: 15
+            enabled: pageState === 0 || pageState === 2
+            checked: {
+                if (pageState !== 0)
+                    if (duration === radioButtonLessThen.text)
+                        return true;
+                    else
+                        return false;
+            }
+
         }
         RadioButtonTemplate{
             id: radioButtonMoreThen
             text: qsTr("Seit mehr als 24 Stunden")
             font.pixelSize: 15
+            enabled: pageState === 0 || pageState === 2 //aktiviert wenn status 0 und 2
+            checked: {
+                if (pageState !== 0)
+                    if (duration === radioButtonMoreThen.text)
+                        return true
+                    else
+                        return false
+            }
         }
         RowLayout {
             ButtonTemplate {
-                text: qsTr("Abbrechen")
+                text: {
+                    if(pageState === 0)
+                        return qsTr("Abbrechen");
+                    else if (pageState === 1)
+                        return qsTr("Zurück");
+                    else
+                        return qsTr("Löschen");
+                }
                 buttonWidth: parent.width/2
                 Layout.fillWidth: true
                 onClicked: {
-                    stackView.pop();
-                    stackView.pop()
+                    if(pageState === 0) {
+                        stackView.pop();
+                        stackView.pop();
+                    }
+                    else if(pageState ===1){
+                        stackView.pop();
+                    }
+
+                    else if(pageState === 2){
+                        dialog.dialogVisible = true;
+                    }
+
                 }
             }
             ButtonTemplate {
-                text: qsTr("Eintragen")
+                text:  {
+                    if(pageState === 0)
+                        return qsTr("Eintragen");
+                    else if (pageState === 1)
+                        return qsTr("Bearbeiten");
+                    else
+                        return qsTr("Ändern");
+                }
                 Layout.fillWidth: true
                 buttonWidth: parent.width / 2
                 onClicked: {
-                    console.log("Wert: " + symptomData.id);
                     //Überpüfe welcher RadioButton ausgewählt
                     if (radioButtonMoreThen.checked) {
                         var radioButtonValue = radioButtonMoreThen.text
                     } else {
                         radioButtonValue = radioButtonLessThen.text
                     }
-                    symptomModel.addSymptom(symptomInput.text, sliderIntensity.value, sliderFrequency.value, radioButtonValue, "25.05.2023", "11:24")
+
+                    if(pageState === 0) {
+                        symptomModel.setSymptoms(symptomInput.text, sliderIntensity.value, sliderFrequency.value, radioButtonValue, "25.05.2023", txtTime.text);
+                        stackView.pop()
+                        stackView.pop()
+                    }
+                    else if(pageState ===1){
+                         console.log("Wert: " + symptom.id);
+                        pageState = 2;
+                    }
+
+                    else if(pageState === 2){
+                        //update function
+
+                    }
                 }
             }
         }

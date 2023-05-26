@@ -6,9 +6,6 @@ import QtQuick.Controls 2.0
 Slider {
     property color checkedColor: "grey"
 
-    value: 0.5
-
-
     background: Rectangle {
         x: parent.leftPadding
         y: parent.topPadding + parent.availableHeight / 2 - height / 2
@@ -25,10 +22,6 @@ Slider {
             height: parent.height
             color: parent.checkedColor
             radius: height / 2
-
-
-
-
             layer.enabled: parent.hovered | parent.pressed
 
         }
@@ -43,8 +36,6 @@ Slider {
         radius: implicitWidth / 2
         color: parent.pressed ? Qt.darker(parent.checkedColor, 1.2) : parent.checkedColor
         border.color: Qt.darker(parent.checkedColor, 0.93)
-
-
         layer.enabled: parent.hovered | parent.pressed
 
     }

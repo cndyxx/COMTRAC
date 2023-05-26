@@ -3,7 +3,7 @@
 /comtrac/Ui/Login.qml
 /comtrac/Ui/Medication.qml
 /comtrac/Ui/SymptomDiary.qml
-/comtrac/Ui/editSymptom.qml
+/comtrac/Ui/EditSymptom.qml
 /comtrac/Ui/findSymptom.qml
 /comtrac/Ui/editMedication.qml
 /comtrac/Ui/findMedication.qml
@@ -19,7 +19,6 @@
 /comtrac/Ui/Components/HeaderTemplate.qml
 /comtrac/Ui/Components/TimePickerTemplate.qml
 /comtrac/Ui/Components/CalendarTemplate.qml
-/comtrac/Ui/Components/PopupTemplate.qml
 /comtrac/Ui/Components/ComboBoxTemplate.qml
 /comtrac/Ui/Components/RoundButtonTemplate.qml
 /comtrac/Ui/Components/IconButton.qml
@@ -32,3 +31,4 @@
 /comtrac/Ui/Components/TextTemplate.qml
 /comtrac/Ui/Components/EditSymptomDelegate.qml
 /comtrac/Ui/Components/SymptomList.qml
+/comtrac/Ui/Components/DialogTemplate.qml

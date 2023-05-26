@@ -23,6 +23,11 @@ DbManager::DbManager()
     }
 }
 
+DbManager::~DbManager()
+{
+    delete instanz;
+}
+
 
 
 

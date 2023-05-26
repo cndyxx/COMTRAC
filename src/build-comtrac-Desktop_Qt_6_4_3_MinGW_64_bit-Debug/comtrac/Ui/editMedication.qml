@@ -6,8 +6,7 @@ import "./Components"
 
 Item {
     property alias medicationName : medicationInput.text
-    Background { id: backgroung
-    }
+    Background { id: background }
 
     HeaderTemplate {
         id: header

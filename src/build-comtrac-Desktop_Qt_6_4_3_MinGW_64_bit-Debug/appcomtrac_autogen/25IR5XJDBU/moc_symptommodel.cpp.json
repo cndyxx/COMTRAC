@@ -33,6 +33,21 @@
                     "type": "Symptom*",
                     "user": false,
                     "write": "setSingleSymptom"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 2,
+                    "name": "daySymptoms",
+                    "notify": "daySymptomsChanged",
+                    "read": "daySymptoms",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QList<Symptom*>",
+                    "user": false,
+                    "write": "setDaySymptoms"
                 }
             ],
             "qualifiedClassName": "SymptomModel",
@@ -46,9 +61,35 @@
                     "access": "public",
                     "name": "singleSymptomChanged",
                     "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "daySymptomsChanged",
+                    "returnType": "void"
                 }
             ],
             "slots": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "id",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "deleteSymptom",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "updateSymptom",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "getSymptoms",
+                    "returnType": "void"
+                },
                 {
                     "access": "public",
                     "arguments": [
@@ -77,34 +118,7 @@
                             "type": "QString"
                         }
                     ],
-                    "name": "addSymptom",
-                    "returnType": "void"
-                },
-                {
-                    "access": "public",
-                    "arguments": [
-                        {
-                            "name": "id",
-                            "type": "int"
-                        }
-                    ],
-                    "name": "setCurrentSymptom",
-                    "returnType": "void"
-                },
-                {
-                    "access": "public",
-                    "name": "getCurrentSymptom",
-                    "returnType": "int"
-                },
-                {
-                    "access": "public",
-                    "arguments": [
-                        {
-                            "name": "id",
-                            "type": "int"
-                        }
-                    ],
-                    "name": "setSymptom",
+                    "name": "setSymptoms",
                     "returnType": "void"
                 }
             ],

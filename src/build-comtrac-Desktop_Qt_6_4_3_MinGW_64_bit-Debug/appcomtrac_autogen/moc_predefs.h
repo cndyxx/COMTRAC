@@ -293,6 +293,7 @@
 #define __FLT128_MAX__ 1.18973149535723176508575932662800702e+4932F128
 #define __INTPTR_MAX__ 0x7fffffffffffffffLL
 #define __cpp_sized_deallocation 201309L
+#define QT_QML_DEBUG 1
 #define __cpp_guaranteed_copy_elision 201606L
 #define __FLT64_HAS_QUIET_NAN__ 1
 #define __stdcall __attribute__((__stdcall__))

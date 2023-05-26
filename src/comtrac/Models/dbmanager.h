@@ -11,6 +11,7 @@ class DbManager
 {
 public:
     DbManager();
+    ~DbManager();
     static DbManager* holeInstanz();
 
 private:

@@ -5,7 +5,7 @@
     <file alias="Ui/Login.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Login.qml</file>
     <file alias="Ui/Medication.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Medication.qml</file>
     <file alias="Ui/SymptomDiary.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SymptomDiary.qml</file>
-    <file alias="Ui/editSymptom.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/editSymptom.qml</file>
+    <file alias="Ui/EditSymptom.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/EditSymptom.qml</file>
     <file alias="Ui/findSymptom.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/findSymptom.qml</file>
     <file alias="Ui/editMedication.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/editMedication.qml</file>
     <file alias="Ui/findMedication.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/findMedication.qml</file>
@@ -21,7 +21,6 @@
     <file alias="Ui/Components/HeaderTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/HeaderTemplate.qml</file>
     <file alias="Ui/Components/TimePickerTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/TimePickerTemplate.qml</file>
     <file alias="Ui/Components/CalendarTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/CalendarTemplate.qml</file>
-    <file alias="Ui/Components/PopupTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/PopupTemplate.qml</file>
     <file alias="Ui/Components/ComboBoxTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/ComboBoxTemplate.qml</file>
     <file alias="Ui/Components/RoundButtonTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/RoundButtonTemplate.qml</file>
     <file alias="Ui/Components/IconButton.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/IconButton.qml</file>
@@ -34,6 +33,7 @@
     <file alias="Ui/Components/TextTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/TextTemplate.qml</file>
     <file alias="Ui/Components/EditSymptomDelegate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/EditSymptomDelegate.qml</file>
     <file alias="Ui/Components/SymptomList.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/SymptomList.qml</file>
+    <file alias="Ui/Components/DialogTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/DialogTemplate.qml</file>
     <file alias="assets/menu.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/menu.png</file>
     <file alias="assets/x_Button.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/x_Button.png</file>
   </qresource>

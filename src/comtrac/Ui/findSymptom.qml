@@ -3,11 +3,11 @@ import "./Components"
 
 Item {
     anchors.centerIn: parent.centerIn
-    SearchTemplate {
 
+    SearchTemplate {
         width: parent.width
         height: parent.height
-        nextPage: "../editSymptom.qml"
+        nextPage: "../EditSymptom.qml"
         headerTitle: "Symptom hinzufügen"
         title: "Symptom"
     }
