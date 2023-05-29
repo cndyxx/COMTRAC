@@ -27,7 +27,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_SymptomModel_t {
-    uint offsetsAndSizes[42];
+    uint offsetsAndSizes[46];
     char stringdata0[13];
     char stringdata1[16];
     char stringdata2[1];
@@ -44,11 +44,13 @@ struct qt_meta_stringdata_SymptomModel_t {
     char stringdata13[9];
     char stringdata14[10];
     char stringdata15[10];
-    char stringdata16[9];
-    char stringdata17[16];
-    char stringdata18[14];
+    char stringdata16[17];
+    char stringdata17[9];
+    char stringdata18[17];
     char stringdata19[9];
-    char stringdata20[12];
+    char stringdata20[16];
+    char stringdata21[14];
+    char stringdata22[12];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_SymptomModel_t::offsetsAndSizes) + ofs), len 
@@ -70,11 +72,13 @@ Q_CONSTINIT static const qt_meta_stringdata_SymptomModel_t qt_meta_stringdata_Sy
         QT_MOC_LITERAL(150, 8),  // "duration"
         QT_MOC_LITERAL(159, 9),  // "entryDate"
         QT_MOC_LITERAL(169, 9),  // "entryTime"
-        QT_MOC_LITERAL(179, 8),  // "symptoms"
-        QT_MOC_LITERAL(188, 15),  // "QList<Symptom*>"
-        QT_MOC_LITERAL(204, 13),  // "singleSymptom"
-        QT_MOC_LITERAL(218, 8),  // "Symptom*"
-        QT_MOC_LITERAL(227, 11)   // "daySymptoms"
+        QT_MOC_LITERAL(179, 16),  // "setSingleSymptom"
+        QT_MOC_LITERAL(196, 8),  // "Symptom*"
+        QT_MOC_LITERAL(205, 16),  // "newSingleSymptom"
+        QT_MOC_LITERAL(222, 8),  // "symptoms"
+        QT_MOC_LITERAL(231, 15),  // "QList<Symptom*>"
+        QT_MOC_LITERAL(247, 13),  // "singleSymptom"
+        QT_MOC_LITERAL(261, 11)   // "daySymptoms"
     },
     "SymptomModel",
     "symptomsChanged",
@@ -92,10 +96,12 @@ Q_CONSTINIT static const qt_meta_stringdata_SymptomModel_t qt_meta_stringdata_Sy
     "duration",
     "entryDate",
     "entryTime",
+    "setSingleSymptom",
+    "Symptom*",
+    "newSingleSymptom",
     "symptoms",
     "QList<Symptom*>",
     "singleSymptom",
-    "Symptom*",
     "daySymptoms"
 };
 #undef QT_MOC_LITERAL
@@ -107,23 +113,24 @@ Q_CONSTINIT static const uint qt_meta_data_SymptomModel[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       7,   14, // methods
-       3,   77, // properties
+       8,   14, // methods
+       3,   86, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        3,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   56,    2, 0x06,    4 /* Public */,
-       3,    0,   57,    2, 0x06,    5 /* Public */,
-       4,    0,   58,    2, 0x06,    6 /* Public */,
+       1,    0,   62,    2, 0x06,    4 /* Public */,
+       3,    0,   63,    2, 0x06,    5 /* Public */,
+       4,    0,   64,    2, 0x06,    6 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       5,    1,   59,    2, 0x0a,    7 /* Public */,
-       7,    0,   62,    2, 0x0a,    9 /* Public */,
-       8,    0,   63,    2, 0x0a,   10 /* Public */,
-       9,    6,   64,    2, 0x0a,   11 /* Public */,
+       5,    1,   65,    2, 0x0a,    7 /* Public */,
+       7,    0,   68,    2, 0x0a,    9 /* Public */,
+       8,    0,   69,    2, 0x0a,   10 /* Public */,
+       9,    6,   70,    2, 0x0a,   11 /* Public */,
+      16,    1,   83,    2, 0x0a,   18 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -135,11 +142,12 @@ Q_CONSTINIT static const uint qt_meta_data_SymptomModel[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::Int, QMetaType::QString, QMetaType::QString, QMetaType::QString,   10,   11,   12,   13,   14,   15,
+    QMetaType::Void, 0x80000000 | 17,   18,
 
  // properties: name, type, flags
-      16, 0x80000000 | 17, 0x0001510b, uint(0), 0,
-      18, 0x80000000 | 19, 0x0001510b, uint(1), 0,
-      20, 0x80000000 | 17, 0x0001510b, uint(2), 0,
+      19, 0x80000000 | 20, 0x0001510b, uint(0), 0,
+      21, 0x80000000 | 17, 0x0001510b, uint(1), 0,
+      22, 0x80000000 | 20, 0x0001510b, uint(2), 0,
 
        0        // eod
 };
@@ -179,7 +187,10 @@ Q_CONSTINIT const QMetaObject SymptomModel::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'setSingleSymptom'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<Symptom *, std::false_type>
     >,
     nullptr
 } };
@@ -197,7 +208,19 @@ void SymptomModel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         case 4: _t->updateSymptom(); break;
         case 5: _t->getSymptoms(); break;
         case 6: _t->setSymptoms((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[5])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[6]))); break;
+        case 7: _t->setSingleSymptom((*reinterpret_cast< std::add_pointer_t<Symptom*>>(_a[1]))); break;
         default: ;
+        }
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        switch (_id) {
+        default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
+        case 7:
+            switch (*reinterpret_cast<int*>(_a[1])) {
+            default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
+            case 0:
+                *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< Symptom* >(); break;
+            }
+            break;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
@@ -276,13 +299,13 @@ int SymptomModel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 7)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 7;
+        _id -= 8;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 7)
-            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 7;
+        if (_id < 8)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 8;
     }else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
             || _c == QMetaObject::RegisterPropertyMetaType) {

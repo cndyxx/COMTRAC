@@ -29,9 +29,10 @@ GridLayout {
 
     MonthGrid {
         id: grid
-        title: parent.currentDate.getMonth()
+        title: "HALLO"
         month: parent.currentDate.getMonth()
         year: parent.currentDate.getFullYear()
+        locale: Qt.locale("de_DE")
         Layout.fillHeight: true
         Layout.fillWidth: true
         spacing: 10
@@ -61,6 +62,8 @@ GridLayout {
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
+                    var datum = model.date.getDate() + "." + model.date.getMonth() + "." + model.date.getFullYear();
+                    SymptomDiary.entryDate = datum
                     console.log("Day: " + model.date.getDate())
                     console.log("Month: " + model.date.getMonth())
                     console.log("Selected Year "+ model.date.getFullYear())

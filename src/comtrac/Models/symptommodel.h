@@ -30,7 +30,7 @@ public:
     void setSymptoms(const QList<Symptom *> &newSymptom);
 
     Symptom *singleSymptom() const;
-    void setSingleSymptom(Symptom *newSingleSymptom);
+
 
     QList<Symptom *> daySymptoms() const;
     void setDaySymptoms(const QList<Symptom *> &newDaySymptoms);
@@ -50,6 +50,7 @@ public slots:
 
     void getSymptoms();
     void setSymptoms(QString name, QString intensity, int frequency, QString duration, QString entryDate, QString entryTime);
+    void setSingleSymptom(Symptom *newSingleSymptom);
 
 
 private:

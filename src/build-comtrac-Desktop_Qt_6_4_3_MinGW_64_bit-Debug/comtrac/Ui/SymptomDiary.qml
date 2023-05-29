@@ -8,7 +8,8 @@ import "./Components"
 //„📈“ (U+1F4C8)
 
 Item {
-    property var symptomData: symptomModel.symptoms
+     property var symptomData: symptomListView.model[index]
+     property string date
     Background { id: background}
     HeaderTemplate {
         id: header
@@ -22,23 +23,25 @@ Item {
 
     ListView {
         id: symptomListView
+
         spacing: 15
         anchors.bottom: parent.bottom
         anchors.bottomMargin: graphicButton.height * 2.2
         width: parent.width
         height: parent.height * 0.25
-        model: symptomData
+        model: symptomModel.symptoms
         anchors.horizontalCenter: parent.horizontalCenter
         delegate: SymptomDelegate {
             anchors.margins: 10
             width: parent.width * 0.9
             height: 40
-            property int symptomId: symptomListView.model[index].id
+            property int symptomId: symptomData.id
 
             onClicked: {
-                console.log(symptomListView.model[index].name)
-                EditSymptom.symptom = symptomListView.model[index]
-                stackView.push("EditSymptom.qml", {"symptom" : symptomListView.model[index], "pageState" : 1})
+                console.log(symptomData.name + "DATUM: " + date);
+                symptomModel.setSingleSymptom(symptomData);
+                stackView.push("EditSymptom.qml", {"pageState" : 1})
+
             }
         }
     }

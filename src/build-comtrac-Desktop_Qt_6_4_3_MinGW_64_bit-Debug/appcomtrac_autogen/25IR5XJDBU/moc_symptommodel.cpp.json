@@ -120,6 +120,17 @@
                     ],
                     "name": "setSymptoms",
                     "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "newSingleSymptom",
+                            "type": "Symptom*"
+                        }
+                    ],
+                    "name": "setSingleSymptom",
+                    "returnType": "void"
                 }
             ],
             "superClasses": [
