@@ -39,7 +39,7 @@ Item {
             onClicked: {
                 console.log(symptomListView.model[index].name + "DATUM: " + selectedDate);
                 symptomModel.setSingleSymptom(symptomListView.model[index]);
-                stackView.push("EditSymptom.qml", {"pageState" : "1"})
+                stackView.push("EditSymptom.qml", {"pageState" : 1})
 
             }
         }

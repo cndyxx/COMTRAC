@@ -131,7 +131,7 @@ Item {
             stepSize: 1
             Layout.fillWidth: true
             enabled: pageState === 0 || pageState === 2 //aktiviert wenn status 0 und 2
-            value: {
+            value: intensity/*{
                 var intensityValue = intensity;
                 if (pageState !== 0) {
                     if (intensityValue === "leicht")
@@ -143,7 +143,7 @@ Item {
                 }
                 else
                     return 1;
-            }
+            }*/
 
         }
 
@@ -270,7 +270,7 @@ Item {
                     }
 
                     else if(pageState === 2){
-                        //update function
+                        symptomModel.updateSymptom(symptomInput.text, sliderIntensity.value, sliderFrequency.value, radioButtonValue, "25.05.2023", txtTime.text);
 
                     }
                 }

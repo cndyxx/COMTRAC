@@ -82,6 +82,32 @@
                 },
                 {
                     "access": "public",
+                    "arguments": [
+                        {
+                            "name": "name",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "intensity",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "frequency",
+                            "type": "int"
+                        },
+                        {
+                            "name": "duration",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "entryDate",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "entryTime",
+                            "type": "QString"
+                        }
+                    ],
                     "name": "updateSymptom",
                     "returnType": "void"
                 },

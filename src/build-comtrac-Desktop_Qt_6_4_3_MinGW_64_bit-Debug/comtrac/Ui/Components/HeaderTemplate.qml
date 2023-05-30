@@ -16,8 +16,16 @@ ToolBar {
     RowLayout {
         anchors.fill: parent
         ToolButton {
-            text: qsTr("‹")
+            id: toolbtn
+            Image {
+                id: arrowBack
+                source:"../../assets/x_Button.png"
+                width: parent.width/2
+                height: parent.height/2
+                anchors.centerIn: parent
+            }
             onClicked: stackView.pop()
+
         }
         Label {
             text: pageTitle
