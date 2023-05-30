@@ -8,8 +8,8 @@ import "./Components"
 //„📈“ (U+1F4C8)
 
 Item {
-     property var symptomData: symptomListView.model[index]
-     property string date
+
+     property string selectedDate
     Background { id: background}
     HeaderTemplate {
         id: header
@@ -35,12 +35,11 @@ Item {
             anchors.margins: 10
             width: parent.width * 0.9
             height: 40
-            property int symptomId: symptomData.id
 
             onClicked: {
-                console.log(symptomData.name + "DATUM: " + date);
-                symptomModel.setSingleSymptom(symptomData);
-                stackView.push("EditSymptom.qml", {"pageState" : 1})
+                console.log(symptomListView.model[index].name + "DATUM: " + selectedDate);
+                symptomModel.setSingleSymptom(symptomListView.model[index]);
+                stackView.push("EditSymptom.qml", {"pageState" : "1"})
 
             }
         }

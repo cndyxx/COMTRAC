@@ -46,11 +46,11 @@ qt_add_qml_module(appcomtrac
     Ui/Login.qml
     Ui/Medication.qml
     Ui/SymptomDiary.qml
-    Ui/EditSymptom.qml
     Ui/findSymptom.qml
     Ui/editMedication.qml
     Ui/findMedication.qml
     Ui/MedicationPlan.qml
+    Ui/EditSymptom.qml
     #elements
     Ui/Components/StackViewPage.qml
     Ui/Components/Background.qml

@@ -3,11 +3,11 @@
 /comtrac/Ui/Login.qml
 /comtrac/Ui/Medication.qml
 /comtrac/Ui/SymptomDiary.qml
-/comtrac/Ui/EditSymptom.qml
 /comtrac/Ui/findSymptom.qml
 /comtrac/Ui/editMedication.qml
 /comtrac/Ui/findMedication.qml
 /comtrac/Ui/MedicationPlan.qml
+/comtrac/Ui/EditSymptom.qml
 /comtrac/Ui/Components/StackViewPage.qml
 /comtrac/Ui/Components/Background.qml
 /comtrac/Ui/Components/TextFieldTemplate.qml

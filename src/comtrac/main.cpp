@@ -30,16 +30,16 @@ int main(int argc, char *argv[])
     QQmlContext *ctx = engine.rootContext();
     ctx->setContextProperty("login", &login);
 
-//    MedicationModel *medModel = new MedicationModel();
-    MedicationModel medModel;
-    ctx->setContextProperty("medModel", &medModel);
-//    engine.rootContext()->setContextProperty("medModel", medModel);
+    MedicationModel *medModel = new MedicationModel();
+//    MedicationModel medModel;
+//    ctx->setContextProperty("medModel", &medModel);
+    engine.rootContext()->setContextProperty("medModel", medModel);
 
 
-//    SymptomModel *symptomModel = new SymptomModel();
-    SymptomModel symptomModel;
-    ctx->setContextProperty("symptomModel", &symptomModel);
-//    engine.rootContext()->setContextProperty("symptomModel", symptomModel);
+    SymptomModel *symptomModel = new SymptomModel();
+//    SymptomModel symptomModel;
+//    ctx->setContextProperty("symptomModel", &symptomModel);
+    engine.rootContext()->setContextProperty("symptomModel", symptomModel);
 
     engine.load(url);
 

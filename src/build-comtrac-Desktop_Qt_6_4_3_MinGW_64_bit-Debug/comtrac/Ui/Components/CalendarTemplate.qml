@@ -10,31 +10,31 @@ GridLayout {
     width: parent.width * 0.9
     height: parent.height * 0.25
     columns: 2
-    ToolBar {
-        Layout.column: 1
-        anchors.bottom: dayOfWeekRow.top
-        width: parent.width
-        height: parent.height
-        Material.background: "white"
-        Material.foreground: "black"
-        RowLayout {
-            anchors.fill: parent
-            ToolButton {
-                text: qsTr("<")
-                // onClicked: letzten Monat anzeigen
-            }
+//    ToolBar {
+//        Layout.column: 1
+//        anchors.bottom: dayOfWeekRow.top
+//        width: parent.width
+//        height: parent.height
+//        Material.background: "white"
+//        Material.foreground: "black"
+//        RowLayout {
+//            anchors.fill: parent
+//            ToolButton {
+//                text: qsTr("<")
+//                // onClicked: letzten Monat anzeigen
+//            }
 
-            Label {
-                text: currentDate.toLocaleString(Qt.locale("de_DE"), "MMMM yyyy")
-                font.pixelSize: Qt.application.font.pixelSize * 1.25
-                anchors.top: parent.top
-            }
-            ToolButton {
-                text: qsTr(">")
-                // onClicked: Nächsten Monat anzeigen
-            }
-        }
-    }
+//            Label {
+//                text: currentDate.toLocaleString(Qt.locale("de_DE"), "MMMM yyyy")
+//                font.pixelSize: Qt.application.font.pixelSize * 1.25
+//                anchors.top: parent.top
+//            }
+//            ToolButton {
+//                text: qsTr(">")
+//                // onClicked: Nächsten Monat anzeigen
+//            }
+//        }
+//    }
     DayOfWeekRow {
         id: dayOfWeekRow
         locale: grid.locale

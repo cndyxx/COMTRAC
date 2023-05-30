@@ -6,11 +6,10 @@ import "./Components"
 
 Item {
 
-    id: root
     // 0: Leer (Eingabe)
     // 1: Datenanzeige
     // 2: Datenanzeige mit aktivierten Feldern
-    property int pageState
+    property int pageState: 0
     property var symptom: symptomModel.singleSymptom
     property string name: symptom.name
     property string intensity: symptom.intensity
@@ -18,8 +17,6 @@ Item {
     property string duration: symptom.duration
     property date entryTime: symptom.entryTime
     property date entryDate: symptom.entryDate
-
-
     property date currentTime: new Date()
 
 
@@ -76,9 +73,6 @@ Item {
                 font.pixelSize: 15
             }
         }
-
-
-
 
         Label {
             id: txtSymptom

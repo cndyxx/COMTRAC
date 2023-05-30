@@ -6,8 +6,8 @@ HomeScreen 1.0 Ui/HomeScreen.qml
 Login 1.0 Ui/Login.qml
 Medication 1.0 Ui/Medication.qml
 SymptomDiary 1.0 Ui/SymptomDiary.qml
-EditSymptom 1.0 Ui/EditSymptom.qml
 MedicationPlan 1.0 Ui/MedicationPlan.qml
+EditSymptom 1.0 Ui/EditSymptom.qml
 StackViewPage 1.0 Ui/Components/StackViewPage.qml
 Background 1.0 Ui/Components/Background.qml
 TextFieldTemplate 1.0 Ui/Components/TextFieldTemplate.qml
