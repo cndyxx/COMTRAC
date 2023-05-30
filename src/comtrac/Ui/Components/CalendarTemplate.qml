@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Controls.Material
 import QtQuick.Layouts
 import "../"
 
@@ -9,7 +10,31 @@ GridLayout {
     width: parent.width * 0.9
     height: parent.height * 0.25
     columns: 2
+    ToolBar {
+        Layout.column: 1
+        anchors.bottom: dayOfWeekRow.top
+        width: parent.width
+        height: parent.height
+        Material.background: "white"
+        Material.foreground: "black"
+        RowLayout {
+            anchors.fill: parent
+            ToolButton {
+                text: qsTr("<")
+                // onClicked: letzten Monat anzeigen
+            }
 
+            Label {
+                text: currentDate.toLocaleString(Qt.locale("de_DE"), "MMMM yyyy")
+                font.pixelSize: Qt.application.font.pixelSize * 1.25
+                anchors.top: parent.top
+            }
+            ToolButton {
+                text: qsTr(">")
+                // onClicked: Nächsten Monat anzeigen
+            }
+        }
+    }
     DayOfWeekRow {
         id: dayOfWeekRow
         locale: grid.locale
@@ -29,7 +54,6 @@ GridLayout {
 
     MonthGrid {
         id: grid
-        title: "HALLO"
         month: parent.currentDate.getMonth()
         year: parent.currentDate.getFullYear()
         locale: Qt.locale("de_DE")
@@ -67,7 +91,7 @@ GridLayout {
                     console.log("Day: " + model.date.getDate())
                     console.log("Month: " + model.date.getMonth())
                     console.log("Selected Year "+ model.date.getFullYear())
-                   // SymptomDiary.symptomData =
+                    // SymptomDiary.symptomData =
                 }
             }
 

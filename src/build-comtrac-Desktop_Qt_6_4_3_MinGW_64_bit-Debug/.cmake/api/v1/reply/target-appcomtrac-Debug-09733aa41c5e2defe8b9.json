@@ -27,12 +27,12 @@
 			"find_dependency",
 			"_qt_internal_find_qt_dependencies",
 			"add_dependencies",
-			"qt6_target_qml_sources",
 			"_qt_internal_scan_qml_imports",
 			"_qt_internal_generate_deploy_qml_imports_script",
 			"cmake_language",
 			"_qt_internal_finalize_executable",
 			"qt6_finalize_target",
+			"qt6_target_qml_sources",
 			"target_compile_definitions",
 			"target_include_directories",
 			"_qt_internal_qml_type_registration",
@@ -453,7 +453,48 @@
 				"parent" : 68
 			},
 			{
+				"file" : 1,
+				"line" : -1,
+				"parent" : 0
+			},
+			{
+				"command" : 18,
+				"file" : 25,
+				"line" : 1,
+				"parent" : 70
+			},
+			{
+				"command" : 17,
+				"file" : 0,
+				"line" : 705,
+				"parent" : 71
+			},
+			{
+				"command" : 16,
+				"file" : 0,
+				"line" : 640,
+				"parent" : 72
+			},
+			{
+				"command" : 15,
+				"file" : 0,
+				"line" : 640,
+				"parent" : 73
+			},
+			{
 				"command" : 14,
+				"file" : 5,
+				"line" : 2891,
+				"parent" : 74
+			},
+			{
+				"command" : 13,
+				"file" : 5,
+				"line" : 2744,
+				"parent" : 75
+			},
+			{
+				"command" : 19,
 				"file" : 5,
 				"line" : 611,
 				"parent" : 16
@@ -462,47 +503,6 @@
 				"command" : 13,
 				"file" : 5,
 				"line" : 2187,
-				"parent" : 70
-			},
-			{
-				"file" : 1,
-				"line" : -1,
-				"parent" : 0
-			},
-			{
-				"command" : 19,
-				"file" : 25,
-				"line" : 1,
-				"parent" : 72
-			},
-			{
-				"command" : 18,
-				"file" : 0,
-				"line" : 705,
-				"parent" : 73
-			},
-			{
-				"command" : 17,
-				"file" : 0,
-				"line" : 640,
-				"parent" : 74
-			},
-			{
-				"command" : 16,
-				"file" : 0,
-				"line" : 640,
-				"parent" : 75
-			},
-			{
-				"command" : 15,
-				"file" : 5,
-				"line" : 2891,
-				"parent" : 76
-			},
-			{
-				"command" : 13,
-				"file" : 5,
-				"line" : 2744,
 				"parent" : 77
 			},
 			{
@@ -581,13 +581,13 @@
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 29,
 				"file" : 5,
 				"line" : 2080,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
@@ -599,409 +599,409 @@
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 1987,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 23,
 				"file" : 5,
 				"line" : 2129,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 28,
 				"file" : 5,
 				"line" : 2205,
-				"parent" : 70
+				"parent" : 77
 			},
 			{
 				"command" : 27,
@@ -1029,7 +1029,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g"
+					"fragment" : "-DQT_QML_DEBUG -g"
 				}
 			],
 			"defines" : 
@@ -1249,7 +1249,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g"
+					"fragment" : "-DQT_QML_DEBUG -g"
 				},
 				{
 					"backtrace" : 86,
@@ -1427,19 +1427,19 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 71,
-			"id" : "appcomtrac_tooling::@6890427a1f51a3e7e1df"
+			"backtrace" : 76,
+			"id" : "appcomtrac_qmlimportscan::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "appcomtrac_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 78,
+			"id" : "appcomtrac_tooling::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 0,
 			"id" : "appcomtrac_autogen::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 78,
-			"id" : "appcomtrac_qmlimportscan::@6890427a1f51a3e7e1df"
+			"id" : "appcomtrac_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "appcomtrac::@6890427a1f51a3e7e1df",
@@ -1462,7 +1462,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
+				"fragment" : "-DQT_QML_DEBUG -g",
 				"role" : "flags"
 			},
 			{
@@ -1933,7 +1933,7 @@
 		},
 		{
 			"backtrace" : 103,
-			"path" : "Ui/EditSymptom.qml",
+			"path" : "Ui/editSymptom.qml",
 			"sourceGroupIndex" : 2
 		},
 		{
@@ -2185,7 +2185,7 @@
 		},
 		{
 			"backtrace" : 145,
-			"path" : "Ui/Components/SearchTemplate.qml",
+			"path" : "Ui/Components/searchTemplate.qml",
 			"sourceGroupIndex" : 2
 		},
 		{

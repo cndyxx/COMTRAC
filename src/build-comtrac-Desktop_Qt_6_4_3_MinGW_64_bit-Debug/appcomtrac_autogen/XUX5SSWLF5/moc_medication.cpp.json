@@ -1,0 +1,152 @@
+{
+    "classes": [
+        {
+            "className": "Medication",
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "name",
+                    "notify": "nameChanged",
+                    "read": "name",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false,
+                    "write": "setName"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "intakePerDay",
+                    "notify": "intakePerDayChanged",
+                    "read": "intakePerDay",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setIntakePerDay"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 2,
+                    "name": "intakeTime",
+                    "notify": "intakeTimeChanged",
+                    "read": "intakeTime",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QTime",
+                    "user": false,
+                    "write": "setIntakeTime"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 3,
+                    "name": "reminderTime",
+                    "notify": "reminderTimeChanged",
+                    "read": "reminderTime",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QTime",
+                    "user": false,
+                    "write": "setReminderTime"
+                }
+            ],
+            "qualifiedClassName": "Medication",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "medicationAdded",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "medicationRemoved",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "medicationUpdated",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "nameChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "reminderTimeChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "intakePerDayChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "intakeTimeChanged",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "medication",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "readMedication",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "name",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "intakePerDay",
+                            "type": "int"
+                        },
+                        {
+                            "name": "intakeTimes",
+                            "type": "QTime"
+                        },
+                        {
+                            "name": "reminderTime",
+                            "type": "QTime"
+                        }
+                    ],
+                    "name": "addMedication",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "medication.h",
+    "outputRevision": 68
+}

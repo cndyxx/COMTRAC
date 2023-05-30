@@ -605,7 +605,7 @@
 		},
 		{
 			"backtrace" : 21,
-			"path" : "Ui/EditSymptom.qml",
+			"path" : "Ui/editSymptom.qml",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -710,7 +710,7 @@
 		},
 		{
 			"backtrace" : 63,
-			"path" : "Ui/Components/SearchTemplate.qml",
+			"path" : "Ui/Components/searchTemplate.qml",
 			"sourceGroupIndex" : 0
 		},
 		{
