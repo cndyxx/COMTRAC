@@ -71,12 +71,6 @@
             "slots": [
                 {
                     "access": "public",
-                    "arguments": [
-                        {
-                            "name": "id",
-                            "type": "int"
-                        }
-                    ],
                     "name": "deleteSymptom",
                     "returnType": "void"
                 },
@@ -156,6 +150,17 @@
                         }
                     ],
                     "name": "setSingleSymptom",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "entryDate",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "getSymptomsOfDate",
                     "returnType": "void"
                 }
             ],

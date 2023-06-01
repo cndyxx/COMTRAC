@@ -18,6 +18,7 @@ Item {
     property date entryTime: symptom.entryTime
     property date entryDate: symptom.entryDate
     property date currentTime: new Date()
+    property string selectedDate
 
 
 
@@ -31,6 +32,9 @@ Item {
     DialogTemplate {
         id: dialog
         dialogVisible: false
+        dialogText: qsTr("Symptomeintrag wirklich löschen?")
+
+        Layout.alignment: Qt.Vertical
     }
 
     ColumnLayout {
@@ -56,19 +60,19 @@ Item {
                 font.pixelSize: 12
             }
             Text {
-                text: "22.05.2023"
+                text:entryDate.toLocaleDateString("dd.MM.yyyy")
                 color: "grey"
                 font.pixelSize: 15
             }
 
             Text {
                 id: txtTime
-                text: currentTime.toLocaleTimeString(Locale.ShortFormat)/*{  ----------> ÄNDERN
+                text: {
                     if(pageState !== 0)
-                        return entryDate;
+                        return entryDate.toLocaleTimeString(Qt.local(DE_de), "hh:mm");
                     else
-                        return currentTime.toLocaleTimeString(Locale.ShortFormat);
-                }*/
+                        return currentTime.toLocaleTimeString(Qt.local(DE_de), "hh:mm");
+                }
                 color: "grey"
                 font.pixelSize: 15
             }
@@ -235,6 +239,7 @@ Item {
                     }
 
                     else if(pageState === 2){
+                        dialog.deleteSymptom = true;
                         dialog.dialogVisible = true;
                     }
 
@@ -258,7 +263,7 @@ Item {
                     } else {
                         radioButtonValue = radioButtonLessThen.text
                     }
-
+                    //Neues Symptom zur Datenbank hinzufügen
                     if(pageState === 0) {
                         symptomModel.setSymptoms(symptomInput.text, sliderIntensity.value, sliderFrequency.value, radioButtonValue, "25.05.2023", txtTime.text);
                         stackView.pop()
@@ -268,7 +273,7 @@ Item {
                          console.log("Wert: " + symptom.id);
                         pageState = 2;
                     }
-
+                    //Symptom in der Datenbank ändern
                     else if(pageState === 2){
                         symptomModel.updateSymptom(symptomInput.text, sliderIntensity.value, sliderFrequency.value, radioButtonValue, "25.05.2023", txtTime.text);
 

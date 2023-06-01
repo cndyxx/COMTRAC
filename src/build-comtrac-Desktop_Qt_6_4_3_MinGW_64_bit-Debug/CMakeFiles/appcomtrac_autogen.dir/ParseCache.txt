@@ -1830,9 +1830,9 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptommodel.h
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/symptom.h
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_qmlcache_loader.cpp
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/login.cpp
-C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/medication.cpp
-C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/symptom.cpp
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/loginmodel.cpp
+C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/symptom.cpp
+C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/medication.cpp
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/dbmanager.cpp
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medicationmodel.cpp
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptommodel.cpp

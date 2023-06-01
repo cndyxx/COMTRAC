@@ -36,6 +36,8 @@
     <file alias="Ui/Components/DialogTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/DialogTemplate.qml</file>
     <file alias="assets/menu.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/menu.png</file>
     <file alias="assets/x_Button.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/x_Button.png</file>
+    <file alias="assets/triangle_next.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/triangle_next.png</file>
+    <file alias="assets/triangle_back.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/triangle_back.png</file>
   </qresource>
 </RCC>
 

@@ -5,9 +5,17 @@ project(comtrac VERSION 0.1 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 6.4 REQUIRED COMPONENTS Quick)
+find_package(Qt6 6.0.0 COMPONENTS QuickControls2 REQUIRED)
 find_package(Qt6 REQUIRED COMPONENTS Sql)
 
 
+set(QT_MODULES
+    Quick
+    QuickControls2
+    QuickTemplates2
+)
+
+find_package(Qt6 COMPONENTS ${QT_MODULES} REQUIRED)
 
 
 qt_standard_project_setup()
@@ -82,6 +90,8 @@ qt_add_qml_module(appcomtrac
     RESOURCES
     assets/menu.png
     assets/x_Button.png
+    assets/triangle_next.png
+    assets/triangle_back.png
 )
 
 
@@ -97,8 +107,14 @@ target_link_libraries(appcomtrac
     PRIVATE Qt6::Quick
 )
 target_link_libraries(appcomtrac PRIVATE Qt6::Sql)
+target_link_libraries(appcomtrac PRIVATE Qt6::QuickControls2)
 
 target_compile_definitions(appcomtrac PRIVATE QT_QML_DEBUG)
+target_link_libraries(appcomtrac
+    PRIVATE
+    Qt6::QuickControls2
+    Qt6::QuickTemplates2
+)
 
 
 install(TARGETS appcomtrac

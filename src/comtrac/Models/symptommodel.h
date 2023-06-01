@@ -44,7 +44,7 @@ signals:
 
 public slots:
 
-    void deleteSymptom(int id);
+    void deleteSymptom();
 
     void updateSymptom(QString name, QString intensity, int frequency, QString duration, QString entryDate, QString entryTime);
 
@@ -52,6 +52,7 @@ public slots:
     void setSymptoms(QString name, QString intensity, int frequency, QString duration, QString entryDate, QString entryTime);
     void setSingleSymptom(Symptom *newSingleSymptom);
 
+    void getSymptomsOfDate(QString entryDate);
 
 private:
     void updateModel();

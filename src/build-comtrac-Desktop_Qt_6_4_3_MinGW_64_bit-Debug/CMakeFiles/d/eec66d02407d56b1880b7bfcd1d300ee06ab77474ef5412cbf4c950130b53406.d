@@ -472,6 +472,22 @@ appcomtrac_autogen/timestamp: \
   C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Quick/Qt6QuickTargets-relwithdebinfo.cmake \
   C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Quick/Qt6QuickTargets.cmake \
   C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Quick/Qt6QuickVersionlessTargets.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6QuickControls2/Qt6QuickControls2AdditionalTargetInfo.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6QuickControls2/Qt6QuickControls2Config.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6QuickControls2/Qt6QuickControls2ConfigVersion.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6QuickControls2/Qt6QuickControls2ConfigVersionImpl.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6QuickControls2/Qt6QuickControls2Dependencies.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6QuickControls2/Qt6QuickControls2Targets-relwithdebinfo.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6QuickControls2/Qt6QuickControls2Targets.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6QuickControls2/Qt6QuickControls2VersionlessTargets.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6QuickTemplates2/Qt6QuickTemplates2AdditionalTargetInfo.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6QuickTemplates2/Qt6QuickTemplates2Config.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6QuickTemplates2/Qt6QuickTemplates2ConfigVersion.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6QuickTemplates2/Qt6QuickTemplates2ConfigVersionImpl.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6QuickTemplates2/Qt6QuickTemplates2Dependencies.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6QuickTemplates2/Qt6QuickTemplates2Targets-relwithdebinfo.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6QuickTemplates2/Qt6QuickTemplates2Targets.cmake \
+  C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6QuickTemplates2/Qt6QuickTemplates2VersionlessTargets.cmake \
   C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginAdditionalTargetInfo.cmake \
   C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginConfig.cmake \
   C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets-relwithdebinfo.cmake \

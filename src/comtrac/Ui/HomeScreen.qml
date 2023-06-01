@@ -11,8 +11,8 @@ Page {
     property string medication: "Medication.qml"
     property string chat: "chat.qml"
     property string vidoe_telephony: "VideoTelephony.qml"
-
     property string stack_view: "Ui/StackViewPage.qml"
+     property date currentDate: new Date()
 
     Background{ id: background}
     ColumnLayout{
@@ -29,6 +29,10 @@ Page {
             text: "Symptomtagebuch"
             Layout.topMargin: 10
             onClicked: {
+                var curDate = currentDate.toLocaleDateString(Qt.locale("de_DE"), "yyyy-MM-dd");
+//                symptomListView.model = symptomModel.getSymptomsOfDay(curDate);
+                console.log("Akutelles Datum in QML: " + curDate);
+                symptomModel.getSymptomsOfDate(curDate);
                 stackView.push(symptom_diary)
             }
         }
