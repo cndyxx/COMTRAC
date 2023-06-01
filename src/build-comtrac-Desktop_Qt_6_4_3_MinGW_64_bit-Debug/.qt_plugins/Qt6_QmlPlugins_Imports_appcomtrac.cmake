@@ -1,4 +1,4 @@
-set(qml_import_scanner_imports_count 36)
+set(qml_import_scanner_imports_count 37)
 set(qml_import_scanner_import_0 "CLASSNAME;QtQuick2Plugin;LINKTARGET;Qt6::qtquick2plugin;NAME;QtQuick;PATH;C:/Qt/6.4.3/mingw_64/qml/QtQuick;PLUGIN;qtquick2plugin;PLUGINISOPTIONAL;;PREFER;:/qt-project.org/imports/QtQuick/;RELATIVEPATH;QtQuick;TYPE;module;")
 set(qml_import_scanner_import_1 "CLASSNAME;QtQmlPlugin;LINKTARGET;Qt6::qmlplugin;NAME;QtQml;PATH;C:/Qt/6.4.3/mingw_64/qml/QtQml;PLUGIN;qmlplugin;PLUGINISOPTIONAL;;PREFER;:/qt-project.org/imports/QtQml/;RELATIVEPATH;QtQml;TYPE;module;")
 set(qml_import_scanner_import_2 "CLASSNAME;QtQmlModelsPlugin;LINKTARGET;Qt6::modelsplugin;NAME;QtQml.Models;PATH;C:/Qt/6.4.3/mingw_64/qml/QtQml/Models;PLUGIN;modelsplugin;PLUGINISOPTIONAL;;PREFER;:/qt-project.org/imports/QtQml/Models/;RELATIVEPATH;QtQml/Models;TYPE;module;")
@@ -34,5 +34,6 @@ set(qml_import_scanner_import_31 "NAME;./Components;PATH;C:/Users/cindy/Document
 set(qml_import_scanner_import_32 "NAME;./Components;PATH;C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Medication.qml/Components;TYPE;directory;")
 set(qml_import_scanner_import_33 "NAME;./Components;PATH;C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/MedicationPlan.qml/Components;TYPE;directory;")
 set(qml_import_scanner_import_34 "NAME;./Components;PATH;C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SymptomDiary.qml/Components;TYPE;directory;")
-set(qml_import_scanner_import_35 "NAME;../;PATH;C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components;TYPE;directory;")
+set(qml_import_scanner_import_35 "NAME;./Components;PATH;C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SymptomHistory.qml/Components;TYPE;directory;")
+set(qml_import_scanner_import_36 "NAME;../;PATH;C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components;TYPE;directory;")
 

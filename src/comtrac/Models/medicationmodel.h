@@ -24,6 +24,9 @@ public:
 
 
 
+    QList<Medication *> singleMedication() const;
+    void setSingleMedication(const QList<Medication *> &newSingleMedication);
+
 private:
 
     //Medikamenten Liste
@@ -32,9 +35,12 @@ private:
     void getMedication();
 
     QList<Medication *> m_medications;
+    QList<Medication *> m_singleMedication;
 
 
 
+
+    Q_PROPERTY(QList<Medication *> singleMedication READ singleMedication WRITE setSingleMedication NOTIFY singleMedicationChanged)
 
 public slots:
     void updateModel();
@@ -44,6 +50,7 @@ public slots:
 signals:
     void medicationChanged();
     void medicationsChanged();
+    void singleMedicationChanged();
 };
 
 

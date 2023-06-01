@@ -25,7 +25,7 @@ Item {
         height: parent.height
         model: medModel.medications
 
-        delegate: MedicationEntry {
+        delegate: MedicationDelegate {
             width: header.width
             height: 40
             medicationName:  medModel.medications[index].name

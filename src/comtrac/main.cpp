@@ -37,8 +37,6 @@ int main(int argc, char *argv[])
 
 
     SymptomModel *symptomModel = new SymptomModel();
-//    SymptomModel symptomModel;
-//    ctx->setContextProperty("symptomModel", &symptomModel);
     engine.rootContext()->setContextProperty("symptomModel", symptomModel);
 
     engine.load(url);

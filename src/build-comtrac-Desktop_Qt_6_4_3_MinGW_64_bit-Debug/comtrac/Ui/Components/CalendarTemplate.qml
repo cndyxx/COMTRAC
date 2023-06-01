@@ -12,8 +12,9 @@ import "../"
 ColumnLayout {
     id: calendar
     property date currentDate: new Date()
+    property var symptomEntry: symptomModel.symptomsOfMonth
 
-    property var selectedDate
+    property var selectedDate: "dd.MM"
     anchors.horizontalCenter: parent.horizontalCenter
     anchors.margins: 20
     width: parent.width * 0.9
@@ -34,14 +35,28 @@ ColumnLayout {
     }
 
     function previousMonth() {
-           calendar.currentDate = setMonth(calendar.currentDate, calendar.currentDate.getMonth() - 1);
-       }
+        calendar.currentDate = setMonth(calendar.currentDate, calendar.currentDate.getMonth() - 1);
+
+    }
     function nextMonth() {
-            calendar.currentDate = setMonth(calendar.currentDate, calendar.currentDate.getMonth() + 1);
-        }
+        calendar.currentDate = setMonth(calendar.currentDate, calendar.currentDate.getMonth() + 1);
+
+    }
+
+    function checkSymptomsForDate(date, month) {
+        // Führe eine Datenbankabfrage durch, um zu überprüfen, ob Symptome für das angegebene Datum vorhanden sind
+        // Gib true zurück, wenn Symptome vorhanden sind, andernfalls false
+        console.log("Ganzes Datum: "+ date);
+        symptomModel.getEntryDates(month);
+        console.log("Monat : " + month);
+        var retVal = symptomModel.findDate(date);
+        console.log("Rückgabe Wert: " + retVal);
+        return retVal;
+    }
+
     ToolBar {
-        anchors.horizontalCenter: parent.horizontalCenter
-        width: parent.width
+        Layout.alignment: Qt.AlignHCenter
+        width: calendar.width
         height: parent.height * 0.10
         Material.background: "white"
         Material.foreground: "dimgrey"
@@ -56,7 +71,7 @@ ColumnLayout {
             anchors.fill: parent
             ToolButton {
                 id: toolbtn
-                anchors.left: parent.left
+                Layout.alignment: Qt.LeftEdge
                 Image {
                     source: "../../assets/triangle_back.png"
                     width: parent.width/3
@@ -79,7 +94,7 @@ ColumnLayout {
 
             ToolButton {
                 id: toolbtn2
-                anchors.right: parent.right
+                Layout.alignment: Qt.RightEdge
                 Image {
                     source: "../../assets/triangle_next.png"
                     width: parent.width/3
@@ -128,7 +143,8 @@ ColumnLayout {
 
         // Markiert den aktuellen Tag im Kalender
         delegate: Item {
-            property bool isSelected: model.date.getDate() === selectedDate
+            property bool isSelected: model.date.getDate().toString() + "." + model.date.getMonth().toString() === selectedDate
+            property bool isEntry: checkSymptomsForDate(model.date.toLocaleString(Qt.locale("de_DE"), "yyyy-MM-dd"), model.date.toLocaleString(Qt.locale("de_DE"), "MM") )
             width: date.width
             height: date.height
 
@@ -148,16 +164,29 @@ ColumnLayout {
                     font.pixelSize: 12
                     font.family: "Arial"
                 }
+                // Kreis für Ereignisse
+                Rectangle {
+                    width: 5
+                    height: 5
+                    radius: width / 2
+                    color: isEntry ? "black" : "transparent" // Farbe des Kreises anpassen
+
+                    // Positionierung des Kreises
+                    anchors {
+                        top: parent.top
+                        right: parent.right
+//                        topMargin: 5
+//                        rightMargin: 5
+                    }
+                }
 
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
                         //Markierung ändern
-                        selectedDate = model.date.getDate()
-                        console.log("SelectedDate: " + selectedDate);
-                        EditSymptom.selectedDate = model.date.toLocaleDateString(Qt.locale("de_DE"), "dd.MM.yyyy");
+                        selectedDate = model.date.getDate().toString() + "." + model.date.getMonth().toString();
                         console.log("Ganzes Datum " + model.date.toLocaleDateString(Qt.locale("de_DE"), "dd.MM.yyyy"));
-                        //ListView anpassen
+                        //ListView anpassen - Symptomliste für den aktuell markierten Tag anzeigen
                         symptomModel.getSymptomsOfDate(model.date.toLocaleDateString(Qt.locale("de_DE"), "yyyy-MM-dd"));
                     }
                 }

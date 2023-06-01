@@ -1,9 +1,10 @@
-
+#include <QDataStream>
 #include "symptommodel.h"
 #include <iostream>
 
 SymptomModel::SymptomModel(QObject *parent) : QSqlQueryModel(parent)
 {
+
 
 }
 
@@ -79,6 +80,36 @@ void SymptomModel::updateSymptom(QString name, QString intensity, int frequency,
 
 }
 
+//Eintragsdatum aus der Datenbank holen - Tage an denen meherere Symptome eingetragen werden wird nur einmal das Datum aus der
+//Datenbank entnommen - keine Duplikate
+void SymptomModel::getEntryDates(QString month)
+{
+    QSqlQuery query;
+    query.prepare("SELECT entryDate FROM symptoms WHERE strftime('%m', entryDate) = ? GROUP BY [entryDate]");
+    query.bindValue(0, month);
+    if(query.exec()){
+        while(query.next()){
+            QDate date = query.value(0).toDate();
+            m_symptomsOfMonth.push_back(date);
+        }
+    } else {
+        qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
+    }
+}
+
+bool SymptomModel::findDate(QString date)
+{
+    bool isInList = false;
+
+    for(QDate newDate : m_symptomsOfMonth){
+        if(newDate.toString("yyyy-MM-dd") == date){
+            isInList = true;
+            break;
+        }
+    }
+    return isInList;
+}
+
 
 
 
@@ -88,6 +119,19 @@ void SymptomModel::updateModel()
 
     // Aktualisiere die ListView im QML
     emit layoutChanged();
+}
+
+QList<QDate> SymptomModel::symptomsOfMonth() const
+{
+    return m_symptomsOfMonth;
+}
+
+void SymptomModel::setSymptomsOfMonth(const QList<QDate> &newSymptomsOfMonth)
+{
+    if (m_symptomsOfMonth == newSymptomsOfMonth)
+        return;
+    m_symptomsOfMonth = newSymptomsOfMonth;
+    emit symptomsOfMonthChanged();
 }
 
 SymptomModel::~SymptomModel()

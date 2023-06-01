@@ -53,10 +53,16 @@ Item {
                     anchors.top: recInput.bottom
                 }
             }
-            onAccepted: {
-                stackView.push(nextPage, {"name" :input.text, "pageState": 0});
+
+
+                onAccepted: {
+                    stackView.push(nextPage, {"name" :input.text, "pageState": 0});
+                }
             }
         }
+
     }
 
-}
+
+
+

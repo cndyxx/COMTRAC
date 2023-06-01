@@ -19,7 +19,6 @@ Item {
     property date entryDate: symptom.entryDate
     property date currentTime: new Date()
     property date currentDate: new Date()
-    property string selectedDate
 
 
 

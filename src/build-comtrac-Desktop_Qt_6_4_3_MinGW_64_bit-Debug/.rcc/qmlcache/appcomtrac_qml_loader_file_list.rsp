@@ -24,9 +24,8 @@
 /comtrac/Ui/Components/RoundButtonTemplate.qml
 /comtrac/Ui/Components/IconButton.qml
 /comtrac/Ui/Components/IntakeTimeList.qml
-/comtrac/Ui/Components/MedicationEntry.qml
+/comtrac/Ui/Components/MedicationDelegate.qml
 /comtrac/Ui/Components/SearchTemplate.qml
-/comtrac/Ui/Components/ListViewTemplate.qml
 /comtrac/Ui/Components/SymptomDelegate.qml
 /comtrac/Ui/Components/MonthGridDelegate.qml
 /comtrac/Ui/Components/TextTemplate.qml

@@ -26,9 +26,8 @@
     <file alias="Ui/Components/RoundButtonTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/RoundButtonTemplate.qml</file>
     <file alias="Ui/Components/IconButton.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/IconButton.qml</file>
     <file alias="Ui/Components/IntakeTimeList.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/IntakeTimeList.qml</file>
-    <file alias="Ui/Components/MedicationEntry.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/MedicationEntry.qml</file>
+    <file alias="Ui/Components/MedicationDelegate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/MedicationDelegate.qml</file>
     <file alias="Ui/Components/SearchTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/SearchTemplate.qml</file>
-    <file alias="Ui/Components/ListViewTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/ListViewTemplate.qml</file>
     <file alias="Ui/Components/SymptomDelegate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/SymptomDelegate.qml</file>
     <file alias="Ui/Components/MonthGridDelegate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/MonthGridDelegate.qml</file>
     <file alias="Ui/Components/TextTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/TextTemplate.qml</file>
@@ -39,6 +38,7 @@
     <file alias="assets/triangle_next.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/triangle_next.png</file>
     <file alias="assets/triangle_back.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/triangle_back.png</file>
     <file alias="assets/x.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/x.png</file>
+    <file alias="assets/pencil.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/pencil.png</file>
   </qresource>
 </RCC>
 

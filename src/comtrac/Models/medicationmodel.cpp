@@ -37,6 +37,19 @@ void MedicationModel::getMedication()
 
 }
 
+QList<Medication *> MedicationModel::singleMedication() const
+{
+    return m_singleMedication;
+}
+
+void MedicationModel::setSingleMedication(const QList<Medication *> &newSingleMedication)
+{
+    if (m_singleMedication == newSingleMedication)
+        return;
+    m_singleMedication = newSingleMedication;
+    emit singleMedicationChanged();
+}
+
 QList<Medication *> MedicationModel::medications() const
 {
     return m_medications;

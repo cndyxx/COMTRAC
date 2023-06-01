@@ -18,6 +18,21 @@
                     "type": "QList<Medication*>",
                     "user": false,
                     "write": "setMedications"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "singleMedication",
+                    "notify": "singleMedicationChanged",
+                    "read": "singleMedication",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QList<Medication*>",
+                    "user": false,
+                    "write": "setSingleMedication"
                 }
             ],
             "qualifiedClassName": "MedicationModel",
@@ -30,6 +45,11 @@
                 {
                     "access": "public",
                     "name": "medicationsChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "singleMedicationChanged",
                     "returnType": "void"
                 }
             ],

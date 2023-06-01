@@ -260,7 +260,6 @@
 #define __FLT64_DIG__ 15
 #define __UINT_FAST32_MAX__ 0xffffffffU
 #define __UINT_LEAST64_TYPE__ long long unsigned int
-#define QT_QUICKTEMPLATES2_LIB 1
 #define __FLT_HAS_QUIET_NAN__ 1
 #define __FLT_MAX_10_EXP__ 38
 #define __LONG_MAX__ 0x7fffffffL

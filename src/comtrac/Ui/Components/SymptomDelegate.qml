@@ -26,6 +26,20 @@ Button {
         border.width: 2
         color: "lightgrey"
         radius: 5
+
+    }
+    Image  {
+
+        source: "../../assets/pencil.png";
+        width: 18
+        height: 18
+        // Positionierung des Bildes
+        anchors {
+            top: parent.top
+            right: parent.right
+            topMargin: 5
+            rightMargin: 5
+        }
     }
 
 }

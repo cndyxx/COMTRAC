@@ -9,13 +9,10 @@ find_package(Qt6 6.0.0 COMPONENTS QuickControls2 REQUIRED)
 find_package(Qt6 REQUIRED COMPONENTS Sql)
 
 
-set(QT_MODULES
-    Quick
-    QuickControls2
-    QuickTemplates2
-)
 
-find_package(Qt6 COMPONENTS ${QT_MODULES} REQUIRED)
+
+
+# ...
 
 
 qt_standard_project_setup()
@@ -76,9 +73,8 @@ qt_add_qml_module(appcomtrac
     Ui/Components/RoundButtonTemplate.qml
     Ui/Components/IconButton.qml
     Ui/Components/IntakeTimeList.qml
-    Ui/Components/MedicationEntry.qml
+    Ui/Components/MedicationDelegate.qml
     Ui/Components/SearchTemplate.qml
-    Ui/Components/ListViewTemplate.qml
     Ui/Components/SymptomDelegate.qml
     Ui/Components/MonthGridDelegate.qml
     Ui/Components/TextTemplate.qml
@@ -94,6 +90,7 @@ qt_add_qml_module(appcomtrac
     assets/triangle_next.png
     assets/triangle_back.png
     assets/x.png
+    assets/pencil.png
 )
 
 
@@ -112,11 +109,7 @@ target_link_libraries(appcomtrac PRIVATE Qt6::Sql)
 target_link_libraries(appcomtrac PRIVATE Qt6::QuickControls2)
 
 target_compile_definitions(appcomtrac PRIVATE QT_QML_DEBUG)
-target_link_libraries(appcomtrac
-    PRIVATE
-    Qt6::QuickControls2
-    Qt6::QuickTemplates2
-)
+
 
 
 install(TARGETS appcomtrac

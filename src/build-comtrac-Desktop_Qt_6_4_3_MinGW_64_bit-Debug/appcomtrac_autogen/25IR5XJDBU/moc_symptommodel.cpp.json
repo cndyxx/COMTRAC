@@ -48,6 +48,21 @@
                     "type": "QList<Symptom*>",
                     "user": false,
                     "write": "setDaySymptoms"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 3,
+                    "name": "symptomsOfMonth",
+                    "notify": "symptomsOfMonthChanged",
+                    "read": "symptomsOfMonth",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QList<QDate>",
+                    "user": false,
+                    "write": "setSymptomsOfMonth"
                 }
             ],
             "qualifiedClassName": "SymptomModel",
@@ -65,6 +80,11 @@
                 {
                     "access": "public",
                     "name": "daySymptomsChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "symptomsOfMonthChanged",
                     "returnType": "void"
                 }
             ],
@@ -96,6 +116,28 @@
                     ],
                     "name": "updateSymptom",
                     "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "month",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "getEntryDates",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "date",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "findDate",
+                    "returnType": "bool"
                 },
                 {
                     "access": "public",

@@ -187,7 +187,7 @@ namespace _comtrac_Ui_Components_IntakeTimeList_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
-namespace _comtrac_Ui_Components_MedicationEntry_qml { 
+namespace _comtrac_Ui_Components_MedicationDelegate_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
     const QQmlPrivate::CachedQmlUnit unit = {
@@ -195,13 +195,6 @@ namespace _comtrac_Ui_Components_MedicationEntry_qml {
     };
 }
 namespace _comtrac_Ui_Components_SearchTemplate_qml { 
-    extern const unsigned char qmlData[];
-    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
-    const QQmlPrivate::CachedQmlUnit unit = {
-        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
-    };
-}
-namespace _comtrac_Ui_Components_ListViewTemplate_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
     const QQmlPrivate::CachedQmlUnit unit = {
@@ -290,9 +283,8 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/RoundButtonTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_RoundButtonTemplate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/IconButton.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_IconButton_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/IntakeTimeList.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_IntakeTimeList_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/MedicationEntry.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_MedicationEntry_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/MedicationDelegate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_MedicationDelegate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/SearchTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_SearchTemplate_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/ListViewTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_ListViewTemplate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/SymptomDelegate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_SymptomDelegate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/MonthGridDelegate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_MonthGridDelegate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/TextTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_TextTemplate_qml::unit);
