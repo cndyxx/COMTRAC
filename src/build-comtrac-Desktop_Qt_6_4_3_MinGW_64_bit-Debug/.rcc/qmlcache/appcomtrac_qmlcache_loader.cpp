@@ -75,6 +75,13 @@ namespace _comtrac_Ui_EditSymptom_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _comtrac_Ui_SymptomHistory_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 namespace _comtrac_Ui_Components_StackViewPage_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
@@ -267,6 +274,7 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/findMedication.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_findMedication_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/MedicationPlan.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_MedicationPlan_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/EditSymptom.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_EditSymptom_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/SymptomHistory.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_SymptomHistory_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/StackViewPage.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_StackViewPage_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/Background.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_Background_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/TextFieldTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_TextFieldTemplate_qml::unit);

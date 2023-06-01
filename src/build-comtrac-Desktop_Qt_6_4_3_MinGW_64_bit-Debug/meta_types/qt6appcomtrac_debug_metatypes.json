@@ -210,14 +210,6 @@
                             {
                                 "name": "duration",
                                 "type": "QString"
-                            },
-                            {
-                                "name": "entryDate",
-                                "type": "QString"
-                            },
-                            {
-                                "name": "entryTime",
-                                "type": "QString"
                             }
                         ],
                         "name": "updateSymptom",

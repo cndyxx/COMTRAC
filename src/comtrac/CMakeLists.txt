@@ -59,6 +59,7 @@ qt_add_qml_module(appcomtrac
     Ui/findMedication.qml
     Ui/MedicationPlan.qml
     Ui/EditSymptom.qml
+    Ui/SymptomHistory.qml
     #elements
     Ui/Components/StackViewPage.qml
     Ui/Components/Background.qml
@@ -89,9 +90,10 @@ qt_add_qml_module(appcomtrac
 
     RESOURCES
     assets/menu.png
-    assets/x_Button.png
+
     assets/triangle_next.png
     assets/triangle_back.png
+    assets/x.png
 )
 
 

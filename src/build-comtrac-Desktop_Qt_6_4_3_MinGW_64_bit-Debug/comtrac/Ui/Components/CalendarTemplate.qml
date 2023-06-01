@@ -6,96 +6,92 @@ import QtQuick.Layouts
 import "../"
 
 
-
-//    ToolBar {
-//        Layout.column: 1
-//        anchors.bottom: dayOfWeekRow.top
-//        width: parent.width
-//        height: parent.height
-//        Material.background: "white"
-//        Material.foreground: "black"
-//        RowLayout {
-//            anchors.fill: parent
-//            ToolButton {
-//                text: qsTr("<")
-//                // onClicked: letzten Monat anzeigen
-//            }
-
-//            Label {
-//                text: currentDate.toLocaleString(Qt.locale("de_DE"), "MMMM yyyy")
-//                font.pixelSize: Qt.application.font.pixelSize * 1.25
-//                anchors.top: parent.top
-//            }
-//            ToolButton {
-//                text: qsTr(">")
-//                // onClicked: Nächsten Monat anzeigen
-//            }
-//        }
-//    }
 //Kalender
 
 
 ColumnLayout {
     id: calendar
-    readonly property date currentDate: new Date()
-    property date currentMonth: currentDate.getMonth()
-    property date currentYear: currentDate.getFullYear()
+    property date currentDate: new Date()
+
     property var selectedDate
     anchors.horizontalCenter: parent.horizontalCenter
     anchors.margins: 20
     width: parent.width * 0.9
     height: parent.height * 0.25
     //columns: 2
+    //Functions
+    function daysInMonth(date) {
+        return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+    }
 
+    function setMonth(date, month) {
+        var oldDay = date.getDate();
+        var newDate = new Date(date);
+        newDate.setDate(1);
+        newDate.setMonth(month);
+        newDate.setDate(Math.min(oldDay, daysInMonth(newDate)));
+        return newDate;
+    }
+
+    function previousMonth() {
+           calendar.currentDate = setMonth(calendar.currentDate, calendar.currentDate.getMonth() - 1);
+       }
+    function nextMonth() {
+            calendar.currentDate = setMonth(calendar.currentDate, calendar.currentDate.getMonth() + 1);
+        }
     ToolBar {
+        anchors.horizontalCenter: parent.horizontalCenter
         width: parent.width
-        height: parent.height * 0.5
+        height: parent.height * 0.10
+        Material.background: "white"
+        Material.foreground: "dimgrey"
+
         background: Rectangle {
             color: "white"
             width: parent.width
             height: parent.height
         }
+
         RowLayout {
             anchors.fill: parent
-            Material.foreground: "black"
             ToolButton {
-                id: toolButtonBack
+                id: toolbtn
+                anchors.left: parent.left
                 Image {
-                    id: arrowBack
-                    source:"../../assets/triangle_back.png"
-                    width: parent.width/4
-                    height: parent.height/4
+                    source: "../../assets/triangle_back.png"
+                    width: parent.width/3
+                    height: parent.height/3
                     anchors.centerIn: parent
                 }
-                //onClicked: stackView.pop()
+                onClicked: previousMonth();
 
             }
-            Text {
+            Label {
                 text: calendar.currentDate.toLocaleString(Qt.locale("de_DE"), "MMMM yyyy")
-                font.pixelSize: Qt.application.font.pixelSize * 1.25
                 color: "black"
+                font.pixelSize: 16
+                font.family: "Arial"
+                elide: Label.ElideRight
                 horizontalAlignment: Qt.AlignHCenter
                 verticalAlignment: Qt.AlignVCenter
+                Layout.fillWidth: true
             }
+
             ToolButton {
-                id: toolButtonNext
+                id: toolbtn2
+                anchors.right: parent.right
                 Image {
-                    id: arrowNext
-                    source:"../../assets/triangle_next.png"
-                    width: parent.width/4
-                    height: parent.height/4
+                    source: "../../assets/triangle_next.png"
+                    width: parent.width/3
+                    height: parent.height/3
                     anchors.centerIn: parent
                 }
-                onClicked: {
-                    var nextDate = new Date(currentYear, currentMonth, 1)
-                    nextDate.setMonth(nextDate.getMonth() + 1)
-                    currentMonth = nextDate.getMonth()
-                    currentYear = nextDate.getFullYear()
-                }
-
+                onClicked: nextMonth();
             }
+
         }
     }
+
 
     DayOfWeekRow {
         id: dayOfWeekRow
@@ -132,15 +128,17 @@ ColumnLayout {
 
         // Markiert den aktuellen Tag im Kalender
         delegate: Item {
+            property bool isSelected: model.date.getDate() === selectedDate
             width: date.width
             height: date.height
 
             Rectangle {
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-                width: parent.width
-                height: parent.height
-                color: model.today ? "lightgrey" : "transparent" // Farbe des aktuellen Tages
+                width: 24
+                height: 24
+
+                color: isSelected ? "lightgrey" : (model.today ? "lightgrey" : "transparent")
                 radius: 90
 
                 Text {
@@ -155,7 +153,7 @@ ColumnLayout {
                     anchors.fill: parent
                     onClicked: {
                         //Markierung ändern
-
+                        selectedDate = model.date.getDate()
                         console.log("SelectedDate: " + selectedDate);
                         EditSymptom.selectedDate = model.date.toLocaleDateString(Qt.locale("de_DE"), "dd.MM.yyyy");
                         console.log("Ganzes Datum " + model.date.toLocaleDateString(Qt.locale("de_DE"), "dd.MM.yyyy"));

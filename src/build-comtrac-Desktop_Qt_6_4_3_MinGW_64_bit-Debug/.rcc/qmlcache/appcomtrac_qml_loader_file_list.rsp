@@ -8,6 +8,7 @@
 /comtrac/Ui/findMedication.qml
 /comtrac/Ui/MedicationPlan.qml
 /comtrac/Ui/EditSymptom.qml
+/comtrac/Ui/SymptomHistory.qml
 /comtrac/Ui/Components/StackViewPage.qml
 /comtrac/Ui/Components/Background.qml
 /comtrac/Ui/Components/TextFieldTemplate.qml

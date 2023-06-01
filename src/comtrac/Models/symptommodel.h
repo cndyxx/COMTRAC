@@ -46,7 +46,7 @@ public slots:
 
     void deleteSymptom();
 
-    void updateSymptom(QString name, QString intensity, int frequency, QString duration, QString entryDate, QString entryTime);
+    void updateSymptom(QString name, QString intensity, int frequency, QString duration);
 
     void getSymptoms();
     void setSymptoms(QString name, QString intensity, int frequency, QString duration, QString entryDate, QString entryTime);

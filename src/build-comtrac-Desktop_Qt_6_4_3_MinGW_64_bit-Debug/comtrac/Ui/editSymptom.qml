@@ -18,6 +18,7 @@ Item {
     property date entryTime: symptom.entryTime
     property date entryDate: symptom.entryDate
     property date currentTime: new Date()
+    property date currentDate: new Date()
     property string selectedDate
 
 
@@ -31,7 +32,7 @@ Item {
     }
     DialogTemplate {
         id: dialog
-        dialogVisible: false
+        //dialogVisible: false
         dialogText: qsTr("Symptomeintrag wirklich löschen?")
 
         Layout.alignment: Qt.Vertical
@@ -60,7 +61,13 @@ Item {
                 font.pixelSize: 12
             }
             Text {
-                text:entryDate.toLocaleDateString("dd.MM.yyyy")
+                id: txtDate
+                text:  {
+                    if(pageState !== 0)
+                        return entryDate.toLocaleDateString("dd.MM.yyyy");
+                    else
+                        return currentDate.toLocaleDateString("dd.MM.yyyy");
+                }
                 color: "grey"
                 font.pixelSize: 15
             }
@@ -69,9 +76,9 @@ Item {
                 id: txtTime
                 text: {
                     if(pageState !== 0)
-                        return entryDate.toLocaleTimeString(Qt.local(DE_de), "hh:mm");
+                        return entryDate.toLocaleTimeString(Qt.locale("de_DE"), "hh:mm");
                     else
-                        return currentTime.toLocaleTimeString(Qt.local(DE_de), "hh:mm");
+                        return currentTime.toLocaleTimeString(Qt.locale("de_DE"), "hh:mm");
                 }
                 color: "grey"
                 font.pixelSize: 15
@@ -135,19 +142,7 @@ Item {
             stepSize: 1
             Layout.fillWidth: true
             enabled: pageState === 0 || pageState === 2 //aktiviert wenn status 0 und 2
-            value: intensity/*{
-                var intensityValue = intensity;
-                if (pageState !== 0) {
-                    if (intensityValue === "leicht")
-                        return 0;
-                    else if (intensityValue === "mäßig")
-                        return 1;
-                    else if (intensityValue === "schwer")
-                        return 2;
-                }
-                else
-                    return 1;
-            }*/
+            value: intensity
 
         }
 
@@ -240,7 +235,7 @@ Item {
 
                     else if(pageState === 2){
                         dialog.deleteSymptom = true;
-                        dialog.dialogVisible = true;
+                        dialog.open()
                     }
 
                 }
@@ -265,17 +260,18 @@ Item {
                     }
                     //Neues Symptom zur Datenbank hinzufügen
                     if(pageState === 0) {
-                        symptomModel.setSymptoms(symptomInput.text, sliderIntensity.value, sliderFrequency.value, radioButtonValue, "25.05.2023", txtTime.text);
+                        symptomModel.setSymptoms(symptomInput.text, sliderIntensity.value, sliderFrequency.value, radioButtonValue, txtDate.text,  txtTime.text);
                         stackView.pop()
                         stackView.pop()
                     }
                     else if(pageState ===1){
-                         console.log("Wert: " + symptom.id);
+                        console.log("Wert: " + symptom.id);
                         pageState = 2;
                     }
                     //Symptom in der Datenbank ändern
                     else if(pageState === 2){
-                        symptomModel.updateSymptom(symptomInput.text, sliderIntensity.value, sliderFrequency.value, radioButtonValue, "25.05.2023", txtTime.text);
+                        symptomModel.updateSymptom(symptomInput.text, sliderIntensity.value, sliderFrequency.value, radioButtonValue);
+                        stackView.pop()
 
                     }
                 }

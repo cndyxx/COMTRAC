@@ -15,6 +15,7 @@ Item {
     HeaderTemplate {
         id: header
         pageTitle: "Symptomtagebuch"
+        navigationStyle: "menu"
     }
     CalendarTemplate {
         id: calendar

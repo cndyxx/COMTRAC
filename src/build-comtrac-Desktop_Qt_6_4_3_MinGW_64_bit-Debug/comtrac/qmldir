@@ -8,6 +8,7 @@ Medication 1.0 Ui/Medication.qml
 SymptomDiary 1.0 Ui/SymptomDiary.qml
 MedicationPlan 1.0 Ui/MedicationPlan.qml
 EditSymptom 1.0 Ui/EditSymptom.qml
+SymptomHistory 1.0 Ui/SymptomHistory.qml
 StackViewPage 1.0 Ui/Components/StackViewPage.qml
 Background 1.0 Ui/Components/Background.qml
 TextFieldTemplate 1.0 Ui/Components/TextFieldTemplate.qml

@@ -9,6 +9,7 @@ Page {
     HeaderTemplate{
         id: headerMedication
         pageTitle: "Medikation"
+        navigationStyle: "menu"
     }
     ColumnLayout {
         anchors.centerIn: parent

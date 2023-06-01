@@ -7,8 +7,8 @@ import "./Components"
 
 Window {
     id: root
-    width: 250
-    height: 500
+    width: 300
+    height: 550
     visible: true
     title: qsTr("COMTRAC")
 

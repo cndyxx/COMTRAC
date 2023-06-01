@@ -57,21 +57,25 @@ void SymptomModel::deleteSymptom()
     emit symptomsChanged();
 }
 
-void SymptomModel::updateSymptom(QString name, QString intensity, int frequency, QString duration, QString entryDate, QString entryTime)
+void SymptomModel::updateSymptom(QString name, QString intensity, int frequency, QString duration)
 {
     int id = m_singleSymptom->id();
+    m_singleSymptom->setName(name);
+    m_singleSymptom->setIntensity(intensity);
+    m_singleSymptom->setFrequency(frequency);
+    m_singleSymptom->setDuration(duration);
+
     QSqlQuery query;
-    query.prepare("UPDATE symptoms set name = ?, intensity = ?, frequency = ?, duration = ?, entryDate = ?, entryTime = ? WHERE id = ?");
+    query.prepare("UPDATE symptoms set name = ?, intensity = ?, frequency = ?, duration = ? WHERE id = ?");
 
     query.bindValue(0, name);
     query.bindValue(1, intensity);
     query.bindValue(2, frequency);
     query.bindValue(3, duration);
-    query.bindValue(4, entryDate);
-    query.bindValue(5, entryTime);
-    query.bindValue(6, id);
+    query.bindValue(4, id);
     if(!query.exec())
         qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
+    emit symptomsChanged();
 
 }
 
