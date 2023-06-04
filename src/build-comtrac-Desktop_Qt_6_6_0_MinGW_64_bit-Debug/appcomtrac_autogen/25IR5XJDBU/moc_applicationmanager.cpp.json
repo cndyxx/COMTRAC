@@ -1,0 +1,41 @@
+{
+    "classes": [
+        {
+            "className": "ApplicationManager",
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "pageState",
+                    "notify": "pageStateChanged",
+                    "read": "getPageState",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setPageState"
+                }
+            ],
+            "qualifiedClassName": "ApplicationManager",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "pageStateChanged",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "applicationmanager.h",
+    "outputRevision": 68
+}

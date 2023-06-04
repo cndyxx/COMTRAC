@@ -4,7 +4,7 @@ import QtQuick.Layouts
 
 Item {
     property string medicationName
-    property string intakeTime
+    property var intakeTime
     anchors.horizontalCenter: parent.horizontalCenter
     Button {
         width: parent.width
@@ -23,7 +23,16 @@ Item {
                 lineHeight: 0.5
             }
             Text {
-                text: "Einnahme: " + intakeTime
+                text: {
+                    var result = ""
+                    for (var i = 0; i < intakeTime.length; i++) {
+                        result += intakeTime[i].toLocaleTimeString("hh:mm");
+                        if (i < intakeTime.length - 1) {
+                            result += ", "
+                        }
+                    }
+                    return "Einnahme: " + result
+                }
                 color: "black"
                 font.pixelSize: 16
                 Layout.fillWidth: true

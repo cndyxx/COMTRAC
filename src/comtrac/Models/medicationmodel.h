@@ -7,7 +7,7 @@
 #include <QSqlQueryModel>
 
 
-#include "Controllers/medication.h"
+#include "Models/medication.h"
 
 class MedicationModel : public QSqlQueryModel
 {
@@ -33,7 +33,8 @@ private:
 
     //Daten aus Datenbank holen
     void getMedication();
-
+    void addIntakeTime(int medicationID, QList<QTime> intakeTimes);
+    void addMedicationIntake(int medicationID, int intakeID);
     QList<Medication *> m_medications;
     QList<Medication *> m_singleMedication;
 
@@ -43,7 +44,7 @@ private:
     Q_PROPERTY(QList<Medication *> singleMedication READ singleMedication WRITE setSingleMedication NOTIFY singleMedicationChanged)
 
 public slots:
-    void updateModel();
+
     void addMedication(QString name, int intakePerDay, QList<QTime> intakeTimes, QTime reminderTime);
 
 

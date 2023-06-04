@@ -659,33 +659,21 @@
 	"HEADERS" : 
 	[
 		[
-			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/login.h",
-			"MU",
-			"XUX5SSWLF5/moc_login.cpp",
-			null
-		],
-		[
-			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/medication.h",
-			"MU",
-			"XUX5SSWLF5/moc_medication.cpp",
-			null
-		],
-		[
-			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/symptom.h",
-			"MU",
-			"XUX5SSWLF5/moc_symptom.cpp",
-			null
-		],
-		[
-			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/applicationmanager.h",
-			"MU",
-			"25IR5XJDBU/moc_applicationmanager.cpp",
-			null
-		],
-		[
 			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/dbmanager.h",
 			"MU",
 			"25IR5XJDBU/moc_dbmanager.cpp",
+			null
+		],
+		[
+			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/intaketime.h",
+			"MU",
+			"25IR5XJDBU/moc_intaketime.cpp",
+			null
+		],
+		[
+			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/login.h",
+			"MU",
+			"25IR5XJDBU/moc_login.cpp",
 			null
 		],
 		[
@@ -695,9 +683,21 @@
 			null
 		],
 		[
+			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medication.h",
+			"MU",
+			"25IR5XJDBU/moc_medication.cpp",
+			null
+		],
+		[
 			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medicationmodel.h",
 			"MU",
 			"25IR5XJDBU/moc_medicationmodel.cpp",
+			null
+		],
+		[
+			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptom.h",
+			"MU",
+			"25IR5XJDBU/moc_symptom.cpp",
 			null
 		],
 		[
@@ -818,6 +818,7 @@
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Medication_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/SymptomDiary_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/SymptomHistory_qml.cpp",
+		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/WeeklyHistory_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/editMedication_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/findMedication_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/findSymptom_qml.cpp",
@@ -841,27 +842,17 @@
 			null
 		],
 		[
-			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/login.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/medication.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/symptom.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/applicationmanager.cpp",
-			"MU",
-			null
-		],
-		[
 			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/dbmanager.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/intaketime.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/login.cpp",
 			"MU",
 			null
 		],
@@ -871,7 +862,17 @@
 			null
 		],
 		[
+			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medication.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medicationmodel.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptom.cpp",
 			"MU",
 			null
 		],
@@ -921,6 +922,7 @@
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Medication_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/SymptomDiary_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/SymptomHistory_qml.cpp",
+		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/WeeklyHistory_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/editMedication_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/findMedication_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/findSymptom_qml.cpp",

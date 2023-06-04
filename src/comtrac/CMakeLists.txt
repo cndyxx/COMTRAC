@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Qt6 6.4 REQUIRED COMPONENTS Quick)
 find_package(Qt6 6.0.0 COMPONENTS QuickControls2 REQUIRED)
 find_package(Qt6 REQUIRED COMPONENTS Sql)
+#find_package(Qt6 REQUIRED COMPONENTS Charts)
 
 
 
@@ -19,14 +20,13 @@ qt_standard_project_setup()
 
 qt_add_executable(appcomtrac
     main.cpp
-    #Controllers
-    Controllers/login.cpp
-    Controllers/login.h
-    Controllers/medication.cpp
-    Controllers/medication.h
-    Controllers/symptom.cpp
-    Controllers/symptom.h
     #Models
+    Models/login.cpp
+    Models/login.h
+    Models/medication.cpp
+    Models/medication.h
+    Models/symptom.cpp
+    Models/symptom.h
     Models/loginModel.cpp
     Models/loginModel.h
     Models/dbManager.h
@@ -35,8 +35,8 @@ qt_add_executable(appcomtrac
     Models/medicationModel.h
     Models/symptommodel.h
     Models/symptommodel.cpp
-    Models/ApplicationManager.cpp
-    Models/ApplicationManager.h
+    Models/IntakeTime.h
+    Models/IntakeTime.cpp
 
 
 )
@@ -57,6 +57,7 @@ qt_add_qml_module(appcomtrac
     Ui/MedicationPlan.qml
     Ui/EditSymptom.qml
     Ui/SymptomHistory.qml
+    Ui/WeeklyHistory.qml
     #elements
     Ui/Components/StackViewPage.qml
     Ui/Components/Background.qml
@@ -107,7 +108,7 @@ target_link_libraries(appcomtrac
 )
 target_link_libraries(appcomtrac PRIVATE Qt6::Sql)
 target_link_libraries(appcomtrac PRIVATE Qt6::QuickControls2)
-
+#target_link_libraries(appcomtrac PRIVATE Qt6::Charts)
 target_compile_definitions(appcomtrac PRIVATE QT_QML_DEBUG)
 
 

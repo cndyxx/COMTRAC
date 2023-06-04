@@ -3,11 +3,11 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QQmlComponent>
-#include "Controllers/login.h"
+#include "Models/login.h"
 #include "Models/dbmanager.h"
 
 #include "Models/medicationmodel.h"
-#include "Controllers/medication.h"
+#include "Models/medication.h"
 #include "Models/symptommodel.h"
 #include <QQmlDebuggingEnabler>
 
@@ -25,14 +25,12 @@ int main(int argc, char *argv[])
         Qt::QueuedConnection);
 
     //Verknüpfung zwischen QML und C++-Model
+    QQmlContext *ctx = engine.rootContext();
 
     Login login;
-    QQmlContext *ctx = engine.rootContext();
     ctx->setContextProperty("login", &login);
 
     MedicationModel *medModel = new MedicationModel();
-//    MedicationModel medModel;
-//    ctx->setContextProperty("medModel", &medModel);
     engine.rootContext()->setContextProperty("medModel", medModel);
 
 

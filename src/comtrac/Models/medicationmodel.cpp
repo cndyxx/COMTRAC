@@ -12,30 +12,55 @@
 MedicationModel::MedicationModel(QObject *parent) : QSqlQueryModel(parent)
 {
     getMedication();
+
 }
 
-
+//Einnahmezeiten von der MedicationID holen
+//SELECT e.intakeTime
+//    FROM Medications m
+//        JOIN MedicationIntake me ON m.medicationID = me.medicationID
+//          JOIN Intake e ON me.intakeID = e.intakeID
+//          WHERE m.medicationID = 1;
 void MedicationModel::getMedication()
 {
     QSqlQuery query;
-    query.prepare("SELECT * FROM Medications");
+    query.prepare("SELECT m.medicationID, m.name, e.intakeTime, reminderTime, intakePerDay FROM Medications m LEFT JOIN MedicationIntake me ON m.medicationID = me.medicationID LEFT JOIN Intake e ON me.intakeID = e.intakeID");
 
-    if(query.exec()){
-        while(query.next()){
+    int previousId = -1;
+    bool firstTimeInLoop = false;
+    QList<QTime> intakeTimes;
+    QString name;
+    int intakePerDay;
+    QTime reminderTime;
+    if (query.exec()) {
+        while (query.next()) {
             int id = query.value(0).toInt();
-            QString name = query.value(1).toString();
-            int intakePerDay = query.value(2).toInt();
-            QTime intakeTime = query.value(3).toTime();
-            QTime reminderTime = query.value(4).toTime();
-            m_medications.push_back(new Medication(id, name, intakePerDay, intakeTime, reminderTime, this));
-            qDebug() << "TEST: " << name ;
+            if(!firstTimeInLoop){
+                firstTimeInLoop = true;
+                previousId = id;
+            }
+            if (id != previousId) {
+                m_medications.push_back(new Medication(previousId, name, intakePerDay, intakeTimes, reminderTime, this));
+                previousId = id;
+                intakeTimes.clear();
+            }
+            name = query.value(1).toString();
+            intakePerDay = query.value(4).toInt();
+            reminderTime = query.value(3).toTime();
+            QTime intakeTime = query.value(2).toTime();
+            intakeTimes.push_back(intakeTime);
+
+
+            qDebug() << "TEST: " << name;
         }
+
     } else {
         qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
     }
-
-
+    m_medications.push_back(new Medication(previousId, name, intakePerDay, intakeTimes, reminderTime, this));
 }
+
+
 
 QList<Medication *> MedicationModel::singleMedication() const
 {
@@ -63,32 +88,49 @@ void MedicationModel::setMedications(const QList<Medication *> &newMedications)
     emit medicationsChanged();
 }
 
+void MedicationModel::addIntakeTime(int medicationID, QList<QTime> intakeTimes)
+{
+    QSqlQuery query;
+    for(int i = 0; i < intakeTimes.size(); i++){
+        query.prepare("INSERT INTO Intake (intakeTime) VALUES (?)");
+        query.bindValue(0, intakeTimes[i]);
+        query.exec();
+        int intakeID = query.lastInsertId().toInt();
+        std::cout << "LETZTE ID: " + intakeID << std::endl;
+        addMedicationIntake(medicationID, intakeID);
+    }
+
+
+}
+
+void MedicationModel::addMedicationIntake(int medicationID, int intakeID)
+{
+    QSqlQuery query;
+    query.prepare("INSERT INTO MedicationIntake (medicationID, intakeID) VALUES (?, ?)");
+    query.bindValue(0, medicationID);
+    query.bindValue(1, intakeID);
+    query.exec();
+}
 
 void MedicationModel::addMedication(QString name,int intakePerDay,QList<QTime> intakeTimes, QTime reminderTime)
 {
-    QString intakeTimesString;
-    for(int i = 0; i < intakePerDay; i++){
-        intakeTimesString  += intakeTimes[i].toString("hh:mm") + ",";
-    }
-    intakeTimesString.chop(1); // Entferne das letzte Komma
-
+    int medicationID;
     QSqlQuery query;
-    query.prepare("INSERT INTO medications (name, intakePerDay, intakeTimes, reminderTime) VALUES (?, ?, ?, ?)");
-    query.bindValue(0, name);
-    query.bindValue(1, intakePerDay);
-    query.bindValue(2, intakeTimesString);
-    query.bindValue(3, reminderTime);
-    query.exec();
-    updateModel();
+    query.prepare("INSERT INTO medications (name, intakePerDay, reminderTime) VALUES (:name, :intakePerDay, :reminderTime)");
+    query.bindValue(":name", name);
+    query.bindValue(":intakePerDay", intakePerDay);
+    query.bindValue(":reminderTime", reminderTime);
+    if(query.exec()) {
+        medicationID = query.lastInsertId().toInt();
+        std::cout << "LETZTE ID: " + medicationID << std::endl;
+        addIntakeTime(medicationID, intakeTimes);
+    }
+    else {
+        qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
+    }
+    emit medicationsChanged();
 }
 
 
-//Medikationsplan updaten
-void MedicationModel::updateModel()
-{
-    //Daten aus Datenbank holen -> SELECT
-    // The update is performed SQL-queries to the database
-    this->setQuery("SELECT id, name, intakePerDay, intakeTimes, reminderTime FROM Symptoms");
-}
 
 

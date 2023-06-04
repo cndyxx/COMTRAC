@@ -29,7 +29,7 @@ Item {
             width: header.width
             height: 40
             medicationName:  medModel.medications[index].name
-//            intakeTime: medModel.medications[index].intakeTime
+            intakeTime: medModel.medications[index].intakeTime
         }
 
 

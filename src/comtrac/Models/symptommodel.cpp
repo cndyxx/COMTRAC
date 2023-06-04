@@ -67,7 +67,7 @@ void SymptomModel::updateSymptom(QString name, QString intensity, int frequency,
     m_singleSymptom->setDuration(duration);
 
     QSqlQuery query;
-    query.prepare("UPDATE symptoms set name = ?, intensity = ?, frequency = ?, duration = ? WHERE id = ?");
+    query.prepare("UPDATE symptoms set name = ?, intensity = ?, frequency = ?, duration = ? WHERE symptomID = ?");
 
     query.bindValue(0, name);
     query.bindValue(1, intensity);

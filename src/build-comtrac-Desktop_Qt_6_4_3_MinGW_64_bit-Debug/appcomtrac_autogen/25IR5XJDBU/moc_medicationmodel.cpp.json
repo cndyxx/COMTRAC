@@ -56,11 +56,6 @@
             "slots": [
                 {
                     "access": "public",
-                    "name": "updateModel",
-                    "returnType": "void"
-                },
-                {
-                    "access": "public",
                     "arguments": [
                         {
                             "name": "name",

@@ -11,7 +11,7 @@
 #include <QDateTime>
 #include <QSqlError>
 #include <iostream>
-#include "Controllers/Symptom.h"
+#include "Models/Symptom.h"
 
 class SymptomModel : public QSqlQueryModel
 {
@@ -19,6 +19,7 @@ class SymptomModel : public QSqlQueryModel
     Q_PROPERTY(QList<Symptom *> symptoms READ symptoms WRITE setSymptoms NOTIFY symptomsChanged)
     Q_PROPERTY(Symptom *singleSymptom READ singleSymptom WRITE setSingleSymptom NOTIFY singleSymptomChanged)
     Q_PROPERTY(QList<Symptom *> daySymptoms READ daySymptoms WRITE setDaySymptoms NOTIFY daySymptomsChanged)
+     Q_PROPERTY(QList<QDate> symptomsOfMonth READ symptomsOfMonth WRITE setSymptomsOfMonth NOTIFY symptomsOfMonthChanged)
 
 public:
     explicit SymptomModel(QObject *parent = nullptr);
@@ -79,7 +80,7 @@ private:
 
 
 
-    Q_PROPERTY(QList<QDate> symptomsOfMonth READ symptomsOfMonth WRITE setSymptomsOfMonth NOTIFY symptomsOfMonthChanged)
+
 };
 
 #endif // SYMPTOMMODEL_H

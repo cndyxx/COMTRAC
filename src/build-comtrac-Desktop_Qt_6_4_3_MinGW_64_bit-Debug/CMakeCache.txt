@@ -297,6 +297,9 @@ QT_CREATOR_SKIP_PACKAGE_MANAGER_SETUP:BOOL=OFF
 //No help, variable specified on the command line.
 QT_QMAKE_EXECUTABLE:FILEPATH=C:/Qt/6.4.3/mingw_64/bin/qmake.exe
 
+//The directory containing a CMake configuration file for Qt6Charts.
+Qt6Charts_DIR:PATH=Qt6Charts_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for Qt6CoreTools.
 Qt6CoreTools_DIR:PATH=C:/Qt/6.4.3/mingw_64/lib/cmake/Qt6CoreTools
 

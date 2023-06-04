@@ -5,8 +5,18 @@ import QtQuick.Layouts
 import "./Components"
 
 Item {
-    property alias medicationName : medicationInput.text
-    Background { id: background }
+
+    property int intakeCount: 1
+    property int pageState: 0
+    property var medication: medModel.medications
+    property string name: medication.name
+    property var intakeTime: medication.intakeTime
+    property int intakePerDay: medication.intakePerDay
+    property date reminderTime: medication.reminderTime
+
+    Background {
+        id: background
+    }
 
     HeaderTemplate {
         id: header
@@ -15,12 +25,10 @@ Item {
     }
 
     ColumnLayout {
-        id: grid
+        anchors.fill: parent
         anchors.top: header.bottom
-        anchors.left: parent.left
-        anchors.leftMargin: 10
-        //Abstand zum Header
-        anchors.margins: 30
+        anchors.topMargin: header.height
+        anchors.margins: 15
         spacing: 10
 
         Text {
@@ -36,7 +44,7 @@ Item {
             font.pixelSize: 17
             font.family: "Arial"
             color: "black"
-            text: medicationName
+            text: name
             focus: true
             Rectangle {
                 width: header.width
@@ -55,39 +63,46 @@ Item {
             Layout.fillWidth: true
             font.family: "Arial"
         }
-        ComboBoxTemplate {
-            id: intakePerDayInput
-            Layout.fillWidth: true
+        ComboBox {
 
-            Rectangle {
-                width: parent.width
-                height: 2
-                color: "grey"
-                anchors.top: intakePerDayInput.bottom
-                anchors.topMargin: 5
+            property int intakeNumber
+            textRole: "text"
+            valueRole: "intakeNumber"
+            model: ListModel {
+                id: intakePerDayModel
+                ListElement { text: "Einmal am Tag"}
+                ListElement { text: "Zweimal am Tag"}
+                ListElement { text: "Dreimal am Tag"}
+                ListElement { text: "Viermal am Tag"}
+            }
+            onActivated: {
+                console.log("ComboBox: " + currentIndex)
+                intakeCount = currentIndex + 1;
+
+
             }
 
         }
 
-        IntakeTimeList {
-            id: intakeList
-            width: header.width
-            height: 50
+        TimePickerTemplate {
+            id: timePickerPopup
+            popUpVisible: false
         }
 
-
-    }
-
-
-
-
-    ColumnLayout {
-        anchors.top: grid.bottom
-        anchors.topMargin: intakeList.height + 10
-        anchors.left: parent.left
-        anchors.leftMargin: 10
-        //Abstand zum Header
-        spacing: 10
+        ListView {
+            id: intakeTimeList
+            width: parent.width
+            height: parent.height * 0.2
+            model:  intakeCount
+            delegate: Button{
+                width: parent.width
+                height: 50
+                text: timePickerPopup.selectedTime.toLocaleTimeString("hh:mm")
+                onClicked: {
+                    timePickerPopup.popUpVisible = true;
+                }
+            }
+        }
 
         RowLayout{
 
@@ -136,5 +151,8 @@ Item {
 
     }
 
-
 }
+
+
+
+

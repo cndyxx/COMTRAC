@@ -1,0 +1,96 @@
+{
+    "classes": [
+        {
+            "className": "MedicationModel",
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "medications",
+                    "notify": "medicationsChanged",
+                    "read": "medications",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QList<Medication*>",
+                    "user": false,
+                    "write": "setMedications"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "singleMedication",
+                    "notify": "singleMedicationChanged",
+                    "read": "singleMedication",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QList<Medication*>",
+                    "user": false,
+                    "write": "setSingleMedication"
+                }
+            ],
+            "qualifiedClassName": "MedicationModel",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "medicationChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "medicationsChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "singleMedicationChanged",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "name": "updateModel",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "name",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "intakePerDay",
+                            "type": "int"
+                        },
+                        {
+                            "name": "intakeTimes",
+                            "type": "QList<QTime>"
+                        },
+                        {
+                            "name": "reminderTime",
+                            "type": "QTime"
+                        }
+                    ],
+                    "name": "addMedication",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QSqlQueryModel"
+                }
+            ]
+        }
+    ],
+    "inputFile": "medicationmodel.h",
+    "outputRevision": 68
+}

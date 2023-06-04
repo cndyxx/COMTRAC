@@ -60,7 +60,10 @@ Item {
         anchors.bottom: parent.bottom
         anchors.margins: 14
         buttonIcon: "\u2630" //muss noch geändert werden in eine Graphik
-        onClicked: stackView.push("SymptomHistory.qml")
+        onClicked: {
+            symptomModel.getSymptoms(); //Alle Symptome aus der Datenbank holen
+            stackView.push("SymptomHistory.qml")
+        }
 
     }
     //Button zum Öffnen des Symptomtagebuchs

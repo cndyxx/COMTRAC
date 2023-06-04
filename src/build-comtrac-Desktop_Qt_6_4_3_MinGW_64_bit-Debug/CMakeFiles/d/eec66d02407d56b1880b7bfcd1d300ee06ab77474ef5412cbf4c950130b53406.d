@@ -771,20 +771,20 @@ appcomtrac_autogen/timestamp: \
   CMakeFiles/3.24.2/CMakeSystem.cmake \
   appcomtrac_autogen/moc_predefs.h \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/CMakeLists.txt \
-  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/login.cpp \
-  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/login.h \
-  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/medication.cpp \
-  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/medication.h \
-  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/symptom.cpp \
-  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Controllers/symptom.h \
-  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/applicationmanager.cpp \
-  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/applicationmanager.h \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/dbmanager.cpp \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/dbmanager.h \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/intaketime.cpp \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/intaketime.h \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/login.cpp \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/login.h \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/loginmodel.cpp \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/loginmodel.h \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medication.cpp \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medication.h \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medicationmodel.cpp \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medicationmodel.h \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptom.cpp \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptom.h \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptommodel.cpp \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptommodel.h \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/main.cpp \
