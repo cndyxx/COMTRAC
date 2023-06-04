@@ -19,7 +19,7 @@ class SymptomModel : public QSqlQueryModel
     Q_PROPERTY(QList<Symptom *> symptoms READ symptoms WRITE setSymptoms NOTIFY symptomsChanged)
     Q_PROPERTY(Symptom *singleSymptom READ singleSymptom WRITE setSingleSymptom NOTIFY singleSymptomChanged)
     Q_PROPERTY(QList<Symptom *> daySymptoms READ daySymptoms WRITE setDaySymptoms NOTIFY daySymptomsChanged)
-     Q_PROPERTY(QList<QDate> symptomsOfMonth READ symptomsOfMonth WRITE setSymptomsOfMonth NOTIFY symptomsOfMonthChanged)
+    Q_PROPERTY(QList<QDate> symptomsOfMonth READ symptomsOfMonth WRITE setSymptomsOfMonth NOTIFY symptomsOfMonthChanged)
 
 public:
     explicit SymptomModel(QObject *parent = nullptr);

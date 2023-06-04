@@ -8,7 +8,7 @@ Item {
 
     property int intakeCount: 1
     property int pageState: 0
-    property var medication: medModel.medications
+    property var medication: medModel.singleMedication
     property string name: medication.name
     property var intakeTime: medication.intakeTime
     property int intakePerDay: medication.intakePerDay
@@ -23,7 +23,13 @@ Item {
         pageTitle: "Medikamente"
 
     }
+    DialogTemplate {
+        id: dialog
+        deleteSymptom: false
+        dialogText: qsTr("Medikament wirklich löschen?")
 
+        Layout.alignment: Qt.Vertical
+    }
     ColumnLayout {
         anchors.fill: parent
         anchors.top: header.bottom
@@ -46,6 +52,7 @@ Item {
             color: "black"
             text: name
             focus: true
+            enabled: pageState === 0 || pageState === 2 //aktiviert wenn status 0 und 2
             Rectangle {
                 width: header.width
                 height: 2
@@ -64,6 +71,14 @@ Item {
             font.family: "Arial"
         }
         ComboBox {
+            enabled: pageState === 0 || pageState === 2 //aktiviert wenn status 0 und 2
+            currentIndex: {
+                if(pageState != 0){
+                    return intakePerDay;
+                } else {
+                    return 1;
+                }
+            }
 
             property int intakeNumber
             textRole: "text"
@@ -97,7 +112,8 @@ Item {
             delegate: Button{
                 width: parent.width
                 height: 50
-                text: timePickerPopup.selectedTime.toLocaleTimeString("hh:mm")
+                text: "TEST"
+
                 onClicked: {
                     timePickerPopup.popUpVisible = true;
                 }
@@ -131,27 +147,72 @@ Item {
 
         RowLayout {
             ButtonTemplate {
-                text: qsTr("Abbrechen")
-                // onClicked: toDoList.appendItem()
+                text: {
+                    if(pageState === 0)
+                        return qsTr("Abbrechen");
+                    else if (pageState === 1)
+                        return qsTr("Zurück");
+                    else
+                        return qsTr("Löschen");
+                }
                 buttonWidth: parent.width/2
                 Layout.fillWidth: true
                 onClicked: {
-                    stackView.pop();
-                    stackView.pop()
+                    if(pageState === 0) {
+                        stackView.pop();
+                        stackView.pop();
+                    }
+                    else if(pageState ===1){
+                        stackView.pop();
+                    }
+
+                    else if(pageState === 2){
+                        dialog.open()
+                    }
+
                 }
             }
             ButtonTemplate {
-                text: qsTr("Eintragen")
-                //onClicked: toDoList.removeCompletedItems()
+                text:  {
+                    if(pageState === 0)
+                        return qsTr("Eintragen");
+                    else if (pageState === 1)
+                        return qsTr("Bearbeiten");
+                    else
+                        return qsTr("Ändern");
+                }
                 Layout.fillWidth: true
                 buttonWidth: parent.width / 2
-                // onClicked: medModel.addMedication(medicationInput.text,intakePerDayInput,  )
+                onClicked: {
+                    //Überpüfe welcher RadioButton ausgewählt
+                    if (radioButtonTimeOfTaking.checked) {
+                        var radioButtonValue = radioButtonTimeOfTaking.text
+                    } else {
+                        radioButtonValue = radioButtonTenMinutesBefore.text
+                    }
+                    //Neues Symptom zur Datenbank hinzufügen
+                    if(pageState === 0) {
+                        //medModel.addMedications(symptomInput.text, sliderIntensity.value, sliderFrequency.value, radioButtonValue, txtDate.text,  txtTime.text);
+                        stackView.pop()
+                        stackView.pop()
+                    }
+                    else if(pageState ===1){
+
+                        pageState = 2;
+                    }
+                    //Symptom in der Datenbank ändern
+                    else if(pageState === 2){
+                        //symptomModel.updateSymptom(symptomInput.text, sliderIntensity.value, sliderFrequency.value, radioButtonValue);
+                        stackView.pop()
+
+                    }
+                }
             }
         }
-
     }
-
 }
+
+
 
 
 

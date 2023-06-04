@@ -14,8 +14,8 @@ Popup {
 
     property int selectedMinute: 0
     property int selectedHour: 0
-    property date selectedTime: new Date(0,0,0,8,0)
-    property var timeList
+    property date selectedTime: new Date(0, 0, 0, 8, 0)
+    property var timeList: [selectedTime.toLocaleTimeString("hh:mm")]
 
     Rectangle {
         width: parent.width
@@ -97,10 +97,11 @@ Popup {
                     buttonWidth: parent.width / 2
                     buttonHeight: parent.height * 0.25
                     onClicked: {
-                        selectedTime = new Date(0, 0, 0, hourTumbler.currentIndex, minuteTumbler.currentIndex)
+                         selectedTime = new Date(0, 0, 0, hourTumbler.currentIndex, minuteTumbler.currentIndex)
+                        medModel.setIntakeTime(selectedTime)
                         timeList.push(selectedTime.toLocaleTimeString("hh:mm"))
                         console.log("Ausgewählte Zeit: " + selectedTime.toLocaleTimeString("hh:mm"))
-                        popUpVisible: false
+                        dialog.close()
                     }
                 }
             }

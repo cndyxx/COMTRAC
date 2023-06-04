@@ -30,7 +30,7 @@
                     "required": false,
                     "scriptable": true,
                     "stored": true,
-                    "type": "QList<Medication*>",
+                    "type": "Medication*",
                     "user": false,
                     "write": "setSingleMedication"
                 }
@@ -75,6 +75,33 @@
                         }
                     ],
                     "name": "addMedication",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "newSingleMedication",
+                            "type": "Medication*"
+                        }
+                    ],
+                    "name": "setSingleMedication",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "time",
+                            "type": "QTime"
+                        }
+                    ],
+                    "name": "setIntakeTime",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "deleteMedication",
                     "returnType": "void"
                 }
             ],

@@ -48,6 +48,9 @@ Popup {
                 onClicked: {
                     if(!deleteSymptom) {
                         //Medikament löschen
+                        medModel.deleteMedication();
+                        dialog.close();
+                        stackView.pop();
                     }
                     else {
                         symptomModel.deleteSymptom();

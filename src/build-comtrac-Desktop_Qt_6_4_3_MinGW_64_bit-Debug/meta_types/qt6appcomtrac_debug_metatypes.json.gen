@@ -122,6 +122,21 @@
                         "type": "QList<QTime>",
                         "user": false,
                         "write": "setIntakeTime"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 4,
+                        "name": "id",
+                        "notify": "idChanged",
+                        "read": "id",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false,
+                        "write": "setId"
                     }
                 ],
                 "qualifiedClassName": "Medication",
@@ -159,6 +174,11 @@
                     {
                         "access": "public",
                         "name": "intakeTimeChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "idChanged",
                         "returnType": "void"
                     }
                 ],
@@ -241,7 +261,7 @@
                         "required": false,
                         "scriptable": true,
                         "stored": true,
-                        "type": "QList<Medication*>",
+                        "type": "Medication*",
                         "user": false,
                         "write": "setSingleMedication"
                     }
@@ -286,6 +306,33 @@
                             }
                         ],
                         "name": "addMedication",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "newSingleMedication",
+                                "type": "Medication*"
+                            }
+                        ],
+                        "name": "setSingleMedication",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "time",
+                                "type": "QTime"
+                            }
+                        ],
+                        "name": "setIntakeTime",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "deleteMedication",
                         "returnType": "void"
                     }
                 ],

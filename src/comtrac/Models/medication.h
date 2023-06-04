@@ -37,6 +37,10 @@ public:
 
     QList<QTime> intakeTime() const;
     void setIntakeTime(const QList<QTime> &newIntakeTime);
+    void setIntakeTime(QTime time);
+
+    int id() const;
+    void setId(int newId);
 
 signals:
     //Ein neues Medikament wurde hinzugefügt
@@ -60,6 +64,8 @@ signals:
 
     void intakeTimeChanged();
 
+    void idChanged();
+
 public slots:
     void readMedication(QString medication);
 
@@ -77,6 +83,7 @@ private:
 
 
 
+    Q_PROPERTY(int id READ id WRITE setId NOTIFY idChanged)
 };
 
 #endif // MEDICATION_H

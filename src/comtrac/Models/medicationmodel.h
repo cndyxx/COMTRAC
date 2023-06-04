@@ -13,6 +13,7 @@ class MedicationModel : public QSqlQueryModel
 {
     Q_OBJECT
     Q_PROPERTY(QList<Medication *> medications READ medications WRITE setMedications NOTIFY medicationsChanged)
+    Q_PROPERTY(Medication *singleMedication READ singleMedication WRITE setSingleMedication NOTIFY singleMedicationChanged)
 
 
 public:
@@ -24,8 +25,8 @@ public:
 
 
 
-    QList<Medication *> singleMedication() const;
-    void setSingleMedication(const QList<Medication *> &newSingleMedication);
+    Medication *singleMedication() const;
+
 
 private:
 
@@ -36,17 +37,15 @@ private:
     void addIntakeTime(int medicationID, QList<QTime> intakeTimes);
     void addMedicationIntake(int medicationID, int intakeID);
     QList<Medication *> m_medications;
-    QList<Medication *> m_singleMedication;
+    Medication * m_singleMedication;
 
-
-
-
-    Q_PROPERTY(QList<Medication *> singleMedication READ singleMedication WRITE setSingleMedication NOTIFY singleMedicationChanged)
 
 public slots:
 
     void addMedication(QString name, int intakePerDay, QList<QTime> intakeTimes, QTime reminderTime);
-
+    void setSingleMedication(Medication *newSingleMedication);
+    void setIntakeTime(QTime time);
+    void deleteMedication();
 
 signals:
     void medicationChanged();

@@ -39,7 +39,7 @@ void SymptomModel::deleteSymptom()
     std::cout << "ID die gelöscht wird: " << symptomId << std::endl;
     //Symptom aus der Datenbank entfernen
     QSqlQuery query;
-    query.prepare("DELETE FROM symptoms WHERE id = ?");
+    query.prepare("DELETE FROM symptoms WHERE symptomID = ?");
     query.bindValue(0, symptomId);
     qDebug() << query.exec();
 

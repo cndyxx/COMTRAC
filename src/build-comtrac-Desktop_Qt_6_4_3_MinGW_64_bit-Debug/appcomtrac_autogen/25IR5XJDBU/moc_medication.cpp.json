@@ -63,6 +63,21 @@
                     "type": "QList<QTime>",
                     "user": false,
                     "write": "setIntakeTime"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 4,
+                    "name": "id",
+                    "notify": "idChanged",
+                    "read": "id",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setId"
                 }
             ],
             "qualifiedClassName": "Medication",
@@ -100,6 +115,11 @@
                 {
                     "access": "public",
                     "name": "intakeTimeChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "idChanged",
                     "returnType": "void"
                 }
             ],

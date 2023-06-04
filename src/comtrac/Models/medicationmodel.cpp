@@ -43,6 +43,7 @@ void MedicationModel::getMedication()
                 m_medications.push_back(new Medication(previousId, name, intakePerDay, intakeTimes, reminderTime, this));
                 previousId = id;
                 intakeTimes.clear();
+                std::cout << "ID: " + previousId;
             }
             name = query.value(1).toString();
             intakePerDay = query.value(4).toInt();
@@ -60,20 +61,6 @@ void MedicationModel::getMedication()
     m_medications.push_back(new Medication(previousId, name, intakePerDay, intakeTimes, reminderTime, this));
 }
 
-
-
-QList<Medication *> MedicationModel::singleMedication() const
-{
-    return m_singleMedication;
-}
-
-void MedicationModel::setSingleMedication(const QList<Medication *> &newSingleMedication)
-{
-    if (m_singleMedication == newSingleMedication)
-        return;
-    m_singleMedication = newSingleMedication;
-    emit singleMedicationChanged();
-}
 
 QList<Medication *> MedicationModel::medications() const
 {
@@ -110,6 +97,56 @@ void MedicationModel::addMedicationIntake(int medicationID, int intakeID)
     query.bindValue(0, medicationID);
     query.bindValue(1, intakeID);
     query.exec();
+}
+
+Medication *MedicationModel::singleMedication() const
+{
+    return m_singleMedication;
+}
+
+void MedicationModel::setSingleMedication(Medication *newSingleMedication)
+{
+    if (m_singleMedication == newSingleMedication)
+        return;
+    m_singleMedication = newSingleMedication;
+    emit singleMedicationChanged();
+}
+
+void MedicationModel::setIntakeTime(QTime time)
+{
+    m_singleMedication->intakeTime().push_back(time);
+}
+
+void MedicationModel::deleteMedication()
+{
+    int id = m_singleMedication->id();
+    std::cout << "ID IN MODEL: " << id;
+    QSqlQuery query;
+    query.prepare("DELETE FROM MedicationIntake WHERE medicationID = :medicationID");
+    query.bindValue(":medicationID", id);
+    if (!query.exec()) {
+        qDebug() << "Error deleting records from MedicationIntake table:" << query.lastError().text();
+        return;
+    }
+    query.prepare("DELETE FROM Medications WHERE medicationID = ?");
+    query.bindValue(0, id);
+    if(query.exec()) {
+        for (int i = 0; i < m_medications.size(); i++)
+        {
+            Medication* medication = m_medications.at(i);
+            if (medication->id() == id)
+            {
+                m_medications.removeAt(i);
+                delete medication; // Speicher freigeben
+                break;
+            }
+        }
+    } else {
+         qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
+    }
+
+    emit medicationsChanged();
+
 }
 
 void MedicationModel::addMedication(QString name,int intakePerDay,QList<QTime> intakeTimes, QTime reminderTime)

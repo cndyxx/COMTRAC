@@ -20,6 +20,19 @@ void Medication::addMedication(QString name, int intakePerDay, QTime intakeTimes
 
 }
 
+int Medication::id() const
+{
+    return m_id;
+}
+
+void Medication::setId(int newId)
+{
+    if (m_id == newId)
+        return;
+    m_id = newId;
+    emit idChanged();
+}
+
 QList<QTime> Medication::intakeTime() const
 {
     return m_intakeTime;
@@ -31,6 +44,11 @@ void Medication::setIntakeTime(const QList<QTime> &newIntakeTime)
         return;
     m_intakeTime = newIntakeTime;
     emit intakeTimeChanged();
+}
+
+void Medication::setIntakeTime(QTime time)
+{
+    m_intakeTime.push_back(time);
 }
 
 

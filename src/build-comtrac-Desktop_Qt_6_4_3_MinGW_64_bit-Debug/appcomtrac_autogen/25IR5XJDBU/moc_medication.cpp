@@ -27,7 +27,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_Medication_t {
-    uint offsetsAndSizes[36];
+    uint offsetsAndSizes[40];
     char stringdata0[11];
     char stringdata1[16];
     char stringdata2[1];
@@ -37,15 +37,17 @@ struct qt_meta_stringdata_Medication_t {
     char stringdata6[20];
     char stringdata7[20];
     char stringdata8[18];
-    char stringdata9[15];
-    char stringdata10[11];
-    char stringdata11[14];
-    char stringdata12[5];
-    char stringdata13[13];
-    char stringdata14[12];
-    char stringdata15[13];
-    char stringdata16[11];
-    char stringdata17[13];
+    char stringdata9[10];
+    char stringdata10[15];
+    char stringdata11[11];
+    char stringdata12[14];
+    char stringdata13[5];
+    char stringdata14[13];
+    char stringdata15[12];
+    char stringdata16[13];
+    char stringdata17[11];
+    char stringdata18[13];
+    char stringdata19[3];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_Medication_t::offsetsAndSizes) + ofs), len 
@@ -60,15 +62,17 @@ Q_CONSTINIT static const qt_meta_stringdata_Medication_t qt_meta_stringdata_Medi
         QT_MOC_LITERAL(76, 19),  // "reminderTimeChanged"
         QT_MOC_LITERAL(96, 19),  // "intakePerDayChanged"
         QT_MOC_LITERAL(116, 17),  // "intakeTimeChanged"
-        QT_MOC_LITERAL(134, 14),  // "readMedication"
-        QT_MOC_LITERAL(149, 10),  // "medication"
-        QT_MOC_LITERAL(160, 13),  // "addMedication"
-        QT_MOC_LITERAL(174, 4),  // "name"
-        QT_MOC_LITERAL(179, 12),  // "intakePerDay"
-        QT_MOC_LITERAL(192, 11),  // "intakeTimes"
-        QT_MOC_LITERAL(204, 12),  // "reminderTime"
-        QT_MOC_LITERAL(217, 10),  // "intakeTime"
-        QT_MOC_LITERAL(228, 12)   // "QList<QTime>"
+        QT_MOC_LITERAL(134, 9),  // "idChanged"
+        QT_MOC_LITERAL(144, 14),  // "readMedication"
+        QT_MOC_LITERAL(159, 10),  // "medication"
+        QT_MOC_LITERAL(170, 13),  // "addMedication"
+        QT_MOC_LITERAL(184, 4),  // "name"
+        QT_MOC_LITERAL(189, 12),  // "intakePerDay"
+        QT_MOC_LITERAL(202, 11),  // "intakeTimes"
+        QT_MOC_LITERAL(214, 12),  // "reminderTime"
+        QT_MOC_LITERAL(227, 10),  // "intakeTime"
+        QT_MOC_LITERAL(238, 12),  // "QList<QTime>"
+        QT_MOC_LITERAL(251, 2)   // "id"
     },
     "Medication",
     "medicationAdded",
@@ -79,6 +83,7 @@ Q_CONSTINIT static const qt_meta_stringdata_Medication_t qt_meta_stringdata_Medi
     "reminderTimeChanged",
     "intakePerDayChanged",
     "intakeTimeChanged",
+    "idChanged",
     "readMedication",
     "medication",
     "addMedication",
@@ -87,7 +92,8 @@ Q_CONSTINIT static const qt_meta_stringdata_Medication_t qt_meta_stringdata_Medi
     "intakeTimes",
     "reminderTime",
     "intakeTime",
-    "QList<QTime>"
+    "QList<QTime>",
+    "id"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -98,25 +104,26 @@ Q_CONSTINIT static const uint qt_meta_data_Medication[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       9,   14, // methods
-       4,   87, // properties
+      10,   14, // methods
+       5,   94, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       7,       // signalCount
+       8,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   68,    2, 0x06,    5 /* Public */,
-       3,    0,   69,    2, 0x06,    6 /* Public */,
-       4,    0,   70,    2, 0x06,    7 /* Public */,
-       5,    0,   71,    2, 0x06,    8 /* Public */,
-       6,    0,   72,    2, 0x06,    9 /* Public */,
-       7,    0,   73,    2, 0x06,   10 /* Public */,
-       8,    0,   74,    2, 0x06,   11 /* Public */,
+       1,    0,   74,    2, 0x06,    6 /* Public */,
+       3,    0,   75,    2, 0x06,    7 /* Public */,
+       4,    0,   76,    2, 0x06,    8 /* Public */,
+       5,    0,   77,    2, 0x06,    9 /* Public */,
+       6,    0,   78,    2, 0x06,   10 /* Public */,
+       7,    0,   79,    2, 0x06,   11 /* Public */,
+       8,    0,   80,    2, 0x06,   12 /* Public */,
+       9,    0,   81,    2, 0x06,   13 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       9,    1,   75,    2, 0x0a,   12 /* Public */,
-      11,    4,   78,    2, 0x0a,   14 /* Public */,
+      10,    1,   82,    2, 0x0a,   14 /* Public */,
+      12,    4,   85,    2, 0x0a,   16 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -126,16 +133,18 @@ Q_CONSTINIT static const uint qt_meta_data_Medication[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::QString,   10,
-    QMetaType::Void, QMetaType::QString, QMetaType::Int, QMetaType::QTime, QMetaType::QTime,   12,   13,   14,   15,
+    QMetaType::Void, QMetaType::QString,   11,
+    QMetaType::Void, QMetaType::QString, QMetaType::Int, QMetaType::QTime, QMetaType::QTime,   13,   14,   15,   16,
 
  // properties: name, type, flags
-      12, QMetaType::QString, 0x00015103, uint(3), 0,
-      13, QMetaType::Int, 0x00015103, uint(5), 0,
-      15, QMetaType::QTime, 0x00015103, uint(4), 0,
-      16, 0x80000000 | 17, 0x0001510b, uint(6), 0,
+      13, QMetaType::QString, 0x00015103, uint(3), 0,
+      14, QMetaType::Int, 0x00015103, uint(5), 0,
+      16, QMetaType::QTime, 0x00015103, uint(4), 0,
+      17, 0x80000000 | 18, 0x0001510b, uint(6), 0,
+      19, QMetaType::Int, 0x00015103, uint(7), 0,
 
        0        // eod
 };
@@ -155,6 +164,8 @@ Q_CONSTINIT const QMetaObject Medication::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<QTime, std::true_type>,
         // property 'intakeTime'
         QtPrivate::TypeAndForceComplete<QList<QTime>, std::true_type>,
+        // property 'id'
+        QtPrivate::TypeAndForceComplete<int, std::true_type>,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<Medication, std::true_type>,
         // method 'medicationAdded'
@@ -170,6 +181,8 @@ Q_CONSTINIT const QMetaObject Medication::staticMetaObject = { {
         // method 'intakePerDayChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'intakeTimeChanged'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'idChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'readMedication'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
@@ -197,8 +210,9 @@ void Medication::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 4: _t->reminderTimeChanged(); break;
         case 5: _t->intakePerDayChanged(); break;
         case 6: _t->intakeTimeChanged(); break;
-        case 7: _t->readMedication((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 8: _t->addMedication((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QTime>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QTime>>(_a[4]))); break;
+        case 7: _t->idChanged(); break;
+        case 8: _t->readMedication((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 9: _t->addMedication((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QTime>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QTime>>(_a[4]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -252,6 +266,13 @@ void Medication::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
                 return;
             }
         }
+        {
+            using _t = void (Medication::*)();
+            if (_t _q_method = &Medication::idChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+                *result = 7;
+                return;
+            }
+        }
     } else if (_c == QMetaObject::RegisterPropertyMetaType) {
         switch (_id) {
         default: *reinterpret_cast<int*>(_a[0]) = -1; break;
@@ -268,6 +289,7 @@ else if (_c == QMetaObject::ReadProperty) {
         case 1: *reinterpret_cast< int*>(_v) = _t->intakePerDay(); break;
         case 2: *reinterpret_cast< QTime*>(_v) = _t->reminderTime(); break;
         case 3: *reinterpret_cast< QList<QTime>*>(_v) = _t->intakeTime(); break;
+        case 4: *reinterpret_cast< int*>(_v) = _t->id(); break;
         default: break;
         }
     } else if (_c == QMetaObject::WriteProperty) {
@@ -279,6 +301,7 @@ else if (_c == QMetaObject::ReadProperty) {
         case 1: _t->setIntakePerDay(*reinterpret_cast< int*>(_v)); break;
         case 2: _t->setReminderTime(*reinterpret_cast< QTime*>(_v)); break;
         case 3: _t->setIntakeTime(*reinterpret_cast< QList<QTime>*>(_v)); break;
+        case 4: _t->setId(*reinterpret_cast< int*>(_v)); break;
         default: break;
         }
     } else if (_c == QMetaObject::ResetProperty) {
@@ -305,18 +328,18 @@ int Medication::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 9)
+        if (_id < 10)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 9;
+        _id -= 10;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 9)
+        if (_id < 10)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 9;
+        _id -= 10;
     }else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
             || _c == QMetaObject::RegisterPropertyMetaType) {
         qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     }
     return _id;
 }
@@ -361,6 +384,12 @@ void Medication::intakePerDayChanged()
 void Medication::intakeTimeChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 6, nullptr);
+}
+
+// SIGNAL 7
+void Medication::idChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 7, nullptr);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE
