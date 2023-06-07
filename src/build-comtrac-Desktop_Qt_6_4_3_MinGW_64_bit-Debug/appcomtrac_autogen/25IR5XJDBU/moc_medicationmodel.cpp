@@ -128,7 +128,7 @@ Q_CONSTINIT static const uint qt_meta_data_MedicationModel[] = {
     QMetaType::Void,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::QString, QMetaType::Int, 0x80000000 | 8, QMetaType::QTime,    6,    7,    9,   10,
+    QMetaType::Void, QMetaType::QString, QMetaType::Int, 0x80000000 | 8, QMetaType::QString,    6,    7,    9,   10,
     QMetaType::Void, 0x80000000 | 12,   13,
     QMetaType::Void, QMetaType::QTime,   15,
     QMetaType::Void,
@@ -164,7 +164,7 @@ Q_CONSTINIT const QMetaObject MedicationModel::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         QtPrivate::TypeAndForceComplete<QList<QTime>, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QTime, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         // method 'setSingleMedication'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<Medication *, std::false_type>,
@@ -186,7 +186,7 @@ void MedicationModel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         case 0: _t->medicationChanged(); break;
         case 1: _t->medicationsChanged(); break;
         case 2: _t->singleMedicationChanged(); break;
-        case 3: _t->addMedication((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QList<QTime>>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QTime>>(_a[4]))); break;
+        case 3: _t->addMedication((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QList<QTime>>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4]))); break;
         case 4: _t->setSingleMedication((*reinterpret_cast< std::add_pointer_t<Medication*>>(_a[1]))); break;
         case 5: _t->setIntakeTime((*reinterpret_cast< std::add_pointer_t<QTime>>(_a[1]))); break;
         case 6: _t->deleteMedication(); break;

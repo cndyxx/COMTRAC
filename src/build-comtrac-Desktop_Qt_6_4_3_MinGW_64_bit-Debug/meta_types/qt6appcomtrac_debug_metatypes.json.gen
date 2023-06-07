@@ -68,6 +68,21 @@
                         "designable": true,
                         "final": false,
                         "index": 0,
+                        "name": "id",
+                        "notify": "idChanged",
+                        "read": "id",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false,
+                        "write": "setId"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
                         "name": "name",
                         "notify": "nameChanged",
                         "read": "name",
@@ -82,7 +97,7 @@
                         "constant": false,
                         "designable": true,
                         "final": false,
-                        "index": 1,
+                        "index": 2,
                         "name": "intakePerDay",
                         "notify": "intakePerDayChanged",
                         "read": "intakePerDay",
@@ -92,21 +107,6 @@
                         "type": "int",
                         "user": false,
                         "write": "setIntakePerDay"
-                    },
-                    {
-                        "constant": false,
-                        "designable": true,
-                        "final": false,
-                        "index": 2,
-                        "name": "reminderTime",
-                        "notify": "reminderTimeChanged",
-                        "read": "reminderTime",
-                        "required": false,
-                        "scriptable": true,
-                        "stored": true,
-                        "type": "QTime",
-                        "user": false,
-                        "write": "setReminderTime"
                     },
                     {
                         "constant": false,
@@ -128,15 +128,15 @@
                         "designable": true,
                         "final": false,
                         "index": 4,
-                        "name": "id",
-                        "notify": "idChanged",
-                        "read": "id",
+                        "name": "reminderTime",
+                        "notify": "reminderTimeChanged",
+                        "read": "reminderTime",
                         "required": false,
                         "scriptable": true,
                         "stored": true,
-                        "type": "int",
+                        "type": "QString",
                         "user": false,
-                        "write": "setId"
+                        "write": "setReminderTime"
                     }
                 ],
                 "qualifiedClassName": "Medication",
@@ -163,11 +163,6 @@
                     },
                     {
                         "access": "public",
-                        "name": "reminderTimeChanged",
-                        "returnType": "void"
-                    },
-                    {
-                        "access": "public",
                         "name": "intakePerDayChanged",
                         "returnType": "void"
                     },
@@ -179,6 +174,11 @@
                     {
                         "access": "public",
                         "name": "idChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "reminderTimeChanged",
                         "returnType": "void"
                     }
                 ],
@@ -207,7 +207,7 @@
                             },
                             {
                                 "name": "intakeTimes",
-                                "type": "QTime"
+                                "type": "QList<QTime>"
                             },
                             {
                                 "name": "reminderTime",
@@ -302,7 +302,7 @@
                             },
                             {
                                 "name": "reminderTime",
-                                "type": "QTime"
+                                "type": "QString"
                             }
                         ],
                         "name": "addMedication",
@@ -573,6 +573,36 @@
                         "type": "QList<QDate>",
                         "user": false,
                         "write": "setSymptomsOfMonth"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 4,
+                        "name": "weekSymptoms",
+                        "notify": "weekSymptomsChanged",
+                        "read": "weekSymptoms",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QList<Symptom*>",
+                        "user": false,
+                        "write": "setWeekSymptoms"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 5,
+                        "name": "symptomEntries",
+                        "notify": "symptomEntriesChanged",
+                        "read": "symptomEntries",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QList<Symptom*>",
+                        "user": false,
+                        "write": "setSymptomEntries"
                     }
                 ],
                 "qualifiedClassName": "SymptomModel",
@@ -595,6 +625,16 @@
                     {
                         "access": "public",
                         "name": "symptomsOfMonthChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "weekSymptomsChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "symptomEntriesChanged",
                         "returnType": "void"
                     }
                 ],
@@ -682,7 +722,7 @@
                                 "type": "QString"
                             }
                         ],
-                        "name": "setSymptoms",
+                        "name": "addSymptoms",
                         "returnType": "void"
                     },
                     {
@@ -705,6 +745,32 @@
                             }
                         ],
                         "name": "getSymptomsOfDate",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "startDate",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "endDate",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "getSymptomsOfWeek",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "getSymptomEntries",
                         "returnType": "void"
                     }
                 ],

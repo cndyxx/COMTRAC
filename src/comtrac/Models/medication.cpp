@@ -3,7 +3,7 @@
 
 
 
-Medication::Medication(int id, QString name, int intakePerDay, QList<QTime> intakeTime, QTime reminderTime, QObject *parent)
+Medication::Medication(int id, QString name, int intakePerDay, QList<QTime> intakeTime, QString reminderTime, QObject *parent)
     : QObject(parent), m_id(id),  m_name(name),  m_intakePerDay(intakePerDay), m_intakeTime(intakeTime), m_reminderTime(reminderTime)
 {
 
@@ -14,10 +14,23 @@ void Medication::readMedication(QString medication)
 
 }
 
-void Medication::addMedication(QString name, int intakePerDay, QTime intakeTimes, QTime reminderTime)
+void Medication::addMedication(QString name, int intakePerDay, QList<QTime> intakeTimes, QTime reminderTime)
 {
     //Medikament in die Datenbank hinzufügen
 
+}
+
+QString Medication::reminderTime() const
+{
+    return m_reminderTime;
+}
+
+void Medication::setReminderTime(const QString &newReminderTime)
+{
+    if (m_reminderTime == newReminderTime)
+        return;
+    m_reminderTime = newReminderTime;
+    emit reminderTimeChanged();
 }
 
 int Medication::id() const
@@ -64,20 +77,6 @@ void Medication::setIntakePerDay(int newIntakePerDay)
     m_intakePerDay = newIntakePerDay;
     emit intakePerDayChanged();
 }
-
-QTime Medication::reminderTime() const
-{
-    return m_reminderTime;
-}
-
-void Medication::setReminderTime(const QTime &newReminderTime)
-{
-    if (m_reminderTime == newReminderTime)
-        return;
-    m_reminderTime = newReminderTime;
-    emit reminderTimeChanged();
-}
-
 
 
 

@@ -19,7 +19,7 @@ class MedicationModel : public QSqlQueryModel
 public:
 
     explicit MedicationModel(QObject *parent = nullptr);
-
+    ~MedicationModel();
     QList<Medication *> medications() const;
     void setMedications(const QList<Medication *> &newMedications);
 
@@ -42,7 +42,7 @@ private:
 
 public slots:
 
-    void addMedication(QString name, int intakePerDay, QList<QTime> intakeTimes, QTime reminderTime);
+    void addMedication(QString name, int intakePerDay, QList<QTime> intakeTimes, QString reminderTime);
     void setSingleMedication(Medication *newSingleMedication);
     void setIntakeTime(QTime time);
     void deleteMedication();

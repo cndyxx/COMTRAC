@@ -20,6 +20,8 @@ class SymptomModel : public QSqlQueryModel
     Q_PROPERTY(Symptom *singleSymptom READ singleSymptom WRITE setSingleSymptom NOTIFY singleSymptomChanged)
     Q_PROPERTY(QList<Symptom *> daySymptoms READ daySymptoms WRITE setDaySymptoms NOTIFY daySymptomsChanged)
     Q_PROPERTY(QList<QDate> symptomsOfMonth READ symptomsOfMonth WRITE setSymptomsOfMonth NOTIFY symptomsOfMonthChanged)
+    Q_PROPERTY(QList<Symptom *> weekSymptoms READ weekSymptoms WRITE setWeekSymptoms NOTIFY weekSymptomsChanged)
+    Q_PROPERTY(QList<Symptom *> symptomEntries READ symptomEntries WRITE setSymptomEntries NOTIFY symptomEntriesChanged)
 
 public:
     explicit SymptomModel(QObject *parent = nullptr);
@@ -39,6 +41,12 @@ public:
     QList<QDate> symptomsOfMonth() const;
     void setSymptomsOfMonth(const QList<QDate> &newSymptomsOfMonth);
 
+    QList<Symptom *> weekSymptoms() const;
+    void setWeekSymptoms(const QList<Symptom *> &newWeekSymptoms);
+
+    QList<Symptom *> symptomEntries() const;
+    void setSymptomEntries(const QList<Symptom *> &newSymptomEnties);
+
 signals:
     void symptomsChanged();
 
@@ -47,6 +55,10 @@ signals:
     void daySymptomsChanged();
 
     void symptomsOfMonthChanged();
+
+    void weekSymptomsChanged();
+
+    void symptomEntriesChanged();
 
 public slots:
 
@@ -61,10 +73,12 @@ public slots:
     bool findDate(QString date);
 
     void getSymptoms();
-    void setSymptoms(QString name, QString intensity, int frequency, QString duration, QString entryDate, QString entryTime);
+    void addSymptoms(QString name, QString intensity, int frequency, QString duration, QString entryDate, QString entryTime);
     void setSingleSymptom(Symptom *newSingleSymptom);
 
     void getSymptomsOfDate(QString entryDate);
+    void getSymptomsOfWeek(QString startDate, QString endDate);
+    void getSymptomEntries(QString name);
 
 private:
     void updateModel();
@@ -74,12 +88,9 @@ private:
     QList<Symptom *> m_daySymptoms; //Liste von Symptomen für einen Tag
     QList<Symptom *> m_weekSymptoms; //Liste von Symptomen für eine Kalenderwoche
     QList<QDate> m_symptomsOfMonth;
+    QList<Symptom *> m_symptomEntries;
 
-
-    int addSymptom(QString name, QString intensity, int frequency, QString duration, QDate entryDate, QTime entryTime);
-
-
-
+    void deleteSymptomOfList(QList<Symptom *> &list , int symptomID);
 
 };
 

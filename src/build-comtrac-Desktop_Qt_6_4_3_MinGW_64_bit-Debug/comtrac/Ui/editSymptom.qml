@@ -259,7 +259,7 @@ Item {
                     }
                     //Neues Symptom zur Datenbank hinzufügen
                     if(pageState === 0) {
-                        symptomModel.setSymptoms(symptomInput.text, sliderIntensity.value, sliderFrequency.value, radioButtonValue, txtDate.text,  txtTime.text);
+                        symptomModel.addSymptoms(symptomInput.text, sliderIntensity.value, sliderFrequency.value, radioButtonValue, txtDate.text,  txtTime.text);
                         stackView.pop()
                         stackView.pop()
                     }

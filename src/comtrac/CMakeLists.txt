@@ -58,6 +58,8 @@ qt_add_qml_module(appcomtrac
     Ui/EditSymptom.qml
     Ui/SymptomHistory.qml
     Ui/WeeklyHistory.qml
+    Ui/Chat.qml
+    Ui/singleSymptomHistory.qml
     #elements
     Ui/Components/StackViewPage.qml
     Ui/Components/Background.qml
@@ -82,6 +84,8 @@ qt_add_qml_module(appcomtrac
     Ui/Components/EditSymptomDelegate.qml
     Ui/Components/SymptomList.qml
     Ui/Components/DialogTemplate.qml
+    Ui/Components/ChatBubble.qml
+    Ui/Components/ChatInput.qml
 
 
 
@@ -92,6 +96,8 @@ qt_add_qml_module(appcomtrac
     assets/triangle_back.png
     assets/x.png
     assets/pencil.png
+    assets/singleSymptom_Diagramm.PNG
+    assets/weeklySymptoms_Diagramm.PNG
 )
 
 

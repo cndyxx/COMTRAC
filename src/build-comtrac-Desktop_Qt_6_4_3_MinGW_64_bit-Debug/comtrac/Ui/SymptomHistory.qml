@@ -86,7 +86,7 @@ Item {
                     }
 
                     onClicked: {
-                        symptomModel.get
+                        symptomModel.getSymptomsOfWeek("2023-06-12", "2023-06-18");
                         stackView.push("WeeklyHistory.qml")
                     }
                 }

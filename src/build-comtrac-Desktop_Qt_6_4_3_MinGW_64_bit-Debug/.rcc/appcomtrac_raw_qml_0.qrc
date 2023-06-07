@@ -12,6 +12,8 @@
     <file alias="Ui/EditSymptom.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/EditSymptom.qml</file>
     <file alias="Ui/SymptomHistory.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/SymptomHistory.qml</file>
     <file alias="Ui/WeeklyHistory.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/WeeklyHistory.qml</file>
+    <file alias="Ui/Chat.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Chat.qml</file>
+    <file alias="Ui/singleSymptomHistory.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/singleSymptomHistory.qml</file>
     <file alias="Ui/Components/StackViewPage.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/StackViewPage.qml</file>
     <file alias="Ui/Components/Background.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/Background.qml</file>
     <file alias="Ui/Components/TextFieldTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/TextFieldTemplate.qml</file>
@@ -35,11 +37,15 @@
     <file alias="Ui/Components/EditSymptomDelegate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/EditSymptomDelegate.qml</file>
     <file alias="Ui/Components/SymptomList.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/SymptomList.qml</file>
     <file alias="Ui/Components/DialogTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/DialogTemplate.qml</file>
+    <file alias="Ui/Components/ChatBubble.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/ChatBubble.qml</file>
+    <file alias="Ui/Components/ChatInput.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/ChatInput.qml</file>
     <file alias="assets/menu.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/menu.png</file>
     <file alias="assets/triangle_next.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/triangle_next.png</file>
     <file alias="assets/triangle_back.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/triangle_back.png</file>
     <file alias="assets/x.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/x.png</file>
     <file alias="assets/pencil.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/pencil.png</file>
+    <file alias="assets/singleSymptom_Diagramm.PNG">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/singleSymptom_Diagramm.PNG</file>
+    <file alias="assets/weeklySymptoms_Diagramm.PNG">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/weeklySymptoms_Diagramm.PNG</file>
   </qresource>
 </RCC>
 

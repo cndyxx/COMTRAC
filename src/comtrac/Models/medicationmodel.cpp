@@ -15,6 +15,18 @@ MedicationModel::MedicationModel(QObject *parent) : QSqlQueryModel(parent)
 
 }
 
+MedicationModel::~MedicationModel()
+{
+    delete m_singleMedication;
+    m_singleMedication = nullptr;
+
+    for (Medication *medication : m_medications) {
+        delete medication;
+    }
+
+
+}
+
 //Einnahmezeiten von der MedicationID holen
 //SELECT e.intakeTime
 //    FROM Medications m
@@ -31,7 +43,7 @@ void MedicationModel::getMedication()
     QList<QTime> intakeTimes;
     QString name;
     int intakePerDay;
-    QTime reminderTime;
+    QString reminderTime;
     if (query.exec()) {
         while (query.next()) {
             int id = query.value(0).toInt();
@@ -47,7 +59,7 @@ void MedicationModel::getMedication()
             }
             name = query.value(1).toString();
             intakePerDay = query.value(4).toInt();
-            reminderTime = query.value(3).toTime();
+            reminderTime = query.value(3).toString();
             QTime intakeTime = query.value(2).toTime();
             intakeTimes.push_back(intakeTime);
 
@@ -149,7 +161,7 @@ void MedicationModel::deleteMedication()
 
 }
 
-void MedicationModel::addMedication(QString name,int intakePerDay,QList<QTime> intakeTimes, QTime reminderTime)
+void MedicationModel::addMedication(QString name,int intakePerDay,QList<QTime> intakeTimes, QString reminderTime)
 {
     int medicationID;
     QSqlQuery query;
@@ -157,10 +169,12 @@ void MedicationModel::addMedication(QString name,int intakePerDay,QList<QTime> i
     query.bindValue(":name", name);
     query.bindValue(":intakePerDay", intakePerDay);
     query.bindValue(":reminderTime", reminderTime);
+
     if(query.exec()) {
         medicationID = query.lastInsertId().toInt();
         std::cout << "LETZTE ID: " + medicationID << std::endl;
         addIntakeTime(medicationID, intakeTimes);
+        m_medications.push_back(new Medication(medicationID, name, intakePerDay, intakeTimes, reminderTime, this));
     }
     else {
         qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();

@@ -5,14 +5,22 @@ import QtQuick.Layouts
 import "./Components"
 
 Item {
-
+    property var initialTime: new Date()
     property int intakeCount: 1
     property int pageState: 0
+    property var list: []
     property var medication: medModel.singleMedication
     property string name: medication.name
     property var intakeTime: medication.intakeTime
     property int intakePerDay: medication.intakePerDay
     property date reminderTime: medication.reminderTime
+
+    function getIntakeTime(){
+        for(var i = 0; i < intakeCount; i++){
+            list.push(intakeTimeList[i].text)
+            console.log("TESTAUSGABE: " + intakeTimeList[i].text);
+        }
+    }
 
     Background {
         id: background
@@ -23,13 +31,13 @@ Item {
         pageTitle: "Medikamente"
 
     }
-    DialogTemplate {
-        id: dialog
-        deleteSymptom: false
-        dialogText: qsTr("Medikament wirklich löschen?")
+        DialogTemplate {
+            id: dialog
+            deleteSymptom: false
+            dialogText: qsTr("Medikament wirklich löschen?")
 
-        Layout.alignment: Qt.Vertical
-    }
+            Layout.alignment: Qt.Vertical
+        }
     ColumnLayout {
         anchors.fill: parent
         anchors.top: header.bottom
@@ -93,29 +101,25 @@ Item {
             onActivated: {
                 console.log("ComboBox: " + currentIndex)
                 intakeCount = currentIndex + 1;
-
+                timePickerPopup.timePicker = intakeList();
 
             }
 
         }
 
-        TimePickerTemplate {
-            id: timePickerPopup
-            popUpVisible: false
-        }
+
 
         ListView {
-            id: intakeTimeList
+            id: intakeTimeListView
             width: parent.width
             height: parent.height * 0.2
             model:  intakeCount
-            delegate: Button{
-                width: parent.width
-                height: 50
-                text: "TEST"
-
-                onClicked: {
-                    timePickerPopup.popUpVisible = true;
+            spacing: 10
+            delegate: TimePickerTemplate{
+                id: intakeTimeList
+                onSaveClicked: {
+                    console.log("Ausgewählter Text In Edit:", text)
+                    list.push(text)
                 }
             }
         }
@@ -192,7 +196,7 @@ Item {
                     }
                     //Neues Symptom zur Datenbank hinzufügen
                     if(pageState === 0) {
-                        //medModel.addMedications(symptomInput.text, sliderIntensity.value, sliderFrequency.value, radioButtonValue, txtDate.text,  txtTime.text);
+                        medModel.addMedication(medicationInput.text, intakeCount, list, radioButtonValue);
                         stackView.pop()
                         stackView.pop()
                     }

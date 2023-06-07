@@ -9,7 +9,7 @@ Page {
 
     property string symptom_diary: "SymptomDiary.qml"
     property string medication: "Medication.qml"
-    property string chat: "chat.qml"
+    property string chat: "Chat.qml"
     property string vidoe_telephony: "VideoTelephony.qml"
     property string stack_view: "Ui/StackViewPage.qml"
      property date currentDate: new Date()

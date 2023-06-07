@@ -71,7 +71,7 @@
                         },
                         {
                             "name": "reminderTime",
-                            "type": "QTime"
+                            "type": "QString"
                         }
                     ],
                     "name": "addMedication",

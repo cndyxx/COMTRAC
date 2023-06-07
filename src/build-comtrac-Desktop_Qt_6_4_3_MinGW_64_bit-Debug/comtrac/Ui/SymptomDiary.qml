@@ -9,7 +9,7 @@ import "./Components"
 
 Item {
 
-    property var symptom: symptomModel.symptoms
+    property var symptom: symptomModel.daySymptoms
 
     Background { id: background}
     HeaderTemplate {
@@ -46,9 +46,9 @@ Item {
     }
     Connections {
         target: symptomModel  // Das Symptom-Modellobjekt in QML
-        function onSymptomsChanged() {
+        function onDaySymptomsChanged() {
             // Aktualisiere das Modell der ListView
-            symptomListView.model = symptomModel.symptoms;
+            symptomListView.model = symptomModel.daySymptoms;
             //symptomListView.model.append(symptomModel.symptoms);
         }
     }

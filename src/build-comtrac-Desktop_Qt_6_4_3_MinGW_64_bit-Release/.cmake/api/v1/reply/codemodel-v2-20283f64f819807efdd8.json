@@ -1,0 +1,160 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-906d3a3f8df360b22c89.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "comtrac",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Release-e0638473bc2fb8e961bb.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Release-370ffd529404d2f0462d.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Release-df5734ae2219b189ad32.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appcomtrac::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appcomtrac-Release-24395d3d40c8f1717d06.json",
+					"name" : "appcomtrac",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appcomtrac_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appcomtrac_autogen-Release-a634082978027d0063a9.json",
+					"name" : "appcomtrac_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appcomtrac_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appcomtrac_autogen_timestamp_deps-Release-3c73244bf5aaa0d7cc1d.json",
+					"name" : "appcomtrac_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appcomtrac_other_files::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appcomtrac_other_files-Release-2cf3b16d50098e76358d.json",
+					"name" : "appcomtrac_other_files",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appcomtrac_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appcomtrac_qmlimportscan-Release-79b5ec65f58015a2fb2d.json",
+					"name" : "appcomtrac_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appcomtrac_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appcomtrac_qmllint-Release-4d90d4edc8857d11a1ca.json",
+					"name" : "appcomtrac_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appcomtrac_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appcomtrac_qmllint_json-Release-e492043199f97d643021.json",
+					"name" : "appcomtrac_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appcomtrac_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appcomtrac_qmltyperegistration-Release-ded5b395de63beffe4a3.json",
+					"name" : "appcomtrac_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appcomtrac_tooling::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appcomtrac_tooling-Release-69540ac0507aa0b06739.json",
+					"name" : "appcomtrac_tooling",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Release",
+		"source" : "C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
