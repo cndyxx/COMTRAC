@@ -37,7 +37,7 @@
     <file alias="Ui/Components/EditSymptomDelegate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/EditSymptomDelegate.qml</file>
     <file alias="Ui/Components/SymptomList.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/SymptomList.qml</file>
     <file alias="Ui/Components/DialogTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/DialogTemplate.qml</file>
-    <file alias="Ui/Components/ChatBubble.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/ChatBubble.qml</file>
+    <file alias="Ui/Components/MessageDelegate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/MessageDelegate.qml</file>
     <file alias="Ui/Components/ChatInput.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/ChatInput.qml</file>
     <file alias="assets/menu.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/menu.png</file>
     <file alias="assets/triangle_next.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/triangle_next.png</file>

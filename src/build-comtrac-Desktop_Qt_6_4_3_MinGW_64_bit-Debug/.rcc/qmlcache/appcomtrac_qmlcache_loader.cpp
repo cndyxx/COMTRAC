@@ -264,7 +264,7 @@ namespace _comtrac_Ui_Components_DialogTemplate_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
-namespace _comtrac_Ui_Components_ChatBubble_qml { 
+namespace _comtrac_Ui_Components_MessageDelegate_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
     const QQmlPrivate::CachedQmlUnit unit = {
@@ -329,7 +329,7 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/EditSymptomDelegate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_EditSymptomDelegate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/SymptomList.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_SymptomList_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/DialogTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_DialogTemplate_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/ChatBubble.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_ChatBubble_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/MessageDelegate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_MessageDelegate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/ChatInput.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_ChatInput_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;

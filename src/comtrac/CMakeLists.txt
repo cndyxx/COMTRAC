@@ -37,6 +37,10 @@ qt_add_executable(appcomtrac
     Models/symptommodel.cpp
     Models/IntakeTime.h
     Models/IntakeTime.cpp
+    Models/MessageModel.cpp
+    Models/MessageModel.h
+    Models/Message.cpp
+    Models/Message.h
 
 
 )
@@ -84,7 +88,7 @@ qt_add_qml_module(appcomtrac
     Ui/Components/EditSymptomDelegate.qml
     Ui/Components/SymptomList.qml
     Ui/Components/DialogTemplate.qml
-    Ui/Components/ChatBubble.qml
+    Ui/Components/MessageDelegate.qml
     Ui/Components/ChatInput.qml
 
 

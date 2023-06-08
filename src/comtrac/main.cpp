@@ -9,6 +9,7 @@
 #include "Models/medicationmodel.h"
 #include "Models/medication.h"
 #include "Models/symptommodel.h"
+#include "Models/messagemodel.h"
 #include <QQmlDebuggingEnabler>
 
 int main(int argc, char *argv[])
@@ -37,6 +38,8 @@ int main(int argc, char *argv[])
     SymptomModel *symptomModel = new SymptomModel();
     engine.rootContext()->setContextProperty("symptomModel", symptomModel);
 
+    MessageModel *messageModel = new MessageModel();
+    engine.rootContext()->setContextProperty("messageModel", messageModel);
     engine.load(url);
 
     return app.exec();

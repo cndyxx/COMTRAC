@@ -14,7 +14,6 @@ ColumnLayout {
     property date currentDate: new Date()
     property var symptomEntry: symptomModel.symptomsOfMonth
     property bool isEntry
-
     property var selectedDate: "dd.MM"
     anchors.horizontalCenter: parent.horizontalCenter
     anchors.margins: 20

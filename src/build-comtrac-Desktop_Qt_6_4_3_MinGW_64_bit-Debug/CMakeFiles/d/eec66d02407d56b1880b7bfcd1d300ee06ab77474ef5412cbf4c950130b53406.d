@@ -783,6 +783,10 @@ appcomtrac_autogen/timestamp: \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medication.h \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medicationmodel.cpp \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medicationmodel.h \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/message.cpp \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/message.h \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/messagemodel.cpp \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/messagemodel.h \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptom.cpp \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptom.h \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptommodel.cpp \

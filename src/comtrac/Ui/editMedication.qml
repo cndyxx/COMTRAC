@@ -15,12 +15,14 @@ Item {
     property int intakePerDay: medication.intakePerDay
     property date reminderTime: medication.reminderTime
 
+
     function getIntakeTime(){
         for(var i = 0; i < intakeCount; i++){
             list.push(intakeTimeList[i].text)
             console.log("TESTAUSGABE: " + intakeTimeList[i].text);
         }
     }
+
 
     Background {
         id: background
@@ -31,13 +33,15 @@ Item {
         pageTitle: "Medikamente"
 
     }
-        DialogTemplate {
-            id: dialog
-            deleteSymptom: false
-            dialogText: qsTr("Medikament wirklich löschen?")
 
-            Layout.alignment: Qt.Vertical
-        }
+    DialogTemplate {
+        id: dialog
+        deleteSymptom: false
+        dialogText: qsTr("Medikament wirklich löschen?")
+
+        Layout.alignment: Qt.Vertical
+    }
+
     ColumnLayout {
         anchors.fill: parent
         anchors.top: header.bottom
@@ -101,26 +105,42 @@ Item {
             onActivated: {
                 console.log("ComboBox: " + currentIndex)
                 intakeCount = currentIndex + 1;
-                timePickerPopup.timePicker = intakeList();
-
+            //    timePickerPopup.timePicker = intakeList();
             }
-
         }
-
-
 
         ListView {
             id: intakeTimeListView
             width: parent.width
             height: parent.height * 0.2
             model:  intakeCount
+            ScrollBar.vertical: ScrollBar { active: true }
+            clip: true
             spacing: 10
-            delegate: TimePickerTemplate{
+            delegate: ButtonTemplate{
+                id: intakeTimeBtn
+
+                property string time: "08:00 AM"
+
+                onClicked: timePicker.open()
+
+                text: time
+
+                /* TimePickerTemplate{
                 id: intakeTimeList
                 onSaveClicked: {
                     console.log("Ausgewählter Text In Edit:", text)
                     list.push(text)
+                }*/
+
+                TimePickerTemplate {
+                    id: timePicker
+                    onSaveClicked: {
+                        time = text
+                        list.push(time)
+                    }
                 }
+
             }
         }
 
