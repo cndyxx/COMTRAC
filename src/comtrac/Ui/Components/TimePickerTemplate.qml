@@ -14,7 +14,7 @@ import QtQuick.Layouts
 Popup {
     id: dialog
     anchors.centerIn: parent
-
+    property int currentIndex
     property date selectedTime: new Date(0, 0, 0, 8, 0)
     property var timeList: [selectedTime.toLocaleTimeString("hh:mm")]
 
@@ -108,18 +108,9 @@ Popup {
                     buttonHeight: parent.height * 0.25
                     onClicked: {
                         selectedTime = new Date(0, 0, 0, hourTumbler.currentIndex, minuteTumbler.currentIndex)
+                        medModel.setIntakeTime(selectedTime.toLocaleTimeString("hh:mm"), currentIndex)
                         saveClicked(selectedTime.toLocaleTimeString("hh:mm"))
                         dialog.close()
-
-                        //console.log("Ausgewählte Zeit: " + selectedTime.toLocaleTimeString("hh:mm"))
-
-                        /*onClicked: {
-                            // ...
-
-                            // Signal auslösen und den ausgewählten Text übergeben
-                            saveClicked(selectedTime.toLocaleTimeString("hh:mm"))
-                            dialog.close()
-                        }*/
 
                     }
                 }

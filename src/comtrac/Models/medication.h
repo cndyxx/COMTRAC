@@ -14,10 +14,11 @@
 class Medication : public QObject
 {
     Q_OBJECT
-     Q_PROPERTY(int id READ id WRITE setId NOTIFY idChanged)
+    Q_PROPERTY(int id READ id WRITE setId NOTIFY idChanged)
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
     Q_PROPERTY(int intakePerDay READ intakePerDay WRITE setIntakePerDay NOTIFY intakePerDayChanged)
     Q_PROPERTY(QList<QTime> intakeTime READ intakeTime WRITE setIntakeTime NOTIFY intakeTimeChanged)
+    Q_PROPERTY(QString reminderTime READ reminderTime WRITE setReminderTime NOTIFY reminderTimeChanged)
 
 
 public:
@@ -31,8 +32,9 @@ public:
 
 
     QList<QTime> intakeTime() const;
-    void setIntakeTime(const QList<QTime> &newIntakeTime);
-    void setIntakeTime(QTime time);
+
+    void setIntakeTime(QTime time, int index);
+    void initializeIntakeTimeList();
 
     int id() const;
     void setId(int newId);
@@ -55,9 +57,6 @@ signals:
     void intakePerDayChanged();
 
 
-
-
-
     void intakeTimeChanged();
 
     void idChanged();
@@ -69,6 +68,7 @@ public slots:
 
     void addMedication(QString name, int intakePerDay, QList<QTime> intakeTimes, QTime reminderTime);
 
+    void setIntakeTime(const QList<QTime> &newIntakeTime);
 private:
     int m_id;
     QString m_name;
@@ -82,7 +82,7 @@ private:
 
 
 
-    Q_PROPERTY(QString reminderTime READ reminderTime WRITE setReminderTime NOTIFY reminderTimeChanged)
+
 };
 
 #endif // MEDICATION_H

@@ -44,8 +44,10 @@ public slots:
 
     void addMedication(QString name, int intakePerDay, QList<QTime> intakeTimes, QString reminderTime);
     void setSingleMedication(Medication *newSingleMedication);
-    void setIntakeTime(QTime time);
+    void setIntakeTime(QString time, int index);
+    void initializeIntakeTimeList(int size);
     void deleteMedication();
+    void updateMedication(QString name, int intakePerDay, QList<QTime> intakeTimes, QString reminderTime);
 
 signals:
     void medicationChanged();

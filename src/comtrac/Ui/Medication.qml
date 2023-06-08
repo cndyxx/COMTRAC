@@ -30,6 +30,7 @@ Page {
             id: addMedication
             text: "Medikament hinzufügen"
             onClicked: {
+                medModel.initializeIntakeTimeList(1);
                 stackView.push("findMedication.qml")
             }
         }

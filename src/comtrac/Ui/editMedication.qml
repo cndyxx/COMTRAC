@@ -15,14 +15,20 @@ Item {
     property int intakePerDay: medication.intakePerDay
     property date reminderTime: medication.reminderTime
 
-
+    Connections {
+        target: medModel  // Das Symptom-Modellobjekt in QML
+        function onSingleMedicationChanged() {
+            // Aktualisiere das Modell der ListView
+            intakeTimeListView.model = intakeTime;
+            //symptomListView.model.append(symptomModel.symptoms);
+        }
+    }
     function getIntakeTime(){
         for(var i = 0; i < intakeCount; i++){
             list.push(intakeTimeList[i].text)
             console.log("TESTAUSGABE: " + intakeTimeList[i].text);
         }
     }
-
 
     Background {
         id: background
@@ -88,7 +94,7 @@ Item {
                 if(pageState != 0){
                     return intakePerDay;
                 } else {
-                    return 1;
+                    return 0;
                 }
             }
 
@@ -105,7 +111,8 @@ Item {
             onActivated: {
                 console.log("ComboBox: " + currentIndex)
                 intakeCount = currentIndex + 1;
-            //    timePickerPopup.timePicker = intakeList();
+                medModel.initializeIntakeTimeList(intakeCount);
+
             }
         }
 
@@ -113,7 +120,8 @@ Item {
             id: intakeTimeListView
             width: parent.width
             height: parent.height * 0.2
-            model:  intakeCount
+            model:  intakeTime
+            currentIndex: 0
             ScrollBar.vertical: ScrollBar { active: true }
             clip: true
             spacing: 10
@@ -122,23 +130,19 @@ Item {
 
                 property string time: "08:00 AM"
 
-                onClicked: timePicker.open()
+                onClicked: {
+                    timePicker.currentIndex = index;
+                    timePicker.open();
+                }
 
-                text: time
-
-                /* TimePickerTemplate{
-                id: intakeTimeList
-                onSaveClicked: {
-                    console.log("Ausgewählter Text In Edit:", text)
-                    list.push(text)
-                }*/
+                text: intakeTimeListView.model[index].toLocaleTimeString("hh:mm")
 
                 TimePickerTemplate {
                     id: timePicker
-                    onSaveClicked: {
-                        time = text
-                        list.push(time)
-                    }
+//                    onSaveClicked: {
+////                        time = text
+////                        list.push(time)
+//                    }
                 }
 
             }
@@ -216,7 +220,7 @@ Item {
                     }
                     //Neues Symptom zur Datenbank hinzufügen
                     if(pageState === 0) {
-                        medModel.addMedication(medicationInput.text, intakeCount, list, radioButtonValue);
+                        medModel.addMedication(medicationInput.text, intakeCount, intakeTime, radioButtonValue);
                         stackView.pop()
                         stackView.pop()
                     }

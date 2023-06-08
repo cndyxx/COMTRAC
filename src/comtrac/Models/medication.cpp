@@ -59,9 +59,17 @@ void Medication::setIntakeTime(const QList<QTime> &newIntakeTime)
     emit intakeTimeChanged();
 }
 
-void Medication::setIntakeTime(QTime time)
+void Medication::setIntakeTime(QTime time, int index)
 {
-    m_intakeTime.push_back(time);
+    m_intakeTime.replace(index, time);
+}
+
+void Medication::initializeIntakeTimeList()
+{
+    QTime time(8,0,0);
+    for(int i = 0; i < m_intakePerDay; i++){
+        m_intakeTime.push_back(time);
+    }
 }
 
 

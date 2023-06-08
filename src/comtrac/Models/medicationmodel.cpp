@@ -12,7 +12,10 @@
 MedicationModel::MedicationModel(QObject *parent) : QSqlQueryModel(parent)
 {
     getMedication();
-
+    QTime time(8,0,0);
+    QList<QTime> m_intakeTime;
+    m_intakeTime.push_back(time);
+    m_singleMedication = new Medication(0, "", 1, m_intakeTime, "", this);
 }
 
 MedicationModel::~MedicationModel()
@@ -27,12 +30,6 @@ MedicationModel::~MedicationModel()
 
 }
 
-//Einnahmezeiten von der MedicationID holen
-//SELECT e.intakeTime
-//    FROM Medications m
-//        JOIN MedicationIntake me ON m.medicationID = me.medicationID
-//          JOIN Intake e ON me.intakeID = e.intakeID
-//          WHERE m.medicationID = 1;
 void MedicationModel::getMedication()
 {
     QSqlQuery query;
@@ -124,10 +121,27 @@ void MedicationModel::setSingleMedication(Medication *newSingleMedication)
     emit singleMedicationChanged();
 }
 
-void MedicationModel::setIntakeTime(QTime time)
+void MedicationModel::setIntakeTime(QString m_time, int index)
 {
-    m_singleMedication->intakeTime().push_back(time);
+    QTime time = QTime::fromString(m_time, "hh:mm");
+    m_singleMedication->setIntakeTime(time, index);
+    emit singleMedicationChanged();
 }
+
+void MedicationModel::initializeIntakeTimeList(int size)
+{
+    m_singleMedication->setIntakePerDay(size);
+    QTime time(8,0,0);
+    QList<QTime> m_intakeTime;
+
+    for(int i = 0; i < size; i++){
+        m_intakeTime.push_back(time);
+    }
+    m_singleMedication->setIntakeTime(m_intakeTime);
+     emit singleMedicationChanged();
+}
+
+
 
 void MedicationModel::deleteMedication()
 {
@@ -159,6 +173,11 @@ void MedicationModel::deleteMedication()
 
     emit medicationsChanged();
 
+}
+
+void MedicationModel::updateMedication(QString name, int intakePerDay, QList<QTime> intakeTimes, QString reminderTime)
+{
+    //UPDATE MedicationIntake SET intakeTime = :intakeTime WHERE medicationID = :medicationID
 }
 
 void MedicationModel::addMedication(QString name,int intakePerDay,QList<QTime> intakeTimes, QString reminderTime)

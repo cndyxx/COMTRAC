@@ -157,6 +157,17 @@
                     ],
                     "name": "addMedication",
                     "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "newIntakeTime",
+                            "type": "QList<QTime>"
+                        }
+                    ],
+                    "name": "setIntakeTime",
+                    "returnType": "void"
                 }
             ],
             "superClasses": [

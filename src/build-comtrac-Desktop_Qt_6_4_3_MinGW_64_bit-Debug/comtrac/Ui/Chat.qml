@@ -4,7 +4,7 @@ import "./Components"
 
 Item {
     property int currentMessage: 0
-    property bool visibleMessages: [true, false, false, false]
+    property var visibleMessages: [true, false, false, false]
     Background {
         id: background
         color: "lightgrey"
