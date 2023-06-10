@@ -5,6 +5,7 @@ import QtQuick.Controls 2.0
 ComboBox {
 
     property int intakeNumber
+    textRole: "text"
     model: ListModel {
         id: intakePerDayModel
         ListElement { text: "Einmal pro Tag"; intakeNumber: 1}
@@ -12,5 +13,6 @@ ComboBox {
         ListElement { text: "Dreimal pro Tag"; intakeNumber: 3}
         ListElement { text: "Viermal pro Tag"; intakeNumber: 4}
     }
+
 
 }

@@ -59,7 +59,15 @@ Item {
         anchors.left: parent.left
         anchors.bottom: parent.bottom
         anchors.margins: 14
-        buttonIcon: "\u2630" //muss noch geändert werden in eine Graphik
+
+        Image {
+            anchors.centerIn: parent
+            source: "../assets/chart.png"
+            width: parent.width/2
+            height: parent.height/2
+        }
+
+        //buttonIcon: "\u1F4C8" //muss noch geändert werden in eine Graphik
         onClicked: {
             symptomModel.getSymptoms(); //Alle Symptome aus der Datenbank holen
             stackView.push("SymptomHistory.qml")
@@ -68,10 +76,18 @@ Item {
     }
     //Button zum Öffnen des Symptomtagebuchs
     RoundButtonTemplate {
-        buttonIcon: "\u254B"
+        //buttonIcon: "\u254B"
         anchors.right: parent.right
         anchors.bottom: parent.bottom
         anchors.margins: 14
+
+        Image {
+            anchors.centerIn: parent
+            source: "../assets/plus.png"
+            width: parent.width/2
+            height: parent.height/2
+        }
+
         onClicked: stackView.push("findSymptom.qml");
 
     }

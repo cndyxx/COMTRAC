@@ -5,6 +5,7 @@ import QtQuick.Layouts
 
 Button {
     property var symptomData: symptomListView.model[index]
+    property var symptomColor: "lightgrey"
 
     anchors.horizontalCenter: parent.horizontalCenter
     width: parent.width
@@ -24,7 +25,16 @@ Button {
         height: 50
         border.color: "darkgrey"
         border.width: 2
-        color: "lightgrey"
+        color: switch (symptomData.name) {
+               case "Fieber":
+                   return "red";
+               case "Kopfschmerzen":
+                   return "blue";
+               case "Übelkeit":
+                   return "green";
+               default:
+                   return "gray";
+           }
         radius: 5
 
     }

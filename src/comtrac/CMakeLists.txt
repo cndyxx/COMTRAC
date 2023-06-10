@@ -90,15 +90,16 @@ qt_add_qml_module(appcomtrac
     Ui/Components/DialogTemplate.qml
     Ui/Components/MessageDelegate.qml
     Ui/Components/ChatInput.qml
+    Ui/Components/CheckBoxTemplate.qml
 
 
 
     RESOURCES
     assets/menu.png
-
     assets/triangle_next.png
     assets/triangle_back.png
-    assets/x.png
+    assets/plus.png
+    assets/chart.png
     assets/pencil.png
     assets/singleSymptom_Diagramm.PNG
     assets/weeklySymptoms_Diagramm.PNG

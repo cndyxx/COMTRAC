@@ -6,12 +6,12 @@ import QtQuick.Layouts
 
 Button {
     property string buttonIcon
-    width: 50
-    height: 50
+    width: 65
+    height: 65
 
     background: Rectangle {
         color: "grey"
-        radius: 30
+        radius: 45
     }
 
     Text {

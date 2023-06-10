@@ -34,6 +34,7 @@ TextTemplate 1.0 Ui/Components/TextTemplate.qml
 EditSymptomDelegate 1.0 Ui/Components/EditSymptomDelegate.qml
 SymptomList 1.0 Ui/Components/SymptomList.qml
 DialogTemplate 1.0 Ui/Components/DialogTemplate.qml
-ChatBubble 1.0 Ui/Components/ChatBubble.qml
+MessageDelegate 1.0 Ui/Components/MessageDelegate.qml
 ChatInput 1.0 Ui/Components/ChatInput.qml
+CheckBoxTemplate 1.0 Ui/Components/CheckBoxTemplate.qml
 

@@ -24,6 +24,8 @@ public:
 
 public slots:
 
+
+
 signals:
 
 
@@ -32,6 +34,8 @@ signals:
 private:
     QList<Message *> m_messages;
     QList<MedicationModel *> m_medications;
+
+
 
 };
 

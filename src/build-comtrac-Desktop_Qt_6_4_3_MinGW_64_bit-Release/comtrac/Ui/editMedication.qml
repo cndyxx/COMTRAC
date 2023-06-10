@@ -5,15 +5,30 @@ import QtQuick.Layouts
 import "./Components"
 
 Item {
-
+    property var initialTime: new Date()
     property int intakeCount: 1
-    property var intakeTime: []
     property int pageState: 0
+    property var list: []
     property var medication: medModel.singleMedication
     property string name: medication.name
     property var intakeTime: medication.intakeTime
     property int intakePerDay: medication.intakePerDay
     property date reminderTime: medication.reminderTime
+
+    Connections {
+        target: medModel  // Das Symptom-Modellobjekt in QML
+        function onSingleMedicationChanged() {
+            // Aktualisiere das Modell der ListView
+            intakeTimeListView.model = intakeTime;
+            //symptomListView.model.append(symptomModel.symptoms);
+        }
+    }
+    function getIntakeTime(){
+        for(var i = 0; i < intakeCount; i++){
+            list.push(intakeTimeList[i].text)
+            console.log("TESTAUSGABE: " + intakeTimeList[i].text);
+        }
+    }
 
     Background {
         id: background
@@ -24,6 +39,7 @@ Item {
         pageTitle: "Medikamente"
 
     }
+
     DialogTemplate {
         id: dialog
         deleteSymptom: false
@@ -31,6 +47,7 @@ Item {
 
         Layout.alignment: Qt.Vertical
     }
+
     ColumnLayout {
         anchors.fill: parent
         anchors.top: header.bottom
@@ -77,7 +94,7 @@ Item {
                 if(pageState != 0){
                     return intakePerDay;
                 } else {
-                    return 1;
+                    return 0;
                 }
             }
 
@@ -94,39 +111,36 @@ Item {
             onActivated: {
                 console.log("ComboBox: " + currentIndex)
                 intakeCount = currentIndex + 1;
-
+                medModel.initializeIntakeTimeList(intakeCount);
 
             }
-
         }
 
-        TimePickerTemplate {
-            id: timePickerPopup
-            popUpVisible: false
-            timePicker: list()
-        }
-    function list(){
-        for(var i = 0; i < intakeCount; i++){
-            var time = new Date()
-            time.setHours(8, 0, 0)  // Setzt die Uhrzeit auf 08:00
-            timeList.push(time)
-        }
-        return time;
-    }
         ListView {
-            id: intakeTimeList
+            id: intakeTimeListView
             width: parent.width
             height: parent.height * 0.2
-            model:  intakeCount
-            delegate: Button{
-                width: parent.width
-                height: 50
-                text: timePickerPopup.timePicker[index]
+            model:  intakeTime
+            currentIndex: 0
+            ScrollBar.vertical: ScrollBar { active: true }
+            clip: true
+            spacing: 10
+            delegate: ButtonTemplate{
+                id: intakeTimeBtn
+                enabled: pageState === 0 || pageState === 2
+                property string time: "08:00 AM"
 
                 onClicked: {
-                    timePickerPopup.popUpVisible = true;
-
+                    timePicker.currentIndex = index;
+                    timePicker.open();
                 }
+
+                text: intakeTimeListView.model[index].toLocaleTimeString("hh:mm")
+
+                TimePickerTemplate {
+                    id: timePicker
+                }
+
             }
         }
 
@@ -139,20 +153,25 @@ Item {
                 font.pixelSize: 23
             }
             SwitchTemplate{
+                enabled: pageState === 0 || pageState === 2
                 id: switchReminder
                 anchors.left: txtReminder.right
                 anchors.leftMargin: 60
             }
         }
         RadioButtonTemplate{
+            enabled: pageState === 0 || pageState === 2
             id: radioButtonTimeOfTaking
             text: qsTr("Zum Zeitpunkt der Einnahme")
             font.pixelSize: 15
+            checked: switchReminder.checked === true
         }
         RadioButtonTemplate{
+            enabled: pageState === 0 || pageState === 2
             id: radioButtonTenMinutesBefore
             text: qsTr("10 Minuten vorher")
             font.pixelSize: 15
+            //checked:
         }
 
         RowLayout {
@@ -202,7 +221,7 @@ Item {
                     }
                     //Neues Symptom zur Datenbank hinzufügen
                     if(pageState === 0) {
-                        //medModel.addMedications(symptomInput.text, sliderIntensity.value, sliderFrequency.value, radioButtonValue, txtDate.text,  txtTime.text);
+                        medModel.addMedication(medicationInput.text, intakeCount, intakeTime, radioButtonValue);
                         stackView.pop()
                         stackView.pop()
                     }
@@ -212,7 +231,7 @@ Item {
                     }
                     //Symptom in der Datenbank ändern
                     else if(pageState === 2){
-                        //symptomModel.updateSymptom(symptomInput.text, sliderIntensity.value, sliderFrequency.value, radioButtonValue);
+                        medModel.updateMedication(medicationInput.text, intakeCount, intakeTime, radioButtonValue);
                         stackView.pop()
 
                     }

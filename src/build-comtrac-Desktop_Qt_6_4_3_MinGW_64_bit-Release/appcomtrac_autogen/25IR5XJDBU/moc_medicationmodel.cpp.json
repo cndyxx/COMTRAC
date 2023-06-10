@@ -71,7 +71,7 @@
                         },
                         {
                             "name": "reminderTime",
-                            "type": "QTime"
+                            "type": "QString"
                         }
                     ],
                     "name": "addMedication",
@@ -93,7 +93,11 @@
                     "arguments": [
                         {
                             "name": "time",
-                            "type": "QTime"
+                            "type": "QString"
+                        },
+                        {
+                            "name": "index",
+                            "type": "int"
                         }
                     ],
                     "name": "setIntakeTime",
@@ -101,7 +105,41 @@
                 },
                 {
                     "access": "public",
+                    "arguments": [
+                        {
+                            "name": "size",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "initializeIntakeTimeList",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
                     "name": "deleteMedication",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "name",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "intakePerDay",
+                            "type": "int"
+                        },
+                        {
+                            "name": "intakeTimes",
+                            "type": "QList<QTime>"
+                        },
+                        {
+                            "name": "reminderTime",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "updateMedication",
                     "returnType": "void"
                 }
             ],

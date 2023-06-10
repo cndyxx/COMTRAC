@@ -5,8 +5,34 @@ import QtQuick.Layouts
 import "./Components"
 
 Item {
-    property alias medicationName : medicationInput.text
-    Background { id: background }
+    property var initialTime: new Date()
+    property int intakeCount: 1
+    property int pageState: 0
+    property var list: []
+    property var medication: medModel.singleMedication
+    property string name: medication.name
+    property var intakeTime: medication.intakeTime
+    property int intakePerDay: medication.intakePerDay
+    property date reminderTime: medication.reminderTime
+
+    Connections {
+        target: medModel  // Das Symptom-Modellobjekt in QML
+        function onSingleMedicationChanged() {
+            // Aktualisiere das Modell der ListView
+            intakeTimeListView.model = intakeTime;
+            //symptomListView.model.append(symptomModel.symptoms);
+        }
+    }
+    function getIntakeTime(){
+        for(var i = 0; i < intakeCount; i++){
+            list.push(intakeTimeList[i].text)
+            console.log("TESTAUSGABE: " + intakeTimeList[i].text);
+        }
+    }
+
+    Background {
+        id: background
+    }
 
     HeaderTemplate {
         id: header
@@ -14,13 +40,19 @@ Item {
 
     }
 
+    DialogTemplate {
+        id: dialog
+        deleteSymptom: false
+        dialogText: qsTr("Medikament wirklich löschen?")
+
+        Layout.alignment: Qt.Vertical
+    }
+
     ColumnLayout {
-        id: grid
+        anchors.fill: parent
         anchors.top: header.bottom
-        anchors.left: parent.left
-        anchors.leftMargin: 10
-        //Abstand zum Header
-        anchors.margins: 30
+        anchors.topMargin: header.height
+        anchors.margins: 15
         spacing: 10
 
         Text {
@@ -36,8 +68,9 @@ Item {
             font.pixelSize: 17
             font.family: "Arial"
             color: "black"
-            text: medicationName
+            text: name
             focus: true
+            enabled: pageState === 0 || pageState === 2 //aktiviert wenn status 0 und 2
             Rectangle {
                 width: header.width
                 height: 2
@@ -55,39 +88,65 @@ Item {
             Layout.fillWidth: true
             font.family: "Arial"
         }
-        ComboBoxTemplate {
-            id: intakePerDayInput
-            Layout.fillWidth: true
-
-            Rectangle {
-                width: parent.width
-                height: 2
-                color: "grey"
-                anchors.top: intakePerDayInput.bottom
-                anchors.topMargin: 5
+        ComboBox {
+            enabled: pageState === 0 || pageState === 2 //aktiviert wenn status 0 und 2
+            currentIndex: {
+                if(pageState != 0){
+                    return intakePerDay;
+                } else {
+                    return 0;
+                }
             }
 
+            property int intakeNumber
+            textRole: "text"
+            valueRole: "intakeNumber"
+            model: ListModel {
+                id: intakePerDayModel
+                ListElement { text: "Einmal am Tag"}
+                ListElement { text: "Zweimal am Tag"}
+                ListElement { text: "Dreimal am Tag"}
+                ListElement { text: "Viermal am Tag"}
+            }
+            onActivated: {
+                console.log("ComboBox: " + currentIndex)
+                intakeCount = currentIndex + 1;
+                medModel.initializeIntakeTimeList(intakeCount);
+
+            }
         }
 
-        IntakeTimeList {
-            id: intakeList
-            width: header.width
-            height: 50
+        ListView {
+            id: intakeTimeListView
+            width: parent.width
+            height: parent.height * 0.2
+            model:  intakeTime
+            currentIndex: 0
+            ScrollBar.vertical: ScrollBar { active: true }
+            clip: true
+            spacing: 10
+            delegate: ButtonTemplate{
+                id: intakeTimeBtn
+
+                property string time: "08:00 AM"
+
+                onClicked: {
+                    timePicker.currentIndex = index;
+                    timePicker.open();
+                }
+
+                text: intakeTimeListView.model[index].toLocaleTimeString("hh:mm")
+
+                TimePickerTemplate {
+                    id: timePicker
+//                    onSaveClicked: {
+////                        time = text
+////                        list.push(time)
+//                    }
+                }
+
+            }
         }
-
-
-    }
-
-
-
-
-    ColumnLayout {
-        anchors.top: grid.bottom
-        anchors.topMargin: intakeList.height + 10
-        anchors.left: parent.left
-        anchors.leftMargin: 10
-        //Abstand zum Header
-        spacing: 10
 
         RowLayout{
 
@@ -116,25 +175,73 @@ Item {
 
         RowLayout {
             ButtonTemplate {
-                text: qsTr("Abbrechen")
-                // onClicked: toDoList.appendItem()
+                text: {
+                    if(pageState === 0)
+                        return qsTr("Abbrechen");
+                    else if (pageState === 1)
+                        return qsTr("Zurück");
+                    else
+                        return qsTr("Löschen");
+                }
                 buttonWidth: parent.width/2
                 Layout.fillWidth: true
                 onClicked: {
-                    stackView.pop();
-                    stackView.pop()
+                    if(pageState === 0) {
+                        stackView.pop();
+                        stackView.pop();
+                    }
+                    else if(pageState ===1){
+                        stackView.pop();
+                    }
+
+                    else if(pageState === 2){
+                        dialog.open()
+                    }
+
                 }
             }
             ButtonTemplate {
-                text: qsTr("Eintragen")
-                //onClicked: toDoList.removeCompletedItems()
+                text:  {
+                    if(pageState === 0)
+                        return qsTr("Eintragen");
+                    else if (pageState === 1)
+                        return qsTr("Bearbeiten");
+                    else
+                        return qsTr("Ändern");
+                }
                 Layout.fillWidth: true
                 buttonWidth: parent.width / 2
-                // onClicked: medModel.addMedication(medicationInput.text,intakePerDayInput,  )
+                onClicked: {
+                    //Überpüfe welcher RadioButton ausgewählt
+                    if (radioButtonTimeOfTaking.checked) {
+                        var radioButtonValue = radioButtonTimeOfTaking.text
+                    } else {
+                        radioButtonValue = radioButtonTenMinutesBefore.text
+                    }
+                    //Neues Symptom zur Datenbank hinzufügen
+                    if(pageState === 0) {
+                        medModel.addMedication(medicationInput.text, intakeCount, intakeTime, radioButtonValue);
+                        stackView.pop()
+                        stackView.pop()
+                    }
+                    else if(pageState ===1){
+
+                        pageState = 2;
+                    }
+                    //Symptom in der Datenbank ändern
+                    else if(pageState === 2){
+                        //symptomModel.updateSymptom(symptomInput.text, sliderIntensity.value, sliderFrequency.value, radioButtonValue);
+                        stackView.pop()
+
+                    }
+                }
             }
         }
-
     }
-
-
 }
+
+
+
+
+
+

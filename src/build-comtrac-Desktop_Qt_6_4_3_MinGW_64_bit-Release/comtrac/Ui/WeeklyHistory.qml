@@ -6,7 +6,12 @@ import "./Components"
 
 Item {
     property var symptom: symptomModel.weekSymptoms
-
+    property var colorMap: {
+        "Fieber": "blue",
+        "Kopfschmerzen": "yellow",
+        "Durchfall": "grey",
+        "Gliederschmerzen" : "orange"
+    }
     Background {
         id: background
     }
@@ -15,9 +20,9 @@ Item {
         pageTitle: "Symptomverlauf"
     }
     //Säulendiagramm
-    Rectangle {
-        color: "grey"
-        width: parent.width * 0.8
+    Image {
+        source: "../assets/weeklySymptoms_Diagramm.PNG";
+        width: parent.width * 0.9
         height: parent.height * 0.4
         anchors.top: header.bottom
         anchors.topMargin: 10
@@ -39,6 +44,7 @@ Item {
             anchors.margins: 10
             width: parent.width * 0.9
             height: 40
+
 
             onClicked: {
                 symptomModel.getSymptomEntries(symptomListView.model[index].name);

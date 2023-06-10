@@ -2,22 +2,27 @@ import QtQuick 2.0
 import QtQuick.Controls 2.0
 import QtQuick.Layouts
 
+/*ButtonTemplate{
+    id: button
+    property date selectedTime: new Date(0, 0, 0, 8, 0)
+    property var intakeTime: []
+    signal saveClicked(string text)
+    text: selectedTime.toLocaleTimeString("hh:mm")
+
+    onClicked: dialog.open()
+*/
 Popup {
     id: dialog
-    property bool popUpVisible: false
-    property var timePicker: []
-    property int intakeNumber
-    visible: popUpVisible
-
-    width: parent.width * 0.9
-    height: parent.height * 0.4
-
-
-
-    property int selectedMinute: 0
-    property int selectedHour: 0
+    anchors.centerIn: parent
+    property int currentIndex
     property date selectedTime: new Date(0, 0, 0, 8, 0)
     property var timeList: [selectedTime.toLocaleTimeString("hh:mm")]
+
+    signal saveClicked(string text)
+
+    width: 280
+    height: 250
+
 
     Rectangle {
         width: parent.width
@@ -29,18 +34,18 @@ Popup {
             height: parent.height
             anchors.margins: 10
             Text {
-                 anchors.margins: 10
+                anchors.margins: 10
                 text: "Einnahmezeit:"
                 color: "white"
                 font.family: "Arial"
-                font.weight: Font.Thin
+                font.weight: Font.Bold
                 font.pixelSize: 17
             }
 
             Row {
                 height: 100
                 spacing: 8
-                anchors.horizontalCenter: parent.horizontalCenter
+                Layout.alignment: Qt.AlignCenter
                 Tumbler {
                     id: hourTumbler
                     visibleItemCount: 3
@@ -53,7 +58,7 @@ Popup {
 
                         color: "white"
                         font.family: "Arial"
-                        font.weight: Font.Thin
+                        font.weight: Font.Bold
                         font.pixelSize: 25
                         horizontalAlignment: Text.AlignHCenter
                         verticalAlignment: Text.AlignVCenter
@@ -92,6 +97,9 @@ Popup {
                     Layout.fillWidth: true
                     buttonWidth: parent.width / 2
                     buttonHeight: parent.height * 0.25
+                    onClicked: {
+                        dialog.close()
+                    }
                 }
                 ButtonTemplate{
                     text: "Speichern"
@@ -99,23 +107,19 @@ Popup {
                     buttonWidth: parent.width / 2
                     buttonHeight: parent.height * 0.25
                     onClicked: {
-                         selectedTime = new Date(0, 0, 0, hourTumbler.currentIndex, minuteTumbler.currentIndex)
-                        medModel.setIntakeTime(selectedTime)
-                        timeList.push(selectedTime.toLocaleTimeString("hh:mm"))
-                        timePicker[intakeNumber] = selectedTime;
-                        console.log("Ausgewählte Zeit: " + selectedTime.toLocaleTimeString("hh:mm"))
+                        selectedTime = new Date(0, 0, 0, hourTumbler.currentIndex, minuteTumbler.currentIndex)
+                        medModel.setIntakeTime(selectedTime.toLocaleTimeString("hh:mm"), currentIndex)
+                        saveClicked(selectedTime.toLocaleTimeString("hh:mm"))
                         dialog.close()
+
                     }
                 }
             }
-
-
         }
-
-
+    }
 }
 
 
-}
+
 
 

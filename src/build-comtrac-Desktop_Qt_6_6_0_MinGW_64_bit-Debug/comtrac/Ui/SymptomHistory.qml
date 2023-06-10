@@ -61,30 +61,35 @@ Item {
             Layout.fillWidth: true
             width: parent.width * 0.9
             height: parent.height * 0.7
-            rows: 3
+            rows: 2
             columns: 4
-            flow: GridView.FlowTopToBottom | GridView.FlowLeftToRight
+            flow: Qt.LeftToRight | GridLayout.TopToBottom /*| GridView.FlowLeftToRight*/
 
             Repeater {
-
-                anchors.horizontalCenter: parent.horizontalCenter
+                Layout.alignment: Qt.AlignHCenter
                 anchors.leftMargin: 20
                 model: 8 // Das Model mit den Daten von 52 Elementen
-                delegate: Rectangle {
+                delegate: Button {
+                    contentItem: Text {
+                        horizontalAlignment: Text.AlignHCenter
+                        verticalAlignment: Text.AlignVCenter
+                        text: "KW" + (index +1)
+                    }
+                    background: Rectangle {
+                        id: rectCalendarWeek
+                        color: "lightgrey"
+                        width: grid.width * 0.2
+                        height: rectCalendarWeek.width
+                        radius: 10
 
-                    id: rectCalendarWeek
-                    color: "lightgrey"
-                    width: grid.width * 0.2
-                    height: rectCalendarWeek.width
-                    radius: 10
-                    Text {
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        anchors.verticalCenter: parent.verticalCenter
-                        text: "KW" + (index +1) // ANDERS ANORDNEN !!!!
 
                     }
+
+                    onClicked: {
+                        symptomModel.getSymptomsOfWeek("2023-06-12", "2023-06-18");
+                        stackView.push("WeeklyHistory.qml")
+                    }
                 }
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             }
 
 

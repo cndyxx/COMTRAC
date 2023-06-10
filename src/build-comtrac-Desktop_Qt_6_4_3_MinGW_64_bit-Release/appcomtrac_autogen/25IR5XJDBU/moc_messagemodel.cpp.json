@@ -1,0 +1,41 @@
+{
+    "classes": [
+        {
+            "className": "MessageModel",
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "messages",
+                    "notify": "messagesChanged",
+                    "read": "messages",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QList<Message*>",
+                    "user": false,
+                    "write": "setMessages"
+                }
+            ],
+            "qualifiedClassName": "MessageModel",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "messagesChanged",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "messagemodel.h",
+    "outputRevision": 68
+}

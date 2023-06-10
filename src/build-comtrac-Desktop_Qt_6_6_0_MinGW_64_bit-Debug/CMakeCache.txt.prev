@@ -1270,6 +1270,8 @@ QT_FEATURE_xmlstreamwriter:INTERNAL=ON
 QT_FEATURE_xrender:INTERNAL=OFF
 //Qt feature: zstd (from target Qt6::Core)
 QT_FEATURE_zstd:INTERNAL=OFF
+//Path to the wrapper of the tool commands
+QT_TOOL_COMMAND_WRAPPER_PATH:INTERNAL=C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.qt/bin/qt_setup_tool_path.bat
 //ADVANCED property for variable: Vulkan_GLSLANG_VALIDATOR_EXECUTABLE
 Vulkan_GLSLANG_VALIDATOR_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Vulkan_GLSLC_EXECUTABLE

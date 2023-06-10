@@ -35,3 +35,5 @@ void MessageModel::setMessages(const QList<Message *> &newMessages)
     emit messagesChanged();
 }
 
+
+

@@ -678,15 +678,15 @@
 	"HEADERS" : 
 	[
 		[
-			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/applicationmanager.h",
-			"MU",
-			"25IR5XJDBU/moc_applicationmanager.cpp",
-			null
-		],
-		[
 			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/dbmanager.h",
 			"MU",
 			"25IR5XJDBU/moc_dbmanager.cpp",
+			null
+		],
+		[
+			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/intaketime.h",
+			"MU",
+			"25IR5XJDBU/moc_intaketime.cpp",
 			null
 		],
 		[
@@ -711,6 +711,18 @@
 			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medicationmodel.h",
 			"MU",
 			"25IR5XJDBU/moc_medicationmodel.cpp",
+			null
+		],
+		[
+			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/message.h",
+			"MU",
+			"25IR5XJDBU/moc_message.cpp",
+			null
+		],
+		[
+			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/messagemodel.h",
+			"MU",
+			"25IR5XJDBU/moc_messagemodel.cpp",
 			null
 		],
 		[
@@ -806,9 +818,11 @@
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : 
 	[
+		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Chat_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/Background_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/ButtonTemplate_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/CalendarTemplate_qml.cpp",
+		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/ChatInput_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/ComboBoxTemplate_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/DialogTemplate_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/EditSymptomDelegate_qml.cpp",
@@ -816,6 +830,7 @@
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/IconButton_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/IntakeTimeList_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/MedicationDelegate_qml.cpp",
+		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/MessageDelegate_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/MonthGridDelegate_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/RadioButtonTemplate_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/RoundButtonTemplate_qml.cpp",
@@ -841,6 +856,7 @@
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/editMedication_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/findMedication_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/findSymptom_qml.cpp",
+		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/singleSymptomHistory_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qrc_appcomtrac_raw_qml_0.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qrc_qmake_comtrac.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/appcomtrac_qmltyperegistrations.cpp"
@@ -861,12 +877,12 @@
 			null
 		],
 		[
-			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/applicationmanager.cpp",
+			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/dbmanager.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/dbmanager.cpp",
+			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/intaketime.cpp",
 			"MU",
 			null
 		],
@@ -891,6 +907,16 @@
 			null
 		],
 		[
+			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/message.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/messagemodel.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptom.cpp",
 			"MU",
 			null
@@ -910,9 +936,11 @@
 	"UIC_SEARCH_PATHS" : [],
 	"UIC_SKIP" : 
 	[
+		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Chat_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/Background_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/ButtonTemplate_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/CalendarTemplate_qml.cpp",
+		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/ChatInput_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/ComboBoxTemplate_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/DialogTemplate_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/EditSymptomDelegate_qml.cpp",
@@ -920,6 +948,7 @@
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/IconButton_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/IntakeTimeList_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/MedicationDelegate_qml.cpp",
+		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/MessageDelegate_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/MonthGridDelegate_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/RadioButtonTemplate_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/Components/RoundButtonTemplate_qml.cpp",
@@ -945,6 +974,7 @@
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/editMedication_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/findMedication_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/findSymptom_qml.cpp",
+		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qmlcache/appcomtrac_Ui/singleSymptomHistory_qml.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qrc_appcomtrac_raw_qml_0.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/.rcc/qrc_qmake_comtrac.cpp",
 		"C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/appcomtrac_qmltyperegistrations.cpp"

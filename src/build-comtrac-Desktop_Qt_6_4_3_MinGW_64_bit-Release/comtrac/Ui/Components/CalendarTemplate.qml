@@ -14,7 +14,6 @@ ColumnLayout {
     property date currentDate: new Date()
     property var symptomEntry: symptomModel.symptomsOfMonth
     property bool isEntry
-
     property var selectedDate: "dd.MM"
     anchors.horizontalCenter: parent.horizontalCenter
     anchors.margins: 20
@@ -67,7 +66,7 @@ ColumnLayout {
 
         RowLayout {
             anchors.fill: parent
-            width: calender.width
+            width: calendar.width
             ToolButton {
                 id: toolbtn
                 Layout.alignment: Qt.LeftEdge
@@ -154,7 +153,25 @@ ColumnLayout {
                 width: 24
                 height: 24
 
-                color: isSelected ? "lightgrey" : (model.today ? "lightblue" : "transparent")
+                color: isSelected ? "lightgrey" : "transparent"
+                border.color: {
+                    if(isSelected) {
+                        if (model.today){
+                            return "grey"
+                        }
+                        return "transparent"
+                    }else if (model.today){
+                        return "grey"
+                    }
+                    else{
+                        return "transparent"
+                    }
+                }
+                /*
+                color: isSelected ? "lightgrey" : (model.today ? "transparent" : "transparent")
+                border.color: isSelected ? "transparent" : (model.today ? "grey" : "transparent")
+                border.width: isSelected ? 0 : (model.today ? 1 : 0)
+                */
                 radius: 90
 
                 Text {

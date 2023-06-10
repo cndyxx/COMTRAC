@@ -10,6 +10,8 @@
 /comtrac/Ui/EditSymptom.qml
 /comtrac/Ui/SymptomHistory.qml
 /comtrac/Ui/WeeklyHistory.qml
+/comtrac/Ui/Chat.qml
+/comtrac/Ui/singleSymptomHistory.qml
 /comtrac/Ui/Components/StackViewPage.qml
 /comtrac/Ui/Components/Background.qml
 /comtrac/Ui/Components/TextFieldTemplate.qml
@@ -33,3 +35,5 @@
 /comtrac/Ui/Components/EditSymptomDelegate.qml
 /comtrac/Ui/Components/SymptomList.qml
 /comtrac/Ui/Components/DialogTemplate.qml
+/comtrac/Ui/Components/MessageDelegate.qml
+/comtrac/Ui/Components/ChatInput.qml
