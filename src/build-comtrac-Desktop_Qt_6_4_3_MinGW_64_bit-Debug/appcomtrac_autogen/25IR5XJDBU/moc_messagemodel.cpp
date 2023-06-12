@@ -27,12 +27,15 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_MessageModel_t {
-    uint offsetsAndSizes[10];
+    uint offsetsAndSizes[16];
     char stringdata0[13];
     char stringdata1[16];
     char stringdata2[1];
-    char stringdata3[9];
+    char stringdata3[12];
     char stringdata4[16];
+    char stringdata5[12];
+    char stringdata6[12];
+    char stringdata7[9];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_MessageModel_t::offsetsAndSizes) + ofs), len 
@@ -41,14 +44,20 @@ Q_CONSTINIT static const qt_meta_stringdata_MessageModel_t qt_meta_stringdata_Me
         QT_MOC_LITERAL(0, 12),  // "MessageModel"
         QT_MOC_LITERAL(13, 15),  // "messagesChanged"
         QT_MOC_LITERAL(29, 0),  // ""
-        QT_MOC_LITERAL(30, 8),  // "messages"
-        QT_MOC_LITERAL(39, 15)   // "QList<Message*>"
+        QT_MOC_LITERAL(30, 11),  // "getMessages"
+        QT_MOC_LITERAL(42, 15),  // "QList<Message*>"
+        QT_MOC_LITERAL(58, 11),  // "setMessages"
+        QT_MOC_LITERAL(70, 11),  // "newMessages"
+        QT_MOC_LITERAL(82, 8)   // "messages"
     },
     "MessageModel",
     "messagesChanged",
     "",
-    "messages",
-    "QList<Message*>"
+    "getMessages",
+    "QList<Message*>",
+    "setMessages",
+    "newMessages",
+    "messages"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -59,21 +68,29 @@ Q_CONSTINIT static const uint qt_meta_data_MessageModel[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
-       1,   21, // properties
+       3,   14, // methods
+       1,   37, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   20,    2, 0x06,    2 /* Public */,
+       1,    0,   32,    2, 0x06,    2 /* Public */,
+
+ // slots: name, argc, parameters, tag, flags, initial metatype offsets
+       3,    0,   33,    2, 0x0a,    3 /* Public */,
+       5,    1,   34,    2, 0x0a,    4 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
 
+ // slots: parameters
+    0x80000000 | 4,
+    QMetaType::Void, 0x80000000 | 4,    6,
+
  // properties: name, type, flags
-       3, 0x80000000 | 4, 0x0001510b, uint(0), 0,
+       7, 0x80000000 | 4, 0x0001510b, uint(0), 0,
 
        0        // eod
 };
@@ -90,7 +107,12 @@ Q_CONSTINIT const QMetaObject MessageModel::staticMetaObject = { {
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<MessageModel, std::true_type>,
         // method 'messagesChanged'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'getMessages'
+        QtPrivate::TypeAndForceComplete<QList<Message*>, std::false_type>,
+        // method 'setMessages'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QList<Message*> &, std::false_type>
     >,
     nullptr
 } };
@@ -102,7 +124,21 @@ void MessageModel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         (void)_t;
         switch (_id) {
         case 0: _t->messagesChanged(); break;
+        case 1: { QList<Message*> _r = _t->getMessages();
+            if (_a[0]) *reinterpret_cast< QList<Message*>*>(_a[0]) = std::move(_r); }  break;
+        case 2: _t->setMessages((*reinterpret_cast< std::add_pointer_t<QList<Message*>>>(_a[1]))); break;
         default: ;
+        }
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        switch (_id) {
+        default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
+        case 2:
+            switch (*reinterpret_cast<int*>(_a[1])) {
+            default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
+            case 0:
+                *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QList<Message*> >(); break;
+            }
+            break;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
@@ -160,13 +196,13 @@ int MessageModel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 3;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
-            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        if (_id < 3)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 3;
     }else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
             || _c == QMetaObject::RegisterPropertyMetaType) {

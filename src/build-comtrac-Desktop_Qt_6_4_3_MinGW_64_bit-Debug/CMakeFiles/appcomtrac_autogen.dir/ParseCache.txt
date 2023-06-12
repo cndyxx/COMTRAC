@@ -1489,14 +1489,13 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medicationmodel.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/intaketime.h
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medication.h
+ mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/message.h
+ mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/messagemodel.h
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/messagemodel.h
  mmc:Q_OBJECT
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/messagemodel.h
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/appcomtrac_autogen/moc_predefs.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/QObject
- mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/QTime
- mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/QVector
- mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qabstractitemmodel.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qalgorithms.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qanystringview.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qarraydata.h
@@ -1510,7 +1509,6 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/messagemodel.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qbytearrayalgorithms.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qbytearraylist.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qbytearrayview.h
- mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qcalendar.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qchar.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qcompare.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qcompare_impl.h
@@ -1519,24 +1517,18 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/messagemodel.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qcontainerfwd.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qcontainerinfo.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qcontainertools_impl.h
- mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qcontiguouscache.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qdatastream.h
- mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qdatetime.h
- mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qdebug.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qflags.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qforeach.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qgenericatomic.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qglobal.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qglobalstatic.h
- mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qhash.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qhashfunctions.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qiodevicebase.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qiterable.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qiterator.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qlist.h
- mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qlocale.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qlogging.h
- mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qmap.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qmath.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qmetacontainer.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qmetatype.h
@@ -1551,14 +1543,8 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/messagemodel.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qrefcount.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qscopedpointer.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qscopeguard.h
- mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qset.h
- mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qshareddata.h
- mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qshareddata_impl.h
- mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qsharedpointer.h
- mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qsharedpointer_impl.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qstring.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qstringalgorithms.h
- mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qstringconverter_base.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qstringfwd.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qstringlist.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qstringliteral.h
@@ -1571,21 +1557,10 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/messagemodel.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qtconfigmacros.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qtcore-config.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qtcoreexports.h
- mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qtextstream.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qtmetamacros.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qtypeinfo.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qutf8stringview.h
- mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qvariant.h
- mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qvarlengtharray.h
- mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qvector.h
  mdp:C:/Qt/6.4.3/mingw_64/include/QtCore/qversiontagging.h
- mdp:C:/Qt/6.4.3/mingw_64/include/QtSql/QSqlDatabase
- mdp:C:/Qt/6.4.3/mingw_64/include/QtSql/QSqlQueryModel
- mdp:C:/Qt/6.4.3/mingw_64/include/QtSql/qsqldatabase.h
- mdp:C:/Qt/6.4.3/mingw_64/include/QtSql/qsqlquerymodel.h
- mdp:C:/Qt/6.4.3/mingw_64/include/QtSql/qtsql-config.h
- mdp:C:/Qt/6.4.3/mingw_64/include/QtSql/qtsqlexports.h
- mdp:C:/Qt/6.4.3/mingw_64/include/QtSql/qtsqlglobal.h
  mdp:C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h
  mdp:C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h
  mdp:C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/algorithm
@@ -1801,9 +1776,6 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/messagemodel.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h
- mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/intaketime.h
- mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medication.h
- mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medicationmodel.h
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/message.h
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptom.h
  mmc:Q_OBJECT

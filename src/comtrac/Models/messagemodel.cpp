@@ -27,6 +27,11 @@ QList<Message *> MessageModel::messages() const
     return m_messages;
 }
 
+QList<Message *> MessageModel::getMessages()
+{
+    return messages();
+}
+
 void MessageModel::setMessages(const QList<Message *> &newMessages)
 {
     if (m_messages == newMessages)

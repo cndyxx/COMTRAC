@@ -84,8 +84,8 @@ Item {
                         spacing: 10
 
                         Layout.alignment: Qt.AlignHCenter
-//                        anchors.left: parent.left
-//                        anchors.leftMargin: 15
+                        //                        anchors.left: parent.left
+                        //                        anchors.leftMargin: 15
                         anchors.horizontalCenter: parent.horizontalCenter
                         Repeater {
 
@@ -113,8 +113,8 @@ Item {
 
                     visible: messageData.type === 2
 
-//                    visible: true
-                        Timer {
+                    //                    visible: true
+                    Timer {
                         id: timer
                         interval: 3000 // Timer-Intervall von 1 Sekunde (1000 Millisekunden)
                         repeat: false // Timer wird nicht wiederholt
@@ -122,7 +122,7 @@ Item {
                         onTriggered: {
                             // Timer abgelaufen, hier können Sie den Code für die Aktion ausführen
                             console.log("Timer abgelaufen");
-                        nextMessage()
+                            nextMessage()
                             messageColor= "silver"
                         }
                     }
@@ -143,6 +143,15 @@ Item {
                             model: medModel.medications
                             delegate: CheckBoxTemplate {
                                 text: medication.model[index].name
+                                onClicked: {
+                                    if (checked) {
+                                        // Hinzufügen des Medikaments zur Bestellung
+                                        medModel.addOrderedMedication(model.name)
+                                    } else {
+                                        // Entfernen des Medikaments aus der Bestellung
+                                        medModel.deleteOrderedMedication(model.name)
+                                    }
+                                }
                             }
                         }
 
@@ -155,7 +164,7 @@ Item {
                             onClicked: {
                                 // Handle button click
                                 nextMessage()
-                                meessageData.text = "Rezept(e) für " +  " bestellen?"
+                                meessageData.text = medModel.getOrderedMedication()
 
                             }
 

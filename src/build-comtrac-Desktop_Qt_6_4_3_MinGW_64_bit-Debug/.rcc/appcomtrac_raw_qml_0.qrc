@@ -14,6 +14,7 @@
     <file alias="Ui/WeeklyHistory.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/WeeklyHistory.qml</file>
     <file alias="Ui/Chat.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Chat.qml</file>
     <file alias="Ui/singleSymptomHistory.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/singleSymptomHistory.qml</file>
+    <file alias="Ui/VideoTelephony.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/VideoTelephony.qml</file>
     <file alias="Ui/Components/StackViewPage.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/StackViewPage.qml</file>
     <file alias="Ui/Components/Background.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/Background.qml</file>
     <file alias="Ui/Components/TextFieldTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/TextFieldTemplate.qml</file>
@@ -39,6 +40,7 @@
     <file alias="Ui/Components/DialogTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/DialogTemplate.qml</file>
     <file alias="Ui/Components/MessageDelegate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/MessageDelegate.qml</file>
     <file alias="Ui/Components/ChatInput.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/ChatInput.qml</file>
+    <file alias="Ui/Components/CheckBoxTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/CheckBoxTemplate.qml</file>
     <file alias="assets/menu.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/menu.png</file>
     <file alias="assets/triangle_next.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/triangle_next.png</file>
     <file alias="assets/triangle_back.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/triangle_back.png</file>

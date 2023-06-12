@@ -27,31 +27,37 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_MedicationModel_t {
-    uint offsetsAndSizes[48];
+    uint offsetsAndSizes[60];
     char stringdata0[16];
     char stringdata1[18];
     char stringdata2[1];
     char stringdata3[19];
     char stringdata4[24];
-    char stringdata5[14];
-    char stringdata6[5];
-    char stringdata7[13];
+    char stringdata5[23];
+    char stringdata6[14];
+    char stringdata7[5];
     char stringdata8[13];
-    char stringdata9[12];
-    char stringdata10[13];
-    char stringdata11[20];
-    char stringdata12[12];
-    char stringdata13[20];
-    char stringdata14[14];
-    char stringdata15[5];
-    char stringdata16[6];
-    char stringdata17[25];
-    char stringdata18[5];
-    char stringdata19[17];
+    char stringdata9[13];
+    char stringdata10[12];
+    char stringdata11[13];
+    char stringdata12[20];
+    char stringdata13[12];
+    char stringdata14[20];
+    char stringdata15[14];
+    char stringdata16[5];
+    char stringdata17[6];
+    char stringdata18[25];
+    char stringdata19[5];
     char stringdata20[17];
-    char stringdata21[12];
-    char stringdata22[19];
-    char stringdata23[17];
+    char stringdata21[17];
+    char stringdata22[21];
+    char stringdata23[24];
+    char stringdata24[21];
+    char stringdata25[28];
+    char stringdata26[12];
+    char stringdata27[19];
+    char stringdata28[17];
+    char stringdata29[16];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_MedicationModel_t::offsetsAndSizes) + ofs), len 
@@ -62,31 +68,38 @@ Q_CONSTINIT static const qt_meta_stringdata_MedicationModel_t qt_meta_stringdata
         QT_MOC_LITERAL(34, 0),  // ""
         QT_MOC_LITERAL(35, 18),  // "medicationsChanged"
         QT_MOC_LITERAL(54, 23),  // "singleMedicationChanged"
-        QT_MOC_LITERAL(78, 13),  // "addMedication"
-        QT_MOC_LITERAL(92, 4),  // "name"
-        QT_MOC_LITERAL(97, 12),  // "intakePerDay"
-        QT_MOC_LITERAL(110, 12),  // "QList<QTime>"
-        QT_MOC_LITERAL(123, 11),  // "intakeTimes"
-        QT_MOC_LITERAL(135, 12),  // "reminderTime"
-        QT_MOC_LITERAL(148, 19),  // "setSingleMedication"
-        QT_MOC_LITERAL(168, 11),  // "Medication*"
-        QT_MOC_LITERAL(180, 19),  // "newSingleMedication"
-        QT_MOC_LITERAL(200, 13),  // "setIntakeTime"
-        QT_MOC_LITERAL(214, 4),  // "time"
-        QT_MOC_LITERAL(219, 5),  // "index"
-        QT_MOC_LITERAL(225, 24),  // "initializeIntakeTimeList"
-        QT_MOC_LITERAL(250, 4),  // "size"
-        QT_MOC_LITERAL(255, 16),  // "deleteMedication"
-        QT_MOC_LITERAL(272, 16),  // "updateMedication"
-        QT_MOC_LITERAL(289, 11),  // "medications"
-        QT_MOC_LITERAL(301, 18),  // "QList<Medication*>"
-        QT_MOC_LITERAL(320, 16)   // "singleMedication"
+        QT_MOC_LITERAL(78, 22),  // "orderMedicationChanged"
+        QT_MOC_LITERAL(101, 13),  // "addMedication"
+        QT_MOC_LITERAL(115, 4),  // "name"
+        QT_MOC_LITERAL(120, 12),  // "intakePerDay"
+        QT_MOC_LITERAL(133, 12),  // "QList<QTime>"
+        QT_MOC_LITERAL(146, 11),  // "intakeTimes"
+        QT_MOC_LITERAL(158, 12),  // "reminderTime"
+        QT_MOC_LITERAL(171, 19),  // "setSingleMedication"
+        QT_MOC_LITERAL(191, 11),  // "Medication*"
+        QT_MOC_LITERAL(203, 19),  // "newSingleMedication"
+        QT_MOC_LITERAL(223, 13),  // "setIntakeTime"
+        QT_MOC_LITERAL(237, 4),  // "time"
+        QT_MOC_LITERAL(242, 5),  // "index"
+        QT_MOC_LITERAL(248, 24),  // "initializeIntakeTimeList"
+        QT_MOC_LITERAL(273, 4),  // "size"
+        QT_MOC_LITERAL(278, 16),  // "deleteMedication"
+        QT_MOC_LITERAL(295, 16),  // "updateMedication"
+        QT_MOC_LITERAL(312, 20),  // "addOrderedMedication"
+        QT_MOC_LITERAL(333, 23),  // "deleteOrderedMedication"
+        QT_MOC_LITERAL(357, 20),  // "getOrderedMedication"
+        QT_MOC_LITERAL(378, 27),  // "deleteOrderedMedicationList"
+        QT_MOC_LITERAL(406, 11),  // "medications"
+        QT_MOC_LITERAL(418, 18),  // "QList<Medication*>"
+        QT_MOC_LITERAL(437, 16),  // "singleMedication"
+        QT_MOC_LITERAL(454, 15)   // "orderMedication"
     },
     "MedicationModel",
     "medicationChanged",
     "",
     "medicationsChanged",
     "singleMedicationChanged",
+    "orderMedicationChanged",
     "addMedication",
     "name",
     "intakePerDay",
@@ -103,9 +116,14 @@ Q_CONSTINIT static const qt_meta_stringdata_MedicationModel_t qt_meta_stringdata
     "size",
     "deleteMedication",
     "updateMedication",
+    "addOrderedMedication",
+    "deleteOrderedMedication",
+    "getOrderedMedication",
+    "deleteOrderedMedicationList",
     "medications",
     "QList<Medication*>",
-    "singleMedication"
+    "singleMedication",
+    "orderMedication"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -116,42 +134,53 @@ Q_CONSTINIT static const uint qt_meta_data_MedicationModel[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       9,   14, // methods
-       2,  101, // properties
+      14,   14, // methods
+       3,  140, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       3,       // signalCount
+       4,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   68,    2, 0x06,    3 /* Public */,
-       3,    0,   69,    2, 0x06,    4 /* Public */,
-       4,    0,   70,    2, 0x06,    5 /* Public */,
+       1,    0,   98,    2, 0x06,    4 /* Public */,
+       3,    0,   99,    2, 0x06,    5 /* Public */,
+       4,    0,  100,    2, 0x06,    6 /* Public */,
+       5,    0,  101,    2, 0x06,    7 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       5,    4,   71,    2, 0x0a,    6 /* Public */,
-      11,    1,   80,    2, 0x0a,   11 /* Public */,
-      14,    2,   83,    2, 0x0a,   13 /* Public */,
-      17,    1,   88,    2, 0x0a,   16 /* Public */,
-      19,    0,   91,    2, 0x0a,   18 /* Public */,
-      20,    4,   92,    2, 0x0a,   19 /* Public */,
+       6,    4,  102,    2, 0x0a,    8 /* Public */,
+      12,    1,  111,    2, 0x0a,   13 /* Public */,
+      15,    2,  114,    2, 0x0a,   15 /* Public */,
+      18,    1,  119,    2, 0x0a,   18 /* Public */,
+      20,    0,  122,    2, 0x0a,   20 /* Public */,
+      21,    4,  123,    2, 0x0a,   21 /* Public */,
+      22,    1,  132,    2, 0x0a,   26 /* Public */,
+      23,    1,  135,    2, 0x0a,   28 /* Public */,
+      24,    0,  138,    2, 0x0a,   30 /* Public */,
+      25,    0,  139,    2, 0x0a,   31 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::QString, QMetaType::Int, 0x80000000 | 8, QMetaType::QString,    6,    7,    9,   10,
-    QMetaType::Void, 0x80000000 | 12,   13,
-    QMetaType::Void, QMetaType::QString, QMetaType::Int,   15,   16,
-    QMetaType::Void, QMetaType::Int,   18,
+    QMetaType::Void, QMetaType::QString, QMetaType::Int, 0x80000000 | 9, QMetaType::QString,    7,    8,   10,   11,
+    QMetaType::Void, 0x80000000 | 13,   14,
+    QMetaType::Void, QMetaType::QString, QMetaType::Int,   16,   17,
+    QMetaType::Void, QMetaType::Int,   19,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString, QMetaType::Int, 0x80000000 | 8, QMetaType::QString,    6,    7,    9,   10,
+    QMetaType::Void, QMetaType::QString, QMetaType::Int, 0x80000000 | 9, QMetaType::QString,    7,    8,   10,   11,
+    QMetaType::Void, QMetaType::QString,    7,
+    QMetaType::Void, QMetaType::QString,    7,
+    QMetaType::QString,
+    QMetaType::Void,
 
  // properties: name, type, flags
-      21, 0x80000000 | 22, 0x0001510b, uint(1), 0,
-      23, 0x80000000 | 12, 0x0001510b, uint(2), 0,
+      26, 0x80000000 | 27, 0x0001510b, uint(1), 0,
+      28, 0x80000000 | 13, 0x0001510b, uint(2), 0,
+      29, QMetaType::QStringList, 0x00015103, uint(3), 0,
 
        0        // eod
 };
@@ -167,6 +196,8 @@ Q_CONSTINIT const QMetaObject MedicationModel::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<QList<Medication*>, std::true_type>,
         // property 'singleMedication'
         QtPrivate::TypeAndForceComplete<Medication*, std::true_type>,
+        // property 'orderMedication'
+        QtPrivate::TypeAndForceComplete<QList<QString>, std::true_type>,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<MedicationModel, std::true_type>,
         // method 'medicationChanged'
@@ -174,6 +205,8 @@ Q_CONSTINIT const QMetaObject MedicationModel::staticMetaObject = { {
         // method 'medicationsChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'singleMedicationChanged'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'orderMedicationChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'addMedication'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
@@ -198,7 +231,17 @@ Q_CONSTINIT const QMetaObject MedicationModel::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         QtPrivate::TypeAndForceComplete<QList<QTime>, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'addOrderedMedication'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'deleteOrderedMedication'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'getOrderedMedication'
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'deleteOrderedMedicationList'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
@@ -212,32 +255,38 @@ void MedicationModel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         case 0: _t->medicationChanged(); break;
         case 1: _t->medicationsChanged(); break;
         case 2: _t->singleMedicationChanged(); break;
-        case 3: _t->addMedication((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QList<QTime>>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4]))); break;
-        case 4: _t->setSingleMedication((*reinterpret_cast< std::add_pointer_t<Medication*>>(_a[1]))); break;
-        case 5: _t->setIntakeTime((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
-        case 6: _t->initializeIntakeTimeList((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 7: _t->deleteMedication(); break;
-        case 8: _t->updateMedication((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QList<QTime>>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4]))); break;
+        case 3: _t->orderMedicationChanged(); break;
+        case 4: _t->addMedication((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QList<QTime>>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4]))); break;
+        case 5: _t->setSingleMedication((*reinterpret_cast< std::add_pointer_t<Medication*>>(_a[1]))); break;
+        case 6: _t->setIntakeTime((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
+        case 7: _t->initializeIntakeTimeList((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 8: _t->deleteMedication(); break;
+        case 9: _t->updateMedication((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QList<QTime>>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4]))); break;
+        case 10: _t->addOrderedMedication((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 11: _t->deleteOrderedMedication((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 12: { QString _r = _t->getOrderedMedication();
+            if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
+        case 13: _t->deleteOrderedMedicationList(); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         switch (_id) {
         default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
-        case 3:
+        case 4:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
             case 2:
                 *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QList<QTime> >(); break;
             }
             break;
-        case 4:
+        case 5:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
             case 0:
                 *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< Medication* >(); break;
             }
             break;
-        case 8:
+        case 9:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
             case 2:
@@ -268,6 +317,13 @@ void MedicationModel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
                 return;
             }
         }
+        {
+            using _t = void (MedicationModel::*)();
+            if (_t _q_method = &MedicationModel::orderMedicationChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+                *result = 3;
+                return;
+            }
+        }
     } else if (_c == QMetaObject::RegisterPropertyMetaType) {
         switch (_id) {
         default: *reinterpret_cast<int*>(_a[0]) = -1; break;
@@ -284,6 +340,7 @@ else if (_c == QMetaObject::ReadProperty) {
         switch (_id) {
         case 0: *reinterpret_cast< QList<Medication*>*>(_v) = _t->medications(); break;
         case 1: *reinterpret_cast< Medication**>(_v) = _t->singleMedication(); break;
+        case 2: *reinterpret_cast< QList<QString>*>(_v) = _t->orderMedication(); break;
         default: break;
         }
     } else if (_c == QMetaObject::WriteProperty) {
@@ -293,6 +350,7 @@ else if (_c == QMetaObject::ReadProperty) {
         switch (_id) {
         case 0: _t->setMedications(*reinterpret_cast< QList<Medication*>*>(_v)); break;
         case 1: _t->setSingleMedication(*reinterpret_cast< Medication**>(_v)); break;
+        case 2: _t->setOrderMedication(*reinterpret_cast< QList<QString>*>(_v)); break;
         default: break;
         }
     } else if (_c == QMetaObject::ResetProperty) {
@@ -319,18 +377,18 @@ int MedicationModel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 9)
+        if (_id < 14)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 9;
+        _id -= 14;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 9)
+        if (_id < 14)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 9;
+        _id -= 14;
     }else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
             || _c == QMetaObject::RegisterPropertyMetaType) {
         qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 3;
     }
     return _id;
 }
@@ -351,6 +409,12 @@ void MedicationModel::medicationsChanged()
 void MedicationModel::singleMedicationChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 2, nullptr);
+}
+
+// SIGNAL 3
+void MedicationModel::orderMedicationChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 3, nullptr);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

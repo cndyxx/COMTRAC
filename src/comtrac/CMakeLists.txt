@@ -21,14 +21,10 @@ qt_standard_project_setup()
 qt_add_executable(appcomtrac
     main.cpp
     #Models
-    Models/login.cpp
-    Models/login.h
     Models/medication.cpp
     Models/medication.h
     Models/symptom.cpp
     Models/symptom.h
-    Models/loginModel.cpp
-    Models/loginModel.h
     Models/dbManager.h
     Models/dbManager.cpp
     Models/medicationModel.cpp
@@ -41,6 +37,8 @@ qt_add_executable(appcomtrac
     Models/MessageModel.h
     Models/Message.cpp
     Models/Message.h
+    Models/User.h
+    Models/User.cpp
 
 
 )
@@ -64,6 +62,7 @@ qt_add_qml_module(appcomtrac
     Ui/WeeklyHistory.qml
     Ui/Chat.qml
     Ui/singleSymptomHistory.qml
+    Ui/VideoTelephony.qml
     #elements
     Ui/Components/StackViewPage.qml
     Ui/Components/Background.qml
@@ -91,6 +90,7 @@ qt_add_qml_module(appcomtrac
     Ui/Components/MessageDelegate.qml
     Ui/Components/ChatInput.qml
     Ui/Components/CheckBoxTemplate.qml
+
 
 
 

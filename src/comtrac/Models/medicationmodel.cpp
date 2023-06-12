@@ -96,7 +96,6 @@ void MedicationModel::addIntakeTime(int medicationID, QList<QTime> intakeTimes)
         addMedicationIntake(medicationID, intakeID);
     }
 
-
 }
 
 void MedicationModel::addMedicationIntake(int medicationID, int intakeID)
@@ -106,6 +105,27 @@ void MedicationModel::addMedicationIntake(int medicationID, int intakeID)
     query.bindValue(0, medicationID);
     query.bindValue(1, intakeID);
     query.exec();
+}
+
+QList<QString> MedicationModel::orderMedication() const
+{
+    return m_orderMedication;
+}
+
+void MedicationModel::setOrderMedication(const QList<QString> &newOrderMedication)
+{
+    if (m_orderMedication == newOrderMedication)
+        return;
+    m_orderMedication = newOrderMedication;
+    emit orderMedicationChanged();
+}
+
+void MedicationModel::setMessageModel(MessageModel *messageModel)
+{
+
+    // Speichern Sie den Zeiger auf das MessageModel-Objekt
+    m_messageModel = messageModel;
+
 }
 
 Medication *MedicationModel::singleMedication() const
@@ -188,7 +208,7 @@ void MedicationModel::updateMedication(QString name, int intakePerDay, QList<QTi
     if(!query.exec())
         qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
 
-    query.prepare("UPDATE Intake SET intakeTime = ? WHERE intakeID IN (SELECT intakeID FROM MedicationIntake WHERE medicationID = ?)");
+                                                                query.prepare("UPDATE Intake SET intakeTime = ? WHERE intakeID IN (SELECT intakeID FROM MedicationIntake WHERE medicationID = ?)");
     for(int i = 0; i < intakeTimes.size(); i++){
         query.bindValue(0, intakeTimes[i]);
         query.bindValue(1, medicationId);
@@ -198,6 +218,53 @@ void MedicationModel::updateMedication(QString name, int intakePerDay, QList<QTi
 
     emit medicationsChanged();
 
+}
+
+void MedicationModel::addOrderedMedication(QString name)
+{
+    m_orderMedication.push_back(name);
+}
+
+void MedicationModel::deleteOrderedMedication(QString name)
+{
+    for (int i = 0; i < m_orderMedication.size(); i++)
+    {
+        QString medication = m_orderMedication.at(i);
+        if (medication == name)
+        {
+            m_orderMedication.removeAt(i);
+            break;
+        }
+    }
+}
+
+QString MedicationModel::getOrderedMedication()
+{
+    QString orderText = "Rezept für ";
+        if (m_orderMedication.size() == 1) {
+        orderText += m_orderMedication[0] + " bestellen.";
+    } else if (m_orderMedication.size() > 1) {
+        orderText = "Rezepte für ";
+            for (int i = 0; i < m_orderMedication.size() - 1; i++) {
+            orderText += m_orderMedication[i] + " und ";
+        }
+        orderText += m_orderMedication[m_orderMedication.size() -1 ] + " bestellen.";
+    }
+
+    QList<Message *> messageList = m_messageModel->getMessages();
+    messageList[3]->setText(orderText);
+    m_messageModel->setMessages(messageList);
+    for (Message *newMessage : messageList) {
+        delete newMessage;
+    }
+
+
+    return orderText;
+}
+
+void MedicationModel::deleteOrderedMedicationList()
+{
+    m_orderMedication.clear();
 }
 
 void MedicationModel::addMedication(QString name,int intakePerDay,QList<QTime> intakeTimes, QString reminderTime)

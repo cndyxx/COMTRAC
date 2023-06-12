@@ -3,8 +3,10 @@ import QtQuick.Controls 2.15
 import "./Components"
 
 Item {
+    id: chat
     property int currentMessage: 0
-    property var visibleMessages: [true, false, false, false]
+    property var selectedMedications: []
+
     Background {
         id: background
         color: "lightgrey"
@@ -27,23 +29,29 @@ Item {
 
     ListView{
         id: messageListView
-        width: parent.width * 0.8
+        width: parent.width * 0.9
         height: parent.height - header.height
         anchors.top: header.bottom
-        anchors.margins: 20
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.margins: 10
         model:  messageModel.messages
-        spacing: 20
+        spacing: 30
         delegate: MessageDelegate {
-            anchors.left: parent.left
-            anchors.leftMargin: 30
+            anchors.horizontalCenter: parent.horizontalCenter
             visible: index <= currentMessage
             onNextMessage: {
                 currentMessage +=1
-
             }
         }
+        clip: true
+    }
+    Connections {
+        target: medModel
+        function onMessagesChanged() {
+            // Aktualisiere das Modell der ListView
+            messageListView.model = medModel.messages;
 
-
+        }
     }
 
 

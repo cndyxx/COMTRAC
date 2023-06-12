@@ -5,7 +5,7 @@ import QtQuick.Layouts
 
 Button {
     property var symptomData: symptomListView.model[index]
-    property var symptomColor: "lightgrey"
+    property color symptomColor: "lightgrey"
 
     anchors.horizontalCenter: parent.horizontalCenter
     width: parent.width

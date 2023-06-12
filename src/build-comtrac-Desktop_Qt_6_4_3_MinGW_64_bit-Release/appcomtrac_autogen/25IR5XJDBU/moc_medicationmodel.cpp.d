@@ -309,4 +309,7 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h \
   C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/intaketime.h \
-  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medication.h
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medication.h \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medicationmodel.h \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/message.h \
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/messagemodel.h

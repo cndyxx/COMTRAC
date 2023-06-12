@@ -21,7 +21,7 @@ ToolBar {
                     if (navigationStyle === "menu")
                         return "../../assets/menu.png";
                     else
-                        return "../../assets/x.png";
+                        return "../../assets/plus.png";
                 }
                 width: parent.width/3
                 height: parent.height/3

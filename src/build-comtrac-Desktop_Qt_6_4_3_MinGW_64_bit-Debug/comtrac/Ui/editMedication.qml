@@ -127,7 +127,7 @@ Item {
             spacing: 10
             delegate: ButtonTemplate{
                 id: intakeTimeBtn
-
+                enabled: pageState === 0 || pageState === 2
                 property string time: "08:00 AM"
 
                 onClicked: {
@@ -139,10 +139,6 @@ Item {
 
                 TimePickerTemplate {
                     id: timePicker
-//                    onSaveClicked: {
-////                        time = text
-////                        list.push(time)
-//                    }
                 }
 
             }
@@ -157,20 +153,25 @@ Item {
                 font.pixelSize: 23
             }
             SwitchTemplate{
+                enabled: pageState === 0 || pageState === 2
                 id: switchReminder
                 anchors.left: txtReminder.right
                 anchors.leftMargin: 60
             }
         }
         RadioButtonTemplate{
+            enabled: pageState === 0 || pageState === 2
             id: radioButtonTimeOfTaking
             text: qsTr("Zum Zeitpunkt der Einnahme")
             font.pixelSize: 15
+            checked: switchReminder.checked === true
         }
         RadioButtonTemplate{
+            enabled: pageState === 0 || pageState === 2
             id: radioButtonTenMinutesBefore
             text: qsTr("10 Minuten vorher")
             font.pixelSize: 15
+            //checked:
         }
 
         RowLayout {
@@ -230,7 +231,7 @@ Item {
                     }
                     //Symptom in der Datenbank ändern
                     else if(pageState === 2){
-                        //symptomModel.updateSymptom(symptomInput.text, sliderIntensity.value, sliderFrequency.value, radioButtonValue);
+                        medModel.updateMedication(medicationInput.text, intakeCount, intakeTime, radioButtonValue);
                         stackView.pop()
 
                     }

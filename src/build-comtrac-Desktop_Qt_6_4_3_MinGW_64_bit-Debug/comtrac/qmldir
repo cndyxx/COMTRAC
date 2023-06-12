@@ -11,6 +11,7 @@ EditSymptom 1.0 Ui/EditSymptom.qml
 SymptomHistory 1.0 Ui/SymptomHistory.qml
 WeeklyHistory 1.0 Ui/WeeklyHistory.qml
 Chat 1.0 Ui/Chat.qml
+VideoTelephony 1.0 Ui/VideoTelephony.qml
 StackViewPage 1.0 Ui/Components/StackViewPage.qml
 Background 1.0 Ui/Components/Background.qml
 TextFieldTemplate 1.0 Ui/Components/TextFieldTemplate.qml
@@ -36,4 +37,5 @@ SymptomList 1.0 Ui/Components/SymptomList.qml
 DialogTemplate 1.0 Ui/Components/DialogTemplate.qml
 MessageDelegate 1.0 Ui/Components/MessageDelegate.qml
 ChatInput 1.0 Ui/Components/ChatInput.qml
+CheckBoxTemplate 1.0 Ui/Components/CheckBoxTemplate.qml
 

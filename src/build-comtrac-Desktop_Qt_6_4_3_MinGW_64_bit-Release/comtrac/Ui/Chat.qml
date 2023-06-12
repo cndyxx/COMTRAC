@@ -5,7 +5,8 @@ import "./Components"
 Item {
     id: chat
     property int currentMessage: 0
-    property var visibleMessages: [true, false, false, false]
+    property var selectedMedications: []
+
     Background {
         id: background
         color: "lightgrey"
@@ -40,7 +41,6 @@ Item {
             visible: index <= currentMessage
             onNextMessage: {
                 currentMessage +=1
-
             }
         }
         clip: true

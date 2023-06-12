@@ -6,8 +6,11 @@ import QtQuick.Layouts
 Item {
 
     property var messageData: messageListView.model[index]
-    width: parent.width // Dynamically adjust width based on content
-    height: contentItem.height // Dynamically adjust height based on content
+    property int textMargin: 15
+    property color messageColor: "silver"
+
+    width: parent.width
+    height: contentItem.height
     signal  nextMessage()
 
     ListModel {
@@ -38,22 +41,23 @@ Item {
             case 3:
                 return textItem.implicitHeight + buttonsColumn.height;
             case 4:
-                return buttonsRow.height;
+                return textItem.implicitHeight +buttonsRow.height;
             default:
                 return 0;
             }
         }
 
         Rectangle {
+            id: messageBackground
             width: parent.width
-            height: parent.height
-            color: "grey"
+            height: parent.height +20
+            color: messageColor
             radius: 10
             ColumnLayout {
                 Layout.fillWidth: true
                 width: parent.width
                 Layout.alignment: Qt.AlignHCenter
-
+                spacing: 10
                 Text {
                     id: textItem
                     text: qsTr(messageData.text)
@@ -62,24 +66,33 @@ Item {
                     font.pixelSize: 16
                     Layout.preferredWidth: parent.width
                     Layout.alignment: Qt.AlignHCenter
-
+                    anchors.left: parent.left
+                    anchors.leftMargin: textMargin
+                    anchors.top: parent.top
+                    anchors.topMargin: 5
 
                 }
 
                 // Buttons for the first message type
                 Item {
                     visible: messageData.type === 1
+                    width: parent.width
+                    height: parent.height - textItem.height
 
                     ColumnLayout {
                         id: firstMessage
                         spacing: 10
+
                         Layout.alignment: Qt.AlignHCenter
+                        //                        anchors.left: parent.left
+                        //                        anchors.leftMargin: 15
+                        anchors.horizontalCenter: parent.horizontalCenter
                         Repeater {
 
                             model: buttonText
                             delegate: ButtonTemplate {
                                 text: modelData
-                                buttonWidth: contentItem.width * 0.75
+                                buttonWidth: contentItem.width * 0.8
                                 backgroundDefaultColor: "white"
                                 borderDefaultColor: "black"
                                 contentItemTextColor: "black"
@@ -87,6 +100,8 @@ Item {
                                     // Handle button click
                                     timer.start()
                                     nextMessage()
+                                     //messageColor: "darkgrey"
+
 
                                 }
                             }
@@ -98,8 +113,9 @@ Item {
                 Item {
 
                     visible: messageData.type === 2
-//                    visible: true
-                        Timer {
+
+                    //                    visible: true
+                    Timer {
                         id: timer
                         interval: 3000 // Timer-Intervall von 1 Sekunde (1000 Millisekunden)
                         repeat: false // Timer wird nicht wiederholt
@@ -107,7 +123,8 @@ Item {
                         onTriggered: {
                             // Timer abgelaufen, hier können Sie den Code für die Aktion ausführen
                             console.log("Timer abgelaufen");
-                        nextMessage()
+                            nextMessage()
+                            messageColor= "silver"
                         }
                     }
 
@@ -117,6 +134,7 @@ Item {
                 // Radio buttons and buttons for the third message type
                 Item {
                     visible: messageData.type === 3
+
                     ColumnLayout {
                         id: buttonsColumn
                         spacing: 10
@@ -124,8 +142,17 @@ Item {
                         Repeater {
                             id: medication
                             model: medModel.medications
-                            delegate: RadioButtonTemplate {
+                            delegate: CheckBoxTemplate {
                                 text: medication.model[index].name
+                                onClicked: {
+                                    if (checked) {
+                                        // Hinzufügen des Medikaments zur Bestellung
+                                        medModel.addOrderedMedication(medication.model[index].name)
+                                    } else {
+                                        // Entfernen des Medikaments aus der Bestellung
+                                        medModel.deleteOrderedMedication(medication.model[index].name)
+                                    }
+                                }
                             }
                         }
 
@@ -138,6 +165,9 @@ Item {
                             onClicked: {
                                 // Handle button click
                                 nextMessage()
+                                medModel.getOrderedMedication()
+
+
                             }
 
                         }
@@ -147,12 +177,17 @@ Item {
                 // Buttons in a row for the fourth message type
                 Item {
                     visible: messageData.type === 4
+                    anchors.left: parent.left
+                    anchors.leftMargin: 15
                     RowLayout  {
                         id: buttonsRow
                         spacing: 10
+                        width: contentItem.width * 0.75
+                        anchors.margins: 10
                         ButtonTemplate {
                             text: "Abbrechen"
-                            buttonWidth: contentItem.width * 0.8
+                            buttonWidth: parent.width / 2
+                            Layout.fillHeight: true
                             borderDefaultColor: "black"
                             contentItemTextColor: "black"
                             onClicked: {
@@ -162,13 +197,14 @@ Item {
                         }
                         ButtonTemplate {
                             text: "Bestätigen"
-                            buttonWidth: contentItem.width * 0.8
+                            buttonWidth: parent.width / 2
+                            Layout.fillHeight: true
                             backgroundDefaultColor: "white"
                             borderDefaultColor: "black"
                             contentItemTextColor: "black"
                             onClicked: {
                                 // Handle button click
-                                nextMessage()
+                                nextMessage();
                             }
                         }
                     }

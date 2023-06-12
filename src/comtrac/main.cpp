@@ -41,6 +41,7 @@ int main(int argc, char *argv[])
     MessageModel *messageModel = new MessageModel();
     engine.rootContext()->setContextProperty("messageModel", messageModel);
     engine.load(url);
+    medModel->setMessageModel(messageModel);
 
     return app.exec();
 }

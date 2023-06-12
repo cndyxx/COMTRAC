@@ -1508,6 +1508,9 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medicationmodel.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/intaketime.h
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medication.h
+ mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medicationmodel.h
+ mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/message.h
+ mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/messagemodel.h
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptommodel.h
  mmc:Q_OBJECT
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptommodel.h
@@ -2440,5 +2443,6 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/messagemodel.h
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medication.h
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medicationmodel.h
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/message.h
+ mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/messagemodel.h
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/message.cpp
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/messagemodel.cpp

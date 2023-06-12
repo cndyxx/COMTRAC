@@ -28,6 +28,24 @@
                     "returnType": "void"
                 }
             ],
+            "slots": [
+                {
+                    "access": "public",
+                    "name": "getMessages",
+                    "returnType": "QList<Message*>"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "newMessages",
+                            "type": "QList<Message*>"
+                        }
+                    ],
+                    "name": "setMessages",
+                    "returnType": "void"
+                }
+            ],
             "superClasses": [
                 {
                     "access": "public",

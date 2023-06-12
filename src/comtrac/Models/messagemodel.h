@@ -5,7 +5,6 @@
 
 #include <QObject>
 #include "message.h"
-#include "medicationmodel.h"
 
 
 class MessageModel : public QObject
@@ -17,12 +16,15 @@ public:
 
     explicit MessageModel(QObject *parent = nullptr);
     ~MessageModel();
-
-
     QList<Message *> messages() const;
-    void setMessages(const QList<Message *> &newMessages);
+
+
+
+
 
 public slots:
+    QList<Message *>  getMessages();
+    void setMessages(const QList<Message *> &newMessages);
 
 
 
@@ -33,10 +35,9 @@ signals:
 
 private:
     QList<Message *> m_messages;
-    QList<MedicationModel *> m_medications;
-
-
 
 };
+
+
 
 #endif // MESSAGEMODEL_H

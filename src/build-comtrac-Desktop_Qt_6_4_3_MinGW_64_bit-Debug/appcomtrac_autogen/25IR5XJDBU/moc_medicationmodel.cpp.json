@@ -33,6 +33,21 @@
                     "type": "Medication*",
                     "user": false,
                     "write": "setSingleMedication"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 2,
+                    "name": "orderMedication",
+                    "notify": "orderMedicationChanged",
+                    "read": "orderMedication",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QList<QString>",
+                    "user": false,
+                    "write": "setOrderMedication"
                 }
             ],
             "qualifiedClassName": "MedicationModel",
@@ -50,6 +65,11 @@
                 {
                     "access": "public",
                     "name": "singleMedicationChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "orderMedicationChanged",
                     "returnType": "void"
                 }
             ],
@@ -140,6 +160,38 @@
                         }
                     ],
                     "name": "updateMedication",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "name",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "addOrderedMedication",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "name",
+                            "type": "QString"
+                        }
+                    ],
+                    "name": "deleteOrderedMedication",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "getOrderedMedication",
+                    "returnType": "QString"
+                },
+                {
+                    "access": "public",
+                    "name": "deleteOrderedMedicationList",
                     "returnType": "void"
                 }
             ],
