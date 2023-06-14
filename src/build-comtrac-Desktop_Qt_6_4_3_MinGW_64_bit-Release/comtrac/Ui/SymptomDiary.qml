@@ -28,11 +28,12 @@ Item {
         id: symptomListView
         spacing: 15
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: graphicButton.height * 2.2
+        anchors.bottomMargin: graphicButton.height * 1.3
         width: parent.width
-        height: parent.height * 0.25
+        height: parent.height * 0.30
         model: symptom
         anchors.horizontalCenter: parent.horizontalCenter
+        clip: true
         delegate: SymptomDelegate {
             anchors.margins: 10
             width: parent.width * 0.9

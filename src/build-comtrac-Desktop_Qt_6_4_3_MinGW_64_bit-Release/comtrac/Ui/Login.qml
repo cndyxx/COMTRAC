@@ -5,6 +5,11 @@ import "./Components"
 
 
 Item {
+    id: login
+    width: parent.width
+    Background{
+        color: "lightgrey"
+    }
 
     ColumnLayout{
         id: column
@@ -27,6 +32,7 @@ Item {
             Layout.topMargin: 10
             id: txtUserName
             placeholderText: "Benutzername"
+            textFieldWidth: login.width *0.9
 
         }
 
@@ -34,15 +40,15 @@ Item {
             id: txtPassword
             echoMode: TextInput.Password
             placeholderText: "Passwort"
+            textFieldWidth: login.width *0.9
 
         }
 
         ButtonTemplate{
             id: loginButton
             text: "Anmelden"
+            buttonWidth: login.width * 0.9
             onClicked: {
-               // login.checkLoginData(txtUserName.text, txtPassword.text)
-                //loader.setSource(home_screen)
                 stackView.push("HomeScreen.qml")
             }
         }

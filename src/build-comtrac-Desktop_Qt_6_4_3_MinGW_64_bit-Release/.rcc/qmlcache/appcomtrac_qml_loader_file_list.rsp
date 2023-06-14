@@ -13,6 +13,7 @@
 /comtrac/Ui/Chat.qml
 /comtrac/Ui/singleSymptomHistory.qml
 /comtrac/Ui/VideoTelephony.qml
+/comtrac/Ui/WaitingRoom.qml
 /comtrac/Ui/Components/StackViewPage.qml
 /comtrac/Ui/Components/Background.qml
 /comtrac/Ui/Components/TextFieldTemplate.qml

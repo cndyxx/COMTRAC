@@ -5,6 +5,7 @@ project(comtrac VERSION 0.1 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_TOOLCHAIN_FILE C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake)
 
+
 find_package(Qt6 6.4 REQUIRED COMPONENTS Quick)
 find_package(Qt6 6.0.0 COMPONENTS QuickControls2 REQUIRED)
 find_package(Qt6 REQUIRED COMPONENTS Sql)
@@ -55,6 +56,7 @@ qt_add_qml_module(appcomtrac
     Ui/Chat.qml
     Ui/singleSymptomHistory.qml
     Ui/VideoTelephony.qml
+    Ui/WaitingRoom.qml
     #elements
     Ui/Components/StackViewPage.qml
     Ui/Components/Background.qml
@@ -93,6 +95,7 @@ qt_add_qml_module(appcomtrac
     assets/plus.png
     assets/chart.png
     assets/pencil.png
+    assets/x.png
     assets/singleSymptom_Diagramm.PNG
     assets/weeklySymptoms_Diagramm.PNG
 )

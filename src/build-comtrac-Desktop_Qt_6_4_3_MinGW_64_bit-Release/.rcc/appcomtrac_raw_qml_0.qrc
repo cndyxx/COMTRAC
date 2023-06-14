@@ -15,6 +15,7 @@
     <file alias="Ui/Chat.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Chat.qml</file>
     <file alias="Ui/singleSymptomHistory.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/singleSymptomHistory.qml</file>
     <file alias="Ui/VideoTelephony.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/VideoTelephony.qml</file>
+    <file alias="Ui/WaitingRoom.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/WaitingRoom.qml</file>
     <file alias="Ui/Components/StackViewPage.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/StackViewPage.qml</file>
     <file alias="Ui/Components/Background.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/Background.qml</file>
     <file alias="Ui/Components/TextFieldTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/TextFieldTemplate.qml</file>
@@ -47,6 +48,7 @@
     <file alias="assets/plus.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/plus.png</file>
     <file alias="assets/chart.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/chart.png</file>
     <file alias="assets/pencil.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/pencil.png</file>
+    <file alias="assets/x.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/x.png</file>
     <file alias="assets/singleSymptom_Diagramm.PNG">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/singleSymptom_Diagramm.PNG</file>
     <file alias="assets/weeklySymptoms_Diagramm.PNG">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/weeklySymptoms_Diagramm.PNG</file>
   </qresource>

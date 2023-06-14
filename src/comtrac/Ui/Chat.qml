@@ -17,25 +17,16 @@ Item {
         pageTitle: "Chat"
         navigationStyle: "menu"
     }
-    ListModel {
-        id: messages
-        ListElement {
-            text: "Nachricht 1 "
-        }
-        ListElement{
-            text: "Nachricht 2"
-        }
-    }
 
     ListView{
         id: messageListView
         width: parent.width * 0.9
-        height: parent.height - header.height
+        height: parent.height
         anchors.top: header.bottom
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.margins: 10
         model:  messageModel.messages
-        spacing: 30
+        spacing: 40
         delegate: MessageDelegate {
             anchors.horizontalCenter: parent.horizontalCenter
             visible: index <= currentMessage
@@ -44,7 +35,9 @@ Item {
             }
         }
         clip: true
+
     }
+
     Connections {
         target: medModel
         function onMessagesChanged() {

@@ -12,6 +12,7 @@ SymptomHistory 1.0 Ui/SymptomHistory.qml
 WeeklyHistory 1.0 Ui/WeeklyHistory.qml
 Chat 1.0 Ui/Chat.qml
 VideoTelephony 1.0 Ui/VideoTelephony.qml
+WaitingRoom 1.0 Ui/WaitingRoom.qml
 StackViewPage 1.0 Ui/Components/StackViewPage.qml
 Background 1.0 Ui/Components/Background.qml
 TextFieldTemplate 1.0 Ui/Components/TextFieldTemplate.qml

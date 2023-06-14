@@ -70,18 +70,19 @@ Item {
                 anchors.leftMargin: 20
                 model: 8 // Das Model mit den Daten von 52 Elementen
                 delegate: Button {
-                    contentItem: Text {
-                        horizontalAlignment: Text.AlignHCenter
-                        verticalAlignment: Text.AlignVCenter
-                        text: "KW" + (index +1)
-                    }
+
                     background: Rectangle {
                         id: rectCalendarWeek
                         color: "lightgrey"
                         width: grid.width * 0.2
                         height: rectCalendarWeek.width
                         radius: 10
+                        Text {
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            anchors.verticalCenter: parent.verticalCenter
 
+                            text: "KW" + (index +1)
+                        }
 
                     }
 
