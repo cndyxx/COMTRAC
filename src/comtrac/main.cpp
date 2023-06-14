@@ -3,7 +3,6 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QQmlComponent>
-#include "Models/login.h"
 #include "Models/dbmanager.h"
 
 #include "Models/medicationmodel.h"
@@ -28,8 +27,6 @@ int main(int argc, char *argv[])
     //Verknüpfung zwischen QML und C++-Model
     QQmlContext *ctx = engine.rootContext();
 
-    Login login;
-    ctx->setContextProperty("login", &login);
 
     MedicationModel *medModel = new MedicationModel();
     engine.rootContext()->setContextProperty("medModel", medModel);

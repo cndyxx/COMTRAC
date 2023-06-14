@@ -19,6 +19,7 @@ Window {
         anchors.fill: parent
         source: stack_view
 
+
     }
 
 

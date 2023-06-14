@@ -52,7 +52,7 @@ void MedicationModel::getMedication()
                 m_medications.push_back(new Medication(previousId, name, intakePerDay, intakeTimes, reminderTime, this));
                 previousId = id;
                 intakeTimes.clear();
-                std::cout << "ID: " + previousId;
+
             }
             name = query.value(1).toString();
             intakePerDay = query.value(4).toInt();
@@ -92,7 +92,6 @@ void MedicationModel::addIntakeTime(int medicationID, QList<QTime> intakeTimes)
         query.bindValue(0, intakeTimes[i]);
         query.exec();
         int intakeID = query.lastInsertId().toInt();
-        std::cout << "LETZTE ID: " + intakeID << std::endl;
         addMedicationIntake(medicationID, intakeID);
     }
 

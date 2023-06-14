@@ -11,7 +11,7 @@
 #include <QDateTime>
 #include <QSqlError>
 #include <iostream>
-#include "Models/Symptom.h"
+#include "Models/symptom.h"
 
 class SymptomModel : public QSqlQueryModel
 {

@@ -1,0 +1,14 @@
+-rootPath
+C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac
+-cmake-output
+-output-file
+C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-WebAssembly_Qt_6_4_3-Profile/.qt_plugins/Qt6_QmlPlugins_Imports_appcomtrac.cmake
+-importPath
+C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-WebAssembly_Qt_6_4_3-Profile/comtrac
+-importPath
+C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-WebAssembly_Qt_6_4_3-Profile
+-importPath
+C:/Qt/6.4.3/wasm_32/./qml
+-qrcFiles
+C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-WebAssembly_Qt_6_4_3-Profile/.rcc/qmake_comtrac.qrc
+C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-WebAssembly_Qt_6_4_3-Profile/.rcc/appcomtrac_raw_qml_0.qrc

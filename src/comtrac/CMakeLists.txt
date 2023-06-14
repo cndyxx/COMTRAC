@@ -3,17 +3,11 @@ cmake_minimum_required(VERSION 3.16)
 project(comtrac VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_TOOLCHAIN_FILE C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake)
 
 find_package(Qt6 6.4 REQUIRED COMPONENTS Quick)
 find_package(Qt6 6.0.0 COMPONENTS QuickControls2 REQUIRED)
 find_package(Qt6 REQUIRED COMPONENTS Sql)
-#find_package(Qt6 REQUIRED COMPONENTS Charts)
-
-
-
-
-
-# ...
 
 
 qt_standard_project_setup()
@@ -39,8 +33,6 @@ qt_add_executable(appcomtrac
     Models/Message.h
     Models/User.h
     Models/User.cpp
-
-
 )
 
 qt_add_qml_module(appcomtrac
@@ -121,6 +113,7 @@ target_link_libraries(appcomtrac PRIVATE Qt6::Sql)
 target_link_libraries(appcomtrac PRIVATE Qt6::QuickControls2)
 #target_link_libraries(appcomtrac PRIVATE Qt6::Charts)
 target_compile_definitions(appcomtrac PRIVATE QT_QML_DEBUG)
+
 
 
 

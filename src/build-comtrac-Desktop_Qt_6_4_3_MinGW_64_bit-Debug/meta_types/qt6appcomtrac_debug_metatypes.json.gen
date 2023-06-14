@@ -19,47 +19,6 @@
     {
         "classes": [
             {
-                "className": "Login",
-                "object": true,
-                "qualifiedClassName": "Login",
-                "signals": [
-                    {
-                        "access": "public",
-                        "name": "loginButtonClicked",
-                        "returnType": "void"
-                    }
-                ],
-                "slots": [
-                    {
-                        "access": "public",
-                        "arguments": [
-                            {
-                                "name": "userName",
-                                "type": "QString"
-                            },
-                            {
-                                "name": "password",
-                                "type": "QString"
-                            }
-                        ],
-                        "name": "checkLoginData",
-                        "returnType": "void"
-                    }
-                ],
-                "superClasses": [
-                    {
-                        "access": "public",
-                        "name": "QObject"
-                    }
-                ]
-            }
-        ],
-        "inputFile": "login.h",
-        "outputRevision": 68
-    },
-    {
-        "classes": [
-            {
                 "className": "Medication",
                 "object": true,
                 "properties": [
@@ -1005,6 +964,23 @@
             }
         ],
         "inputFile": "symptommodel.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "User",
+                "object": true,
+                "qualifiedClassName": "User",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "user.h",
         "outputRevision": 68
     }
 ]

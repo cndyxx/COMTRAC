@@ -41,7 +41,7 @@ Item {
             id: loginButton
             text: "Anmelden"
             onClicked: {
-                login.checkLoginData(txtUserName.text, txtPassword.text)
+               // login.checkLoginData(txtUserName.text, txtPassword.text)
                 //loader.setSource(home_screen)
                 stackView.push("HomeScreen.qml")
             }
