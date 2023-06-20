@@ -36,6 +36,7 @@ Item {
 
         anchors.horizontalCenter: parent.horizontalCenter
         delegate: SymptomDelegate {
+            setBackgroundColor: true
             anchors.margins: 10
             width: parent.width * 0.9
             height: 40

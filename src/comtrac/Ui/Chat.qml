@@ -32,6 +32,7 @@ Item {
             visible: index <= currentMessage
             onNextMessage: {
                 currentMessage +=1
+                console.log("Current message: " + currentMessage);
             }
         }
         clip: true

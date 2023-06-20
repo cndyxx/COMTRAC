@@ -6,7 +6,6 @@ import QtQuick.Controls
 import "./Components"
 Item {
     id: homeScreen
-    width: parent.width
     property date currentDate: new Date()
     Background{ id: background}
     ListModel {

@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.16)
 project(comtrac VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_TOOLCHAIN_FILE C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake)
+#set(CMAKE_TOOLCHAIN_FILE C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake)
 
 
 find_package(Qt6 6.4 REQUIRED COMPONENTS Quick)
@@ -57,6 +57,7 @@ qt_add_qml_module(appcomtrac
     Ui/singleSymptomHistory.qml
     Ui/VideoTelephony.qml
     Ui/WaitingRoom.qml
+    Ui/VirtualAppointment.qml
     #elements
     Ui/Components/StackViewPage.qml
     Ui/Components/Background.qml
@@ -84,6 +85,8 @@ qt_add_qml_module(appcomtrac
     Ui/Components/MessageDelegate.qml
     Ui/Components/ChatInput.qml
     Ui/Components/CheckBoxTemplate.qml
+    Ui/Components/IntakeDelegate.qml
+    Ui/Components/CalendarWeeksTemplate.qml
 
 
 
@@ -98,6 +101,7 @@ qt_add_qml_module(appcomtrac
     assets/x.png
     assets/singleSymptom_Diagramm.PNG
     assets/weeklySymptoms_Diagramm.PNG
+    assets/user-silhouette.png
 )
 
 

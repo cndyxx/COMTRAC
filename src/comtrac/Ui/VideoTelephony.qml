@@ -8,6 +8,15 @@ Item {
         pageTitle: "Videotelefonie"
         navigationStyle: "menu"
     }
+    Rectangle {
+        width: parent.width * 0.8
+        height: parent.height * 0.25
+        border.color: "dimgrey"
+        border.width: 2
+        anchors.top: header.bottom
+        anchors.topMargin: 20
+        anchors.horizontalCenter: parent.horizontalCenter
+    }
 
     ButtonTemplate {
         anchors.bottom: parent.bottom

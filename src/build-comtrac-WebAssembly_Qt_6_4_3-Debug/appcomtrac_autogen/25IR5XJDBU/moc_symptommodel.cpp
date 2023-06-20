@@ -55,9 +55,9 @@ struct qt_meta_stringdata_SymptomModel_t {
     char stringdata24[17];
     char stringdata25[18];
     char stringdata26[18];
-    char stringdata27[10];
-    char stringdata28[8];
-    char stringdata29[18];
+    char stringdata27[20];
+    char stringdata28[5];
+    char stringdata29[11];
     char stringdata30[9];
     char stringdata31[16];
     char stringdata32[14];
@@ -97,10 +97,10 @@ Q_CONSTINIT static const qt_meta_stringdata_SymptomModel_t qt_meta_stringdata_Sy
         QT_MOC_LITERAL(292, 8),  // "Symptom*"
         QT_MOC_LITERAL(301, 16),  // "newSingleSymptom"
         QT_MOC_LITERAL(318, 17),  // "getSymptomsOfDate"
-        QT_MOC_LITERAL(336, 17),  // "getSymptomsOfWeek"
-        QT_MOC_LITERAL(354, 9),  // "startDate"
-        QT_MOC_LITERAL(364, 7),  // "endDate"
-        QT_MOC_LITERAL(372, 17),  // "getSymptomEntries"
+        QT_MOC_LITERAL(336, 17),  // "getSymptomEntries"
+        QT_MOC_LITERAL(354, 19),  // "getCalendarWeekDate"
+        QT_MOC_LITERAL(374, 4),  // "year"
+        QT_MOC_LITERAL(379, 10),  // "weekNumber"
         QT_MOC_LITERAL(390, 8),  // "symptoms"
         QT_MOC_LITERAL(399, 15),  // "QList<Symptom*>"
         QT_MOC_LITERAL(415, 13),  // "singleSymptom"
@@ -136,10 +136,10 @@ Q_CONSTINIT static const qt_meta_stringdata_SymptomModel_t qt_meta_stringdata_Sy
     "Symptom*",
     "newSingleSymptom",
     "getSymptomsOfDate",
-    "getSymptomsOfWeek",
-    "startDate",
-    "endDate",
     "getSymptomEntries",
+    "getCalendarWeekDate",
+    "year",
+    "weekNumber",
     "symptoms",
     "QList<Symptom*>",
     "singleSymptom",
@@ -182,8 +182,8 @@ Q_CONSTINIT static const uint qt_meta_data_SymptomModel[] = {
       19,    6,  133,    2, 0x0a,   24 /* Public */,
       22,    1,  146,    2, 0x0a,   31 /* Public */,
       25,    1,  149,    2, 0x0a,   33 /* Public */,
-      26,    2,  152,    2, 0x0a,   35 /* Public */,
-      29,    1,  157,    2, 0x0a,   38 /* Public */,
+      26,    1,  152,    2, 0x0a,   35 /* Public */,
+      27,    2,  155,    2, 0x0a,   37 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -202,8 +202,8 @@ Q_CONSTINIT static const uint qt_meta_data_SymptomModel[] = {
     QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::Int, QMetaType::QString, QMetaType::QString, QMetaType::QString,   10,   11,   12,   13,   20,   21,
     QMetaType::Void, 0x80000000 | 23,   24,
     QMetaType::Void, QMetaType::QString,   20,
-    QMetaType::Void, QMetaType::QString, QMetaType::QString,   27,   28,
     QMetaType::Void, QMetaType::QString,   10,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,   28,   29,
 
  // properties: name, type, flags
       30, 0x80000000 | 31, 0x0001510b, uint(0), 0,
@@ -279,13 +279,13 @@ Q_CONSTINIT const QMetaObject SymptomModel::staticMetaObject = { {
         // method 'getSymptomsOfDate'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
-        // method 'getSymptomsOfWeek'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         // method 'getSymptomEntries'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'getCalendarWeekDate'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>
     >,
     nullptr
 } };
@@ -311,8 +311,8 @@ void SymptomModel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         case 11: _t->addSymptoms((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[5])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[6]))); break;
         case 12: _t->setSingleSymptom((*reinterpret_cast< std::add_pointer_t<Symptom*>>(_a[1]))); break;
         case 13: _t->getSymptomsOfDate((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 14: _t->getSymptomsOfWeek((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
-        case 15: _t->getSymptomEntries((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 14: _t->getSymptomEntries((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 15: _t->getCalendarWeekDate((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {

@@ -17,7 +17,7 @@ Window {
     Loader{
         id: loader
         anchors.fill: parent
-//        source: stack_view
+        source: stack_view
 
 
     }

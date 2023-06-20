@@ -6793,6 +6793,48 @@ function qt_asyncify_resume_js() { let wakeUp = Module.qtAsyncifyWakeUp; if (wak
       HEAP32[(((tmPtr)+(32))>>2)] = dst;
     }
 
+  function __mktime_js(tmPtr) {
+      var date = new Date(HEAP32[(((tmPtr)+(20))>>2)] + 1900,
+                          HEAP32[(((tmPtr)+(16))>>2)],
+                          HEAP32[(((tmPtr)+(12))>>2)],
+                          HEAP32[(((tmPtr)+(8))>>2)],
+                          HEAP32[(((tmPtr)+(4))>>2)],
+                          HEAP32[((tmPtr)>>2)],
+                          0);
+  
+      // There's an ambiguous hour when the time goes back; the tm_isdst field is
+      // used to disambiguate it.  Date() basically guesses, so we fix it up if it
+      // guessed wrong, or fill in tm_isdst with the guess if it's -1.
+      var dst = HEAP32[(((tmPtr)+(32))>>2)];
+      var guessedOffset = date.getTimezoneOffset();
+      var start = new Date(date.getFullYear(), 0, 1);
+      var summerOffset = new Date(date.getFullYear(), 6, 1).getTimezoneOffset();
+      var winterOffset = start.getTimezoneOffset();
+      var dstOffset = Math.min(winterOffset, summerOffset); // DST is in December in South
+      if (dst < 0) {
+        // Attention: some regions don't have DST at all.
+        HEAP32[(((tmPtr)+(32))>>2)] = Number(summerOffset != winterOffset && dstOffset == guessedOffset);
+      } else if ((dst > 0) != (dstOffset == guessedOffset)) {
+        var nonDstOffset = Math.max(winterOffset, summerOffset);
+        var trueOffset = dst > 0 ? dstOffset : nonDstOffset;
+        // Don't try setMinutes(date.getMinutes() + ...) -- it's messed up.
+        date.setTime(date.getTime() + (trueOffset - guessedOffset)*60000);
+      }
+  
+      HEAP32[(((tmPtr)+(24))>>2)] = date.getDay();
+      var yday = ydayFromDate(date)|0;
+      HEAP32[(((tmPtr)+(28))>>2)] = yday;
+      // To match expected behavior, update fields from date
+      HEAP32[((tmPtr)>>2)] = date.getSeconds();
+      HEAP32[(((tmPtr)+(4))>>2)] = date.getMinutes();
+      HEAP32[(((tmPtr)+(8))>>2)] = date.getHours();
+      HEAP32[(((tmPtr)+(12))>>2)] = date.getDate();
+      HEAP32[(((tmPtr)+(16))>>2)] = date.getMonth();
+      HEAP32[(((tmPtr)+(20))>>2)] = date.getYear();
+  
+      return (date.getTime() / 1000)|0;
+    }
+
   
   
   
@@ -13742,6 +13784,7 @@ var wasmImports = {
   "_emval_take_value": __emval_take_value,
   "_gmtime_js": __gmtime_js,
   "_localtime_js": __localtime_js,
+  "_mktime_js": __mktime_js,
   "_mmap_js": __mmap_js,
   "_munmap_js": __munmap_js,
   "_tzset_js": __tzset_js,
@@ -14173,8 +14216,8 @@ var _emscripten_stack_get_current = function() {
 var ___cxa_demangle = createExportWrapper("__cxa_demangle");
 /** @type {function(...*):?} */
 var ___cxa_is_pointer_type = createExportWrapper("__cxa_is_pointer_type");
-var ___start_em_js = Module['___start_em_js'] = 8131128;
-var ___stop_em_js = Module['___stop_em_js'] = 8131428;
+var ___start_em_js = Module['___start_em_js'] = 8191464;
+var ___stop_em_js = Module['___stop_em_js'] = 8191764;
 function invoke_ii(index,a1) {
   var sp = stackSave();
   try {

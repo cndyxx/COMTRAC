@@ -1,6 +1,11 @@
 #include <QDataStream>
 #include "symptommodel.h"
 #include <iostream>
+#include <chrono>
+#include <sstream>
+
+
+using std::ostringstream;
 
 SymptomModel::SymptomModel(QObject *parent) : QSqlQueryModel(parent)
 {
@@ -8,6 +13,34 @@ SymptomModel::SymptomModel(QObject *parent) : QSqlQueryModel(parent)
 
 }
 
+
+
+std::tm SymptomModel::getWeekendDate(int year, int weekNumber)
+{
+    std::tm startDate = {};
+    startDate.tm_year = year - 1900;
+    startDate.tm_mday = 1;
+
+    std::time_t startDateT = std::mktime(&startDate);
+    std::tm* startDateTime = std::localtime(&startDateT);
+
+    // Berechnen des Startdatums der angegebenen Kalenderwoche
+    int daysToMonday = (startDateTime->tm_wday + 6) % 7; // Tage bis zum Montag
+    int daysToAdd = (weekNumber - 1) * 7 + daysToMonday;
+    std::chrono::hours hoursToAdd(daysToAdd * 24);
+    std::chrono::system_clock::time_point weekStartDate = std::chrono::system_clock::from_time_t(startDateT) + hoursToAdd;
+    std::time_t weekStartDateT = std::chrono::system_clock::to_time_t(weekStartDate);
+    std::tm* weekStartDateTime = std::localtime(&weekStartDateT);
+
+    // Einstellen des Anfangstages auf Montag
+    int daysToMondayShift = (weekStartDateTime->tm_wday + 6) % 7;
+    std::chrono::hours hoursToMonday(daysToMondayShift * 24);
+    std::chrono::system_clock::time_point mondayStartDate = weekStartDate - hoursToMonday;
+    std::time_t mondayStartDateT = std::chrono::system_clock::to_time_t(mondayStartDate);
+    std::tm* mondayStartDateTime = std::localtime(&mondayStartDateT);
+
+    return *mondayStartDateTime;;
+}
 void SymptomModel::deleteSymptom()
 {
 
@@ -229,6 +262,7 @@ void SymptomModel::getSymptomsOfWeek(QString startDate, QString endDate)
     if(! m_weekSymptoms.isEmpty()){
         m_weekSymptoms.clear();
     }
+
     QSqlQuery query;
     query.prepare("SELECT * FROM Symptoms WHERE entryDate BETWEEN ? AND ? GROUP BY [name]");
     query.bindValue(0, startDate);
@@ -274,6 +308,26 @@ void SymptomModel::getSymptomEntries(QString name)
     }
     emit symptomEntriesChanged();
 }
+
+void SymptomModel::getCalendarWeekDate(int year, int weekNumber)
+{
+    std::tm startDate = getWeekendDate(year, weekNumber);
+    std::ostringstream startOss;
+    std::ostringstream endOss;
+    if (startDate.tm_mon + 1 < 10) {
+        startOss << (startDate.tm_year + 1900) << "-0" << (startDate.tm_mon + 1) << "-" << startDate.tm_mday;
+        endOss << (startDate.tm_year + 1900) << "-0"  << (startDate.tm_mon + 1) << "-" << startDate.tm_mday +6;
+    } else {
+        startOss << (startDate.tm_year + 1900) << "-" << (startDate.tm_mon + 1) << "-" << startDate.tm_mday;
+        endOss << (startDate.tm_year + 1900) << "-"  << (startDate.tm_mon + 1) << "-" << startDate.tm_mday + 6;
+    }
+
+    QString start_date = QString::fromStdString(startOss.str());
+    QString end_date = QString::fromStdString(endOss.str());
+    getSymptomsOfWeek(start_date, end_date);
+
+}
+
 
 QList<Symptom *> SymptomModel::symptoms() const
 {
@@ -327,7 +381,7 @@ void SymptomModel::getSymptoms()
         m_symptoms.clear();
     }
     QSqlQuery query;
-    query.prepare("SELECT * FROM Symptoms");
+    query.prepare("SELECT * FROM Symptoms GROUP BY [name]");
 
     if(query.exec()){
         while(query.next()){

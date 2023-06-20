@@ -175,42 +175,42 @@ Item {
 
         }
 
-        Text {
-            text: "Dauer des Auftretens: "
-            Layout.topMargin: 20
-            color: "black"
-            font.pixelSize: 17
-            Layout.fillWidth: true
-            font.family: "Arial"
-        }
+//        Text {
+//            text: "Dauer des Auftretens: "
+//            Layout.topMargin: 20
+//            color: "black"
+//            font.pixelSize: 17
+//            Layout.fillWidth: true
+//            font.family: "Arial"
+//        }
 
-        RadioButtonTemplate{
-            id: radioButtonLessThen
-            text: qsTr("Seit weniger als 24 Stunden")
-            font.pixelSize: 15
-            enabled: pageState === 0 || pageState === 2
-            checked: {
-                if (pageState !== 0)
-                    if (duration === radioButtonLessThen.text)
-                        return true;
-                    else
-                        return false;
-            }
+//        RadioButtonTemplate{
+//            id: radioButtonLessThen
+//            text: qsTr("Seit weniger als 24 Stunden")
+//            font.pixelSize: 15
+//            enabled: pageState === 0 || pageState === 2
+//            checked: {
+//                if (pageState !== 0)
+//                    if (duration === radioButtonLessThen.text)
+//                        return true;
+//                    else
+//                        return false;
+//            }
 
-        }
-        RadioButtonTemplate{
-            id: radioButtonMoreThen
-            text: qsTr("Seit mehr als 24 Stunden")
-            font.pixelSize: 15
-            enabled: pageState === 0 || pageState === 2 //aktiviert wenn status 0 und 2
-            checked: {
-                if (pageState !== 0)
-                    if (duration === radioButtonMoreThen.text)
-                        return true
-                    else
-                        return false
-            }
-        }
+//        }
+//        RadioButtonTemplate{
+//            id: radioButtonMoreThen
+//            text: qsTr("Seit mehr als 24 Stunden")
+//            font.pixelSize: 15
+//            enabled: pageState === 0 || pageState === 2 //aktiviert wenn status 0 und 2
+//            checked: {
+//                if (pageState !== 0)
+//                    if (duration === radioButtonMoreThen.text)
+//                        return true
+//                    else
+//                        return false
+//            }
+//        }
         RowLayout {
             ButtonTemplate {
                 text: {
@@ -251,15 +251,15 @@ Item {
                 Layout.fillWidth: true
                 buttonWidth: parent.width / 2
                 onClicked: {
-                    //Überpüfe welcher RadioButton ausgewählt
-                    if (radioButtonMoreThen.checked) {
-                        var radioButtonValue = radioButtonMoreThen.text
-                    } else {
-                        radioButtonValue = radioButtonLessThen.text
-                    }
+//                    //Überpüfe welcher RadioButton ausgewählt
+//                    if (radioButtonMoreThen.checked) {
+//                        var radioButtonValue = radioButtonMoreThen.text
+//                    } else {
+//                        radioButtonValue = radioButtonLessThen.text
+//                    }
                     //Neues Symptom zur Datenbank hinzufügen
                     if(pageState === 0) {
-                        symptomModel.addSymptoms(symptomInput.text, sliderIntensity.value, sliderFrequency.value, radioButtonValue, txtDate.text,  txtTime.text);
+                        symptomModel.addSymptoms(symptomInput.text, sliderIntensity.value, sliderFrequency.value, 0, txtDate.text,  txtTime.text);
                         stackView.pop()
                         stackView.pop()
                     }
@@ -269,7 +269,7 @@ Item {
                     }
                     //Symptom in der Datenbank ändern
                     else if(pageState === 2){
-                        symptomModel.updateSymptom(symptomInput.text, sliderIntensity.value, sliderFrequency.value, radioButtonValue);
+                        symptomModel.updateSymptom(symptomInput.text, sliderIntensity.value, sliderFrequency.value, 0);
                         stackView.pop()
 
                     }

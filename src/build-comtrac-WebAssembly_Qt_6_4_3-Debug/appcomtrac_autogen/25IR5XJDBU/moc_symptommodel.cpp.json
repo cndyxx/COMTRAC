@@ -241,26 +241,26 @@
                     "access": "public",
                     "arguments": [
                         {
-                            "name": "startDate",
-                            "type": "QString"
-                        },
-                        {
-                            "name": "endDate",
+                            "name": "name",
                             "type": "QString"
                         }
                     ],
-                    "name": "getSymptomsOfWeek",
+                    "name": "getSymptomEntries",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
                     "arguments": [
                         {
-                            "name": "name",
-                            "type": "QString"
+                            "name": "year",
+                            "type": "int"
+                        },
+                        {
+                            "name": "weekNumber",
+                            "type": "int"
                         }
                     ],
-                    "name": "getSymptomEntries",
+                    "name": "getCalendarWeekDate",
                     "returnType": "void"
                 }
             ],

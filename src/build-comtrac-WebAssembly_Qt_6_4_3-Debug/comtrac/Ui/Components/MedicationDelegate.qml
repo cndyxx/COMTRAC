@@ -9,12 +9,13 @@ Button {
 
     anchors.horizontalCenter: parent.horizontalCenter
     width: parent.width
-    height: parent.height
+    implicitHeight:  parent.height
     contentItem: ColumnLayout {
         width: parent.width
         height: parent.height
-        spacing: 5
+        spacing: 8
         Text {
+            id: txtMedication
             text: medicationName
             color: "black"
             font.pixelSize: 18
@@ -23,6 +24,7 @@ Button {
             lineHeight: 0.5
         }
         Text {
+            id: txtIntake
             text: {
                 var result = ""
                 for (var i = 0; i < intakeTime.length; i++) {
@@ -33,6 +35,8 @@ Button {
                 }
                 return "Einnahme: " + result
             }
+            wrapMode: Text.WordWrap
+            width: parent.width
             color: "black"
             font.pixelSize: 16
             Layout.fillWidth: true
@@ -43,7 +47,7 @@ Button {
 
     background: Rectangle {
         width: parent.width
-        height: 50
+        height: 60
         border.color: "darkgrey"
         border.width: 2
         color: "lightgrey"

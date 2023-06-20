@@ -76,9 +76,10 @@ public slots:
     void addSymptoms(QString name, QString intensity, int frequency, QString duration, QString entryDate, QString entryTime);
     void setSingleSymptom(Symptom *newSingleSymptom);
 
-    void getSymptomsOfDate(QString entryDate);
-    void getSymptomsOfWeek(QString startDate, QString endDate);
+    void getSymptomsOfDate(QString entryDate); 
     void getSymptomEntries(QString name);
+    void getCalendarWeekDate(int year, int weekNumber);
+
 
 private:
     void updateModel();
@@ -91,6 +92,8 @@ private:
     QList<Symptom *> m_symptomEntries;
 
     void deleteSymptomOfList(QList<Symptom *> &list , int symptomID);
+    std::tm getWeekendDate(int year, int weekNumber);
+    void getSymptomsOfWeek(QString startDate, QString endDate);
 
 };
 

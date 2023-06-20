@@ -1,4 +1,4 @@
-set(CMAKE_CXX_COMPILER "C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/em++.bat")
+set(CMAKE_CXX_COMPILER "C:/emsdk/upstream/emscripten/em++.bat")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "Clang")
 set(CMAKE_CXX_COMPILER_VERSION "17.0.0")
@@ -22,10 +22,10 @@ set(CMAKE_CXX_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/emar.bat")
-set(CMAKE_CXX_COMPILER_AR "C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/emar.bat")
-set(CMAKE_RANLIB "C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/emranlib.bat")
-set(CMAKE_CXX_COMPILER_RANLIB "C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/emranlib.bat")
+set(CMAKE_AR "C:/emsdk/upstream/emscripten/emar.bat")
+set(CMAKE_CXX_COMPILER_AR "C:/emsdk/upstream/emscripten/emar.bat")
+set(CMAKE_RANLIB "C:/emsdk/upstream/emscripten/emranlib.bat")
+set(CMAKE_CXX_COMPILER_RANLIB "C:/emsdk/upstream/emscripten/emranlib.bat")
 set(CMAKE_LINKER "C:/msys64/mingw64/bin/ld.exe")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCXX )
@@ -77,7 +77,7 @@ endif()
 
 
 
-set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include")
+set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "C:/emsdk/upstream/emscripten/cache/sysroot/include")
 set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "")
 set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

@@ -6,6 +6,7 @@ import QtQuick.Layouts
 Button {
     property var symptomData: symptomListView.model[index]
     property color symptomColor: "lightgrey"
+    property bool setBackgroundColor: false
 
     anchors.horizontalCenter: parent.horizontalCenter
     width: parent.width
@@ -21,36 +22,54 @@ Button {
         lineHeight: 0.5
     }
     background: Rectangle {
+        id: backgroundRectangle
         width: parent.width
         height: 50
         border.color: "darkgrey"
         border.width: 2
-        color: switch (symptomData.name) {
+        color:if(setBackgroundColor) {
+                  switch (symptomData.name) {
                case "Fieber":
-                   return "red";
+                   return "orange";
                case "Kopfschmerzen":
-                   return "blue";
+                   return "lightskyblue";
                case "Übelkeit":
-                   return "green";
+                   return "yellowgreen";
                default:
                    return "gray";
            }
+              } else {
+                  return "lightgrey";
+              }
+
         radius: 5
 
     }
-    Image  {
-
-        source: "../../assets/pencil.png";
-        width: 18
-        height: 18
-        // Positionierung des Bildes
+    Button {
+        width: 25
+        height: 25
         anchors {
             top: parent.top
             right: parent.right
             topMargin: 5
             rightMargin: 5
         }
+        contentItem: Image  {
+
+        source: "../../assets/pencil.png";
+
+        // Positionierung des Bildes
+
     }
+        background: Rectangle {
+            color: backgroundRectangle.color
+        }
+
+        onClicked: {
+            symptomModel.setSingleSymptom(symptomData);
+            stackView.push("../EditSymptom.qml", {"pageState" : 2})
+    }
+}
 
 }
 

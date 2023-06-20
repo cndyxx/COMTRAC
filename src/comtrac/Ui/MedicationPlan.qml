@@ -23,7 +23,7 @@ Item {
     }
     ListView {
         id: medicationListView
-        spacing: 15
+        spacing: 10
         anchors.top: header.bottom
         anchors.topMargin: 30
         anchors.bottom: parent.bottom
@@ -35,7 +35,7 @@ Item {
 
         delegate: MedicationDelegate {
             width: parent.width * 0.9
-            height: 40
+            height: 60
             medicationName:  medModel.medications[index].name
             intakeTime: medModel.medications[index].intakeTime
             onClicked: {

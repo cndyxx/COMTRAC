@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/comtrac">
-    <file alias="qmldir">C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-WebAssembly_Qt_6_4_3-Profile/comtrac/qmldir</file>
-  </qresource>
-</RCC>
-

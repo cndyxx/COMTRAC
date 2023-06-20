@@ -60,7 +60,7 @@ Item {
                        return "grey";
                    default:
                        return "silver";
-               }
+                   }
             radius: 10
             ColumnLayout {
                 Layout.fillWidth: true
@@ -93,8 +93,6 @@ Item {
                         spacing: 10
 
                         Layout.alignment: Qt.AlignHCenter
-                        //                        anchors.left: parent.left
-                        //                        anchors.leftMargin: 15
                         anchors.horizontalCenter: parent.horizontalCenter
                         Repeater {
 
@@ -110,7 +108,7 @@ Item {
                                     timer.start()
                                     nextMessage()
 
-                                     //messageColor: "darkgrey"
+                                    //messageColor: "darkgrey"
 
 
                                 }
@@ -130,17 +128,11 @@ Item {
                         id: timer
                         interval: 3000 // Timer-Intervall von 1 Sekunde (1000 Millisekunden)
                         repeat: false // Timer wird nicht wiederholt
-
                         onTriggered: {
-                            // Timer abgelaufen, hier können Sie den Code für die Aktion ausführen
-                            console.log("Timer abgelaufen");
-                            dotTimer.stop();
-                            dotTimer.repeat = false;
-                            repeatTimer.visible = false;
                             nextMessage();
-
-
-
+                            dotTimer.stop();
+                            dotTimer.running = false;
+                            repeatTimer.visible = false;
                         }
                     }
 
@@ -183,8 +175,6 @@ Item {
                                 // Handle button click
                                 nextMessage()
                                 medModel.getOrderedMedication()
-
-
                             }
 
                         }
@@ -234,6 +224,7 @@ Item {
                 Item {
                     id: repeatTimer
                     visible: messageData.type === 2
+
                     Text {
                         id: waitingText
                         font.pixelSize: 20
@@ -244,12 +235,18 @@ Item {
 
                     Timer {
                         id: dotTimer
+                        property int count: 0
                         interval: 1000 // 1 second interval
                         running: true
                         repeat: true
                         onTriggered: {
                             dotCount = (dotCount % 3) + 1 // Increment dot count cyclically from 1 to 3
                             waitingText.text = ".".repeat(dotCount)
+                            count += 1;
+                            if(count === 4){
+                                dotTimer.running = false;
+                                repeatTimer.visible = false;
+                            }
                         }
                     }
                 }

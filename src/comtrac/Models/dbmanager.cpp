@@ -1,5 +1,5 @@
 
-#include "Dbmanager.h"
+#include "dbmanager.h"
 
 bool DbManager::instanceFlag = false;
 DbManager *DbManager::instanz = NULL;

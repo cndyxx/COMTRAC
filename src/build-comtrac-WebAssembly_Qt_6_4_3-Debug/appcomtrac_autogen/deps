@@ -923,20 +923,29 @@ appcomtrac_autogen/timestamp: \
 	C:/Qt/6.4.3/wasm_32/plugins/platforms/qtloader.js \
 	C:/Qt/6.4.3/wasm_32/plugins/platforms/qtlogo.svg \
 	C:/Qt/6.4.3/wasm_32/plugins/platforms/wasm_shell.html \
+	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeCXXCompiler.cmake.in \
 	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeCXXInformation.cmake \
 	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
 	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeDetermineCXXCompiler.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake \
 	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake \
 	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeGenericSystem.cmake \
 	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake \
 	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeNinjaFindMake.cmake \
 	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/CMakePushCheckState.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeSystem.cmake.in \
 	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake \
 	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/CMakeTestCXXCompiler.cmake \
 	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/CheckCXXCompilerFlag.cmake \
 	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/CheckCXXSourceCompiles.cmake \
 	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
 	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/Clang-CXX.cmake \
+	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/Clang-FindBinUtils.cmake \
 	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/Clang.cmake \
 	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/Compiler/GNU.cmake \
 	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/FeatureSummary.cmake \
@@ -947,23 +956,6 @@ appcomtrac_autogen/timestamp: \
 	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/Internal/CheckCompilerFlag.cmake \
 	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/Internal/CheckFlagCommonConfig.cmake \
 	C:/Qt/Tools/CMake_64/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake \
-	C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h \
-	C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/assert.h \
-	C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h \
-	C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/bits/limits.h \
-	C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h \
-	C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/features.h \
-	C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/limits.h \
-	C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdarg.h \
-	C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdbool.h \
-	C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stddef.h \
-	C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h \
-	C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h \
-	C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h \
-	C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/string.h \
-	C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/strings.h \
-	C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h \
-	C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake \
 	C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-WebAssembly_Qt_6_4_3-Debug/.qt_plugins/Qt6_QmlPlugins_Imports_appcomtrac.cmake \
 	C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-WebAssembly_Qt_6_4_3-Debug/.qtc/package-manager/auto-setup.cmake \
 	C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-WebAssembly_Qt_6_4_3-Debug/.rcc/qmlcache/appcomtrac_qmlcache_loader.cpp \
@@ -990,4 +982,21 @@ appcomtrac_autogen/timestamp: \
 	C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/user.cpp \
 	C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/user.h \
 	C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/main.cpp \
+	C:/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h \
+	C:/emsdk/upstream/emscripten/cache/sysroot/include/assert.h \
+	C:/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h \
+	C:/emsdk/upstream/emscripten/cache/sysroot/include/bits/limits.h \
+	C:/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h \
+	C:/emsdk/upstream/emscripten/cache/sysroot/include/features.h \
+	C:/emsdk/upstream/emscripten/cache/sysroot/include/limits.h \
+	C:/emsdk/upstream/emscripten/cache/sysroot/include/stdarg.h \
+	C:/emsdk/upstream/emscripten/cache/sysroot/include/stdbool.h \
+	C:/emsdk/upstream/emscripten/cache/sysroot/include/stddef.h \
+	C:/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h \
+	C:/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h \
+	C:/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h \
+	C:/emsdk/upstream/emscripten/cache/sysroot/include/string.h \
+	C:/emsdk/upstream/emscripten/cache/sysroot/include/strings.h \
+	C:/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h \
+	C:/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

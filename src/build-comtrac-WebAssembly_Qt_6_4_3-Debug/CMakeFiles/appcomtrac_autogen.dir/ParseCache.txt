@@ -87,23 +87,23 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medication.h
  mdp:C:/Qt/6.4.3/wasm_32/include/QtCore/qvarlengtharray.h
  mdp:C:/Qt/6.4.3/wasm_32/include/QtCore/qvector.h
  mdp:C:/Qt/6.4.3/wasm_32/include/QtCore/qversiontagging.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/assert.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/bits/limits.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/features.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/limits.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdarg.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdbool.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stddef.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/string.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/strings.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/intaketime.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/assert.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/bits/limits.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/features.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/limits.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdarg.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdbool.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stddef.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/string.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/strings.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/dbmanager.h
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptom.h
  mmc:Q_OBJECT
@@ -192,22 +192,22 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptom.h
  mdp:C:/Qt/6.4.3/wasm_32/include/QtCore/qvarlengtharray.h
  mdp:C:/Qt/6.4.3/wasm_32/include/QtCore/qvector.h
  mdp:C:/Qt/6.4.3/wasm_32/include/QtCore/qversiontagging.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/assert.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/bits/limits.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/features.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/limits.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdarg.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdbool.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stddef.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/string.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/strings.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/assert.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/bits/limits.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/features.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/limits.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdarg.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdbool.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stddef.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/string.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/strings.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/message.h
  mmc:Q_OBJECT
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/message.h
@@ -276,16 +276,16 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/message.h
  mdp:C:/Qt/6.4.3/wasm_32/include/QtCore/qtypeinfo.h
  mdp:C:/Qt/6.4.3/wasm_32/include/QtCore/qutf8stringview.h
  mdp:C:/Qt/6.4.3/wasm_32/include/QtCore/qversiontagging.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/assert.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/features.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdarg.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdbool.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stddef.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/string.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/strings.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/assert.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/features.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdarg.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdbool.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stddef.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/string.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/strings.h
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/intaketime.h
  mmc:Q_OBJECT
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/intaketime.h
@@ -354,16 +354,16 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/intaketime.h
  mdp:C:/Qt/6.4.3/wasm_32/include/QtCore/qtypeinfo.h
  mdp:C:/Qt/6.4.3/wasm_32/include/QtCore/qutf8stringview.h
  mdp:C:/Qt/6.4.3/wasm_32/include/QtCore/qversiontagging.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/assert.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/features.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdarg.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdbool.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stddef.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/string.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/strings.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/assert.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/features.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdarg.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdbool.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stddef.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/string.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/strings.h
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medicationmodel.h
  mmc:Q_OBJECT
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medicationmodel.h
@@ -459,26 +459,26 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medicationmodel.h
  mdp:C:/Qt/6.4.3/wasm_32/include/QtSql/qtsql-config.h
  mdp:C:/Qt/6.4.3/wasm_32/include/QtSql/qtsqlexports.h
  mdp:C:/Qt/6.4.3/wasm_32/include/QtSql/qtsqlglobal.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/assert.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/bits/limits.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/features.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/limits.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdarg.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdbool.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stddef.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/string.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/strings.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/intaketime.h
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/medication.h
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/message.h
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/messagemodel.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/assert.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/bits/limits.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/features.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/limits.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdarg.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdbool.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stddef.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/string.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/strings.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptommodel.h
  mmc:Q_OBJECT
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptommodel.h
@@ -580,23 +580,23 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptommodel.h
  mdp:C:/Qt/6.4.3/wasm_32/include/QtSql/qtsql-config.h
  mdp:C:/Qt/6.4.3/wasm_32/include/QtSql/qtsqlexports.h
  mdp:C:/Qt/6.4.3/wasm_32/include/QtSql/qtsqlglobal.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/assert.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/bits/limits.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/features.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/limits.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdarg.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdbool.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stddef.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/string.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/strings.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/symptom.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/assert.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/bits/limits.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/features.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/limits.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdarg.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdbool.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stddef.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/string.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/strings.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/messagemodel.h
  mmc:Q_OBJECT
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/messagemodel.h
@@ -665,17 +665,17 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/messagemodel.h
  mdp:C:/Qt/6.4.3/wasm_32/include/QtCore/qtypeinfo.h
  mdp:C:/Qt/6.4.3/wasm_32/include/QtCore/qutf8stringview.h
  mdp:C:/Qt/6.4.3/wasm_32/include/QtCore/qversiontagging.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/assert.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/features.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdarg.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdbool.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stddef.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/string.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/strings.h
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/message.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/assert.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/features.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdarg.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdbool.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stddef.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/string.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/strings.h
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/user.h
  mmc:Q_OBJECT
  mdp:C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/user.h
@@ -744,16 +744,16 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/user.h
  mdp:C:/Qt/6.4.3/wasm_32/include/QtCore/qtypeinfo.h
  mdp:C:/Qt/6.4.3/wasm_32/include/QtCore/qutf8stringview.h
  mdp:C:/Qt/6.4.3/wasm_32/include/QtCore/qversiontagging.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/assert.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/features.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdarg.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdbool.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stddef.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/string.h
- mdp:C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/strings.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/assert.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/features.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdarg.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdbool.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stddef.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/string.h
+ mdp:C:/emsdk/upstream/emscripten/cache/sysroot/include/strings.h
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-WebAssembly_Qt_6_4_3-Debug/.rcc/qmlcache/appcomtrac_qmlcache_loader.cpp
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/dbmanager.cpp
 C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/intaketime.cpp

@@ -1,12 +1,12 @@
 The target system is: Emscripten - 1 - x86
 The host system is: Windows - 10.0.19045 - AMD64
-The target system is: Emscripten - 1 - x86
-The host system is: Windows - 10.0.19045 - AMD64
 Performing C++ SOURCE FILE Test HAVE_STDATOMIC succeeded with the following output:
 Change Dir: C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-WebAssembly_Qt_6_4_3-Debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Qt/Tools/Ninja/ninja.exe cmTC_2900c && [1/2] Building CXX object CMakeFiles/cmTC_2900c.dir/src.cxx.o
-[2/2] Linking CXX executable cmTC_2900c.js
+Run Build Command(s):C:/Qt/Tools/Ninja/ninja.exe cmTC_50838 && [1/2] Building CXX object CMakeFiles/cmTC_50838.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_50838.js
+cache:INFO: generating system asset: symbol_lists/d8f5cff6d7609e4aa3a1b19d55e9f09080f15a29.json... (this will be cached in "C:\emsdk\upstream\emscripten\cache\symbol_lists\d8f5cff6d7609e4aa3a1b19d55e9f09080f15a29.json" for subsequent builds)
+cache:INFO:  - ok
 
 
 Source file was:
@@ -35,8 +35,8 @@ int main(int, char **)
 Performing C++ SOURCE FILE Test HAVE_GETTIME succeeded with the following output:
 Change Dir: C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-WebAssembly_Qt_6_4_3-Debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Qt/Tools/Ninja/ninja.exe cmTC_cdc4f && [1/2] Building CXX object CMakeFiles/cmTC_cdc4f.dir/src.cxx.o
-[2/2] Linking CXX executable cmTC_cdc4f.js
+Run Build Command(s):C:/Qt/Tools/Ninja/ninja.exe cmTC_a06c3 && [1/2] Building CXX object CMakeFiles/cmTC_a06c3.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_a06c3.js
 
 
 Source file was:
@@ -50,8 +50,8 @@ int main(int, char **) {
 Performing C++ SOURCE FILE Test HAVE_EGL succeeded with the following output:
 Change Dir: C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-WebAssembly_Qt_6_4_3-Debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Qt/Tools/Ninja/ninja.exe cmTC_84ce8 && [1/2] Building CXX object CMakeFiles/cmTC_84ce8.dir/src.cxx.o
-[2/2] Linking CXX executable cmTC_84ce8.js
+Run Build Command(s):C:/Qt/Tools/Ninja/ninja.exe cmTC_f9cbe && [1/2] Building CXX object CMakeFiles/cmTC_f9cbe.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_f9cbe.js
 
 
 Source file was:

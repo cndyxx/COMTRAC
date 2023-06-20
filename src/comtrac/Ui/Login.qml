@@ -53,6 +53,21 @@ Item {
             }
         }
 
+        Text{
+            id: textField
+            text: "Passwort vergessen?"
+            anchors.horizontalCenter: parent.horizontalCenter
+            font.family: "Arial"
+            font.pixelSize: 16
+            color: "dimgrey"
+//            MouseArea {
+//                anchors.fill: parent
+//                onClicked: {
+//                    textField.forceActiveFocus() // Fokus auf das Textfeld setzen
+//                }
+//            }
+        }
+
     }
 
 

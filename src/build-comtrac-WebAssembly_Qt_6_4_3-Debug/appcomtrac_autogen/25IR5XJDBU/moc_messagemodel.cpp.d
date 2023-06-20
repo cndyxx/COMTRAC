@@ -64,14 +64,14 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-WebAssembly_Qt_6_4_3-D
   C:/Qt/6.4.3/wasm_32/include/QtCore/qtypeinfo.h \
   C:/Qt/6.4.3/wasm_32/include/QtCore/qutf8stringview.h \
   C:/Qt/6.4.3/wasm_32/include/QtCore/qversiontagging.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/assert.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/features.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdarg.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdbool.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stddef.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/string.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/strings.h \
-  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/message.h
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/message.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/assert.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/features.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/stdarg.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/stdbool.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/stddef.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/string.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/strings.h

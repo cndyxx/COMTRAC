@@ -7,7 +7,9 @@ Item {
 
     property var messageData: messageListView.model[index]
     property int textMargin: 15
-    property color messageColor: "silver"
+    property date currentTime: new Date()
+    property string inputText: messageData.text
+    property int dotCount: 1
 
     width: parent.width
     height: contentItem.height
@@ -42,6 +44,8 @@ Item {
                 return textItem.implicitHeight + buttonsColumn.height;
             case 4:
                 return textItem.implicitHeight +buttonsRow.height;
+            case 5:
+                return textItem.implicitHeight;
             default:
                 return 0;
             }
@@ -51,7 +55,12 @@ Item {
             id: messageBackground
             width: parent.width
             height: parent.height +20
-            color: messageColor
+            color: switch (messageData.type) {
+                   case 2:
+                       return "grey";
+                   default:
+                       return "silver";
+                   }
             radius: 10
             ColumnLayout {
                 Layout.fillWidth: true
@@ -60,7 +69,7 @@ Item {
                 spacing: 10
                 Text {
                     id: textItem
-                    text: qsTr(messageData.text)
+                    text: qsTr(inputText)
                     wrapMode: Text.WordWrap
                     width: parent.width
                     font.pixelSize: 16
@@ -84,8 +93,6 @@ Item {
                         spacing: 10
 
                         Layout.alignment: Qt.AlignHCenter
-                        //                        anchors.left: parent.left
-                        //                        anchors.leftMargin: 15
                         anchors.horizontalCenter: parent.horizontalCenter
                         Repeater {
 
@@ -100,7 +107,8 @@ Item {
                                     // Handle button click
                                     timer.start()
                                     nextMessage()
-                                     //messageColor: "darkgrey"
+
+                                    //messageColor: "darkgrey"
 
 
                                 }
@@ -114,17 +122,17 @@ Item {
 
                     visible: messageData.type === 2
 
+
                     //                    visible: true
                     Timer {
                         id: timer
                         interval: 3000 // Timer-Intervall von 1 Sekunde (1000 Millisekunden)
                         repeat: false // Timer wird nicht wiederholt
-
                         onTriggered: {
-                            // Timer abgelaufen, hier können Sie den Code für die Aktion ausführen
-                            console.log("Timer abgelaufen");
-                            nextMessage()
-                            messageColor= "silver"
+                            nextMessage();
+                            dotTimer.stop();
+                            dotTimer.running = false;
+                            repeatTimer.visible = false;
                         }
                     }
 
@@ -152,6 +160,7 @@ Item {
                                         // Entfernen des Medikaments aus der Bestellung
                                         medModel.deleteOrderedMedication(medication.model[index].name)
                                     }
+                                    dotTimer.start()
                                 }
                             }
                         }
@@ -166,8 +175,6 @@ Item {
                                 // Handle button click
                                 nextMessage()
                                 medModel.getOrderedMedication()
-
-
                             }
 
                         }
@@ -210,7 +217,55 @@ Item {
                     }
 
                 }
+                Item {
+                    visible:  messageData.type === 5
+                }
+
+                Item {
+                    id: repeatTimer
+                    visible: messageData.type === 2
+
+                    Text {
+                        id: waitingText
+                        font.pixelSize: 20
+                        font.family: "Arial"
+                        color: "dimgrey"
+                        text: ""
+                    }
+
+                    Timer {
+                        id: dotTimer
+                        property int count: 0
+                        interval: 1000 // 1 second interval
+                        running: true
+                        repeat: true
+                        onTriggered: {
+                            dotCount = (dotCount % 3) + 1 // Increment dot count cyclically from 1 to 3
+                            waitingText.text = ".".repeat(dotCount)
+                            count += 1;
+                            if(count === 4){
+                                dotTimer.running = false;
+                                repeatTimer.visible = false;
+                            }
+                        }
+                    }
+                }
+
             }
+        }
+        Text {
+            anchors.top: messageBackground.bottom
+            anchors.topMargin: 2
+            anchors.right: if(messageData.type === 2) return parent.right
+            font.family: "Arial"
+            font.pixelSize: 12
+
+            text: if(messageData.type !== 2){
+                      return currentTime.toLocaleTimeString(Qt.locale("de_DE"), "hh:mm") + " von Chatbot"
+                  } else {
+
+                      return currentTime.toLocaleTimeString(Qt.locale("de_DE"), "hh:mm")
+                  }
         }
     }
 }

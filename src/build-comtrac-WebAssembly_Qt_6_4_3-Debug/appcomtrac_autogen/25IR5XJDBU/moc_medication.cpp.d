@@ -83,20 +83,20 @@ C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-WebAssembly_Qt_6_4_3-D
   C:/Qt/6.4.3/wasm_32/include/QtCore/qvarlengtharray.h \
   C:/Qt/6.4.3/wasm_32/include/QtCore/qvector.h \
   C:/Qt/6.4.3/wasm_32/include/QtCore/qversiontagging.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/assert.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/bits/limits.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/features.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/limits.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdarg.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdbool.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stddef.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/string.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/strings.h \
-  C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h \
-  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/intaketime.h
+  C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Models/intaketime.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/assert.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/bits/limits.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/features.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/limits.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/stdarg.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/stdbool.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/stddef.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/string.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/strings.h \
+  C:/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h

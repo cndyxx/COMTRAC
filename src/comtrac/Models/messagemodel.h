@@ -27,7 +27,6 @@ public slots:
     void setMessages(const QList<Message *> &newMessages);
 
 
-
 signals:
 
 

@@ -13,6 +13,8 @@
 /comtrac/Ui/Chat.qml
 /comtrac/Ui/singleSymptomHistory.qml
 /comtrac/Ui/VideoTelephony.qml
+/comtrac/Ui/WaitingRoom.qml
+/comtrac/Ui/VirtualAppointment.qml
 /comtrac/Ui/Components/StackViewPage.qml
 /comtrac/Ui/Components/Background.qml
 /comtrac/Ui/Components/TextFieldTemplate.qml
@@ -39,3 +41,5 @@
 /comtrac/Ui/Components/MessageDelegate.qml
 /comtrac/Ui/Components/ChatInput.qml
 /comtrac/Ui/Components/CheckBoxTemplate.qml
+/comtrac/Ui/Components/IntakeDelegate.qml
+/comtrac/Ui/Components/CalendarWeeksTemplate.qml

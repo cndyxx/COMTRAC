@@ -27,10 +27,8 @@ int main(int argc, char *argv[])
     //Verknüpfung zwischen QML und C++-Model
     QQmlContext *ctx = engine.rootContext();
 
-
     MedicationModel *medModel = new MedicationModel();
     engine.rootContext()->setContextProperty("medModel", medModel);
-
 
     SymptomModel *symptomModel = new SymptomModel();
     engine.rootContext()->setContextProperty("symptomModel", symptomModel);
@@ -39,6 +37,7 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty("messageModel", messageModel);
     engine.load(url);
     medModel->setMessageModel(messageModel);
+
 
     return app.exec();
 }

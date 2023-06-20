@@ -5,6 +5,7 @@ import QtQuick.Layouts
 import "./Components"
 
 Item {
+    id: medPage
     property var initialTime: new Date()
     property int intakeCount: 1
     property int pageState: 0
@@ -13,7 +14,7 @@ Item {
     property string name: medication.name
     property var intakeTime: medication.intakeTime
     property int intakePerDay: medication.intakePerDay
-    property date reminderTime: medication.reminderTime
+    property string reminderTime: medication.reminderTime
 
     Connections {
         target: medModel  // Das Symptom-Modellobjekt in QML
@@ -72,7 +73,7 @@ Item {
             focus: true
             enabled: pageState === 0 || pageState === 2 //aktiviert wenn status 0 und 2
             Rectangle {
-                width: header.width
+                width: header.width * 0.9
                 height: 2
                 color: "grey"
                 anchors.top: medicationInput.bottom
@@ -89,10 +90,25 @@ Item {
             font.family: "Arial"
         }
         ComboBox {
+            font.family: "Arial"
+            font.pixelSize: 16
             enabled: pageState === 0 || pageState === 2 //aktiviert wenn status 0 und 2
+
+            background: Rectangle {
+                color: "transparent"
+                border.color: "transparent"
+                Rectangle {
+                    height: 2
+                    width: parent.width
+                    color: "black"
+                    anchors.bottom: parent.bottom
+                }
+            }
+
+
             currentIndex: {
                 if(pageState != 0){
-                    return intakePerDay;
+                    return intakePerDay-1;
                 } else {
                     return 0;
                 }
@@ -100,7 +116,6 @@ Item {
 
             property int intakeNumber
             textRole: "text"
-            valueRole: "intakeNumber"
             model: ListModel {
                 id: intakePerDayModel
                 ListElement { text: "Einmal am Tag"}
@@ -122,10 +137,20 @@ Item {
             height: parent.height * 0.2
             model:  intakeTime
             currentIndex: 0
-            ScrollBar.vertical: ScrollBar { active: true }
+            ScrollBar.vertical: ScrollBar {
+                anchors.right: medPage.right
+
+                active: true
+                background: Rectangle {
+                    color: "transparent"
+                    border.color: "transparent"
+                    radius: 50
+                }
+
+            }
             clip: true
             spacing: 10
-            delegate: ButtonTemplate{
+            delegate: IntakeDelegate{
                 id: intakeTimeBtn
                 enabled: pageState === 0 || pageState === 2
                 property string time: "08:00 AM"
@@ -152,28 +177,54 @@ Item {
                 font.family: "Arial"
                 font.pixelSize: 23
             }
-            SwitchTemplate{
-                enabled: pageState === 0 || pageState === 2
+            SwitchTemplate {
                 id: switchReminder
                 anchors.left: txtReminder.right
                 anchors.leftMargin: 60
+                checked: if (switchReminder.checked) {
+                            radioButtonTimeOfTaking.checked = true;
+                          } else {
+                            radioButtonTimeOfTaking.checked = false;
+                            radioButtonTenMinutesBefore.checked = false;
+                          }
+                enabled: pageState === 0 || pageState === 2
             }
         }
-        RadioButtonTemplate{
-            enabled: pageState === 0 || pageState === 2
+        RadioButtonTemplate {
             id: radioButtonTimeOfTaking
+            enabled: pageState === 0 || pageState === 2
             text: qsTr("Zum Zeitpunkt der Einnahme")
             font.pixelSize: 15
-            checked: switchReminder.checked === true
+            checked: switchReminder.checked && pageState !== 0
         }
-        RadioButtonTemplate{
-            enabled: pageState === 0 || pageState === 2
+        RadioButtonTemplate {
             id: radioButtonTenMinutesBefore
+            enabled: pageState === 0 || pageState === 2
             text: qsTr("10 Minuten vorher")
             font.pixelSize: 15
-            //checked:
+            checked: switchReminder.checked && pageState !== 0
         }
+        Component.onCompleted: {
+            if(pageState!= 0){
+                if(reminderTime === radioButtonTenMinutesBefore.text){
+                    radioButtonTenMinutesBefor.checked = true;
+                } else if(reminderTime === radioButtonTimeOfTaking.text){
+                    radioButtonTimeOfTaking.checked = true;
+                } else {
+                    switchReminder.checked = false;
+                }
+            }
+            else {
+                if (switchReminder.checked) {
+                    radioButtonTimeOfTaking.checked = true;
+                } else {
+                    radioButtonTimeOfTaking.checked = false;
+                    radioButtonTenMinutesBefore.checked = false;
+                }
+            }
 
+
+        }
         RowLayout {
             ButtonTemplate {
                 text: {

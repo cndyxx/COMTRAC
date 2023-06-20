@@ -207,7 +207,7 @@ void MedicationModel::updateMedication(QString name, int intakePerDay, QList<QTi
     if(!query.exec())
         qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
 
-                                                                query.prepare("UPDATE Intake SET intakeTime = ? WHERE intakeID IN (SELECT intakeID FROM MedicationIntake WHERE medicationID = ?)");
+    query.prepare("UPDATE Intake SET intakeTime = ? WHERE intakeID IN (SELECT intakeID FROM MedicationIntake WHERE medicationID = ?)");
     for(int i = 0; i < intakeTimes.size(); i++){
         query.bindValue(0, intakeTimes[i]);
         query.bindValue(1, medicationId);
@@ -277,7 +277,6 @@ void MedicationModel::addMedication(QString name,int intakePerDay,QList<QTime> i
 
     if(query.exec()) {
         medicationID = query.lastInsertId().toInt();
-        std::cout << "LETZTE ID: " + medicationID << std::endl;
         addIntakeTime(medicationID, intakeTimes);
         m_medications.push_back(new Medication(medicationID, name, intakePerDay, intakeTimes, reminderTime, this));
     }

@@ -110,6 +110,20 @@ namespace _comtrac_Ui_VideoTelephony_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _comtrac_Ui_WaitingRoom_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _comtrac_Ui_VirtualAppointment_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 namespace _comtrac_Ui_Components_StackViewPage_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
@@ -292,6 +306,20 @@ namespace _comtrac_Ui_Components_CheckBoxTemplate_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _comtrac_Ui_Components_IntakeDelegate_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _comtrac_Ui_Components_CalendarWeeksTemplate_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 
 }
 namespace {
@@ -321,6 +349,8 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Chat.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Chat_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/singleSymptomHistory.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_singleSymptomHistory_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/VideoTelephony.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_VideoTelephony_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/WaitingRoom.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_WaitingRoom_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/VirtualAppointment.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_VirtualAppointment_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/StackViewPage.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_StackViewPage_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/Background.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_Background_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/TextFieldTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_TextFieldTemplate_qml::unit);
@@ -347,6 +377,8 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/MessageDelegate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_MessageDelegate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/ChatInput.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_ChatInput_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/CheckBoxTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_CheckBoxTemplate_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/IntakeDelegate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_IntakeDelegate_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/CalendarWeeksTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_CalendarWeeksTemplate_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;
