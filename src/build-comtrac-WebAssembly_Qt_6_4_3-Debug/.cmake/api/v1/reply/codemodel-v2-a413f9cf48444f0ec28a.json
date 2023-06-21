@@ -1,0 +1,151 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-6e06fa5a82cedbe85f5e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "comtrac",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-b93fcc0a1e82b29c906f.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-84b3e4e70722b83c7d67.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-1d59d868248d07e2b145.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appcomtrac::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appcomtrac-Debug-484fe64c90a7788ef274.json",
+					"name" : "appcomtrac",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appcomtrac_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appcomtrac_autogen-Debug-a33a59e5c3c9c58b7bea.json",
+					"name" : "appcomtrac_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appcomtrac_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appcomtrac_autogen_timestamp_deps-Debug-c02c51dc144efef52673.json",
+					"name" : "appcomtrac_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appcomtrac_other_files::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appcomtrac_other_files-Debug-5d16d8fdcd8ab618c924.json",
+					"name" : "appcomtrac_other_files",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appcomtrac_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appcomtrac_qmllint-Debug-b6bbd6e66877dae34648.json",
+					"name" : "appcomtrac_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appcomtrac_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appcomtrac_qmllint_json-Debug-6749591cdb690a12037b.json",
+					"name" : "appcomtrac_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appcomtrac_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appcomtrac_qmltyperegistration-Debug-1ad47a1263dc0c6e8af1.json",
+					"name" : "appcomtrac_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appcomtrac_tooling::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appcomtrac_tooling-Debug-b9fb443cbeeb6a6185ed.json",
+					"name" : "appcomtrac_tooling",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-WebAssembly_Qt_6_4_3-Debug",
+		"source" : "C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

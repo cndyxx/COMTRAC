@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.16)
 project(comtrac VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-#set(CMAKE_TOOLCHAIN_FILE C:/Users/cindy/AppData/Local/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake)
+set(CMAKE_TOOLCHAIN_FILE C:/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake)
 
 
 find_package(Qt6 6.4 REQUIRED COMPONENTS Quick)

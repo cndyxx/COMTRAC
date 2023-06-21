@@ -1,0 +1,17 @@
+{
+    "classes": [
+        {
+            "className": "IntakeTime",
+            "object": true,
+            "qualifiedClassName": "IntakeTime",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "intaketime.h",
+    "outputRevision": 68
+}

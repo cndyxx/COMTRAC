@@ -11,11 +11,14 @@
 
 MedicationModel::MedicationModel(QObject *parent) : QSqlQueryModel(parent)
 {
-    getMedication();
+    //getMedication();
     QTime time(8,0,0);
     QList<QTime> m_intakeTime;
     m_intakeTime.push_back(time);
     m_singleMedication = new Medication(0, "", 1, m_intakeTime, "", this);
+    m_medications.push_back(new Medication(1, "Hustensaft", 2, m_intakeTime, "", this));
+    m_medications.push_back(new Medication(2, "Ibuprofen", 3, m_intakeTime, "", this));
+    m_medications.push_back(new Medication(3, "Salbe", 3, m_intakeTime, "", this));
 }
 
 MedicationModel::~MedicationModel()
@@ -175,20 +178,20 @@ void MedicationModel::deleteMedication()
     }
     query.prepare("DELETE FROM Medications WHERE medicationID = ?");
     query.bindValue(0, id);
-    if(query.exec()) {
-        for (int i = 0; i < m_medications.size(); i++)
+    //    if(query.exec()) {
+    for (int i = 0; i < m_medications.size(); i++)
+    {
+        Medication* medication = m_medications.at(i);
+        if (medication->id() == id)
         {
-            Medication* medication = m_medications.at(i);
-            if (medication->id() == id)
-            {
-                m_medications.removeAt(i);
-                delete medication; // Speicher freigeben
-                break;
-            }
+            m_medications.removeAt(i);
+            delete medication; // Speicher freigeben
+            break;
         }
-    } else {
-        qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
     }
+    //    } else {
+    //        qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
+    //    }
 
     emit medicationsChanged();
 
@@ -207,7 +210,7 @@ void MedicationModel::updateMedication(QString name, int intakePerDay, QList<QTi
     if(!query.exec())
         qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
 
-    query.prepare("UPDATE Intake SET intakeTime = ? WHERE intakeID IN (SELECT intakeID FROM MedicationIntake WHERE medicationID = ?)");
+                                                                query.prepare("UPDATE Intake SET intakeTime = ? WHERE intakeID IN (SELECT intakeID FROM MedicationIntake WHERE medicationID = ?)");
     for(int i = 0; i < intakeTimes.size(); i++){
         query.bindValue(0, intakeTimes[i]);
         query.bindValue(1, medicationId);
@@ -275,14 +278,14 @@ void MedicationModel::addMedication(QString name,int intakePerDay,QList<QTime> i
     query.bindValue(":intakePerDay", intakePerDay);
     query.bindValue(":reminderTime", reminderTime);
 
-    if(query.exec()) {
+//    if(query.exec()) {
         medicationID = query.lastInsertId().toInt();
         addIntakeTime(medicationID, intakeTimes);
         m_medications.push_back(new Medication(medicationID, name, intakePerDay, intakeTimes, reminderTime, this));
-    }
-    else {
-        qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
-    }
+//    }
+//    else {
+//        qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
+//    }
     emit medicationsChanged();
 }
 

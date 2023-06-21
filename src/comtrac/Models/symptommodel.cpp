@@ -9,8 +9,17 @@ using std::ostringstream;
 
 SymptomModel::SymptomModel(QObject *parent) : QSqlQueryModel(parent)
 {
-
-
+    QDate date;
+    QTime time;
+    m_symptoms.push_back(new Symptom(0, "Fieber", "leicht", 1, "", QDate(2023,6,19) , QTime(9,30,0), this));
+    m_symptoms.push_back(new Symptom(1, "Gliederschmerzen", "leicht", 1, "", QDate(2023,6,24) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(2, "Durchfall", "leicht", 6, "", QDate(2023,6,21) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(3, "Hautausschlag", "leicht", 1, "", QDate(2023,6,28) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(4, "Fieber", "leicht", 1, "", QDate(2023,6,19) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(5, "Gliederschmerzen", "leicht", 1, "", QDate(2023,7,15) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(6, "Durchfall", "leicht", 5, "", QDate(2023,7,12) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(7, "Nachtschweiß", "leicht", 1, "", QDate(2023,7,14) , QTime(9,30,0),  this));
+        m_symptoms.push_back(new Symptom(7, "Nachtschweiß", "leicht", 1, "", QDate(2023,7,16) , QTime(9,30,0),  this));
 }
 
 
@@ -47,8 +56,8 @@ void SymptomModel::deleteSymptom()
 
     int symptomId = m_singleSymptom->id();
     std::cout << "ID die gelöscht wird: " << symptomId << std::endl;
-    //Symptom aus der Datenbank entfernen
-    QSqlQuery query;
+            //Symptom aus der Datenbank entfernen
+            QSqlQuery query;
     query.prepare("DELETE FROM symptoms WHERE symptomID = ?");
     query.bindValue(0, symptomId);
     qDebug() << query.exec();
@@ -81,7 +90,7 @@ void SymptomModel::updateSymptom(QString name, QString intensity, int frequency,
     query.bindValue(4, id);
     if(!query.exec())
         qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
-    emit symptomsChanged();
+                                                                emit symptomsChanged();
 
 }
 
@@ -237,50 +246,66 @@ void SymptomModel::getSymptomsOfDate(QString entry_Date)
     if(! m_daySymptoms.isEmpty()){
         m_daySymptoms.clear();
     }
-    QSqlQuery query;
-    query.prepare("SELECT * FROM Symptoms WHERE entryDate = ?");
-    query.bindValue(0, entry_Date);
-    if(query.exec()){
-        while(query.next()){
-            int id = query.value(0).toInt();
-            QString name = query.value(1).toString();
-            QString intensity = query.value(2).toString();
-            int frequency = query.value(3).toInt();
-            QString duration = query.value(4).toString();
-            QDate entryDate = query.value(5).toDate();
-            QTime entryTime = query.value(6).toTime();
-            m_daySymptoms.push_back(new Symptom(id, name, intensity, frequency, duration, entryDate, entryTime, this));
-        }
-    } else {
-        qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
-    }
+//    QSqlQuery query;
+//    query.prepare("SELECT * FROM Symptoms WHERE entryDate = ?");
+//    query.bindValue(0, entry_Date);
+//    if(query.exec()){
+//        while(query.next()){
+//            int id = query.value(0).toInt();
+//            QString name = query.value(1).toString();
+//            QString intensity = query.value(2).toString();
+//            int frequency = query.value(3).toInt();
+//            QString duration = query.value(4).toString();
+//            QDate entryDate = query.value(5).toDate();
+//            QTime entryTime = query.value(6).toTime();
+//            m_daySymptoms.push_back(new Symptom(id, name, intensity, frequency, duration, entryDate, entryTime, this));
+//        }
+//    } else {
+//        qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
+//    }
+    QDate date(2023,6,21);
+    QTime time(12,8);
+    m_daySymptoms.push_back(new Symptom(1, "Husten", "", 8, "Mehr als 24 Stundne", date , time, this));
     emit daySymptomsChanged();
 }
 
-void SymptomModel::getSymptomsOfWeek(QString startDate, QString endDate)
+void SymptomModel::getSymptomsOfWeek(QString start_date, QString end_date)
 {
     if(! m_weekSymptoms.isEmpty()){
         m_weekSymptoms.clear();
     }
 
-    QSqlQuery query;
-    query.prepare("SELECT * FROM Symptoms WHERE entryDate BETWEEN ? AND ? GROUP BY [name]");
-    query.bindValue(0, startDate);
-    query.bindValue(1, endDate);
-    if(query.exec()) {
-        while(query.next()){
-            int id = query.value(0).toInt();
-            QString name = query.value(1).toString();
-            QString intensity = query.value(2).toString();
-            int frequency = query.value(3).toInt();
-            QString duration = query.value(4).toString();
-            QDate entryDate = query.value(5).toDate();
-            QTime entryTime = query.value(6).toTime();
-            m_weekSymptoms.push_back(new Symptom(id, name, intensity, frequency, duration, entryDate, entryTime, this));
+    //    QSqlQuery query;
+    //    query.prepare("SELECT * FROM Symptoms WHERE entryDate BETWEEN ? AND ? GROUP BY [name]");
+    //    query.bindValue(0, startDate);
+    //    query.bindValue(1, endDate);
+    //    if(query.exec()) {
+    //        while(query.next()){
+    //            int id = query.value(0).toInt();
+    //            QString name = query.value(1).toString();
+    //            QString intensity = query.value(2).toString();
+    //            int frequency = query.value(3).toInt();
+    //            QString duration = query.value(4).toString();
+    //            QDate entryDate = query.value(5).toDate();
+    //            QTime entryTime = query.value(6).toTime();
+    //            m_weekSymptoms.push_back(new Symptom(id, name, intensity, frequency, duration, entryDate, entryTime, this));
+    //        }
+    //    }else {
+    //        qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
+    //    }
+    // Funktion zum Filtern der Einträge zwischen den gegebenen Datumsangaben
+
+    QDate startDate = QDate::fromString(start_date,"yyyy-MM-dd");
+    QDate endDate = QDate::fromString(end_date,"yyyy-MM-dd");
+
+    for (Symptom* symptom : m_symptoms) {
+        if (symptom->entryDate() >= startDate && symptom->entryDate() <= endDate) {
+            m_weekSymptoms.push_back(symptom);
         }
-    }else {
-        qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
+
     }
+
+
     emit weekSymptomsChanged();
 }
 

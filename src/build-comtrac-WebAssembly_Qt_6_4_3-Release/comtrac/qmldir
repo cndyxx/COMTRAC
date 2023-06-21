@@ -1,0 +1,45 @@
+module comtrac
+typeinfo appcomtrac.qmltypes
+prefer :/comtrac/
+Main 1.0 Ui/Main.qml
+HomeScreen 1.0 Ui/HomeScreen.qml
+Login 1.0 Ui/Login.qml
+Medication 1.0 Ui/Medication.qml
+SymptomDiary 1.0 Ui/SymptomDiary.qml
+MedicationPlan 1.0 Ui/MedicationPlan.qml
+EditSymptom 1.0 Ui/EditSymptom.qml
+SymptomHistory 1.0 Ui/SymptomHistory.qml
+WeeklyHistory 1.0 Ui/WeeklyHistory.qml
+Chat 1.0 Ui/Chat.qml
+VideoTelephony 1.0 Ui/VideoTelephony.qml
+WaitingRoom 1.0 Ui/WaitingRoom.qml
+VirtualAppointment 1.0 Ui/VirtualAppointment.qml
+StackViewPage 1.0 Ui/Components/StackViewPage.qml
+Background 1.0 Ui/Components/Background.qml
+TextFieldTemplate 1.0 Ui/Components/TextFieldTemplate.qml
+ButtonTemplate 1.0 Ui/Components/ButtonTemplate.qml
+SideMenu 1.0 Ui/Components/SideMenu.qml
+RadioButtonTemplate 1.0 Ui/Components/RadioButtonTemplate.qml
+SwitchTemplate 1.0 Ui/Components/SwitchTemplate.qml
+SliderTemplate 1.0 Ui/Components/SliderTemplate.qml
+HeaderTemplate 1.0 Ui/Components/HeaderTemplate.qml
+TimePickerTemplate 1.0 Ui/Components/TimePickerTemplate.qml
+CalendarTemplate 1.0 Ui/Components/CalendarTemplate.qml
+ComboBoxTemplate 1.0 Ui/Components/ComboBoxTemplate.qml
+RoundButtonTemplate 1.0 Ui/Components/RoundButtonTemplate.qml
+IconButton 1.0 Ui/Components/IconButton.qml
+IntakeTimeList 1.0 Ui/Components/IntakeTimeList.qml
+MedicationDelegate 1.0 Ui/Components/MedicationDelegate.qml
+SearchTemplate 1.0 Ui/Components/SearchTemplate.qml
+SymptomDelegate 1.0 Ui/Components/SymptomDelegate.qml
+MonthGridDelegate 1.0 Ui/Components/MonthGridDelegate.qml
+TextTemplate 1.0 Ui/Components/TextTemplate.qml
+EditSymptomDelegate 1.0 Ui/Components/EditSymptomDelegate.qml
+SymptomList 1.0 Ui/Components/SymptomList.qml
+DialogTemplate 1.0 Ui/Components/DialogTemplate.qml
+MessageDelegate 1.0 Ui/Components/MessageDelegate.qml
+ChatInput 1.0 Ui/Components/ChatInput.qml
+CheckBoxTemplate 1.0 Ui/Components/CheckBoxTemplate.qml
+IntakeDelegate 1.0 Ui/Components/IntakeDelegate.qml
+CalendarWeeksTemplate 1.0 Ui/Components/CalendarWeeksTemplate.qml
+
