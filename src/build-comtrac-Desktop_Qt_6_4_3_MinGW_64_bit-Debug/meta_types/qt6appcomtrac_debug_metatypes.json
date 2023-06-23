@@ -388,7 +388,7 @@
                     {
                         "access": "public",
                         "name": "getOrderedMedication",
-                        "returnType": "QString"
+                        "returnType": "QList<QString>"
                     },
                     {
                         "access": "public",
@@ -515,6 +515,17 @@
                         ],
                         "name": "setMessages",
                         "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "medications",
+                                "type": "QList<QString>"
+                            }
+                        ],
+                        "name": "setMessageText",
+                        "returnType": "QString"
                     }
                 ],
                 "superClasses": [

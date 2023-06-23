@@ -30,20 +30,23 @@ Item {
         anchors.bottom: parent.bottom
         anchors.bottomMargin: graphicButton.height * 1.3
         width: parent.width
-        height: parent.height * 0.30
+        height: parent.height * 0.25
         model: symptom
         anchors.horizontalCenter: parent.horizontalCenter
         clip: true
+        ScrollBarTemplate {}
         delegate: SymptomDelegate {
             anchors.margins: 10
             width: parent.width * 0.9
-            height: 40
+            height: 50
 
             onClicked: {                
                 symptomModel.setSingleSymptom(symptomListView.model[index]);
                 stackView.push("EditSymptom.qml", {"pageState" : 1})
             }
         }
+
+
     }
     Connections {
         target: symptomModel  // Das Symptom-Modellobjekt in QML
@@ -68,9 +71,9 @@ Item {
             height: parent.height/2
         }
 
-        //buttonIcon: "\u1F4C8" //muss noch geändert werden in eine Graphik
+
         onClicked: {
-            symptomModel.getCalendarWeekDate(2023, 26); //Kalenderwoche 26
+            //symptomModel.getCalendarWeekDate(2023, 26); //Kalenderwoche 26
             stackView.push("SymptomHistory.qml")
         }
 

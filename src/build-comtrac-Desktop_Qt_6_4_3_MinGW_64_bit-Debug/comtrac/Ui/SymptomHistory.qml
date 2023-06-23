@@ -53,12 +53,12 @@ Item {
 
     ListModel{
         id: calendarWeekModel
-        ListElement{calendarWeek: '24'; backgroundColor: "lightgrey"; borderColor: "lightgrey"}
-        ListElement{calendarWeek: '25'; backgroundColor: "grey"; borderColor: "grey"}
-        ListElement{calendarWeek: '26'; backgroundColor: "lightgrey"; borderColor: "black"}
+        ListElement{calendarWeek: '24'; backgroundColor: "grey"; borderColor: "grey"}
+        ListElement{calendarWeek: '25'; backgroundColor: "darkgrey"; borderColor: "darkgrey"}
+        ListElement{calendarWeek: '26'; backgroundColor: "darkgrey"; borderColor: "black"}
         ListElement{calendarWeek: '27'; backgroundColor: "lightgrey"; borderColor: "lightgrey"}
-        ListElement{calendarWeek: '28'; backgroundColor: "darkgrey"; borderColor: "darkgrey"}
-        ListElement{calendarWeek: '29'; backgroundColor: "grey"; borderColor:  "grey"}
+        ListElement{calendarWeek: '28'; backgroundColor: "lightgrey"; borderColor: "lightgrey"}
+        ListElement{calendarWeek: '29'; backgroundColor: "lightgrey"; borderColor:  "lightgrey"}
         ListElement{calendarWeek: '30'; backgroundColor: "lightgrey"; borderColor: "lightgrey"}
         ListElement{calendarWeek: '31'; backgroundColor: "lightgrey"; borderColor: "lightgrey"}
 
@@ -74,6 +74,22 @@ Item {
         color: "white"
         border.width: 2
         border.color: "lightgrey"
+        Text{
+            text: "Juni"
+            font.pixelSize: 15
+            font.family: "Arial"
+            color: "dimgrey"
+            anchors.left: parent.left; anchors.leftMargin: 95
+            anchors.top: parent.top; anchors.topMargin: 5
+        }
+        Text{
+            text: "Juli"
+            font.pixelSize: 15
+            font.family: "Arial"
+            color: "dimgrey"
+            anchors.right: parent.right; anchors.rightMargin: 35
+            anchors.top: parent.top; anchors.topMargin: 5
+        }
         Rectangle {
             width: 12
             height: 12
@@ -91,7 +107,7 @@ Item {
             anchors.left: parent.left
             anchors.leftMargin: 18
             anchors.top: parent.top
-            anchors.topMargin: 20
+            anchors.topMargin: 25
             anchors.right: parent.right
             anchors.rightMargin: 30
             cellWidth: 60; cellHeight: 60
@@ -126,6 +142,7 @@ Item {
                 onClicked: {
                     console.log("Test")
                     symptomModel.getCalendarWeekDate(2023, calendarWeek);
+                    console.log("kalendwerocue: " + calendarWeek)
 
                 }
             }
@@ -163,7 +180,7 @@ Item {
                 RowLayout {
                     Repeater {
                         anchors.left: txtLittle.right
-                        model: ["lightgrey", "grey", "darkgrey", "black"]
+                        model: ["lightgrey", "darkgrey", "grey", "black"]
                         delegate: Rectangle {
                             width: 10
                             height:10
@@ -185,23 +202,26 @@ Item {
     ListView {
         id: symptomListView
         spacing: 15
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: 60
+        anchors.bottom: parent.bottom; anchors.bottomMargin: 5
+        anchors.top: borderRectangle.bottom; anchors.topMargin: 5
         width: parent.width
-        height: parent.height * 0.40
+        height: parent.height + 20
         model: symptom
         clip: true
+        ScrollBarTemplate {}
         anchors.horizontalCenter: parent.horizontalCenter
         delegate: SymptomDelegate {
+            id: symptomDelegate
             anchors.margins: 10
             width: parent.width * 0.9
-            height: 40
+            height: 50
 
             onClicked: {
-                symptomModel.setSingleSymptom(symptomListView.model[index]);
-                stackView.push("EditSymptom.qml", {"pageState" : 1})
+                symptomModel.getSymptomEntries(symptomListView.model[index].name);
+                stackView.push("singleSymptomHistory.qml")
             }
         }
+
     }
     
 }

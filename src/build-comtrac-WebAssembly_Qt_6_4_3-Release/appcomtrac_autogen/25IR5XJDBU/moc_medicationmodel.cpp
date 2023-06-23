@@ -174,7 +174,7 @@ Q_CONSTINIT static const uint qt_meta_data_MedicationModel[] = {
     QMetaType::Void, QMetaType::QString, QMetaType::Int, 0x80000000 | 9, QMetaType::QString,    7,    8,   10,   11,
     QMetaType::Void, QMetaType::QString,    7,
     QMetaType::Void, QMetaType::QString,    7,
-    QMetaType::QString,
+    QMetaType::QStringList,
     QMetaType::Void,
 
  // properties: name, type, flags
@@ -239,7 +239,7 @@ Q_CONSTINIT const QMetaObject MedicationModel::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         // method 'getOrderedMedication'
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QList<QString>, std::false_type>,
         // method 'deleteOrderedMedicationList'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
@@ -264,8 +264,8 @@ void MedicationModel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         case 9: _t->updateMedication((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QList<QTime>>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4]))); break;
         case 10: _t->addOrderedMedication((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 11: _t->deleteOrderedMedication((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 12: { QString _r = _t->getOrderedMedication();
-            if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
+        case 12: { QList<QString> _r = _t->getOrderedMedication();
+            if (_a[0]) *reinterpret_cast< QList<QString>*>(_a[0]) = std::move(_r); }  break;
         case 13: _t->deleteOrderedMedicationList(); break;
         default: ;
         }

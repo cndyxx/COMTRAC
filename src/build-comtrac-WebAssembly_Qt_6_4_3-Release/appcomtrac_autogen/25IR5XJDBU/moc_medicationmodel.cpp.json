@@ -187,7 +187,7 @@
                 {
                     "access": "public",
                     "name": "getOrderedMedication",
-                    "returnType": "QString"
+                    "returnType": "QList<QString>"
                 },
                 {
                     "access": "public",

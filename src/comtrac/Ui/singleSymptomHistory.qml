@@ -33,7 +33,7 @@ Item {
         width: parent.width
         height: parent.height * 0.35
         model: symptom
-
+        ScrollBarTemplate {}
         anchors.horizontalCenter: parent.horizontalCenter
         delegate: SymptomDelegate {
             setBackgroundColor: true

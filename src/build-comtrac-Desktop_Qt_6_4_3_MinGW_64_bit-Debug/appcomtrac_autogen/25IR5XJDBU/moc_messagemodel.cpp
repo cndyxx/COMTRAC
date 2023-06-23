@@ -27,7 +27,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_MessageModel_t {
-    uint offsetsAndSizes[16];
+    uint offsetsAndSizes[20];
     char stringdata0[13];
     char stringdata1[16];
     char stringdata2[1];
@@ -35,7 +35,9 @@ struct qt_meta_stringdata_MessageModel_t {
     char stringdata4[16];
     char stringdata5[12];
     char stringdata6[12];
-    char stringdata7[9];
+    char stringdata7[15];
+    char stringdata8[12];
+    char stringdata9[9];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_MessageModel_t::offsetsAndSizes) + ofs), len 
@@ -48,7 +50,9 @@ Q_CONSTINIT static const qt_meta_stringdata_MessageModel_t qt_meta_stringdata_Me
         QT_MOC_LITERAL(42, 15),  // "QList<Message*>"
         QT_MOC_LITERAL(58, 11),  // "setMessages"
         QT_MOC_LITERAL(70, 11),  // "newMessages"
-        QT_MOC_LITERAL(82, 8)   // "messages"
+        QT_MOC_LITERAL(82, 14),  // "setMessageText"
+        QT_MOC_LITERAL(97, 11),  // "medications"
+        QT_MOC_LITERAL(109, 8)   // "messages"
     },
     "MessageModel",
     "messagesChanged",
@@ -57,6 +61,8 @@ Q_CONSTINIT static const qt_meta_stringdata_MessageModel_t qt_meta_stringdata_Me
     "QList<Message*>",
     "setMessages",
     "newMessages",
+    "setMessageText",
+    "medications",
     "messages"
 };
 #undef QT_MOC_LITERAL
@@ -68,19 +74,20 @@ Q_CONSTINIT static const uint qt_meta_data_MessageModel[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
-       1,   37, // properties
+       4,   14, // methods
+       1,   46, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   32,    2, 0x06,    2 /* Public */,
+       1,    0,   38,    2, 0x06,    2 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       3,    0,   33,    2, 0x0a,    3 /* Public */,
-       5,    1,   34,    2, 0x0a,    4 /* Public */,
+       3,    0,   39,    2, 0x0a,    3 /* Public */,
+       5,    1,   40,    2, 0x0a,    4 /* Public */,
+       7,    1,   43,    2, 0x0a,    6 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -88,9 +95,10 @@ Q_CONSTINIT static const uint qt_meta_data_MessageModel[] = {
  // slots: parameters
     0x80000000 | 4,
     QMetaType::Void, 0x80000000 | 4,    6,
+    QMetaType::QString, QMetaType::QStringList,    8,
 
  // properties: name, type, flags
-       7, 0x80000000 | 4, 0x0001510b, uint(0), 0,
+       9, 0x80000000 | 4, 0x0001510b, uint(0), 0,
 
        0        // eod
 };
@@ -112,7 +120,10 @@ Q_CONSTINIT const QMetaObject MessageModel::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<QList<Message*>, std::false_type>,
         // method 'setMessages'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<const QList<Message*> &, std::false_type>
+        QtPrivate::TypeAndForceComplete<const QList<Message*> &, std::false_type>,
+        // method 'setMessageText'
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QList<QString>, std::false_type>
     >,
     nullptr
 } };
@@ -127,6 +138,8 @@ void MessageModel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         case 1: { QList<Message*> _r = _t->getMessages();
             if (_a[0]) *reinterpret_cast< QList<Message*>*>(_a[0]) = std::move(_r); }  break;
         case 2: _t->setMessages((*reinterpret_cast< std::add_pointer_t<QList<Message*>>>(_a[1]))); break;
+        case 3: { QString _r = _t->setMessageText((*reinterpret_cast< std::add_pointer_t<QList<QString>>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -196,13 +209,13 @@ int MessageModel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 4;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 4;
     }else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
             || _c == QMetaObject::RegisterPropertyMetaType) {

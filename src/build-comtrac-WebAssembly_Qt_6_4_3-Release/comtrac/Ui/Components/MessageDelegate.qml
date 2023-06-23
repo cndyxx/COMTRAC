@@ -9,10 +9,11 @@ Item {
     property int textMargin: 15
     property date currentTime: new Date()
     property string inputText: messageData.text
+    property int textType: messageData.type
     property int dotCount: 1
 
     width: parent.width
-    height: contentItem.height
+    height: contentItem.height + 50
     signal  nextMessage()
 
     ListModel {
@@ -35,7 +36,7 @@ Item {
         id: contentItem
         implicitWidth: parent.width
         implicitHeight: {
-            switch (messageData.type) {
+            switch (textType) {
             case 1:
                 return textItem.implicitHeight + firstMessage.height;
             case 2:
@@ -43,7 +44,7 @@ Item {
             case 3:
                 return textItem.implicitHeight + buttonsColumn.height;
             case 4:
-                return textItem.implicitHeight +buttonsRow.height;
+                return textItem.implicitHeight + buttonsRow.height + 20;
             case 5:
                 return textItem.implicitHeight;
             default:
@@ -55,7 +56,7 @@ Item {
             id: messageBackground
             width: parent.width
             height: parent.height +20
-            color: switch (messageData.type) {
+            color: switch (textType) {
                    case 2:
                        return "grey";
                    default:
@@ -79,51 +80,46 @@ Item {
                     anchors.leftMargin: textMargin
                     anchors.top: parent.top
                     anchors.topMargin: 5
+                    anchors.right: parent.right
+                    anchors.rightMargin: 10
 
                 }
 
-                // Buttons for the first message type
+                // Erste Nachricht (Buttons)
                 Item {
-                    visible: messageData.type === 1
+                    visible: textType === 1
                     width: parent.width
                     height: parent.height - textItem.height
 
                     ColumnLayout {
                         id: firstMessage
                         spacing: 10
-
                         Layout.alignment: Qt.AlignHCenter
                         anchors.horizontalCenter: parent.horizontalCenter
-                        Repeater {
 
+                        Repeater {
                             model: buttonText
+
                             delegate: ButtonTemplate {
                                 text: modelData
                                 buttonWidth: contentItem.width * 0.8
                                 backgroundDefaultColor: "white"
                                 borderDefaultColor: "black"
                                 contentItemTextColor: "black"
+
                                 onClicked: {
-                                    // Handle button click
                                     timer.start()
                                     nextMessage()
-
-                                    //messageColor: "darkgrey"
-
-
                                 }
                             }
                         }
                     }
                 }
 
-                // Text only for the second and fifth message types
+                // Zweite Nachricht (Nur Text)
                 Item {
-
-                    visible: messageData.type === 2
-
-
-                    //                    visible: true
+                    visible: textType === 2
+                    //Timer, der bei Ablauf der Zeit die nächste Nachricht sichtbar macht
                     Timer {
                         id: timer
                         interval: 3000 // Timer-Intervall von 1 Sekunde (1000 Millisekunden)
@@ -135,13 +131,41 @@ Item {
                             repeatTimer.visible = false;
                         }
                     }
+                }
+                //Wartepunkte: Demonstrieren dem Nutzer, dass das System etwas vearbeitet
+                Item {
+                    id: repeatTimer
+                    visible: textType === 2
 
+                    Text {
+                        id: waitingText
+                        font.pixelSize: 20
+                        font.family: "Arial"
+                        color: "dimgrey"
+                        text: ""
+                    }
 
+                    Timer {
+                        id: dotTimer
+                        property int count: 0
+                        interval: 1000
+                        running: true
+                        repeat: true
+                        onTriggered: {
+                            dotCount = (dotCount % 3) + 1
+                            waitingText.text = ".".repeat(dotCount)
+                            count += 1;
+                            if(count === 4){
+                                dotTimer.running = false;
+                                repeatTimer.visible = false;
+                            }
+                        }
+                    }
                 }
 
                 // Radio buttons and buttons for the third message type
                 Item {
-                    visible: messageData.type === 3
+                    visible: textType === 3
 
                     ColumnLayout {
                         id: buttonsColumn
@@ -164,6 +188,34 @@ Item {
                                 }
                             }
                         }
+                        RowLayout {
+                        CheckBoxTemplate{
+                            onClicked: {
+                                if (checked) {
+                                    // Hinzufügen des Medikaments zur Bestellung
+                                    medModel.addOrderedMedication(newMedication.text)
+                                } else {
+                                    // Entfernen des Medikaments aus der Bestellung
+                                    medModel.deleteOrderedMedication(newMedication.text)
+                                }
+                                dotTimer.start()
+                            }
+                        }
+                        TextField {
+                            id: newMedication
+                            background: Rectangle {
+                                id: borderLine
+                                color: messageBackground.color
+                                Rectangle{
+                                    width: messageBackground.width * 0.6
+                                    height: 2
+                                    color: "black"
+                                    anchors.top: borderLine.bottom
+                                    anchors.topMargin: 5
+                                }
+                            }
+                        }
+                        }
 
                         ButtonTemplate {
                             text: "Auswahl bestätigen"
@@ -173,8 +225,9 @@ Item {
                             buttonWidth: contentItem.width * 0.8
                             onClicked: {
                                 // Handle button click
-                                nextMessage()
-                                medModel.getOrderedMedication()
+                                messageModel.setMessageText(medModel.getOrderedMedication());
+                                nextMessage();
+
                             }
 
                         }
@@ -182,15 +235,16 @@ Item {
                 }
 
                 // Buttons in a row for the fourth message type
-                Item {
-                    visible: messageData.type === 4
+                Item { 
+                    visible: textType === 4
                     anchors.left: parent.left
                     anchors.leftMargin: 15
                     RowLayout  {
                         id: buttonsRow
                         spacing: 10
                         width: contentItem.width * 0.75
-                        anchors.margins: 10
+                        Layout.alignment: Qt.AlignHCenter
+                        anchors.bottom: contentItem.bottom; anchors.bottomMargin: 5
                         ButtonTemplate {
                             text: "Abbrechen"
                             buttonWidth: parent.width / 2
@@ -212,55 +266,28 @@ Item {
                             onClicked: {
                                 // Handle button click
                                 nextMessage();
-                            }
+
                         }
                     }
 
                 }
                 Item {
-                    visible:  messageData.type === 5
+                    visible:  textType === 5
+
                 }
 
-                Item {
-                    id: repeatTimer
-                    visible: messageData.type === 2
 
-                    Text {
-                        id: waitingText
-                        font.pixelSize: 20
-                        font.family: "Arial"
-                        color: "dimgrey"
-                        text: ""
-                    }
-
-                    Timer {
-                        id: dotTimer
-                        property int count: 0
-                        interval: 1000 // 1 second interval
-                        running: true
-                        repeat: true
-                        onTriggered: {
-                            dotCount = (dotCount % 3) + 1 // Increment dot count cyclically from 1 to 3
-                            waitingText.text = ".".repeat(dotCount)
-                            count += 1;
-                            if(count === 4){
-                                dotTimer.running = false;
-                                repeatTimer.visible = false;
-                            }
-                        }
-                    }
-                }
 
             }
         }
         Text {
             anchors.top: messageBackground.bottom
             anchors.topMargin: 2
-            anchors.right: if(messageData.type === 2) return parent.right
+            anchors.right: if(textType === 2) return parent.right
             font.family: "Arial"
             font.pixelSize: 12
 
-            text: if(messageData.type !== 2){
+            text: if(textType !== 2){
                       return currentTime.toLocaleTimeString(Qt.locale("de_DE"), "hh:mm") + " von Chatbot"
                   } else {
 
@@ -270,3 +297,4 @@ Item {
     }
 }
 
+}

@@ -135,20 +135,10 @@ Item {
         ListView {
             id: intakeTimeListView
             width: parent.width
-            height: parent.height * 0.2
+            height: parent.height * 0.3
             model:  intakeTime
             currentIndex: 0
-            ScrollBar.vertical: ScrollBar {
-                anchors.right: medPage.right
-
-                active: true
-                background: Rectangle {
-                    color: "transparent"
-                    border.color: "transparent"
-                    radius: 50
-                }
-
-            }
+            ScrollBarTemplate{}
             clip: true
             spacing: 10
             delegate: IntakeDelegate{

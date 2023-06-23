@@ -13,13 +13,13 @@ Window {
     title: qsTr("COMTRAC")
 
     property string stack_view: "Components/StackViewPage.qml"
-    Rectangle{
-        id: rectangle
-        width: 300
-        height: 550
-        anchors.horizontalCenter: root
-        anchors.verticalCenter: root
-    }
+        Rectangle{
+            id: rectangle
+            width: 300
+            height: 550
+            anchors.horizontalCenter: root
+            anchors.verticalCenter: root
+        }
 
     Loader{
         id: loader

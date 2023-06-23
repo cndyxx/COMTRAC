@@ -30,8 +30,6 @@ private:
     MessageModel* m_messageModel;
 
 
-
-
 public:
 
     explicit MedicationModel(QObject *parent = nullptr);
@@ -54,7 +52,7 @@ public slots:
     void updateMedication(QString name, int intakePerDay, QList<QTime> intakeTimes, QString reminderTime);
     void addOrderedMedication(QString name);
     void deleteOrderedMedication(QString name);
-    QString getOrderedMedication();
+    QList<QString>  getOrderedMedication();
     void deleteOrderedMedicationList();
 
 signals:

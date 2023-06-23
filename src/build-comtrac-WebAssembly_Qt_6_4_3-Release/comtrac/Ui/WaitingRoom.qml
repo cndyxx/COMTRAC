@@ -5,6 +5,7 @@ import "./Components"
 Item {
     id: waitingRoom
     property int dotCount: 1
+    property int elapsedTime: 0
     width: parent.width
     height: parent.height
 
@@ -13,13 +14,39 @@ Item {
         id: header
         pageTitle: "Videosprechstunde"
     }
+
+    Timer {
+            id: timer
+            interval: 1000 // Interval in milliseconds (1 second)
+            running: true
+            repeat: true
+            onTriggered: {
+                elapsedTime += 1;
+            }
+        }
+        Rectangle{
+            id: elapsedTimeText
+            width: 100
+            height: 60
+            anchors.top: header.bottom; anchors.topMargin: 10
+            anchors.horizontalCenter: parent.horizontalCenter
+
+            Text {
+
+                text: "00:0" + elapsedTime
+                anchors.centerIn: parent
+                font.pixelSize: 12
+            }
+        }
+
+
     Rectangle {
         id: messageBackground
-        width: parent.width
+        width: parent.width * 0.7
         height: parent.height * 0.5
         color: background.color
         radius: 10
-
+        anchors.top: elapsedTimeText.bottom
         anchors.centerIn: parent
 
         Text {
@@ -47,6 +74,7 @@ Item {
 
         Component.onCompleted: {
             dotTimer.start()
+            t
         }
 
         Timer {
@@ -57,7 +85,7 @@ Item {
             repeat: true
             onTriggered: {
                 dotCount = (dotCount % 3) + 1;
-                waitingText.text = ".".repeat(dotCount);
+                waitingText.text = ".".repeat(dotCount);             
                 count += 1;
                 if(count === 11){
                     dotTimer.running = false;
@@ -66,6 +94,7 @@ Item {
 
             }
         }
+
 
 
     }

@@ -44,6 +44,17 @@
                     ],
                     "name": "setMessages",
                     "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "medications",
+                            "type": "QList<QString>"
+                        }
+                    ],
+                    "name": "setMessageText",
+                    "returnType": "QString"
                 }
             ],
             "superClasses": [

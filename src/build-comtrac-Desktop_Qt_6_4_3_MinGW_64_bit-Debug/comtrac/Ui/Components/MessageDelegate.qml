@@ -44,7 +44,7 @@ Item {
             case 3:
                 return textItem.implicitHeight + buttonsColumn.height;
             case 4:
-                return textItem.implicitHeight + buttonsRow.height;
+                return textItem.implicitHeight + buttonsRow.height + 20;
             case 5:
                 return textItem.implicitHeight;
             default:
@@ -80,10 +80,12 @@ Item {
                     anchors.leftMargin: textMargin
                     anchors.top: parent.top
                     anchors.topMargin: 5
+                    anchors.right: parent.right
+                    anchors.rightMargin: 10
 
                 }
 
-                // Buttons for the first message type
+                // Erste Nachricht (Buttons)
                 Item {
                     visible: textType === 1
                     width: parent.width
@@ -92,39 +94,32 @@ Item {
                     ColumnLayout {
                         id: firstMessage
                         spacing: 10
-
                         Layout.alignment: Qt.AlignHCenter
                         anchors.horizontalCenter: parent.horizontalCenter
-                        Repeater {
 
+                        Repeater {
                             model: buttonText
+
                             delegate: ButtonTemplate {
                                 text: modelData
                                 buttonWidth: contentItem.width * 0.8
                                 backgroundDefaultColor: "white"
                                 borderDefaultColor: "black"
                                 contentItemTextColor: "black"
+
                                 onClicked: {
-                                    // Handle button click
                                     timer.start()
                                     nextMessage()
-
-                                    //messageColor: "darkgrey"
-
-
                                 }
                             }
                         }
                     }
                 }
 
-                // Text only for the second and fifth message types
+                // Zweite Nachricht (Nur Text)
                 Item {
-
                     visible: textType === 2
-
-
-                    //                    visible: true
+                    //Timer, der bei Ablauf der Zeit die nächste Nachricht sichtbar macht
                     Timer {
                         id: timer
                         interval: 3000 // Timer-Intervall von 1 Sekunde (1000 Millisekunden)
@@ -136,8 +131,36 @@ Item {
                             repeatTimer.visible = false;
                         }
                     }
+                }
+                //Wartepunkte: Demonstrieren dem Nutzer, dass das System etwas vearbeitet
+                Item {
+                    id: repeatTimer
+                    visible: textType === 2
 
+                    Text {
+                        id: waitingText
+                        font.pixelSize: 20
+                        font.family: "Arial"
+                        color: "dimgrey"
+                        text: ""
+                    }
 
+                    Timer {
+                        id: dotTimer
+                        property int count: 0
+                        interval: 1000
+                        running: true
+                        repeat: true
+                        onTriggered: {
+                            dotCount = (dotCount % 3) + 1
+                            waitingText.text = ".".repeat(dotCount)
+                            count += 1;
+                            if(count === 4){
+                                dotTimer.running = false;
+                                repeatTimer.visible = false;
+                            }
+                        }
+                    }
                 }
 
                 // Radio buttons and buttons for the third message type
@@ -202,8 +225,9 @@ Item {
                             buttonWidth: contentItem.width * 0.8
                             onClicked: {
                                 // Handle button click
-                                nextMessage()
-                                medModel.getOrderedMedication()
+                                messageModel.setMessageText(medModel.getOrderedMedication());
+                                nextMessage();
+
                             }
 
                         }
@@ -211,7 +235,7 @@ Item {
                 }
 
                 // Buttons in a row for the fourth message type
-                Item {
+                Item { 
                     visible: textType === 4
                     anchors.left: parent.left
                     anchors.leftMargin: 15
@@ -219,7 +243,8 @@ Item {
                         id: buttonsRow
                         spacing: 10
                         width: contentItem.width * 0.75
-                        anchors.margins: 10
+                        Layout.alignment: Qt.AlignHCenter
+                        anchors.bottom: contentItem.bottom; anchors.bottomMargin: 5
                         ButtonTemplate {
                             text: "Abbrechen"
                             buttonWidth: parent.width / 2
@@ -251,35 +276,7 @@ Item {
 
                 }
 
-                Item {
-                    id: repeatTimer
-                    visible: textType === 2
 
-                    Text {
-                        id: waitingText
-                        font.pixelSize: 20
-                        font.family: "Arial"
-                        color: "dimgrey"
-                        text: ""
-                    }
-
-                    Timer {
-                        id: dotTimer
-                        property int count: 0
-                        interval: 1000 // 1 second interval
-                        running: true
-                        repeat: true
-                        onTriggered: {
-                            dotCount = (dotCount % 3) + 1 // Increment dot count cyclically from 1 to 3
-                            waitingText.text = ".".repeat(dotCount)
-                            count += 1;
-                            if(count === 4){
-                                dotTimer.running = false;
-                                repeatTimer.visible = false;
-                            }
-                        }
-                    }
-                }
 
             }
         }

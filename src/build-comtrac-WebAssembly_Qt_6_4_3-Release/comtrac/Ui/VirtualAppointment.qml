@@ -24,12 +24,13 @@ Item {
         }
 
         Rectangle{
-            width: Text.width
-            height: Text.height
+            width: txtDoctor.width
+            height: 20
             anchors.top: parent.top; anchors.topMargin: 10
             anchors.left: parent.left; anchors.leftMargin: 10
             color: "grey"
             Text{
+                id: txtDoctor
                 text: "Dr. Max Mustermann"
                 font.family: "Arial"
                 font.pixelSize: 12
@@ -54,10 +55,12 @@ Item {
         Rectangle{
             anchors.top: parent.top
             anchors.left: parent.left
-            width: Text.width
-            height: Text.height
+            width: txtUser.width
+            height: 20
             color: "lightgrey"
+
             Text{
+                id: txtUser
                 text: "Du"
                 font.family: "Arial"
                 font.pixelSize: 12

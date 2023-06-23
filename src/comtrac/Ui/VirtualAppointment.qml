@@ -8,6 +8,7 @@ Item {
     HeaderTemplate{
         id: headerMedication
         pageTitle: "Videosprechstunde"
+
     }
 
     Rectangle {
@@ -24,14 +25,13 @@ Item {
         }
 
         Rectangle{
-            width: Text.width
-            height: Text.height
+            width: txtDoctor.width
+            height: 20
             anchors.top: parent.top; anchors.topMargin: 10
             anchors.left: parent.left; anchors.leftMargin: 10
             color: "grey"
-            border.color: "black"
-            border.width: 2
             Text{
+                id: txtDoctor
                 text: "Dr. Max Mustermann"
                 font.family: "Arial"
                 font.pixelSize: 12
@@ -46,7 +46,7 @@ Item {
         anchors.rightMargin: 10
         color: "lightgrey"
         width: parent.width * 0.3
-        height: parent.height * 0.2
+        height: parent.height * 0.4
         Image{
             source: "../assets/user-silhouette.png"
             width: parent.width * 0.5
@@ -56,12 +56,12 @@ Item {
         Rectangle{
             anchors.top: parent.top
             anchors.left: parent.left
-            width: Text.width
-            height: Text.height
+            width: txtUser.width
+            height: 20
             color: "lightgrey"
-            border.color: "black"
-            border.width: 2
+
             Text{
+                id: txtUser
                 text: "Du"
                 font.family: "Arial"
                 font.pixelSize: 12

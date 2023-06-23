@@ -5,12 +5,12 @@ import QtQuick.Controls 2.0
 CheckBox {
     id: root
 
-
     property color checkedColor: "grey"
     property string checkBoxText
 
 
     text: checkBoxText
+
 
 
     hoverEnabled: true

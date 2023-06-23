@@ -13,6 +13,7 @@ Item {
         id: header
         pageTitle: "Medikationsplan"
     }
+
     Connections {
         target: medModel  // Das Symptom-Modellobjekt in QML
         function onMedicationsChanged() {

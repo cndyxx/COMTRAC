@@ -53,14 +53,14 @@ Item {
 
     ListModel{
         id: calendarWeekModel
-        ListElement{calendarWeek: 1}
-        ListElement{calendarWeek: 2}
-        ListElement{calendarWeek: 3}
-        ListElement{calendarWeek: 4}
-        ListElement{calendarWeek: 5}
-        ListElement{calendarWeek: 6}
-        ListElement{calendarWeek: 7}
-        ListElement{calendarWeek: 8}
+        ListElement{calendarWeek: '24'; backgroundColor: "lightgrey"; borderColor: "lightgrey"}
+        ListElement{calendarWeek: '25'; backgroundColor: "darkgrey"; borderColor: "darkgrey"}
+        ListElement{calendarWeek: '26'; backgroundColor: "darkgrey"; borderColor: "black"}
+        ListElement{calendarWeek: '27'; backgroundColor: "lightgrey"; borderColor: "lightgrey"}
+        ListElement{calendarWeek: '28'; backgroundColor: "grey"; borderColor: "grey"}
+        ListElement{calendarWeek: '29'; backgroundColor: "darkgrey"; borderColor:  "darkgrey"}
+        ListElement{calendarWeek: '30'; backgroundColor: "lightgrey"; borderColor: "lightgrey"}
+        ListElement{calendarWeek: '31'; backgroundColor: "lightgrey"; borderColor: "lightgrey"}
 
 
     }
@@ -69,22 +69,27 @@ Item {
         id: borderRectangle
         anchors.top: yearLabel.bottom
         anchors.horizontalCenter: parent.horizontalCenter
-        width: parent.width * 0.98
+        width: parent.width * 0.9
         height: parent.height * 0.3
         color: "white"
         border.width: 2
-        border.color: "dimgrey"
-        Button {
-            width: 10
-            height: 10
+        border.color: "lightgrey"
+        Rectangle {
+            width: 12
+            height: 12
             anchors.left: parent.left
             anchors.leftMargin: 5
             anchors.verticalCenter: parent.verticalCenter
+            Image {
+                width: parent.width
+                height: parent.height
+                source: "../assets/triangle_back.png"
+            }
         }
         GridView {
             id: calendarWeekView
             anchors.left: parent.left
-            anchors.leftMargin: 30
+            anchors.leftMargin: 18
             anchors.top: parent.top
             anchors.topMargin: 20
             anchors.right: parent.right
@@ -97,12 +102,12 @@ Item {
             height: 150
             flow: Qt.LeftToRight | GridView.FlowTopToBottom
 
-            model: ['24', '25', '26', '27', '28', '29', '30', '31']
+            model: calendarWeekModel
             delegate: Button {
-                width: 50
-                height: 50
+                width: 55
+                height: 55
                 contentItem: Text{
-                    text: "KW " + /*(index + 1)*/ calendarWeekView.model[index]
+                    text: "KW " + /*(index + 1)*/ /*calendarWeekView.model[index].*/calendarWeek
                     font.pixelSize: 12
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
@@ -110,35 +115,34 @@ Item {
 
                 background: Rectangle {
                     id: rectCalendarWeek
-                    color: "lightgrey"
-                    width: 50
+                    color: backgroundColor
+                    width: 55
                     height: rectCalendarWeek.width
                     radius: 10
+                    border.color: borderColor
+                    border.width: 2
 
                 }
                 onClicked: {
                     console.log("Test")
-                    symptomModel.getCalendarWeekDate(2023, calendarWeekView.model[index]);
+                    symptomModel.getCalendarWeekDate(2023, calendarWeek);
 
                 }
             }
         }
 
-        //        CalendarWeeksTemplate {
-        //            anchors.left: parent.left
-        //            anchors.leftMargin: 20
-        //            anchors.top: parent.top
-        //            anchors.topMargin: 30
-        //            anchors.right: parent.right
-        //            anchors.rightMargin: 30
-        //        }
-        Button {
-            width: 10
-            height: 10
+
+        Rectangle {
+            width: 12
+            height: 12
             anchors.right: parent.right
             anchors.rightMargin: 5
             anchors.verticalCenter: parent.verticalCenter
-            onClicked: {}
+            Image {
+                width: parent.width
+                height: parent.height
+                source: "../assets/triangle_next.png"
+            }
         }
 
         Rectangle {
@@ -159,7 +163,7 @@ Item {
                 RowLayout {
                     Repeater {
                         anchors.left: txtLittle.right
-                        model: ["lightgrey", "grey", "darkgrey", "black"]
+                        model: ["lightgrey", "darkgrey", "grey", "black"]
                         delegate: Rectangle {
                             width: 10
                             height:10
@@ -191,11 +195,11 @@ Item {
         delegate: SymptomDelegate {
             anchors.margins: 10
             width: parent.width * 0.9
-            height: 40
+            height: 50
 
             onClicked: {
-                symptomModel.setSingleSymptom(symptomListView.model[index]);
-                stackView.push("EditSymptom.qml", {"pageState" : 1})
+                symptomModel.getSymptomEntries(symptomListView.model[index].name);
+                stackView.push("singleSymptomHistory.qml")
             }
         }
     }

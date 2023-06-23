@@ -16,9 +16,10 @@ MedicationModel::MedicationModel(QObject *parent) : QSqlQueryModel(parent)
     QList<QTime> m_intakeTime;
     m_intakeTime.push_back(time);
     m_singleMedication = new Medication(0, "", 1, m_intakeTime, "", this);
-    m_medications.push_back(new Medication(1, "Hustensaft", 2, m_intakeTime, "", this));
-    m_medications.push_back(new Medication(2, "Ibuprofen", 3, m_intakeTime, "", this));
-    m_medications.push_back(new Medication(3, "Salbe", 3, m_intakeTime, "", this));
+    m_medications.push_back(new Medication(1, "Biktarvy", 1, m_intakeTime, "", this));
+    m_intakeTime.push_back(QTime(14,0,0));
+    m_medications.push_back(new Medication(2, "Ibuprofen", 2, m_intakeTime, "", this));
+
 }
 
 MedicationModel::~MedicationModel()
@@ -240,28 +241,9 @@ void MedicationModel::deleteOrderedMedication(QString name)
     }
 }
 
-QString MedicationModel::getOrderedMedication()
+QList<QString> MedicationModel::getOrderedMedication()
 {
-    QString orderText = "Rezept für ";
-        if (m_orderMedication.size() == 1) {
-        orderText += m_orderMedication[0] + " bestellen.";
-    } else if (m_orderMedication.size() > 1) {
-        orderText = "Rezepte für ";
-            for (int i = 0; i < m_orderMedication.size() - 1; i++) {
-            orderText += m_orderMedication[i] + " und ";
-        }
-        orderText += m_orderMedication[m_orderMedication.size() -1 ] + " bestellen.";
-    }
-
-    QList<Message *> messageList = m_messageModel->getMessages();
-    messageList[3]->setText(orderText);
-    m_messageModel->setMessages(messageList);
-    for (Message *newMessage : messageList) {
-        delete newMessage;
-    }
-
-
-    return orderText;
+    return m_orderMedication;
 }
 
 void MedicationModel::deleteOrderedMedicationList()

@@ -175,42 +175,43 @@ Item {
 
         }
 
-//        Text {
-//            text: "Dauer des Auftretens: "
-//            Layout.topMargin: 20
-//            color: "black"
-//            font.pixelSize: 17
-//            Layout.fillWidth: true
-//            font.family: "Arial"
-//        }
+        Text {
+            text: "Dauer des Auftretens: "
+            Layout.topMargin: 20
+            color: "black"
+            font.pixelSize: 17
+            Layout.fillWidth: true
+            font.family: "Arial"
+        }
 
-//        RadioButtonTemplate{
-//            id: radioButtonLessThen
-//            text: qsTr("Seit weniger als 24 Stunden")
-//            font.pixelSize: 15
-//            enabled: pageState === 0 || pageState === 2
-//            checked: {
-//                if (pageState !== 0)
-//                    if (duration === radioButtonLessThen.text)
-//                        return true;
-//                    else
-//                        return false;
-//            }
+        RadioButtonTemplate{
+            id: radioButtonLessThen
+            text: qsTr("Seit weniger als 24 Stunden")
+            font.pixelSize: 15
+            enabled: pageState === 0 || pageState === 2
+            checked: {
+                if (pageState !== 0)
+                    if (duration === radioButtonLessThen.text)
+                        return true;
+                    else
+                        return false;
+            }
 
-//        }
-//        RadioButtonTemplate{
-//            id: radioButtonMoreThen
-//            text: qsTr("Seit mehr als 24 Stunden")
-//            font.pixelSize: 15
-//            enabled: pageState === 0 || pageState === 2 //aktiviert wenn status 0 und 2
-//            checked: {
-//                if (pageState !== 0)
-//                    if (duration === radioButtonMoreThen.text)
-//                        return true
-//                    else
-//                        return false
-//            }
-//        }
+        }
+        RadioButtonTemplate{
+            id: radioButtonMoreThen
+            text: qsTr("Seit mehr als 24 Stunden")
+            font.pixelSize: 15
+            enabled: pageState === 0 || pageState === 2 //aktiviert wenn status 0 und 2
+            checked: {
+                if (pageState !== 0)
+                    if (duration === radioButtonMoreThen.text)
+                        return true
+                    else
+                        return false
+            }
+        }
+
         RowLayout {
             ButtonTemplate {
                 text: {

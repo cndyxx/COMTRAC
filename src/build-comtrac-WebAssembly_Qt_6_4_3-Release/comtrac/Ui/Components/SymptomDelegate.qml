@@ -24,7 +24,7 @@ Button {
     background: Rectangle {
         id: backgroundRectangle
         width: parent.width
-        height: 50
+        height: 60
         border.color: "darkgrey"
         border.width: 2
         color:if(setBackgroundColor) {

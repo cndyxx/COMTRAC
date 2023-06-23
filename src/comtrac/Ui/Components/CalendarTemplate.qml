@@ -44,7 +44,7 @@ ColumnLayout {
     }
 
     function checkSymptomsForDate(date, month) {
-        // Führe eine Datenbankabfrage durch, um zu überprüfen, ob Symptome für das angegebene Datum vorhanden sind
+        // Datenbankabfrage durch, um zu überprüfen, ob Symptome für das angegebene Datum vorhanden sind
         // Gib true zurück, wenn Symptome vorhanden sind, andernfalls false
         symptomModel.getEntryDates(month);
         var retVal = symptomModel.findDate(date);
@@ -110,6 +110,7 @@ ColumnLayout {
         id: dayOfWeekRow
         locale: grid.locale
         font.bold: false
+
         delegate: Label {
             text: model.shortName
             font: dayOfWeekRow.font
@@ -167,11 +168,7 @@ ColumnLayout {
                         return "transparent"
                     }
                 }
-                /*
-                color: isSelected ? "lightgrey" : (model.today ? "transparent" : "transparent")
-                border.color: isSelected ? "transparent" : (model.today ? "grey" : "transparent")
-                border.width: isSelected ? 0 : (model.today ? 1 : 0)
-                */
+
                 radius: 90
 
                 Text {

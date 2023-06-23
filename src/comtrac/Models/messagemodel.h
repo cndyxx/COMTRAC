@@ -25,7 +25,7 @@ public:
 public slots:
     QList<Message *>  getMessages();
     void setMessages(const QList<Message *> &newMessages);
-
+    QString setMessageText(QList<QString> medications);
 
 signals:
 

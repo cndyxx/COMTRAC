@@ -42,4 +42,5 @@ ChatInput 1.0 Ui/Components/ChatInput.qml
 CheckBoxTemplate 1.0 Ui/Components/CheckBoxTemplate.qml
 IntakeDelegate 1.0 Ui/Components/IntakeDelegate.qml
 CalendarWeeksTemplate 1.0 Ui/Components/CalendarWeeksTemplate.qml
+ScrollBarTemplate 1.0 Ui/Components/ScrollBarTemplate.qml
 

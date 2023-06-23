@@ -27,7 +27,6 @@ Item {
     function getIntakeTime(){
         for(var i = 0; i < intakeCount; i++){
             list.push(intakeTimeList[i].text)
-            console.log("TESTAUSGABE: " + intakeTimeList[i].text);
         }
     }
 
@@ -52,7 +51,7 @@ Item {
     ColumnLayout {
         anchors.fill: parent
         anchors.top: header.bottom
-        anchors.topMargin: header.height
+        anchors.topMargin: header.height + 10
         anchors.margins: 15
         spacing: 10
 

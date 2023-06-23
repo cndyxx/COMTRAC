@@ -42,4 +42,18 @@ void MessageModel::setMessages(const QList<Message *> &newMessages)
 }
 
 
-
+QString MessageModel::setMessageText(QList<QString> medications)
+{
+    QString orderText = "Rezept für ";
+        if (medications.size() == 1) {
+        orderText += medications[0] + " bestellen.";
+    } else if (medications.size() > 1) {
+        orderText = "Rezepte für ";
+            for (int i = 0; i < medications.size() - 1; i++) {
+            orderText += medications[i] + " und ";
+        }
+        orderText += medications[medications.size() -1 ] + " bestellen.";
+    }
+    m_messages[3]->setText(orderText);
+    return orderText;
+}

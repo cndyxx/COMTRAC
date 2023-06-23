@@ -87,6 +87,7 @@ qt_add_qml_module(appcomtrac
     Ui/Components/CheckBoxTemplate.qml
     Ui/Components/IntakeDelegate.qml
     Ui/Components/CalendarWeeksTemplate.qml
+    Ui/Components/ScrollBarTemplate.qml
 
 
 
