@@ -320,6 +320,13 @@ namespace _comtrac_Ui_Components_CalendarWeeksTemplate_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _comtrac_Ui_Components_ScrollBarTemplate_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 
 }
 namespace {
@@ -379,6 +386,7 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/CheckBoxTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_CheckBoxTemplate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/IntakeDelegate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_IntakeDelegate_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/CalendarWeeksTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_CalendarWeeksTemplate_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/comtrac/Ui/Components/ScrollBarTemplate.qml"), &QmlCacheGeneratedCode::_comtrac_Ui_Components_ScrollBarTemplate_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;

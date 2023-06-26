@@ -45,6 +45,7 @@
     <file alias="Ui/Components/CheckBoxTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/CheckBoxTemplate.qml</file>
     <file alias="Ui/Components/IntakeDelegate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/IntakeDelegate.qml</file>
     <file alias="Ui/Components/CalendarWeeksTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/CalendarWeeksTemplate.qml</file>
+    <file alias="Ui/Components/ScrollBarTemplate.qml">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/Ui/Components/ScrollBarTemplate.qml</file>
     <file alias="assets/menu.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/menu.png</file>
     <file alias="assets/triangle_next.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/triangle_next.png</file>
     <file alias="assets/triangle_back.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/triangle_back.png</file>
@@ -55,6 +56,11 @@
     <file alias="assets/singleSymptom_Diagramm.PNG">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/singleSymptom_Diagramm.PNG</file>
     <file alias="assets/weeklySymptoms_Diagramm.PNG">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/weeklySymptoms_Diagramm.PNG</file>
     <file alias="assets/user-silhouette.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/user-silhouette.png</file>
+    <file alias="assets/video_icon.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/video_icon.png</file>
+    <file alias="assets/microphone.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/microphone.png</file>
+    <file alias="assets/chat.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/chat.png</file>
+    <file alias="assets/circle.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/circle.png</file>
+    <file alias="assets/arrow.png">C:/Users/cindy/Documents/GitHub/COMTRAC/src/comtrac/assets/arrow.png</file>
   </qresource>
 </RCC>
 

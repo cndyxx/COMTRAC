@@ -14,8 +14,12 @@ Item {
         id: header
         pageTitle: "Symptomverlauf"
     }
+
+
+
     //Säulendiagramm
     Image {
+        id: chart
         source: "../assets/singleSymptom_Diagramm.PNG";
         width: parent.width * 0.9
         height: parent.height * 0.4
@@ -23,17 +27,34 @@ Item {
         anchors.topMargin: 10
         anchors.horizontalCenter: parent.horizontalCenter
     }
+    GridView {
+        id: gridView
+        width: parent.width * 0.9
+        height: 40
+        anchors.top: chart.bottom
+        anchors.topMargin: 10
+        flow: Qt.LeftToRight | GridView.FlowTopToBottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        model: ["Intensität", "Häufigkeit", "Dauer"]
+        delegate: CheckBoxTemplate {
+            text: modelData
+            font.pixelSize: 15
+            font.family: "Arial"
+        }
+    }
 
     //SymtpomListe
     ListView {
         id: symptomListView
-        spacing: 15
+        spacing: 25
+
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: 60
+        anchors.bottomMargin: 5
+
         width: parent.width
         height: parent.height * 0.35
         model: symptom
-
+        ScrollBarTemplate {}
         anchors.horizontalCenter: parent.horizontalCenter
         delegate: SymptomDelegate {
             setBackgroundColor: true

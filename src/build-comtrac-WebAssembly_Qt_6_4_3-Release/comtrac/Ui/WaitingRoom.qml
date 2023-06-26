@@ -73,8 +73,7 @@ Item {
 
 
         Component.onCompleted: {
-            dotTimer.start()
-            t
+            dotTimer.start();
         }
 
         Timer {
@@ -87,7 +86,7 @@ Item {
                 dotCount = (dotCount % 3) + 1;
                 waitingText.text = ".".repeat(dotCount);             
                 count += 1;
-                if(count === 11){
+                if(count === 9){
                     dotTimer.running = false;
                     stackView.push("VirtualAppointment.qml")
                 }

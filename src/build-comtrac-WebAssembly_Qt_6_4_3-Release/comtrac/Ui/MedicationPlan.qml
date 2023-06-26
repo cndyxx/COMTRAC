@@ -33,7 +33,7 @@ Item {
         width: parent.width
         height: parent.height
         model: medModel.medications
-
+        ScrollBarTemplate {}
         delegate: MedicationDelegate {
             width: parent.width * 0.9
             height: 60
