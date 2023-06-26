@@ -10,10 +10,12 @@ Button {
     property color borderDefaultColor: "grey"
     property int buttonWidth: 213
     property int buttonHeight: 60
+    property bool homeScreen: false
 
 
    // text: "Button"
     contentItem: Text {
+        id: buttonTxt
         text: root.text
         color: root.contentItemTextColor
         font.pixelSize: 17

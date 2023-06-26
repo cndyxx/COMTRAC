@@ -315,8 +315,8 @@ extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[] = {
 Q_UNUSED(aotContext)
 Q_UNUSED(argumentsPtr)
 double r7_1;
-double r2_2;
 QObject *r2_1;
+double r2_2;
 // generate_MoveConst
 r7_1 = 0.01000000000000000;
 // generate_LoadQmlContextPropertyLookup

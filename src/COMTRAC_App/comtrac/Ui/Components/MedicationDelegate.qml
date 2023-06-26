@@ -4,7 +4,8 @@ import QtQuick.Layouts
 
 
 Button {
-    property string medicationName
+    property var medication: medicationListView.model[index]
+    property string medicationName: medication.name
     property var intakeTime
 
     anchors.horizontalCenter: parent.horizontalCenter
@@ -46,6 +47,7 @@ Button {
     }
 
     background: Rectangle {
+        id: backgroundRectangle
         width: parent.width
         height: 60
         border.color: "darkgrey"
@@ -54,7 +56,31 @@ Button {
         radius: 5
 
     }
+    Button {
+        width: 25
+        height: 25
+        anchors {
+            top: parent.top
+            right: parent.right
+            topMargin: 5
+            rightMargin: 5
+        }
+        contentItem: Image  {
 
+            source: "../../assets/pencil.png";
+
+            // Positionierung des Bildes
+
+        }
+        background: Rectangle {
+            color: backgroundRectangle.color
+        }
+
+        onClicked: {
+            medModel.setSingleMedication(medication);
+            stackView.push("../editMedication.qml", {"pageState" : 2})
+        }
+    }
 
 
 

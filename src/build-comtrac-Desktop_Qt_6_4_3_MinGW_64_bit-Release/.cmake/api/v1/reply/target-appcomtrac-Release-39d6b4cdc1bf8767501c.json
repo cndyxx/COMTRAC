@@ -105,25 +105,25 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 127,
+				"line" : 132,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 119,
+				"line" : 124,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 120,
+				"line" : 125,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 116,
+				"line" : 121,
 				"parent" : 0
 			},
 			{
@@ -514,7 +514,7 @@
 			{
 				"command" : 20,
 				"file" : 1,
-				"line" : 122,
+				"line" : 127,
 				"parent" : 0
 			},
 			{
@@ -1136,6 +1136,18 @@
 				"parent" : 71
 			},
 			{
+				"command" : 23,
+				"file" : 5,
+				"line" : 1987,
+				"parent" : 71
+			},
+			{
+				"command" : 23,
+				"file" : 5,
+				"line" : 2129,
+				"parent" : 71
+			},
+			{
 				"command" : 28,
 				"file" : 5,
 				"line" : 2205,
@@ -1145,19 +1157,19 @@
 				"command" : 27,
 				"file" : 0,
 				"line" : 342,
-				"parent" : 184
+				"parent" : 186
 			},
 			{
 				"command" : 26,
 				"file" : 0,
 				"line" : 1810,
-				"parent" : 185
+				"parent" : 187
 			},
 			{
 				"command" : 23,
 				"file" : 0,
 				"line" : 1574,
-				"parent" : 186
+				"parent" : 188
 			}
 		]
 	},
@@ -1405,7 +1417,8 @@
 				109,
 				111,
 				113,
-				114
+				115,
+				116
 			]
 		},
 		{
@@ -1611,11 +1624,11 @@
 			"id" : "appcomtrac_qmlimportscan::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "appcomtrac_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "appcomtrac_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "appcomtrac_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "appcomtrac::@6890427a1f51a3e7e1df",
@@ -1819,7 +1832,8 @@
 				109,
 				111,
 				113,
-				114
+				115,
+				116
 			]
 		},
 		{
@@ -1887,24 +1901,23 @@
 				108,
 				110,
 				112,
-				115,
-				168,
-				169,
-				170,
+				114,
+				117,
 				171,
 				172,
 				173,
 				174,
 				175,
-				176
+				176,
+				177,
+				178,
+				179
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				116,
-				117,
 				118,
 				119,
 				120,
@@ -1954,7 +1967,10 @@
 				164,
 				165,
 				166,
-				167
+				167,
+				168,
+				169,
+				170
 			]
 		}
 	],
@@ -2640,7 +2656,19 @@
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 187,
+			"backtrace" : 184,
+			"path" : "Ui/Components/ScrollBarTemplate.qml",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 185,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Release/.rcc/qmlcache/appcomtrac_Ui/Components/ScrollBarTemplate_qml.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 189,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Release/.rcc/qrc_appcomtrac_raw_qml_0.cpp",
@@ -2944,6 +2972,12 @@
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Release/.rcc/qmlcache/appcomtrac_Ui/Components/CalendarWeeksTemplate_qml.cpp.rule",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-Desktop_Qt_6_4_3_MinGW_64_bit-Release/.rcc/qmlcache/appcomtrac_Ui/Components/ScrollBarTemplate_qml.cpp.rule",
 			"sourceGroupIndex" : 3
 		},
 		{

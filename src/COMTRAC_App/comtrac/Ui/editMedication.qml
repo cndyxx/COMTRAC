@@ -16,6 +16,30 @@ Item {
     property int intakePerDay: medication.intakePerDay
     property string reminderTime: medication.reminderTime
 
+
+
+
+    Component.onCompleted: {
+        if(pageState === 0){
+            comboBoxEntryTime.currentIndex = 0;
+            intakeCount = 1;
+        }
+
+
+
+
+
+    }
+    function setIntakeTime() {
+        var time = new Date();
+        time.setHours(8);
+        time.setMinutes(0);
+        time.setSeconds(0);
+
+        var intake_Time = [];
+        intake_Time.push(time);
+        return  intake_Time;
+    }
     Connections {
         target: medModel  // Das Symptom-Modellobjekt in QML
         function onSingleMedicationChanged() {
@@ -24,11 +48,7 @@ Item {
             //symptomListView.model.append(symptomModel.symptoms);
         }
     }
-    function getIntakeTime(){
-        for(var i = 0; i < intakeCount; i++){
-            list.push(intakeTimeList[i].text)
-        }
-    }
+
 
     Background {
         id: background
@@ -53,7 +73,9 @@ Item {
         anchors.top: header.bottom
         anchors.topMargin: header.height + 10
         anchors.margins: 15
-        spacing: 10
+        spacing: 5
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 5
 
         Text {
             text: "Medikament"
@@ -82,13 +104,14 @@ Item {
 
         Text {
             text: "Einnahme"
-            Layout.topMargin: 20
+            Layout.topMargin:15
             color: "black"
             font.pixelSize: 23
             Layout.fillWidth: true
             font.family: "Arial"
         }
         ComboBox {
+            id: comboBoxEntryTime
             font.family: "Arial"
             font.pixelSize: 16
             Layout.fillWidth: true
@@ -100,7 +123,7 @@ Item {
                 Rectangle {
                     height: 2
                     width: parent.width
-                    color: "black"
+                    color: "dimgrey"
                     anchors.bottom: parent.bottom
                     Layout.fillWidth: true
                 }
@@ -135,7 +158,7 @@ Item {
         ListView {
             id: intakeTimeListView
             width: parent.width
-            height: parent.height * 0.3
+            height: parent.height * 0.25
             model:  intakeTime
             currentIndex: 0
             ScrollBarTemplate{}
@@ -179,18 +202,26 @@ Item {
                             radioButtonTenMinutesBefore.checked = false;
                           }
                 enabled: pageState === 0 || pageState === 2
+
+                onCheckedChanged: {
+                    if (!switchReminder.checked) {
+                        radioButtonTimeOfTaking.checked = false;
+                        radioButtonTenMinutesBefore.checked = false;
+                    }
+                }
             }
         }
         RadioButtonTemplate {
             id: radioButtonTimeOfTaking
-            enabled: pageState === 0 || pageState === 2
+            enabled: switchReminder.checked && (pageState === 0 || pageState === 2)
             text: qsTr("Zum Zeitpunkt der Einnahme")
             font.pixelSize: 15
             checked: switchReminder.checked && pageState !== 0
         }
+
         RadioButtonTemplate {
             id: radioButtonTenMinutesBefore
-            enabled: pageState === 0 || pageState === 2
+            enabled: switchReminder.checked && (pageState === 0 || pageState === 2)
             text: qsTr("10 Minuten vorher")
             font.pixelSize: 15
             checked: switchReminder.checked && pageState !== 0
@@ -199,8 +230,10 @@ Item {
             if(pageState!= 0){
                 if(reminderTime === radioButtonTenMinutesBefore.text){
                     radioButtonTenMinutesBefor.checked = true;
+                    switchReminder.checked = true;
                 } else if(reminderTime === radioButtonTimeOfTaking.text){
                     radioButtonTimeOfTaking.checked = true;
+                    switchReminder.checked = true;
                 } else {
                     switchReminder.checked = false;
                 }
@@ -214,9 +247,10 @@ Item {
                 }
             }
 
-
         }
         RowLayout {
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 10
             ButtonTemplate {
                 text: {
                     if(pageState === 0)

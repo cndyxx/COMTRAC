@@ -27,6 +27,7 @@ Page {
         }
         ButtonTemplate{
             Layout.topMargin: 80
+            buttonWidth: medication.width * 0.9
             id: addMedication
             text: "Medikament hinzufügen"
             onClicked: {
@@ -37,6 +38,7 @@ Page {
 
         ButtonTemplate{
             id: medicationPlan
+            buttonWidth: medication.width * 0.9
             text: "Mediaktionsplan"
             onClicked: {
                 stackView.push("MedicationPlan.qml")

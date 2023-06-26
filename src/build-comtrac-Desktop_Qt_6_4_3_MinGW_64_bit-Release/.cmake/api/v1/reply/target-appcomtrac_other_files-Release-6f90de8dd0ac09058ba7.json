@@ -737,6 +737,78 @@
 				"file" : 0,
 				"line" : 1594,
 				"parent" : 118
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 1727,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 1594,
+				"parent" : 120
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 1727,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 1594,
+				"parent" : 122
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 1727,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 1594,
+				"parent" : 124
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 1727,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 1594,
+				"parent" : 126
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 1727,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 1594,
+				"parent" : 128
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 1727,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 1594,
+				"parent" : 130
 			}
 		]
 	},
@@ -799,22 +871,28 @@
 				43,
 				44,
 				45,
-				53,
-				54
+				46,
+				54,
+				55
 			]
 		},
 		{
 			"name" : "Resources",
 			"sourceIndexes" : 
 			[
-				46,
 				47,
 				48,
 				49,
 				50,
 				51,
 				52,
-				55
+				53,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61
 			]
 		}
 	],
@@ -1052,52 +1130,82 @@
 		},
 		{
 			"backtrace" : 101,
+			"path" : "Ui/Components/ScrollBarTemplate.qml",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 103,
 			"path" : "assets/menu.png",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 103,
+			"backtrace" : 105,
 			"path" : "assets/triangle_next.png",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 105,
+			"backtrace" : 107,
 			"path" : "assets/triangle_back.png",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 107,
+			"backtrace" : 109,
 			"path" : "assets/plus.png",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 109,
+			"backtrace" : 111,
 			"path" : "assets/chart.png",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 111,
+			"backtrace" : 113,
 			"path" : "assets/pencil.png",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 113,
+			"backtrace" : 115,
 			"path" : "assets/x.png",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 115,
+			"backtrace" : 117,
 			"path" : "assets/singleSymptom_Diagramm.PNG",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 117,
+			"backtrace" : 119,
 			"path" : "assets/weeklySymptoms_Diagramm.PNG",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 119,
+			"backtrace" : 121,
 			"path" : "assets/user-silhouette.png",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 123,
+			"path" : "assets/video_icon.png",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 125,
+			"path" : "assets/microphone.png",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 127,
+			"path" : "assets/chat.png",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 129,
+			"path" : "assets/circle.png",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 131,
+			"path" : "assets/arrow.png",
 			"sourceGroupIndex" : 1
 		}
 	],

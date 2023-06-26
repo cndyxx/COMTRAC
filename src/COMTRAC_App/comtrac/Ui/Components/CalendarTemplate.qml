@@ -21,6 +21,17 @@ ColumnLayout {
     height: parent.height * 0.25
     //columns: 2
     //Functions
+
+    Connections {
+        target: symptomModel  // Das Symptom-Modellobjekt in QML
+        function onSymptomsChanged() {
+            // Aktualisiere das Modell der ListView
+            calendarEntry.isEntry = checkSymptomsForDate(model.date.toLocaleString(Qt.locale("de_DE"), "yyyy-MM-dd"), model.date.toLocaleString(Qt.locale("de_DE"), "MM") );
+            symptomListView.model = symptomModel.symptomsOfMonth;
+            //symptomListView.model.append(symptomModel.symptoms);
+        }
+    }
+
     function daysInMonth(date) {
         return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
     }
@@ -143,6 +154,7 @@ ColumnLayout {
 
         // Markiert den aktuellen Tag im Kalender
         delegate: Item {
+            id: calendarEntry
             property bool isSelected: model.date.getDate().toString() + "." + model.date.getMonth().toString() === selectedDate
             property bool isEntry: checkSymptomsForDate(model.date.toLocaleString(Qt.locale("de_DE"), "yyyy-MM-dd"), model.date.toLocaleString(Qt.locale("de_DE"), "MM") )
             width: date.width
