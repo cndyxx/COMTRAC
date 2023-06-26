@@ -3,6 +3,7 @@
 #include <iostream>
 #include <chrono>
 #include <sstream>
+#include <iomanip>
 
 
 using std::ostringstream;
@@ -12,20 +13,24 @@ SymptomModel::SymptomModel(QObject *parent) : QSqlQueryModel(parent)
     QDate date;
     QTime time;
     //Kalenderwoche 24
-    m_symptoms.push_back(new Symptom(0, "Fieber", "leicht", 1, "", QDate(2023,6,12) , QTime(9,30,0), this));
-    m_symptoms.push_back(new Symptom(1, "Gliederschmerzen", "leicht", 1, "", QDate(2023,6,13) , QTime(9,30,0),  this));
-    m_symptoms.push_back(new Symptom(2, "Durchfall", "leicht", 6, "", QDate(2023,6,14) , QTime(9,30,0),  this));
-    m_symptoms.push_back(new Symptom(3, "Hautausschlag", "leicht", 1, "", QDate(2023,6,15) , QTime(9,30,0),  this));
-    m_symptoms.push_back(new Symptom(4, "Nachtschweiß", "leicht", 1, "", QDate(2023,6,17) , QTime(9,30,0),  this));
-    //Kalenderwoche 25
-    m_symptoms.push_back(new Symptom(5, "Fieber", "leicht", 1, "", QDate(2023,6,19) , QTime(9,30,0),  this));
-    m_symptoms.push_back(new Symptom(6, "Gliederschmerzen", "leicht", 1, "", QDate(2023,6,20) , QTime(9,30,0),  this));
-    m_symptoms.push_back(new Symptom(7, "Durchfall", "leicht", 5, "", QDate(2023,6, 22) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(0, "Fieber", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,12) , QTime(9,30,0), this));
+    m_symptoms.push_back(new Symptom(1, "Gliederschmerzen", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,13) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(2, "Durchfall", "leicht", 6, "Seit weniger als 24 Stunden", QDate(2023,6,14) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(3, "Hautausschlag", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,15) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(4, "Nachtschweiß", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,17) , QTime(9,30,0),  this));
+        //Kalenderwoche 25
+    m_symptoms.push_back(new Symptom(5, "Fieber", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,19) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(6, "Gliederschmerzen", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,20) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(7, "Durchfall", "leicht", 5, "Seit weniger als 24 Stunden", QDate(2023,6, 22) , QTime(9,30,0),  this));
     //Kalenderwoche 26
-    m_symptoms.push_back(new Symptom(8, "Fieber", "leicht", 1, "", QDate(2023,6,26) , QTime(9,30,0),  this));
-   // m_symptoms.push_back(new Symptom(9, "Nachtschweiß", "leicht", 1, "", QDate(2023,6,27) , QTime(9,30,0),  this));
-   // m_symptoms.push_back(new Symptom(10, "Durchfall", "leicht", 1, "", QDate(2023,6,29) , QTime(9,30,0),  this));
-
+   // m_symptoms.push_back(new Symptom(8, "Fieber", "leicht", 1, "", QDate(2023,6,26) , QTime(9,30,0),  this));
+    // m_symptoms.push_back(new Symptom(9, "Nachtschweiß", "leicht", 1, "", QDate(2023,6,27) , QTime(9,30,0),  this));
+    // m_symptoms.push_back(new Symptom(10, "Durchfall", "leicht", 1, "", QDate(2023,6,29) , QTime(9,30,0),  this));
+    date = QDate(2023, 6,26);
+    m_symptoms.push_back(new Symptom(8, "Fieber", "leicht", 1, "Seit mehr als 24 Stunden", date , QTime(9,30,0),  this));
+    for(int i = 0; i < 8; i++){
+        primaryKey.push_back(i);
+    }
 }
 
 
@@ -61,21 +66,28 @@ void SymptomModel::deleteSymptom()
 
 
     int symptomId = m_singleSymptom->id();
+    for(int i = 0; i < primaryKey.size(); i++){
+        if(primaryKey[i] == symptomId){
+            primaryKey.removeAt(i);
+        }
+    }
     std::cout << "ID die gelöscht wird: " << symptomId << std::endl;
             //Symptom aus der Datenbank entfernen
-            QSqlQuery query;
-    query.prepare("DELETE FROM symptoms WHERE symptomID = ?");
-    query.bindValue(0, symptomId);
-    qDebug() << query.exec();
+            //            QSqlQuery query;
+            //    query.prepare("DELETE FROM symptoms WHERE symptomID = ?");
+            //    query.bindValue(0, symptomId);
+            //    qDebug() << query.exec();
 
-    //Symptom aus der Symptom Liste entfernen
+                //Symptom aus der Symptom Liste entfernen
 
-    deleteSymptomOfList(m_symptoms, symptomId);
-    //Symptom aus der Symptom Liste entfernen
+
+                    //Symptom aus der Symptom Liste entfernen
     deleteSymptomOfList(m_daySymptoms, symptomId);
+    deleteSymptomOfList(m_symptoms, symptomId);
 
     emit symptomsChanged();
     emit daySymptomsChanged();
+
 }
 
 void SymptomModel::updateSymptom(QString name, QString intensity, int frequency, QString duration)
@@ -86,17 +98,17 @@ void SymptomModel::updateSymptom(QString name, QString intensity, int frequency,
     m_singleSymptom->setFrequency(frequency);
     m_singleSymptom->setDuration(duration);
 
-    QSqlQuery query;
-    query.prepare("UPDATE symptoms set name = ?, intensity = ?, frequency = ?, duration = ? WHERE symptomID = ?");
+    //    QSqlQuery query;
+    //    query.prepare("UPDATE symptoms set name = ?, intensity = ?, frequency = ?, duration = ? WHERE symptomID = ?");
 
-    query.bindValue(0, name);
-    query.bindValue(1, intensity);
-    query.bindValue(2, frequency);
-    query.bindValue(3, duration);
-    query.bindValue(4, id);
-    if(!query.exec())
-        qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
-                                                                emit symptomsChanged();
+    //    query.bindValue(0, name);
+    //    query.bindValue(1, intensity);
+    //    query.bindValue(2, frequency);
+    //    query.bindValue(3, duration);
+    //    query.bindValue(4, id);
+    //    if(!query.exec())
+    //        qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
+    emit symptomsChanged();
 
 }
 
@@ -125,6 +137,7 @@ void SymptomModel::getEntryDates(QString month)
     //    } else {
     //        qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
     //    }
+
 }
 
 bool SymptomModel::findDate(QString date)
@@ -153,6 +166,7 @@ void SymptomModel::updateModel()
 
 void SymptomModel::deleteSymptomOfList(QList<Symptom *> &list, int symptomId)
 {
+
     //Symptom aus der Symptom Liste entfernen
     for (int i = 0; i < list.size(); i++)
     {
@@ -361,17 +375,21 @@ void SymptomModel::getSymptomEntries(QString name)
 void SymptomModel::getCalendarWeekDate(int year, int weekNumber)
 {
     std::tm startDate = getWeekendDate(year, weekNumber);
+
     std::ostringstream startOss;
     std::ostringstream endOss;
-    if (startDate.tm_mon + 1 < 10) {
-        startOss << (startDate.tm_year + 1900) << "-0" << (startDate.tm_mon + 1) << "-" << startDate.tm_mday;
-        endOss << (startDate.tm_year + 1900) << "-0"  << (startDate.tm_mon + 1) << "-" << startDate.tm_mday +6;
-    } else {
-        startOss << (startDate.tm_year + 1900) << "-" << (startDate.tm_mon + 1) << "-" << startDate.tm_mday;
-        endOss << (startDate.tm_year + 1900) << "-"  << (startDate.tm_mon + 1) << "-" << startDate.tm_mday + 6;
-    }
 
+    // Ermittle das Startdatum als QString
+    startOss << (startDate.tm_year + 1900) << "-" << std::setw(2) << std::setfill('0') << (startDate.tm_mon + 1) << "-" << std::setw(2) << std::setfill('0') << startDate.tm_mday;
     QString start_date = QString::fromStdString(startOss.str());
+
+    // Erhöhe das Startdatum um 6 Tage und überprüfe, ob ein neuer Monat beginnt
+    std::tm endDate = startDate;
+    endDate.tm_mday += 6;
+    std::mktime(&endDate); // Aktualisiere die Struktur, um den korrekten Monat zu berücksichtigen
+
+    // Ermittle das Enddatum als QString
+    endOss << (endDate.tm_year + 1900) << "-" << std::setw(2) << std::setfill('0') << (endDate.tm_mon + 1) << "-" << std::setw(2) << std::setfill('0') << endDate.tm_mday;
     QString end_date = QString::fromStdString(endOss.str());
     getSymptomsOfWeek(start_date, end_date);
 
@@ -394,26 +412,32 @@ void SymptomModel::setSymptoms(const QList<Symptom *> &newSymptoms)
 //Neues Symptom zur Liste hinzufügen und in die Datenbank einpflegen
 void SymptomModel::addSymptoms(QString name, QString intensity, int frequency, QString duration, QString entry_date, QString entry_time)
 {
-    int newSymptomID;
+    int max = primaryKey[0]; // Es wird davon ausgegangen, dass das erste Element das Maximum ist
+    for(int i = 0; i < primaryKey.size(); i++){
+        if(primaryKey[i] > max)
+            max = primaryKey[i];
+    }
+
+    int newSymptomID = max + 1;
     QDate entryDate = QDate::fromString(entry_date,"dd.MM.yyyy");
     QTime entryTime = QTime::fromString(entry_time, "hh:mm");  
 
-    QSqlQuery query;
-    query.prepare("INSERT INTO symptoms (name, intensity, frequency, duration, entryDate, entryTime) "
-                  "VALUES (:name, :intensity, :frequency, :duration, :entryDate, :entryTime)");
-    query.bindValue(":name", name);
-    query.bindValue(":intensity", intensity);
-    query.bindValue(":frequency", frequency);
-    query.bindValue(":duration", duration);
-    query.bindValue(":entryDate", entryDate);
-    query.bindValue(":entryTime", entryTime);
+//    QSqlQuery query;
+//    query.prepare("INSERT INTO symptoms (name, intensity, frequency, duration, entryDate, entryTime) "
+//                  "VALUES (:name, :intensity, :frequency, :duration, :entryDate, :entryTime)");
+//    query.bindValue(":name", name);
+//    query.bindValue(":intensity", intensity);
+//    query.bindValue(":frequency", frequency);
+//    query.bindValue(":duration", duration);
+//    query.bindValue(":entryDate", entryDate);
+//    query.bindValue(":entryTime", entryTime);
 
-    if(query.exec()) {
-        newSymptomID = query.lastInsertId().toInt();
-    }
-    else {
-        qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
-    }
+//    if(query.exec()) {
+//        newSymptomID = query.lastInsertId().toInt();
+//    }
+//    else {
+//        qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
+//    }
 
     //Symptom zur Symptomliste hinzufügen
     m_symptoms.push_back(new Symptom(newSymptomID, name, intensity, frequency, duration, entryDate, entryTime, this));

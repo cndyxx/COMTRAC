@@ -16,10 +16,11 @@ MedicationModel::MedicationModel(QObject *parent) : QSqlQueryModel(parent)
     QList<QTime> m_intakeTime;
     m_intakeTime.push_back(time);
     m_singleMedication = new Medication(0, "", 1, m_intakeTime, "", this);
-    m_medications.push_back(new Medication(1, "Biktarvy", 1, m_intakeTime, "", this));
+    m_medications.push_back(new Medication(1, "Biktarvy", 1, m_intakeTime, "Zum Zeitpunkt der Einnahme", this));
     m_intakeTime.push_back(QTime(14,0,0));
-    m_medications.push_back(new Medication(2, "Ibuprofen", 2, m_intakeTime, "", this));
-
+    m_medications.push_back(new Medication(2, "Ibuprofen", 2, m_intakeTime, "Zum Zeitpunkt der Einnahme", this));
+    primaryKey.push_back(1);
+    primaryKey.push_back(2);
 }
 
 MedicationModel::~MedicationModel()
@@ -153,14 +154,15 @@ void MedicationModel::setIntakeTime(QString m_time, int index)
 
 void MedicationModel::initializeIntakeTimeList(int size)
 {
+
     m_singleMedication->setIntakePerDay(size);
     QTime time(8,0,0);
-    QList<QTime> m_intakeTime;
+    QList<QTime> intakeTime;
 
     for(int i = 0; i < size; i++){
-        m_intakeTime.push_back(time);
+        intakeTime.push_back(time);
     }
-    m_singleMedication->setIntakeTime(m_intakeTime);
+     m_singleMedication->setIntakeTime(intakeTime);
     emit singleMedicationChanged();
 }
 
@@ -169,16 +171,21 @@ void MedicationModel::initializeIntakeTimeList(int size)
 void MedicationModel::deleteMedication()
 {
     int id = m_singleMedication->id();
-    std::cout << "ID IN MODEL: " << id;
-    QSqlQuery query;
-    query.prepare("DELETE FROM MedicationIntake WHERE medicationID = :medicationID");
-    query.bindValue(":medicationID", id);
-    if (!query.exec()) {
-        qDebug() << "Error deleting records from MedicationIntake table:" << query.lastError().text();
-        return;
+    for(int i = 0; i < primaryKey.size(); i++){
+        if(primaryKey[i] == id){
+            primaryKey.removeAt(i);
+        }
     }
-    query.prepare("DELETE FROM Medications WHERE medicationID = ?");
-    query.bindValue(0, id);
+//    std::cout << "ID IN MODEL: " << id;
+//    QSqlQuery query;
+//    query.prepare("DELETE FROM MedicationIntake WHERE medicationID = :medicationID");
+//    query.bindValue(":medicationID", id);
+//    if (!query.exec()) {
+//        qDebug() << "Error deleting records from MedicationIntake table:" << query.lastError().text();
+//        return;
+//    }
+//    query.prepare("DELETE FROM Medications WHERE medicationID = ?");
+//    query.bindValue(0, id);
     //    if(query.exec()) {
     for (int i = 0; i < m_medications.size(); i++)
     {
@@ -193,7 +200,11 @@ void MedicationModel::deleteMedication()
     //    } else {
     //        qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
     //    }
+    QTime time(8,0,0);
+    QList<QTime> m_intakeTime;
+    m_intakeTime.push_back(time);
 
+    setSingleMedication(new Medication(0, "", 1, m_intakeTime, "", this));
     emit medicationsChanged();
 
 }
@@ -253,16 +264,23 @@ void MedicationModel::deleteOrderedMedicationList()
 
 void MedicationModel::addMedication(QString name,int intakePerDay,QList<QTime> intakeTimes, QString reminderTime)
 {
-    int medicationID;
-    QSqlQuery query;
-    query.prepare("INSERT INTO medications (name, intakePerDay, reminderTime) VALUES (:name, :intakePerDay, :reminderTime)");
-    query.bindValue(":name", name);
-    query.bindValue(":intakePerDay", intakePerDay);
-    query.bindValue(":reminderTime", reminderTime);
+    int max = primaryKey[0]; // Es wird davon ausgegangen, dass das erste Element das Maximum ist
+    for(int i = 0; i < primaryKey.size(); i++){
+        if(primaryKey[i] > max)
+            max = primaryKey[i];
+    }
+
+    int medicationID = max + 1;
+    primaryKey.push_back(medicationID);
+//    QSqlQuery query;
+//    query.prepare("INSERT INTO medications (name, intakePerDay, reminderTime) VALUES (:name, :intakePerDay, :reminderTime)");
+//    query.bindValue(":name", name);
+//    query.bindValue(":intakePerDay", intakePerDay);
+//    query.bindValue(":reminderTime", reminderTime);
 
 //    if(query.exec()) {
-        medicationID = query.lastInsertId().toInt();
-        addIntakeTime(medicationID, intakeTimes);
+//      medicationID = query.lastInsertId().toInt();
+        //addIntakeTime(medicationID, intakeTimes);
         m_medications.push_back(new Medication(medicationID, name, intakePerDay, intakeTimes, reminderTime, this));
 //    }
 //    else {

@@ -73,7 +73,7 @@ Item {
 
 
         onClicked: {
-            //symptomModel.getCalendarWeekDate(2023, 26); //Kalenderwoche 26
+            symptomModel.getCalendarWeekDate(2023, 26); //Kalenderwoche 26
             stackView.push("SymptomHistory.qml")
         }
 

@@ -31,7 +31,7 @@ Item {
         ListView{
             id: messageListView
             width: parent.width * 0.9
-            height: parent.height - header.height - 20
+            height: parent.height - header.height - 80
             anchors.top: header.bottom
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.margins: 10
@@ -53,8 +53,43 @@ Item {
 
         }
 
+        Rectangle {
+            width: parent.width
+            height: 50
+            anchors.bottom: parent.bottom
+            color: "dimgrey"
+            Rectangle {
+                width: parent.width * 0.7
+                height: parent.height * 0.8
+                anchors.left: parent.left; anchors.leftMargin: 10
+                anchors.verticalCenter: parent.verticalCenter
+                color: "white"
+                radius: 15
+                Text {
+                    text: "Nachricht"
+                    font.pixelSize: 20
+                    font.family: "Arial"
+                    color: "dimgrey"
+                    anchors.left: parent.left; anchors.leftMargin: 10
+                    anchors.verticalCenter: parent.verticalCenter
+                }
+            }
 
-
-
-
+            Rectangle{
+                id: button
+                width: parent.height * 0.8
+                height: button.width
+                color: "grey"
+                radius: 50
+                anchors.right: parent.right; anchors.rightMargin: 10
+                anchors.verticalCenter: parent.verticalCenter
+                Image {
+                    width: parent.width * 0.5
+                    height: parent.height * 0.5
+                    source: "../assets/arrow.png"
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.verticalCenter: parent.verticalCenter
+                }
+            }
+        }
 }

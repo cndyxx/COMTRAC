@@ -21,6 +21,17 @@ ColumnLayout {
     height: parent.height * 0.25
     //columns: 2
     //Functions
+
+    Connections {
+        target: symptomModel  // Das Symptom-Modellobjekt in QML
+        function onSymptomsChanged() {
+            // Aktualisiere das Modell der ListView
+            calendarEntry.isEntry = checkSymptomsForDate(model.date.toLocaleString(Qt.locale("de_DE"), "yyyy-MM-dd"), model.date.toLocaleString(Qt.locale("de_DE"), "MM") );
+            symptomListView.model = symptomModel.symptomsOfMonth;
+            //symptomListView.model.append(symptomModel.symptoms);
+        }
+    }
+
     function daysInMonth(date) {
         return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
     }
@@ -44,7 +55,7 @@ ColumnLayout {
     }
 
     function checkSymptomsForDate(date, month) {
-        // Führe eine Datenbankabfrage durch, um zu überprüfen, ob Symptome für das angegebene Datum vorhanden sind
+        // Datenbankabfrage durch, um zu überprüfen, ob Symptome für das angegebene Datum vorhanden sind
         // Gib true zurück, wenn Symptome vorhanden sind, andernfalls false
         symptomModel.getEntryDates(month);
         var retVal = symptomModel.findDate(date);
@@ -110,6 +121,7 @@ ColumnLayout {
         id: dayOfWeekRow
         locale: grid.locale
         font.bold: false
+
         delegate: Label {
             text: model.shortName
             font: dayOfWeekRow.font
@@ -142,6 +154,7 @@ ColumnLayout {
 
         // Markiert den aktuellen Tag im Kalender
         delegate: Item {
+            id: calendarEntry
             property bool isSelected: model.date.getDate().toString() + "." + model.date.getMonth().toString() === selectedDate
             property bool isEntry: checkSymptomsForDate(model.date.toLocaleString(Qt.locale("de_DE"), "yyyy-MM-dd"), model.date.toLocaleString(Qt.locale("de_DE"), "MM") )
             width: date.width
@@ -167,11 +180,7 @@ ColumnLayout {
                         return "transparent"
                     }
                 }
-                /*
-                color: isSelected ? "lightgrey" : (model.today ? "transparent" : "transparent")
-                border.color: isSelected ? "transparent" : (model.today ? "grey" : "transparent")
-                border.width: isSelected ? 0 : (model.today ? 1 : 0)
-                */
+
                 radius: 90
 
                 Text {

@@ -27,20 +27,7 @@ Button {
         height: 60
         border.color: "darkgrey"
         border.width: 2
-        color:if(setBackgroundColor) {
-                  switch (symptomData.name) {
-               case "Fieber":
-                   return "orange";
-               case "Kopfschmerzen":
-                   return "lightskyblue";
-               case "Übelkeit":
-                   return "yellowgreen";
-               default:
-                   return "gray";
-           }
-              } else {
-                  return "lightgrey";
-              }
+        color: "lightgrey"
 
         radius: 5
 
@@ -56,11 +43,11 @@ Button {
         }
         contentItem: Image  {
 
-        source: "../../assets/pencil.png";
+            source: "../../assets/pencil.png";
 
-        // Positionierung des Bildes
+            // Positionierung des Bildes
 
-    }
+        }
         background: Rectangle {
             color: backgroundRectangle.color
         }
@@ -68,8 +55,8 @@ Button {
         onClicked: {
             symptomModel.setSingleSymptom(symptomData);
             stackView.push("../EditSymptom.qml", {"pageState" : 2})
+        }
     }
-}
 
 }
 

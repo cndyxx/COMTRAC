@@ -28,6 +28,7 @@ private:
     Medication * m_singleMedication;
     QList<QString> m_orderMedication;
     MessageModel* m_messageModel;
+    QList<int> primaryKey;
 
 
 public:

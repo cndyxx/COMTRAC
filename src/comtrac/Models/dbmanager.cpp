@@ -7,7 +7,7 @@ DbManager *DbManager::instanz = NULL;
 
 DbManager::DbManager()
 {
-    QString path= "/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-WebAssembly_Qt_6_4_3-Release/comtrac/database/dbComtrac.db"; //"../comtrac/database/dbComtrac.db";
+    QString path= "../comtrac/database/dbComtrac.db"; //"../comtrac/database/dbComtrac.db";
     m_db = QSqlDatabase::addDatabase("QSQLITE");
     m_db.setDatabaseName(path);
     m_db.open();

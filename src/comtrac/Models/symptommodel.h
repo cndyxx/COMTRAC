@@ -94,6 +94,7 @@ private:
     void deleteSymptomOfList(QList<Symptom *> &list , int symptomID);
     std::tm getWeekendDate(int year, int weekNumber);
     void getSymptomsOfWeek(QString startDate, QString endDate);
+    QList<int> primaryKey;
 
 };
 

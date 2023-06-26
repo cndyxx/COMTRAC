@@ -91,7 +91,6 @@ qt_add_qml_module(appcomtrac
 
 
 
-
     RESOURCES
     assets/menu.png
     assets/triangle_next.png
@@ -103,6 +102,11 @@ qt_add_qml_module(appcomtrac
     assets/singleSymptom_Diagramm.PNG
     assets/weeklySymptoms_Diagramm.PNG
     assets/user-silhouette.png
+    assets/video_icon.png
+    assets/microphone.png
+    assets/chat.png
+    assets/circle.png
+    assets/arrow.png
 )
 
 

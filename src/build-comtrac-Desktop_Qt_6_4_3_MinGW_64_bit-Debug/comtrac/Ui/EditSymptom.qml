@@ -252,15 +252,15 @@ Item {
                 Layout.fillWidth: true
                 buttonWidth: parent.width / 2
                 onClicked: {
-//                    //Überpüfe welcher RadioButton ausgewählt
-//                    if (radioButtonMoreThen.checked) {
-//                        var radioButtonValue = radioButtonMoreThen.text
-//                    } else {
-//                        radioButtonValue = radioButtonLessThen.text
-//                    }
+                    //Überpüfe welcher RadioButton ausgewählt
+                    if (radioButtonMoreThen.checked) {
+                        var radioButtonValue = radioButtonMoreThen.text
+                    } else {
+                        radioButtonValue = radioButtonLessThen.text
+                    }
                     //Neues Symptom zur Datenbank hinzufügen
                     if(pageState === 0) {
-                        symptomModel.addSymptoms(symptomInput.text, sliderIntensity.value, sliderFrequency.value, 0, txtDate.text,  txtTime.text);
+                        symptomModel.addSymptoms(symptomInput.text, sliderIntensity.value, sliderFrequency.value, radioButtonValue, txtDate.text,  txtTime.text);
                         stackView.pop()
                         stackView.pop()
                     }
@@ -270,7 +270,7 @@ Item {
                     }
                     //Symptom in der Datenbank ändern
                     else if(pageState === 2){
-                        symptomModel.updateSymptom(symptomInput.text, sliderIntensity.value, sliderFrequency.value, 0);
+                        symptomModel.updateSymptom(symptomInput.text, sliderIntensity.value, sliderFrequency.value, radioButtonValue);
                         stackView.pop()
 
                     }
