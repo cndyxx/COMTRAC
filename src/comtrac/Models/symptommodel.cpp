@@ -4,6 +4,7 @@
 #include <chrono>
 #include <sstream>
 #include <iomanip>
+#include <mutex>
 
 
 using std::ostringstream;
@@ -13,22 +14,22 @@ SymptomModel::SymptomModel(QObject *parent) : QSqlQueryModel(parent)
     QDate date;
     QTime time;
     //Kalenderwoche 24
-    m_symptoms.push_back(new Symptom(0, "Fieber", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,12) , QTime(9,30,0), this));
-    m_symptoms.push_back(new Symptom(1, "Gliederschmerzen", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,13) , QTime(9,30,0),  this));
-    m_symptoms.push_back(new Symptom(2, "Durchfall", "leicht", 6, "Seit weniger als 24 Stunden", QDate(2023,6,14) , QTime(9,30,0),  this));
-    m_symptoms.push_back(new Symptom(3, "Hautausschlag", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,15) , QTime(9,30,0),  this));
-    m_symptoms.push_back(new Symptom(4, "Nachtschweiß", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,17) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(1, "Fieber", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,12) , QTime(9,30,0), this));
+    m_symptoms.push_back(new Symptom(2, "Gliederschmerzen", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,13) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(3, "Durchfall", "leicht", 6, "Seit weniger als 24 Stunden", QDate(2023,6,14) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(4, "Hautausschlag am Arm", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,15) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(5, "Nachtschweiß", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,17) , QTime(9,30,0),  this));
         //Kalenderwoche 25
-    m_symptoms.push_back(new Symptom(5, "Fieber", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,19) , QTime(9,30,0),  this));
-    m_symptoms.push_back(new Symptom(6, "Gliederschmerzen", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,20) , QTime(9,30,0),  this));
-    m_symptoms.push_back(new Symptom(7, "Durchfall", "leicht", 5, "Seit weniger als 24 Stunden", QDate(2023,6, 22) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(6, "Fieber", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,19) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(7, "Gliederschmerzen", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,20) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(8, "Durchfall", "leicht", 5, "Seit weniger als 24 Stunden", QDate(2023,6, 22) , QTime(9,30,0),  this));
     //Kalenderwoche 26
    // m_symptoms.push_back(new Symptom(8, "Fieber", "leicht", 1, "", QDate(2023,6,26) , QTime(9,30,0),  this));
     // m_symptoms.push_back(new Symptom(9, "Nachtschweiß", "leicht", 1, "", QDate(2023,6,27) , QTime(9,30,0),  this));
     // m_symptoms.push_back(new Symptom(10, "Durchfall", "leicht", 1, "", QDate(2023,6,29) , QTime(9,30,0),  this));
     date = QDate(2023, 6,26);
-    m_symptoms.push_back(new Symptom(8, "Fieber", "leicht", 1, "Seit mehr als 24 Stunden", date , QTime(9,30,0),  this));
-    for(int i = 0; i < 8; i++){
+    m_symptoms.push_back(new Symptom(9, "Fieber", "leicht", 1, "Seit mehr als 24 Stunden", date , QTime(9,30,0),  this));
+    for(int i = 1; i < 9; i++){
         primaryKey.push_back(i);
     }
 }
@@ -64,13 +65,8 @@ std::tm SymptomModel::getWeekendDate(int year, int weekNumber)
 void SymptomModel::deleteSymptom()
 {
 
-
     int symptomId = m_singleSymptom->id();
-    for(int i = 0; i < primaryKey.size(); i++){
-        if(primaryKey[i] == symptomId){
-            primaryKey.removeAt(i);
-        }
-    }
+
     std::cout << "ID die gelöscht wird: " << symptomId << std::endl;
             //Symptom aus der Datenbank entfernen
             //            QSqlQuery query;
@@ -82,9 +78,19 @@ void SymptomModel::deleteSymptom()
 
 
                     //Symptom aus der Symptom Liste entfernen
-    deleteSymptomOfList(m_daySymptoms, symptomId);
-    deleteSymptomOfList(m_symptoms, symptomId);
+    for(int i = 0; i < m_symptoms.size(); i++){
+        if(m_symptoms[i]->id() == symptomId){
+            m_symptoms.removeAt(i);
+        }
+    }
 
+    //deleteSymptomOfList(m_symptoms, symptomId);
+    deleteSymptomOfList(m_daySymptoms, symptomId);
+    for(int i = 0; i < primaryKey.size(); i++){
+        if(primaryKey[i] == symptomId){
+            primaryKey.removeAt(i);
+        }
+    }
     emit symptomsChanged();
     emit daySymptomsChanged();
 
@@ -170,7 +176,8 @@ void SymptomModel::deleteSymptomOfList(QList<Symptom *> &list, int symptomId)
     //Symptom aus der Symptom Liste entfernen
     for (int i = 0; i < list.size(); i++)
     {
-        Symptom* symptom = list.at(i);
+        Symptom * symptom;
+        symptom = list.at(i);
         if (symptom->id() == symptomId)
         {
             list.removeAt(i);
@@ -178,6 +185,7 @@ void SymptomModel::deleteSymptomOfList(QList<Symptom *> &list, int symptomId)
             break;
         }
     }
+
 }
 
 QList<Symptom *> SymptomModel::symptomEntries() const
