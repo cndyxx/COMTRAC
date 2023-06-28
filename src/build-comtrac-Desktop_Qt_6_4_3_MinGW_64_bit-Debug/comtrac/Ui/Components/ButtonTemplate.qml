@@ -29,7 +29,7 @@ Button {
     background: Rectangle {
         implicitWidth: buttonWidth
         implicitHeight: buttonHeight
-        color: root.down ? root.backgroundPressedColor : root.backgroundDefaultColor
+        color: root.down ? root.backgroundPressedColor : (root.hovered ? Qt.lighter(backgroundDefaultColor, 1.2) : root.backgroundDefaultColor)
         radius: 25
         border.color: borderDefaultColor
         //layer.enabled: true

@@ -25,10 +25,6 @@ Item {
             intakeCount = 1;
         }
 
-
-
-
-
     }
     function setIntakeTime() {
         var time = new Date();
@@ -167,7 +163,6 @@ Item {
             delegate: IntakeDelegate{
                 id: intakeTimeBtn
                 enabled: pageState === 0 || pageState === 2
-                property string time: "08:00 AM"
 
                 onClicked: {
                     timePicker.currentIndex = index;
@@ -195,16 +190,16 @@ Item {
                 id: switchReminder
                 anchors.left: txtReminder.right
                 anchors.leftMargin: 60
-                checked: if (switchReminder.checked) {
-                            radioButtonTimeOfTaking.checked = true;
-                          } else {
-                            radioButtonTimeOfTaking.checked = false;
-                            radioButtonTenMinutesBefore.checked = false;
-                          }
                 enabled: pageState === 0 || pageState === 2
-
+                checked: radioButtonTimeOfTaking.checked || radioButtonTenMinutesBefore.checked
                 onCheckedChanged: {
-                    if (!switchReminder.checked) {
+                    if (switchReminder.checked) {
+                        if (reminderTime === "Zum Zeitpunkt der Einnahme") {
+                            radioButtonTimeOfTaking.checked = true;
+                        } else if (reminderTime === "10 Minuten vorher") {
+                            radioButtonTenMinutesBefore.checked = true;
+                        }
+                    } else {
                         radioButtonTimeOfTaking.checked = false;
                         radioButtonTenMinutesBefore.checked = false;
                     }
@@ -216,7 +211,19 @@ Item {
             enabled: switchReminder.checked && (pageState === 0 || pageState === 2)
             text: qsTr("Zum Zeitpunkt der Einnahme")
             font.pixelSize: 15
-            checked: switchReminder.checked && pageState !== 0
+            checked:  {
+                if (pageState !== 0)
+                    if (reminderTime === radioButtonTimeOfTaking.text)
+                        return true
+                    else
+                        return false
+            }
+            onCheckedChanged: {
+                if (checked) {
+                    switchReminder.checked = true;
+                    reminderTime = "Zum Zeitpunkt der Einnahme";
+                }
+            }
         }
 
         RadioButtonTemplate {
@@ -224,30 +231,22 @@ Item {
             enabled: switchReminder.checked && (pageState === 0 || pageState === 2)
             text: qsTr("10 Minuten vorher")
             font.pixelSize: 15
-            checked: switchReminder.checked && pageState !== 0
-        }
-        Component.onCompleted: {
-            if(pageState!= 0){
-                if(reminderTime === radioButtonTenMinutesBefore.text){
-                    radioButtonTenMinutesBefor.checked = true;
-                    switchReminder.checked = true;
-                } else if(reminderTime === radioButtonTimeOfTaking.text){
-                    radioButtonTimeOfTaking.checked = true;
-                    switchReminder.checked = true;
-                } else {
-                    switchReminder.checked = false;
-                }
+            checked: {
+                if (pageState !== 0)
+                    if (reminderTime === radioButtonTenMinutesBefore.text)
+                        return true
+                    else
+                        return false
             }
-            else {
-                if (switchReminder.checked) {
-                    radioButtonTimeOfTaking.checked = true;
-                } else {
-                    radioButtonTimeOfTaking.checked = false;
-                    radioButtonTenMinutesBefore.checked = false;
+                onCheckedChanged: {
+                    if (checked) {
+                        switchReminder.checked = true;
+                        reminderTime = "10 Minuten vorher";
+                    }
                 }
-            }
 
         }
+
         RowLayout {
             anchors.bottom: parent.bottom
             anchors.bottomMargin: 10

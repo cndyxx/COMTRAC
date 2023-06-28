@@ -6,11 +6,12 @@ import QtQuick.Layouts
 
 Button {
     property string buttonIcon
+    id: root
     width: 65
     height: 65
 
     background: Rectangle {
-        color: "grey"
+        color: root.down ? root.Qt.darger("grey", 1.2) : (root.hovered ? Qt.lighter("grey", 1.2) : "grey")
         radius: 45
     }
 
