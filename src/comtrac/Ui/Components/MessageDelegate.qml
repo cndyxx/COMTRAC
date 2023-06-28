@@ -11,10 +11,12 @@ Item {
     property string inputText: messageData.text
     property int textType: messageData.type
     property int dotCount: 1
+    property bool disableButton: false
 
     width: parent.width
     height: contentItem.height + 50
     signal  nextMessage()
+    signal cancelAction()
 
     ListModel {
         id: buttonText
@@ -101,15 +103,22 @@ Item {
                             model: buttonText
 
                             delegate: ButtonTemplate {
+                                id: button
                                 text: modelData
                                 buttonWidth: contentItem.width * 0.8
                                 backgroundDefaultColor: "white"
                                 borderDefaultColor: "black"
                                 contentItemTextColor: "black"
+                                enabled: if(text !== "Rezept bestellen"){
+                                             return false;
+                                         } else {
+                                             return true;
+                                         }
 
                                 onClicked: {
                                     timer.start()
                                     nextMessage()
+                                    button.enabled = false;
                                 }
                             }
                         }
@@ -252,7 +261,8 @@ Item {
                             borderDefaultColor: "black"
                             contentItemTextColor: "black"
                             onClicked: {
-                                // Handle button click
+                                cancelAction();
+                                button.enabled = true;
 
                             }
                         }

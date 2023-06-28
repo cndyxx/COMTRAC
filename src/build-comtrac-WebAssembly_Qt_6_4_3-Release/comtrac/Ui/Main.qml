@@ -19,13 +19,14 @@ Window {
             id: rectangle
             width: 300
             height: 550
-            anchors.horizontalCenter: root
-            anchors.verticalCenter: root
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
         }
 
     Loader{
         id: loader
         anchors.fill: rectangle
+
         source: stack_view
 
 

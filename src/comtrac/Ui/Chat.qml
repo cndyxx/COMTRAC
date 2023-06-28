@@ -47,6 +47,11 @@ Item {
                     currentMessage +=1
                     messageListView.currentIndex += 1
                 }
+                onCancelAction: {
+                    messageListView.model = messageModel.messages;
+                    currentMessage = 0;
+                    messageListView.currentIndex = 0;
+                }
             }
             clip: true
 

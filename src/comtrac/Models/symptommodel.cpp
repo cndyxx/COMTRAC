@@ -18,18 +18,19 @@ SymptomModel::SymptomModel(QObject *parent) : QSqlQueryModel(parent)
     m_symptoms.push_back(new Symptom(2, "Gliederschmerzen", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,13) , QTime(9,30,0),  this));
     m_symptoms.push_back(new Symptom(3, "Durchfall", "leicht", 6, "Seit weniger als 24 Stunden", QDate(2023,6,14) , QTime(9,30,0),  this));
     m_symptoms.push_back(new Symptom(4, "Hautausschlag am Arm", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,15) , QTime(9,30,0),  this));
-    m_symptoms.push_back(new Symptom(5, "Nachtschweiß", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,17) , QTime(9,30,0),  this));
-        //Kalenderwoche 25
-    m_symptoms.push_back(new Symptom(6, "Fieber", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,19) , QTime(9,30,0),  this));
-    m_symptoms.push_back(new Symptom(7, "Gliederschmerzen", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,20) , QTime(9,30,0),  this));
-    m_symptoms.push_back(new Symptom(8, "Durchfall", "leicht", 5, "Seit weniger als 24 Stunden", QDate(2023,6, 22) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(5, "Nachtschweiß", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,15) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(6, "Nachtschweiß", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,17) , QTime(9,30,0),  this));
+    //Kalenderwoche 25
+    m_symptoms.push_back(new Symptom(7, "Fieber", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,19) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(8, "Gliederschmerzen", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,20) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(9, "Durchfall", "leicht", 5, "Seit weniger als 24 Stunden", QDate(2023,6, 22) , QTime(9,30,0),  this));
     //Kalenderwoche 26
    // m_symptoms.push_back(new Symptom(8, "Fieber", "leicht", 1, "", QDate(2023,6,26) , QTime(9,30,0),  this));
     // m_symptoms.push_back(new Symptom(9, "Nachtschweiß", "leicht", 1, "", QDate(2023,6,27) , QTime(9,30,0),  this));
     // m_symptoms.push_back(new Symptom(10, "Durchfall", "leicht", 1, "", QDate(2023,6,29) , QTime(9,30,0),  this));
-    date = QDate(2023, 6,26);
-    m_symptoms.push_back(new Symptom(9, "Fieber", "leicht", 1, "Seit mehr als 24 Stunden", date , QTime(9,30,0),  this));
-    for(int i = 1; i < 9; i++){
+    m_symptoms.push_back(new Symptom(10, "Fieber", "leicht", 1, "Seit mehr als 24 Stunden", QDate(2023, 6,27) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(11, "Kopfschmerzen", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023, 6,28) , QTime(9,30,0),  this));
+    for(int i = 1; i < 11; i++){
         primaryKey.push_back(i);
     }
 }

@@ -38,7 +38,7 @@ Item {
         model: ["Intensität", "Häufigkeit", "Dauer"]
         delegate: CheckBoxTemplate {
             text: modelData
-            font.pixelSize: 15
+            font.pixelSize: 12
             font.family: "Arial"
         }
     }
@@ -50,7 +50,7 @@ Item {
 
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 5
-
+        clip: true
         width: parent.width
         height: parent.height * 0.35
         model: symptom

@@ -20,6 +20,8 @@ Item {
         height: 150
         Image{
             source: "../assets/user-silhouette.png"
+            anchors.verticalCenterOffset: 0
+            anchors.horizontalCenterOffset: 7
             width: parent.width * 0.4
             height: parent.height * 0.9
             anchors.horizontalCenter: parent.horizontalCenter
@@ -27,7 +29,7 @@ Item {
         }
 
         Rectangle{
-            width: txtDoctor.width
+            width: txtDoctor.width * 0.9
             height: 20
             anchors.top: parent.top; anchors.topMargin: 5
             anchors.left: parent.left; anchors.leftMargin: 5

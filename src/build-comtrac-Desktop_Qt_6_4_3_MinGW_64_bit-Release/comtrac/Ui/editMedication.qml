@@ -167,7 +167,6 @@ Item {
             delegate: IntakeDelegate{
                 id: intakeTimeBtn
                 enabled: pageState === 0 || pageState === 2
-                property string time: "08:00 AM"
 
                 onClicked: {
                     timePicker.currentIndex = index;
@@ -204,10 +203,22 @@ Item {
                 enabled: pageState === 0 || pageState === 2
 
                 onCheckedChanged: {
-                    if (!switchReminder.checked) {
-                        radioButtonTimeOfTaking.checked = false;
-                        radioButtonTenMinutesBefore.checked = false;
-                    }
+//                    if (!switchReminder.checked) {
+//                        radioButtonTimeOfTaking.checked = false;
+//                        radioButtonTenMinutesBefore.checked = false;
+//                    }
+                    if (switchReminder.checked) {
+                               if (reminderTime === radioButtonTimeOfTaking.text) {
+                                   radioButtonTimeOfTaking.checked = true;
+                                   radioButtonTenMinutesBefore.checked = false;
+                               } else if (reminderTime === radioButtonTenMinutesBefore.text) {
+                                   radioButtonTimeOfTaking.checked = false;
+                                   radioButtonTenMinutesBefore.checked = true;
+                               }
+                           } else {
+                               radioButtonTimeOfTaking.checked = false;
+                               radioButtonTenMinutesBefore.checked = false;
+                           }
                 }
             }
         }
@@ -216,7 +227,7 @@ Item {
             enabled: switchReminder.checked && (pageState === 0 || pageState === 2)
             text: qsTr("Zum Zeitpunkt der Einnahme")
             font.pixelSize: 15
-            checked: switchReminder.checked && pageState !== 0
+            checked: (switchReminder.checked && pageState !== 0) || reminderTime === radioButtonTimeOfTaking.text
         }
 
         RadioButtonTemplate {
@@ -224,30 +235,31 @@ Item {
             enabled: switchReminder.checked && (pageState === 0 || pageState === 2)
             text: qsTr("10 Minuten vorher")
             font.pixelSize: 15
-            checked: switchReminder.checked && pageState !== 0
-        }
-        Component.onCompleted: {
-            if(pageState!= 0){
-                if(reminderTime === radioButtonTenMinutesBefore.text){
-                    radioButtonTenMinutesBefor.checked = true;
-                    switchReminder.checked = true;
-                } else if(reminderTime === radioButtonTimeOfTaking.text){
-                    radioButtonTimeOfTaking.checked = true;
-                    switchReminder.checked = true;
-                } else {
-                    switchReminder.checked = false;
-                }
-            }
-            else {
-                if (switchReminder.checked) {
-                    radioButtonTimeOfTaking.checked = true;
-                } else {
-                    radioButtonTimeOfTaking.checked = false;
-                    radioButtonTenMinutesBefore.checked = false;
-                }
-            }
+            checked: (switchReminder.checked && pageState !== 0) || reminderTime === radioButtonTenMinutesBefore.text
 
         }
+//        Component.onCompleted: {
+//            if(pageState!= 0){
+//                if(reminderTime === radioButtonTenMinutesBefore.text){
+//                    radioButtonTenMinutesBefor.checked = true;
+//                    switchReminder.checked = true;
+//                } else if(reminderTime === radioButtonTimeOfTaking.text){
+//                    radioButtonTimeOfTaking.checked = true;
+//                    switchReminder.checked = true;
+//                } else {
+//                    switchReminder.checked = false;
+//                }
+//            }
+//            else {
+//                if (switchReminder.checked) {
+//                    radioButtonTimeOfTaking.checked = true;
+//                } else {
+//                    radioButtonTimeOfTaking.checked = false;
+//                    radioButtonTenMinutesBefore.checked = false;
+//                }
+//            }
+
+//        }
         RowLayout {
             anchors.bottom: parent.bottom
             anchors.bottomMargin: 10
