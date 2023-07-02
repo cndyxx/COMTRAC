@@ -26,49 +26,46 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_Symptom_t {
-    uint offsetsAndSizes[32];
+    uint offsetsAndSizes[30];
     char stringdata0[8];
-    char stringdata1[10];
+    char stringdata1[12];
     char stringdata2[1];
-    char stringdata3[12];
+    char stringdata3[17];
     char stringdata4[17];
-    char stringdata5[17];
-    char stringdata6[16];
+    char stringdata5[16];
+    char stringdata6[17];
     char stringdata7[17];
-    char stringdata8[17];
-    char stringdata9[3];
-    char stringdata10[5];
+    char stringdata8[3];
+    char stringdata9[5];
+    char stringdata10[10];
     char stringdata11[10];
-    char stringdata12[10];
-    char stringdata13[9];
+    char stringdata12[9];
+    char stringdata13[10];
     char stringdata14[10];
-    char stringdata15[10];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_Symptom_t::offsetsAndSizes) + ofs), len 
 Q_CONSTINIT static const qt_meta_stringdata_Symptom_t qt_meta_stringdata_Symptom = {
     {
         QT_MOC_LITERAL(0, 7),  // "Symptom"
-        QT_MOC_LITERAL(8, 9),  // "idChanged"
-        QT_MOC_LITERAL(18, 0),  // ""
-        QT_MOC_LITERAL(19, 11),  // "nameChanged"
-        QT_MOC_LITERAL(31, 16),  // "intensityChanged"
-        QT_MOC_LITERAL(48, 16),  // "frequencyChanged"
-        QT_MOC_LITERAL(65, 15),  // "durationChanged"
-        QT_MOC_LITERAL(81, 16),  // "entryDateChanged"
-        QT_MOC_LITERAL(98, 16),  // "entryTimeChanged"
-        QT_MOC_LITERAL(115, 2),  // "id"
-        QT_MOC_LITERAL(118, 4),  // "name"
-        QT_MOC_LITERAL(123, 9),  // "intensity"
-        QT_MOC_LITERAL(133, 9),  // "frequency"
-        QT_MOC_LITERAL(143, 8),  // "duration"
-        QT_MOC_LITERAL(152, 9),  // "entryDate"
-        QT_MOC_LITERAL(162, 9)   // "entryTime"
+        QT_MOC_LITERAL(8, 11),  // "nameChanged"
+        QT_MOC_LITERAL(20, 0),  // ""
+        QT_MOC_LITERAL(21, 16),  // "intensityChanged"
+        QT_MOC_LITERAL(38, 16),  // "frequencyChanged"
+        QT_MOC_LITERAL(55, 15),  // "durationChanged"
+        QT_MOC_LITERAL(71, 16),  // "entryDateChanged"
+        QT_MOC_LITERAL(88, 16),  // "entryTimeChanged"
+        QT_MOC_LITERAL(105, 2),  // "id"
+        QT_MOC_LITERAL(108, 4),  // "name"
+        QT_MOC_LITERAL(113, 9),  // "intensity"
+        QT_MOC_LITERAL(123, 9),  // "frequency"
+        QT_MOC_LITERAL(133, 8),  // "duration"
+        QT_MOC_LITERAL(142, 9),  // "entryDate"
+        QT_MOC_LITERAL(152, 9)   // "entryTime"
     },
     "Symptom",
-    "idChanged",
-    "",
     "nameChanged",
+    "",
     "intensityChanged",
     "frequencyChanged",
     "durationChanged",
@@ -91,21 +88,20 @@ Q_CONSTINIT static const uint qt_meta_data_Symptom[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       7,   14, // methods
-       7,   63, // properties
+       6,   14, // methods
+       7,   56, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       7,       // signalCount
+       6,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   56,    2, 0x06,    8 /* Public */,
-       3,    0,   57,    2, 0x06,    9 /* Public */,
-       4,    0,   58,    2, 0x06,   10 /* Public */,
-       5,    0,   59,    2, 0x06,   11 /* Public */,
-       6,    0,   60,    2, 0x06,   12 /* Public */,
-       7,    0,   61,    2, 0x06,   13 /* Public */,
-       8,    0,   62,    2, 0x06,   14 /* Public */,
+       1,    0,   50,    2, 0x06,    8 /* Public */,
+       3,    0,   51,    2, 0x06,    9 /* Public */,
+       4,    0,   52,    2, 0x06,   10 /* Public */,
+       5,    0,   53,    2, 0x06,   11 /* Public */,
+       6,    0,   54,    2, 0x06,   12 /* Public */,
+       7,    0,   55,    2, 0x06,   13 /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -114,16 +110,15 @@ Q_CONSTINIT static const uint qt_meta_data_Symptom[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void,
 
  // properties: name, type, flags
-       9, QMetaType::Int, 0x00015103, uint(0), 0,
+       8, QMetaType::Int, 0x00015401, uint(-1), 0,
+       9, QMetaType::QString, 0x00015103, uint(0), 0,
       10, QMetaType::QString, 0x00015103, uint(1), 0,
-      11, QMetaType::QString, 0x00015103, uint(2), 0,
-      12, QMetaType::Int, 0x00015103, uint(3), 0,
-      13, QMetaType::QString, 0x00015103, uint(4), 0,
-      14, QMetaType::QDate, 0x00015103, uint(5), 0,
-      15, QMetaType::QTime, 0x00015103, uint(6), 0,
+      11, QMetaType::Int, 0x00015103, uint(2), 0,
+      12, QMetaType::QString, 0x00015103, uint(3), 0,
+      13, QMetaType::QDate, 0x00015103, uint(4), 0,
+      14, QMetaType::QTime, 0x00015103, uint(5), 0,
 
        0        // eod
 };
@@ -151,8 +146,6 @@ Q_CONSTINIT const QMetaObject Symptom::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<QTime, std::true_type>,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<Symptom, std::true_type>,
-        // method 'idChanged'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'nameChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'intensityChanged'
@@ -175,63 +168,55 @@ void Symptom::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         auto *_t = static_cast<Symptom *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->idChanged(); break;
-        case 1: _t->nameChanged(); break;
-        case 2: _t->intensityChanged(); break;
-        case 3: _t->frequencyChanged(); break;
-        case 4: _t->durationChanged(); break;
-        case 5: _t->entryDateChanged(); break;
-        case 6: _t->entryTimeChanged(); break;
+        case 0: _t->nameChanged(); break;
+        case 1: _t->intensityChanged(); break;
+        case 2: _t->frequencyChanged(); break;
+        case 3: _t->durationChanged(); break;
+        case 4: _t->entryDateChanged(); break;
+        case 5: _t->entryTimeChanged(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
             using _t = void (Symptom::*)();
-            if (_t _q_method = &Symptom::idChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &Symptom::nameChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 0;
                 return;
             }
         }
         {
             using _t = void (Symptom::*)();
-            if (_t _q_method = &Symptom::nameChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &Symptom::intensityChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 1;
                 return;
             }
         }
         {
             using _t = void (Symptom::*)();
-            if (_t _q_method = &Symptom::intensityChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &Symptom::frequencyChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 2;
                 return;
             }
         }
         {
             using _t = void (Symptom::*)();
-            if (_t _q_method = &Symptom::frequencyChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &Symptom::durationChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 3;
                 return;
             }
         }
         {
             using _t = void (Symptom::*)();
-            if (_t _q_method = &Symptom::durationChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &Symptom::entryDateChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 4;
                 return;
             }
         }
         {
             using _t = void (Symptom::*)();
-            if (_t _q_method = &Symptom::entryDateChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
-                *result = 5;
-                return;
-            }
-        }
-        {
-            using _t = void (Symptom::*)();
             if (_t _q_method = &Symptom::entryTimeChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
-                *result = 6;
+                *result = 5;
                 return;
             }
         }
@@ -254,7 +239,6 @@ void Symptom::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         (void)_t;
         void *_v = _a[0];
         switch (_id) {
-        case 0: _t->setId(*reinterpret_cast< int*>(_v)); break;
         case 1: _t->setName(*reinterpret_cast< QString*>(_v)); break;
         case 2: _t->setIntensity(*reinterpret_cast< QString*>(_v)); break;
         case 3: _t->setFrequency(*reinterpret_cast< int*>(_v)); break;
@@ -288,13 +272,13 @@ int Symptom::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 7)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 7;
+        _id -= 6;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 7)
+        if (_id < 6)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 7;
+        _id -= 6;
     }else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
             || _c == QMetaObject::RegisterPropertyMetaType) {
@@ -305,45 +289,39 @@ int Symptom::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void Symptom::idChanged()
+void Symptom::nameChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
 }
 
 // SIGNAL 1
-void Symptom::nameChanged()
+void Symptom::intensityChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
 }
 
 // SIGNAL 2
-void Symptom::intensityChanged()
+void Symptom::frequencyChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 2, nullptr);
 }
 
 // SIGNAL 3
-void Symptom::frequencyChanged()
+void Symptom::durationChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 3, nullptr);
 }
 
 // SIGNAL 4
-void Symptom::durationChanged()
+void Symptom::entryDateChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 4, nullptr);
 }
 
 // SIGNAL 5
-void Symptom::entryDateChanged()
-{
-    QMetaObject::activate(this, &staticMetaObject, 5, nullptr);
-}
-
-// SIGNAL 6
 void Symptom::entryTimeChanged()
 {
-    QMetaObject::activate(this, &staticMetaObject, 6, nullptr);
+    QMetaObject::activate(this, &staticMetaObject, 5, nullptr);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

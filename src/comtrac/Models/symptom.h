@@ -11,7 +11,7 @@
 class Symptom  : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(int id READ id WRITE setId NOTIFY idChanged)
+    Q_PROPERTY(int id READ id CONSTANT)
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
     Q_PROPERTY(QString intensity READ intensity WRITE setIntensity NOTIFY intensityChanged)
     Q_PROPERTY(int frequency READ frequency WRITE setFrequency NOTIFY frequencyChanged)
@@ -22,8 +22,7 @@ class Symptom  : public QObject
 public:
     explicit Symptom(int id, QString name, QString intensity, int frequency, QString duration, QDate entryDate, QTime entryTime, QObject *parent = nullptr);
 
-    int id() const;
-    void setId(int newId);
+
 
     QString name() const;
     void setName(const QString &newName);
@@ -43,8 +42,12 @@ public:
     QTime entryTime() const;
     void setEntryTime(const QTime &newEntryTime);
 
+
+
+    int id() const;
+
 signals:
-    void idChanged();
+
 
     void nameChanged();
 
@@ -67,6 +70,8 @@ private:
     QString m_duration;
     QDate m_entryDate;
     QTime m_entryTime;
+
+
 
 
 };

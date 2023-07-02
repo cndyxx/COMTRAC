@@ -10,18 +10,6 @@ Symptom::Symptom(int id, QString name, QString intensity, int frequency, QString
 
 }
 
-int Symptom::id() const
-{
-    return m_id;
-}
-
-void Symptom::setId(int newId)
-{
-    if (m_id == newId)
-        return;
-    m_id = newId;
-    emit idChanged();
-}
 
 QString Symptom::name() const
 {
@@ -88,6 +76,12 @@ void Symptom::setEntryTime(const QTime &newEntryTime)
     m_entryTime = newEntryTime;
     emit entryTimeChanged();
 }
+
+int Symptom::id() const
+{
+    return m_id;
+}
+
 
 
 QDate Symptom::entryDate() const

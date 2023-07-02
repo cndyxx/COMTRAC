@@ -56,8 +56,8 @@ Item {
         id: calendarWeekModel
         ListElement{calendarWeek: '24'; backgroundColor: "grey"; borderColor: "grey"}
         ListElement{calendarWeek: '25'; backgroundColor: "darkgrey"; borderColor: "darkgrey"}
-        ListElement{calendarWeek: '26'; backgroundColor: "darkgrey"; borderColor: "orange"}
-        ListElement{calendarWeek: '27'; backgroundColor: "lightgrey"; borderColor: "lightgrey"}
+        ListElement{calendarWeek: '26'; backgroundColor: "darkgrey"; borderColor: "darkgrey"}
+        ListElement{calendarWeek: '27'; backgroundColor: "lightgrey"; borderColor: "orange"}
         ListElement{calendarWeek: '28'; backgroundColor: "lightgrey"; borderColor: "lightgrey"}
         ListElement{calendarWeek: '29'; backgroundColor: "lightgrey"; borderColor:  "lightgrey"}
         ListElement{calendarWeek: '30'; backgroundColor: "lightgrey"; borderColor: "lightgrey"}
