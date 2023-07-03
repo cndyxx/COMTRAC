@@ -199,6 +199,7 @@ Item {
                         }
                         RowLayout {
                         CheckBoxTemplate{
+                            id: checkBox
                             onClicked: {
                                 if (checked) {
                                     // Hinzufügen des Medikaments zur Bestellung
@@ -212,15 +213,18 @@ Item {
                         }
                         TextField {
                             id: newMedication
+                            Layout.fillWidth: true
                             background: Rectangle {
                                 id: borderLine
                                 color: messageBackground.color
+                                width: contentItem.width * 0.6
+                                height: checkBox.height
                                 Rectangle{
-                                    width: messageBackground.width * 0.6
+                                    width: contentItem.width * 0.6
                                     height: 2
                                     color: "black"
                                     anchors.top: borderLine.bottom
-                                    anchors.topMargin: 5
+
                                 }
                             }
                         }
