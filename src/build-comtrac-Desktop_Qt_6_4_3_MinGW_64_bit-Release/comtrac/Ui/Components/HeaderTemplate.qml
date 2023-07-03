@@ -6,7 +6,7 @@ import QtQuick.Controls.Material
 ToolBar {
     property string pageTitle
     property string navigationStyle
-
+    signal backButton()
     width: parent.width
     height: parent.height * 0.10
     Material.background: "white"
@@ -29,8 +29,11 @@ ToolBar {
                 //anchors.rightMargin: 5
             }
 // TODO: sliding menu
-            onClicked: stackView.pop()
+            onClicked: {
 
+                stackView.pop();
+                backButton();
+            }
         }
         Label {
             text: pageTitle

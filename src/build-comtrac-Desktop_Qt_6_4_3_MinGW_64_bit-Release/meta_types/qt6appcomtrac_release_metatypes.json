@@ -546,19 +546,17 @@
                 "object": true,
                 "properties": [
                     {
-                        "constant": false,
+                        "constant": true,
                         "designable": true,
                         "final": false,
                         "index": 0,
                         "name": "id",
-                        "notify": "idChanged",
                         "read": "id",
                         "required": false,
                         "scriptable": true,
                         "stored": true,
                         "type": "int",
-                        "user": false,
-                        "write": "setId"
+                        "user": false
                     },
                     {
                         "constant": false,
@@ -653,11 +651,6 @@
                 ],
                 "qualifiedClassName": "Symptom",
                 "signals": [
-                    {
-                        "access": "public",
-                        "name": "idChanged",
-                        "returnType": "void"
-                    },
                     {
                         "access": "public",
                         "name": "nameChanged",
@@ -880,11 +873,6 @@
                         ],
                         "name": "findDate",
                         "returnType": "bool"
-                    },
-                    {
-                        "access": "public",
-                        "name": "getSymptoms",
-                        "returnType": "void"
                     },
                     {
                         "access": "public",

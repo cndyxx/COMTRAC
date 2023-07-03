@@ -17,6 +17,7 @@ Item {
         id: header
         pageTitle: "Chat"
         navigationStyle: "menu"
+        onBackButton: medModel.deleteOrderedMedicationList();
     }
 
     ListModel {
@@ -51,6 +52,7 @@ Item {
                     messageListView.model = messageModel.messages;
                     currentMessage = 0;
                     messageListView.currentIndex = 0;
+                    medModel.deleteOrderedMedicationList();
                 }
             }
             clip: true

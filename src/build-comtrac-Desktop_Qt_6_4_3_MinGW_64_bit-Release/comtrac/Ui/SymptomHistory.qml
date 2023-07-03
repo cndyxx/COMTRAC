@@ -23,7 +23,8 @@ Item {
 
     property date currentDate: new Date()
     property var symptom: symptomModel.weekSymptoms
-    
+    property string prevBorderColor: ""
+
     Background {
         id: background
     }
@@ -55,8 +56,8 @@ Item {
         id: calendarWeekModel
         ListElement{calendarWeek: '24'; backgroundColor: "grey"; borderColor: "grey"}
         ListElement{calendarWeek: '25'; backgroundColor: "darkgrey"; borderColor: "darkgrey"}
-        ListElement{calendarWeek: '26'; backgroundColor: "darkgrey"; borderColor: "black"}
-        ListElement{calendarWeek: '27'; backgroundColor: "lightgrey"; borderColor: "lightgrey"}
+        ListElement{calendarWeek: '26'; backgroundColor: "darkgrey"; borderColor: "darkgrey"}
+        ListElement{calendarWeek: '27'; backgroundColor: "lightgrey"; borderColor: "orange"}
         ListElement{calendarWeek: '28'; backgroundColor: "lightgrey"; borderColor: "lightgrey"}
         ListElement{calendarWeek: '29'; backgroundColor: "lightgrey"; borderColor:  "lightgrey"}
         ListElement{calendarWeek: '30'; backgroundColor: "lightgrey"; borderColor: "lightgrey"}
@@ -140,9 +141,18 @@ Item {
 
                 }
                 onClicked: {
-                    console.log("Test")
+                    //console.log("Test");
                     symptomModel.getCalendarWeekDate(2023, calendarWeek);
-                    console.log("kalendwerocue: " + calendarWeek)
+                    //console.log("kalenderwoche: " + calendarWeek);
+
+
+                    for(var i = 0; i < calendarWeekModel.rowCount(); i++){
+                        if(calendarWeekModel.get(i).borderColor === "black"){
+                            calendarWeekModel.set(i, {"borderColor": prevBorderColor});
+                        }
+                    }
+                    prevBorderColor = borderColor;
+                    borderColor = "black"
 
                 }
             }

@@ -165,15 +165,6 @@ bool SymptomModel::findDate(QString date)
 
 
 
-
-void SymptomModel::updateModel()
-{
-    //Daten holen -> SELECT
-
-    // Aktualisiere die ListView im QML
-    emit layoutChanged();
-}
-
 void SymptomModel::deleteSymptomOfList(QList<Symptom *> &list, int symptomId)
 {
 
@@ -459,34 +450,7 @@ void SymptomModel::addSymptoms(QString name, QString intensity, int frequency, Q
 }
 
 
-//Alle Symptome aus der Datenbank holen
-void SymptomModel::getSymptoms()
-{
-    if(! m_symptoms.isEmpty()){
-        m_symptoms.clear();
-    }
-    QSqlQuery query;
-    query.prepare("SELECT * FROM Symptoms GROUP BY [name]");
 
-    if(query.exec()){
-        while(query.next()){
-            int id = query.value(0).toInt();
-            QString name = query.value(1).toString();
-            QString intensity = query.value(2).toString();
-            int frequency = query.value(3).toInt();
-            QString duration = query.value(4).toString();
-            QDate entryDate = query.value(5).toDate();
-            QTime entryTime = query.value(6).toTime();
-            m_symptoms.push_back(new Symptom(id, name, intensity, frequency, duration, entryDate, entryTime, this));
-            qDebug() << "TEST: " << name ;
-        }
-    } else {
-        qDebug() << "Fehler bei der Ausführung der Abfrage:" << query.lastError().text();
-    }
-    std::reverse(m_symptoms.begin(), m_symptoms.end());
-
-    emit symptomsChanged();
-}
 
 
 

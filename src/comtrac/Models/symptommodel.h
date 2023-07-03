@@ -72,29 +72,30 @@ public slots:
     //Prüfe, ob der Übergabewert (Datum) in der Liste vorhanden ist
     bool findDate(QString date);
 
-    void getSymptoms();
     void addSymptoms(QString name, QString intensity, int frequency, QString duration, QString entryDate, QString entryTime);
+
     void setSingleSymptom(Symptom *newSingleSymptom);
 
-    void getSymptomsOfDate(QString entryDate); 
+    void getSymptomsOfDate(QString entryDate);
+
     void getSymptomEntries(QString name);
+
     void getCalendarWeekDate(int year, int weekNumber);
 
 
 private:
-    void updateModel();
     QList<Symptom*> m_symptoms; //Liste von allen Symptomen in der Datenbank
-    int currentSymptom;
     Symptom *m_singleSymptom; //Einzelnes Symptom
     QList<Symptom *> m_daySymptoms; //Liste von Symptomen für einen Tag
     QList<Symptom *> m_weekSymptoms; //Liste von Symptomen für eine Kalenderwoche
-    QList<QDate> m_symptomsOfMonth;
+    QList<QDate> m_symptomsOfMonth; //Liste von allen Symptomen in einem Monat, nur das Datum -> für Kalender
     QList<Symptom *> m_symptomEntries;
+    QList<int> primaryKey;
 
     void deleteSymptomOfList(QList<Symptom *> &list , int symptomID);
     std::tm getWeekendDate(int year, int weekNumber);
     void getSymptomsOfWeek(QString startDate, QString endDate);
-    QList<int> primaryKey;
+
 
 };
 

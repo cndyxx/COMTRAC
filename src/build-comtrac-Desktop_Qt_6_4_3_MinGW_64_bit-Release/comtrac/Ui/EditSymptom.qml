@@ -75,7 +75,7 @@ Item {
                 id: txtTime
                 text: {
                     if(pageState !== 0)
-                        return entryDate.toLocaleTimeString(Qt.locale("de_DE"), "hh:mm");
+                        return "09:30" //entryDate.toLocaleTimeString(Qt.locale("de_DE"), "hh:mm");
                     else
                         return currentTime.toLocaleTimeString(Qt.locale("de_DE"), "hh:mm");
                 }
