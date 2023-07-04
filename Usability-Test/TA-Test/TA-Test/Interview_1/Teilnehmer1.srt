@@ -1,0 +1,216 @@
+1
+00:00:00,000 --> 00:00:03,320
+Jetzt läuft die Aufzeichnung sehr gut.
+
+2
+00:00:03,320 --> 00:00:06,200
+Ich hoffe, dass alles gut funktioniert.
+
+3
+00:00:06,200 --> 00:00:13,640
+Eigentlich war dieser Test für ein Computer, ein Rechner konzipiert, aber schauen wir mal,
+
+4
+00:00:13,640 --> 00:00:15,760
+ob das auf dem iPad genauso gut funktioniert.
+
+5
+00:00:15,760 --> 00:00:17,760
+Ja, ich denke schon.
+
+6
+00:00:17,760 --> 00:00:21,800
+Das ist auch interessant zu erfahren, ob das im iPad klappt.
+
+7
+00:00:21,800 --> 00:00:26,880
+Genau, dann würden wir schon zur ersten Aufgabe kommen.
+
+8
+00:00:27,640 --> 00:00:30,640
+Wir sehen jetzt diesen Bildschirm vor sich,
+
+9
+00:00:30,640 --> 00:00:36,040
+diese App, also der soll den Lock-in-Screen der App darstellen.
+
+10
+00:00:36,040 --> 00:00:38,040
+Genau.
+
+11
+00:00:38,040 --> 00:00:49,960
+Und jetzt möchten wir quasi Sie bitten, stellen Sie sich vor, Sie hätten die Comtrip-Track-App
+
+12
+00:00:49,960 --> 00:00:54,760
+jetzt auf Ihrem Smartphone oder auf Ihrem Tablet, wie gerade, und Sie müssten sich einloggen.
+
+13
+00:00:54,880 --> 00:01:02,760
+Dann haben wir jetzt die initiale Frage, wenn Sie diese App hätten, warum würden Sie sich einloggen?
+
+14
+00:01:02,760 --> 00:01:08,000
+Also, was sind so die ersten Gedanken, wieso würden Sie sich da einloggen wollen und die App nutzen wollen?
+
+15
+00:01:11,520 --> 00:01:18,840
+Ja, also im Prinzip ging es ja mir darum, als die als Unterstützung zu benutzen,
+
+16
+00:01:19,160 --> 00:01:28,400
+um halt meine, wie soll ich sagen, Veränderung oder meine Medikamente oder halt Nebenwirkungen
+
+17
+00:01:28,400 --> 00:01:38,400
+in Bezug auf meine Erkrankungen zu dokumentieren, die dann später auch vom Arzt her, dass man da
+
+18
+00:01:38,400 --> 00:01:45,160
+halt einfach eine Zusammenfassung hat oder halt auch Veränderungen bemerkt und dann
+
+19
+00:01:45,160 --> 00:01:50,840
+vielleicht eventuell noch andere Dinge anstoßen muss, um mich bei Gesundheit zu halten.
+
+20
+00:01:50,840 --> 00:01:59,680
+Gut. Genau. Und jetzt würden wir Sie bitten, sich anzumelden. Sie können jetzt aber zufällige
+
+21
+00:01:59,680 --> 00:02:04,720
+Daten da eingeben. Das muss jetzt keinen Sinn ergeben, es kann x, y sein, das kann alles sein.
+
+22
+00:02:04,720 --> 00:02:11,240
+Einfach, Sie wollen jetzt ein Anmeldeprozess durchführen und sich in der App einloggen.
+
+23
+00:02:11,240 --> 00:02:19,320
+Ja. Und gerne lauter bei denken, was Sie jetzt machen, was Sie jetzt machen würden und wieso.
+
+24
+00:02:19,320 --> 00:02:28,800
+Okay, also jetzt stelle ich aber fest, dass es wohl nicht mit dem iPad geht, weil die Tastatur
+
+25
+00:02:28,800 --> 00:02:38,400
+kommt nicht hoch. Das ist ungewöhnlich. Auch wenn Sie, haben Sie, also Sie klicken jetzt auf
+
+26
+00:02:38,400 --> 00:02:45,200
+das obere Feld wahrscheinlich. Ja. Und es erscheint keiner Tastatur. Ja, normalerweise würde
+
+27
+00:02:45,200 --> 00:02:51,440
+die eigentlich bei anderen, wenn man sich so einloggt, Apps die Tastatur, wenn man das fällt geht.
+
+28
+00:02:51,440 --> 00:03:00,480
+Können Sie auf Anmelden trotzdem drücken? Ja. Okay. Dann würde ich Sie jetzt an der Stelle
+
+29
+00:03:00,480 --> 00:03:07,720
+einfach bitten, nochmal quasi zu überlegen, was Sie gerade gemacht hätten, um sich anzumelden.
+
+30
+00:03:08,560 --> 00:03:18,720
+Also ich hätte mir halt einen Benutzernamen gegeben und ein Passwort und hätte mich dann da
+
+31
+00:03:18,720 --> 00:03:26,960
+eingeloggt. Weil Sie gerade gemacht haben auf Anmelden gedrückt? Ja, genau, auf Anmelden.
+
+32
+00:03:26,960 --> 00:03:33,640
+Okay. Jetzt weiß ich halt nicht, woran das liegt, dass hier bei diesem Test dann da,
+
+33
+00:03:33,640 --> 00:03:39,440
+dass die Tastatur nicht kommt. Ja, das liegt wahrscheinlich daran, dass wir den
+
+34
+00:03:39,440 --> 00:03:43,320
+Rechner konzipiert haben und dass jetzt mit dem iPad wahrscheinlich auch nicht richtig
+
+35
+00:03:43,320 --> 00:03:48,240
+konfiguriert ist, dass dann, dass dann im Feld dann die Tastatur hochkommt. Wir hoffen aber,
+
+36
+00:03:48,240 --> 00:03:53,500
+dass das jetzt bei den nächsten Aufgaben besser funktioniert. Okay. Genau. Ja, wenn ich das
+
+37
+00:03:53,500 --> 00:03:59,440
+gewusst hätte, wäre ich auf den Rechner gegangen. Ja. Wir würden erst mal weitermachen und dann
+
+38
+00:03:59,440 --> 00:04:04,200
+wenn es gar nicht mehr funktioniert, dann müssen wir uns nochmal was überlegen. Okay. Okay. Die
+
+39
+00:04:04,200 --> 00:04:10,080
+zweite Aufgabe, da geht es jetzt darum, einen Symptom hinzuzufügen. Stellen Sie sich vor,
+
+40
+00:04:10,080 --> 00:04:18,880
+ja, wir haben seit zwei Tagen Fieber und da wäre mal 38,5 Grad und Sie wollen das Symptom Fieber
+
+41
+00:04:18,880 --> 00:04:26,080
+in der App hinzuzufügen, beschreiben Sie genau, Sie warten Sie noch ein bisschen, beschreiben Sie
+
+42
+00:04:26,080 --> 00:04:32,760
+genau, wie Sie vorgehen, um das Symptom hinzuzufügen und welche Informationen Sie an welcher
+
+43
+00:04:32,760 --> 00:04:43,320
+Stelle eingeben würden. Okay. Also ich habe, ich habe, ich habe jetzt auf den Baden, wie heißt das
+
+44
+00:04:43,320 --> 00:04:49,960
+auf Deutsch für Sie? Ja, Baden ist in Ordnung. Ja, auf das, auf den Baden gedrückt, wo halt dann
+
+45
+00:04:50,000 --> 00:04:59,040
+da steht diese, ähm, Metsysissymptomeingabe und jetzt sehe ich den Kalender mit dem Datum vom
+
+46
+00:04:59,040 --> 00:05:11,200
+27. Juni und da würde ich jetzt in das Feld, das vorgegebene Feld eintragen, dass ich Fieber hätte.
+
+47
+00:05:11,200 --> 00:05:28,040
+Aber, ach so, und da stehen ja Kopfschmerzen, aber ich würde dann aufs Plus gehen und würde in dem
+
+48
+00:05:28,040 --> 00:05:37,560
+Auswahlfeld Symptom eingeben, ja, dass ich Fieber hätte, aber leider lässt es mich das nicht tun,
+
+49
+00:05:38,000 --> 00:05:46,280
+weil ich auf dem iPad bin. Jetzt wollte ich Sie fragen, würden, wäre es für Sie okay, wenn wir
+
+50
+00:05:46,280 --> 00:05:52,880
+entweder abbrechen und ich stelle schnell mein Rechner an und mache da weiter, also ich lock mich
+
+51
+00:05:52,880 --> 00:05:58,640
+noch mal ein oder wir machen, verschieben mich auf einen anderen Tag? Nicht für uns wäre es in Ordnung,
+
+52
+00:05:58,640 --> 00:06:04,040
+wenn Sie quasi jetzt das aufs Rechner wegführen würden und Sie dann noch mal ins Rollkommen
+
+53
+00:06:04,040 --> 00:06:09,880
+einfach. Okay, dann mache ich das jetzt schnell. Okay, dann genau ist es derselbe Link, wir
+
+54
+00:06:09,880 --> 00:06:15,520
+warten hier in diesem Call-out und dann können Sie es einfach noch mal anmelden. Mach ich dann, super. Bis gleich.
+
