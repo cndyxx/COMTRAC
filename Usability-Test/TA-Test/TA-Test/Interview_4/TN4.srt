@@ -1,0 +1,816 @@
+1
+00:00:00,000 --> 00:00:06,880
+So, jetzt geht es los und dann würden wir auch einfach direkt starten mit der ersten
+
+2
+00:00:06,880 --> 00:00:07,880
+Aufgabe.
+
+3
+00:00:07,880 --> 00:00:11,280
+Du siehst jetzt hier die anmelde Plattform.
+
+4
+00:00:11,280 --> 00:00:23,280
+Jetzt musst du noch nichts tun, das ist erst mal eine Frage, genau du, so als du öffnest
+
+5
+00:00:23,280 --> 00:00:29,080
+quasi diese App, das stellen wir uns jetzt mal vor und du siehst jetzt diese Plattform
+
+6
+00:00:29,080 --> 00:00:35,480
+und jetzt stellen wir dir quasi die Frage, warum würdest du diese App eigentlich überhaupt
+
+7
+00:00:35,480 --> 00:00:40,600
+öffnen mit dem Wissen, was du jetzt quasi schon hast, wie viel würdest du die App jetzt
+
+8
+00:00:40,600 --> 00:00:41,600
+nutzen wollen?
+
+9
+00:00:41,600 --> 00:00:48,440
+Also ich würde mich jetzt einloggen wollen und am liebsten, wenn einen Termin vereinbaren
+
+10
+00:00:48,440 --> 00:00:55,560
+wollen, das wäre das Hauptziel, was ich verfolgen würde mit dem Feedback auch, was wir gegeben
+
+11
+00:00:55,560 --> 00:00:56,560
+haben.
+
+12
+00:00:56,560 --> 00:01:05,280
+Okay, dann würde ich dich jetzt bitten, dich anzumelden bei der App, du kannst jetzt einfach
+
+13
+00:01:05,280 --> 00:01:09,560
+tufällig irgendwas beeingeben, das funktioniert alles, die Daten werden auch nicht gespeichert,
+
+14
+00:01:09,560 --> 00:01:10,560
+die du da eingibst.
+
+15
+00:01:10,560 --> 00:01:14,960
+Ich würde dich einfach binden, so ein Anmeldeprozess mal durchzuführen, wie du das sonst machen
+
+16
+00:01:14,960 --> 00:01:15,960
+würdest.
+
+17
+00:01:15,960 --> 00:01:31,000
+Also ich habe jetzt meinen Benutzernamen Test1 eingegeben und habe meinen Passwort angegeben
+
+18
+00:01:31,000 --> 00:01:36,160
+und würde jetzt auf Anmelden drücken, um in die App zu kommen, um in die Anwendung zu
+
+19
+00:01:36,160 --> 00:01:37,160
+kommen.
+
+20
+00:01:37,160 --> 00:01:50,480
+Ich habe gedrückt und bin jetzt auf der Maske, wo ich alle vier Möglichkeiten sehe.
+
+21
+00:01:50,480 --> 00:01:57,280
+Genau, also das war auch schon die erste Aufgabe, die hast du gut gelöst.
+
+22
+00:01:57,280 --> 00:02:05,280
+Jetzt kommen wir zur Aufgabe 2, stell dir vor, du hast 38,5 Grad Fieber, du willst das
+
+23
+00:02:05,280 --> 00:02:12,400
+Symptome in der App hinzufügen, beschreibe, wie du vorgehst, um das Symptome hinzuzufügen
+
+24
+00:02:12,400 --> 00:02:16,280
+und welche Informationen du an welcher Stelle eingeben würdest.
+
+25
+00:02:16,280 --> 00:02:29,240
+Okay, also wenn ich 38 Grad Fieber hätte und es eintragen möchte, würde ich ganz klasse
+
+26
+00:02:29,240 --> 00:02:39,000
+intuitiv auf dieses Symptom-Tagebuch gehen, das öffnet sich jetzt nicht, ich weiß nicht
+
+27
+00:02:39,000 --> 00:02:43,920
+ob es an meiner Verbindung liegt, naja, das war wohl die Verbindung und würde dann den
+
+28
+00:02:43,920 --> 00:03:04,400
+heutigen Tag angeben, d.h. 4.7. würde ich hier das Symptome eingeben, was ich Fieber habe,
+
+29
+00:03:04,400 --> 00:03:14,680
+Intensität, wie es sich, wie oft kommt es vor, es ist gerade heute entstanden, seit
+
+30
+00:03:14,680 --> 00:03:24,400
+weniger als 24 Stunden Uhrzeit, wenn die ganze Zeit jetzt nicht bearbeiten, dass es voreingespeicherte.
+
+31
+00:03:24,400 --> 00:03:29,960
+Okay, hätte ich sonst auch geändert, ansonsten würde ich dann hier auf Ändern klicken, wobei
+
+32
+00:03:29,960 --> 00:03:38,680
+ich sagen muss, da würde ich mir dann lieber irgendwie was wünschen, das annehmen oder hinzufügen
+
+33
+00:03:38,680 --> 00:03:44,360
+oder sowas ändern, würde mich irritieren, weil es das erste Mal ist, dass ich das Symptome eintrage,
+
+34
+00:03:44,360 --> 00:03:55,400
+aber ich denke es ist ändern. Genau, ja, das war jetzt möglich. Ich habe jetzt die 38 Grad nicht
+
+35
+00:03:55,400 --> 00:04:03,040
+angegeben, richtig. Genau, ja, das wäre zum Beispiel eine Information, die du hättest
+
+36
+00:04:03,040 --> 00:04:08,040
+eingeben können. Wie hättest du dir denn an der Stelle gewünscht, vielleicht die
+
+37
+00:04:08,040 --> 00:04:14,240
+Gradzahl einzutragen, direkt mit in dem Symptom gefällt oder noch als extra? Also ich glaube,
+
+38
+00:04:14,240 --> 00:04:21,240
+wenn man das, also Fieber auswählen könnte oder der das automatisch erkennt, dann direkt die
+
+39
+00:04:21,240 --> 00:04:26,520
+Abfrage, deswegen habe ich glaube ich auch vergessen, wie viel Grad es war. Ich glaube,
+
+40
+00:04:26,520 --> 00:04:34,560
+das wäre nutzerfreundlicher. Genau, also tatsächlich ist es bei der späteren App auch so geplant,
+
+41
+00:04:34,560 --> 00:04:39,360
+dass wenn du, also dass es so eine Autoergänzung gibt, das heißt, wenn du FE eingibst, dann kommt
+
+42
+00:04:39,360 --> 00:04:45,760
+da schon der Vorstark Fieber. Und das wäre aber genau dann das Feedback von dir, das du dir dann
+
+43
+00:04:45,760 --> 00:04:50,160
+wünschen würdest, dass man dann die Gradzahl da auch einfragen kann, dass das abgefragt wird.
+
+44
+00:04:51,160 --> 00:04:58,560
+Jetzt in dem Fall stand da ja eben Kopfschmerzen und du hast das Symptom geändert,
+
+45
+00:04:58,560 --> 00:05:05,000
+zu Fieber, deswegen stand auch ändern. Ich würde jetzt dir kurz beschreiben, wie die App,
+
+46
+00:05:05,000 --> 00:05:09,720
+das eigentlich sich wünschen würde, dass man ein neues Symptom einträgt. Und dann kannst du mal
+
+47
+00:05:09,720 --> 00:05:16,040
+dazu dein Feedback geben, ob du das intuitiv findest. Also an der Stelle hättest du auch so richtig,
+
+48
+00:05:16,360 --> 00:05:21,800
+den 4. Juli ausgewählt und dann hätte man unten rechts auf Plus drücken mussten.
+
+49
+00:05:21,800 --> 00:05:26,440
+Okay. Und wenn du da drauf drückst, dann kann man ein neues Symptom eintragen.
+
+50
+00:05:26,440 --> 00:05:34,600
+Dann muss ich sagen, dann hat mich das da direkt Kopfschmerzen steht, sehr irritiert. Also dann
+
+51
+00:05:34,600 --> 00:05:40,240
+wäre es, glaube ich, besser, da würde nur Symptom stehen oder also nicht direkt Kopfschmerzen,
+
+52
+00:05:40,240 --> 00:05:44,400
+weil das war für mich intuitiv einfach falsch und deswegen habe ich das direkt geändert.
+
+53
+00:05:45,400 --> 00:05:49,480
+Ja, das war jetzt vielleicht auf dem Umstand geschuldet, dass wir jetzt dann Symptom
+
+54
+00:05:49,480 --> 00:05:54,480
+voreingetragen haben. Das wäre quasi jetzt in der Realität, wäre das so gewesen,
+
+55
+00:05:54,480 --> 00:05:57,520
+hättest du an dem Tag schon ein Symptom eingetragen und zwar Kopfschmerzen.
+
+56
+00:05:57,520 --> 00:06:02,160
+Und dann wäre das dann aufgelistet worden für den 4. Juli.
+
+57
+00:06:02,160 --> 00:06:07,240
+Also wenn es nicht da gestern hätte, hätte ich wahrscheinlich intuitiv das Plus gedrückt,
+
+58
+00:06:07,240 --> 00:06:09,840
+dadurch, dass es da standfast etwas irritieren.
+
+59
+00:06:10,800 --> 00:06:16,560
+Verstehe. Danke für das Feedback. Dann kommen wir zur nächsten Aufgabe. Jetzt geht es darum,
+
+60
+00:06:16,560 --> 00:06:22,640
+einen Symptom zu bearbeiten. Jetzt in dem Fall, hätte ich das, was ich schon gemacht habe,
+
+61
+00:06:22,640 --> 00:06:26,600
+hätte ich nicht gebeten, gerade das Symptom Kopfschmerzen zu bearbeiten.
+
+62
+00:06:26,600 --> 00:06:33,000
+Tatsächlich hast du das jetzt natürlich abgeändert. Dann würde ich dich einfach bitten,
+
+63
+00:06:33,000 --> 00:06:39,600
+das Symptom Fieber zu bearbeiten und im Laufe des Tages hat sich die Intensität verstärkt,
+
+64
+00:06:40,360 --> 00:06:45,040
+oder in dem Fall verringert. Die Intensität des Fiebers hat sich verringert und du möchtest
+
+65
+00:06:45,040 --> 00:06:47,400
+das Symptom jetzt bearbeiten. Wie würdest du vorgehen?
+
+66
+00:06:47,400 --> 00:06:54,920
+Bearbeiten ist für mich der Stift. Das heißt, ich würde intuitiv eigentlich auf den Stift gehen.
+
+67
+00:06:54,920 --> 00:07:11,360
+Würde die Intensität herunterschorben, auf leicht und es dann ändern.
+
+68
+00:07:11,360 --> 00:07:19,240
+Also du hast jetzt auf den Ändern-Button gedrückt.
+
+69
+00:07:19,560 --> 00:07:21,240
+Genau, auf ändern.
+
+70
+00:07:21,240 --> 00:07:27,400
+Ja, sehr gut. Dann kommen wir zur nächsten Aufgabe. Da geht es darum,
+
+71
+00:07:27,400 --> 00:07:31,240
+einen Symptom zu löschen. Sie haben einen Symptom in der App hinzugefügt,
+
+72
+00:07:31,240 --> 00:07:35,800
+bei dem Sie zunächst dachten, dass es vielleicht was mit HIV zu tun haben könnte.
+
+73
+00:07:35,800 --> 00:07:40,640
+Sie waren jedoch beim Arzt und bestellte sich heraus, dass es eine andere Ursache hatte.
+
+74
+00:07:40,640 --> 00:07:46,000
+Jetzt erstmal die Frage, ohne dass du was machen musst. Was würdest du machen?
+
+75
+00:07:46,000 --> 00:07:49,200
+Einfach bei diesem Szenario? Würdest du überhaupt was machen?
+
+76
+00:07:49,200 --> 00:07:52,720
+Also ehrlich gesagt, würde ich wahrscheinlich gar nichts machen,
+
+77
+00:07:52,720 --> 00:07:56,520
+wäre dann froh und würde das in der App vernachlässigen.
+
+78
+00:07:56,520 --> 00:08:06,720
+Dann stelle ich noch eine konkrete Aufgabe. Jetzt möchtest du das Symptom
+
+79
+00:08:06,720 --> 00:08:12,200
+Hautausschlag am Arm aber löschen, das hast du am 15.6. eingetragen.
+
+80
+00:08:12,200 --> 00:08:14,200
+Wie würdest du vorgehen?
+
+81
+00:08:14,200 --> 00:08:18,400
+Der 15.6. Hautausschlag am Arm möchtest du löschen?
+
+82
+00:08:18,400 --> 00:08:28,040
+Da jetzt so konkret 15.6. gesagt wurde, würde ich jetzt auf den Kalender gehen.
+
+83
+00:08:28,040 --> 00:08:31,880
+Ansonsten hätte ich jetzt eher versucht, mal hier drauf zu gehen,
+
+84
+00:08:31,880 --> 00:08:39,320
+ob ich irgendwie alle Symptome sehe. Aber nur aufgrund der Informationen
+
+85
+00:08:39,320 --> 00:08:47,080
+würde ich jetzt auf 15.6. gehen und dann auf Hautausschlag am Arm gehen und versuchen,
+
+86
+00:08:47,080 --> 00:08:54,000
+das zu bearbeiten. Und die Aufgabe war jetzt, es zu löschen.
+
+87
+00:08:54,000 --> 00:09:04,120
+Das finde ich jetzt ein bisschen schwierig, dass nicht direkt irgendwie Stehzyntom entfernen.
+
+88
+00:09:04,120 --> 00:09:11,040
+Ich würde jetzt mal auf bearbeiten gehen, ob da noch was kommt, aber löschen sehe ich nicht.
+
+89
+00:09:11,040 --> 00:09:26,800
+Da steht löschen, Symptomeintrag wirklich löschen, löschen.
+
+90
+00:09:27,800 --> 00:09:30,280
+Ich habe auf den Button gedrückt und es ist gelöscht.
+
+91
+00:09:30,280 --> 00:09:44,000
+Würdest du dazu noch was sagen wollen oder war das jetzt, wenn man das einmal weiß,
+
+92
+00:09:44,000 --> 00:09:46,200
+dann ist es doch relativ intuitiv?
+
+93
+00:09:46,200 --> 00:09:49,600
+Wenn man es einmal weiß, dann weiß man, glaube ich, wie es geht.
+
+94
+00:09:49,600 --> 00:09:56,480
+Bei dem Schritt vorher hätte ich mir schon irgendwie auch so ein Vermerk löschen oder so was
+
+95
+00:09:56,480 --> 00:09:59,240
+gewünscht, weil das ist halt noch mal ein Schritt mehr, um dahin zu kommen.
+
+96
+00:09:59,240 --> 00:10:04,440
+Gut, dann machen wir mit der nächsten Aufgabe schon weiter.
+
+97
+00:10:04,440 --> 00:10:10,720
+Jetzt geht es um den Symptomenverlauf. Fählen Sie sich vor, da stelle du dir vor,
+
+98
+00:10:10,720 --> 00:10:14,960
+du öffnest die App, du möchtest deinen persönlichen Symptomenverlauf überprüfen.
+
+99
+00:10:14,960 --> 00:10:19,840
+Jetzt besteht die Aufgabe darin, den Wochenüberblick über die Symptome für die
+
+100
+00:10:19,840 --> 00:10:23,520
+vergangene Woche zu finden. Dann, wie würdest du davor gehen?
+
+101
+00:10:23,520 --> 00:10:34,400
+Ausgangssituation von hier, da hier nur die Monate sind, würde ich jetzt einfach erst mal probieren,
+
+102
+00:10:34,400 --> 00:10:38,520
+ob ich hier irgendwas finde. Darauf habe ich jetzt nichts gefunden.
+
+103
+00:10:38,520 --> 00:10:43,840
+Ich habe auf das Plus gedrückt, würde dann oben auf Symptome gehen, auf diese drei
+
+104
+00:10:43,880 --> 00:10:53,560
+Linien gehen, um zurückzukommen ins Symptom-Tagebuch. Klicke noch mal drauf, aber mir fehlt so ein
+
+105
+00:10:53,560 --> 00:10:58,280
+bisschen so eine Übersicht, wo ich in die Woche jetzt reinkomme.
+
+106
+00:10:58,280 --> 00:11:03,240
+Was wäre vielleicht ein Schritt, den du jetzt testen würdest?
+
+107
+00:11:04,240 --> 00:11:12,760
+Also jetzt würde ich diesen Verlauf hier drücken und dann sehe ich, komme ich in die
+
+108
+00:11:12,760 --> 00:11:20,200
+Wochenübersicht. Das ist für mich aber tatsächlich nicht ganz schlüssig, dass ich da die Wochenübersicht finde.
+
+109
+00:11:20,200 --> 00:11:27,200
+Also es müsste vielleicht ein bisschen besser gekennzeichnet werden, wenn man zu dieser Woche
+
+110
+00:11:27,200 --> 00:11:33,280
+über sich kommt. Also dieses Zeichen ist nicht ganz gängig und einfach verständlich, wenn man mit der
+
+111
+00:11:33,280 --> 00:11:39,440
+Materie nicht so vertraut ist. Also da würde ich mir dann eine andere wünschen.
+
+112
+00:11:39,440 --> 00:11:45,560
+Das heißt, welche Woche war jetzt? Genau, ging erst mal nur allgemein um ein Wochenübersicht.
+
+113
+00:11:45,560 --> 00:11:54,200
+Die Aufgabe hat so erfüllt. Dann gibt es jetzt noch eine weitere Teilaufgabe.
+
+114
+00:11:54,200 --> 00:12:01,120
+So möchtest du ja den Symptomverlauf für ein einzelnes Symptom ansehen. Wie gehst du davor?
+
+115
+00:12:01,120 --> 00:12:17,360
+Okay, da ich hier im Verlauf wieder bin, würde ich hier drin bleiben und schauen, ob ich über die Symptome
+
+116
+00:12:17,360 --> 00:12:24,160
+weiter komme. Ich habe jetzt auf das Symptomfieber geklickt und bin da in einem Symptomverlauf
+
+117
+00:12:24,160 --> 00:12:31,720
+gekommen, wo ich dann den Wochenverlauf sehe. Ich weiß nicht, welche Woche es ist, aber da wird
+
+118
+00:12:31,720 --> 00:12:39,840
+mir der Wochenverlauf vom Fieber angezeigt. Genau, das ist korrekt. Also das ist jetzt hier sehr
+
+119
+00:12:39,840 --> 00:12:44,680
+prototypisch. Also wenn du jetzt auf Intensität oder Häufigkeit oder Dauer klickst, wird sich
+
+120
+00:12:44,680 --> 00:12:49,880
+am Grafen nichts verändern, aber später soll das dann interaktiv passen, sich dann der Graf an,
+
+121
+00:12:49,880 --> 00:12:55,880
+wie nachdem, was du auswählst. Genau, das wäre dann der Symptom für Verlauf für Fieber für die
+
+122
+00:12:55,880 --> 00:13:01,440
+Kalenderwoche, die da aktuell ausgewählt waren vorherigen Fenster. Das finde ich tatsächlich auch
+
+123
+00:13:01,440 --> 00:13:06,560
+ganz gut, dass man da zwischen den Kategorien unterscheiden kann. Also wenn man wirklich gucken will,
+
+124
+00:13:06,560 --> 00:13:13,800
+wie lange ist das Ganze jetzt, dauert das Ganze schon, ist glaube ich ganz gut, dann da was ändern
+
+125
+00:13:13,800 --> 00:13:22,880
+zu können auch. Ja, danke fürs Feedback. Dann kommen wir auch schon zur nächsten Aufgabe. Da
+
+126
+00:13:22,880 --> 00:13:28,480
+geht es jetzt um Medikamente und du warst ja vom Arzt und hast ein neues Medikament verschrieben
+
+127
+00:13:28,480 --> 00:13:37,800
+bekommen. Wie würdest du dieses Medikament in die App eintragen? Wie lief du davor? Ja, würde ich von
+
+128
+00:13:37,800 --> 00:13:44,480
+hier erstmal wieder versuchen zurückzukommen. Das heißt, ich würde auf das X klicken, nochmal
+
+129
+00:13:44,480 --> 00:13:49,400
+auf das X, um dann wieder ins Minüt zu kommen. Bei Symptom-Tagebuch klick ich wieder auf die
+
+130
+00:13:49,400 --> 00:13:58,680
+drei Linien und würde dann auf den Punkt Medikation gehen und würde ich, dann habe ich zwei Optionen,
+
+131
+00:13:58,680 --> 00:14:03,680
+Medikationsplan oder Medikament hinzufügen. Ich würde auf Medikament hinzufügen, klicken,
+
+132
+00:14:03,680 --> 00:14:08,960
+um ein Medikament einzugeben und hier könnte ich jetzt den Namen des Medikaments eingeben.
+
+133
+00:14:08,960 --> 00:14:14,960
+Und jetzt würde ich beispielhaft das Medikament Ibuprofen nennen und du möchtest das zweimal am
+
+134
+00:14:14,960 --> 00:14:27,280
+Tag nehmen. So, dann gebe ich hier das Medikament unter Medikament das Wort Ibuprofen ein und komme
+
+135
+00:14:27,280 --> 00:14:36,280
+nicht weiter. So, ich habe jetzt einfach Enter gedrückt, weil ich, ich weiß nicht, ob es an meiner
+
+136
+00:14:36,280 --> 00:14:42,080
+Verbindung lag, aber ich habe keine Möglichkeit Wortfahren oder Eintragen gesehen. Deswegen habe
+
+137
+00:14:42,080 --> 00:14:46,520
+ich intuitiv einfach Enter gedrückt, aber kann auch an der Verbindung gelegen haben. Jetzt habe ich hier die...
+
+138
+00:14:46,520 --> 00:14:50,760
+Da wäre kein Button gewesen, aber den würdest du sehr wahrscheinlich dann an der Stelle wünschen,
+
+139
+00:14:50,760 --> 00:14:55,440
+den man betenet. Ja, weil ich sonst nicht ganz gewusst hätte, was ich tun muss. Ich habe jetzt
+
+140
+00:14:55,440 --> 00:15:01,320
+natürlich computertechnisch einfach den Enter gedrückt, aber ich glaube, da wäre es ganz schön,
+
+141
+00:15:01,320 --> 00:15:15,240
+wenn man irgendwas drücken kann. Genau, Ibuprofen, Einnahme, einmal am Tag und...
+
+142
+00:15:15,240 --> 00:15:22,320
+Ja, genau, zweimal am Tag würdest du das nehmen. Zweimal am Tag. Dann würde ich das ändern bei
+
+143
+00:15:22,320 --> 00:15:28,560
+einmal am Tag. Das würde ich ändern in zweimal am Tag und einmal auf acht Uhr und dann würde ich
+
+144
+00:15:28,560 --> 00:15:39,200
+für abends wahrscheinlich stellen. Bei dem zweiten Mal acht Uhr wollte ich jetzt die Uhrzeit ändern.
+
+145
+00:15:39,200 --> 00:15:46,480
+Ich kann aber nicht hoch oder runter scrollen. Ja, denn dafür jetzt hier in dem Prototypen sehr
+
+146
+00:15:46,480 --> 00:15:52,640
+etwas komplizierter. Du musst die Maus drücken und dann nach oben ziehen. Geht das?
+
+147
+00:15:52,640 --> 00:16:09,680
+Ja, oder nach unten. Das ist jetzt sehr umstellig. Ich lasse es jetzt mal auf 16 Uhr, weil das zieht
+
+148
+00:16:09,680 --> 00:16:13,920
+sich immer sehr schwierig. Eigentlich hätte ich es jetzt auf Abend gestellt. Ich drücke jetzt auf
+
+149
+00:16:14,000 --> 00:16:22,160
+Speichern und dann habe ich zweimal am Tag acht und 16 Uhr und würde mir eine Erinnerung wünschen
+
+150
+00:16:22,160 --> 00:16:28,320
+und das aber zehn Minuten vor Eingabe, das finde ich ganz gut, dass ich das einstellen kann und
+
+151
+00:16:28,320 --> 00:16:38,040
+würde dann auf Eintragen klicken und dann wäre das Medikament drin. Ja, das war schon mit der
+
+152
+00:16:38,160 --> 00:16:45,120
+Aufgabe. Jetzt möchten Sie im Medikament bearbeiten. Wir möchten das Medikament Evo Profen jetzt nicht
+
+153
+00:16:45,120 --> 00:16:50,160
+mehr zweimal am Tag nehmen, sondern nur noch einmal am Tag. Wie soll wir zu die Änderung
+
+154
+00:16:50,160 --> 00:16:56,400
+in der App aktualisieren? Wie geht es so klar? Das würde ich wie eben im Symptom-Tagebuch auch
+
+155
+00:16:56,400 --> 00:17:04,040
+wieder über den Stift machen. Das erschließt sich ganz gut und dann komme ich hier wieder auf
+
+156
+00:17:04,040 --> 00:17:11,240
+Medikament und würde von zweimal auf einmal am Tag ändern. Ach, passt für mich wieder zehn
+
+157
+00:17:11,240 --> 00:17:22,760
+Minuten vorher und klicke dann auf Ende und dann wurde es geändert. Sehr gut. Dann geht es jetzt
+
+158
+00:17:22,760 --> 00:17:28,520
+darum, ein Medikament zu löschen. Ich möchte das Medikament Evo Profen nicht mehr einnehmen,
+
+159
+00:17:28,520 --> 00:17:33,760
+hat der Arzt gesagt, damit die Daten in der App aktuell sind, willst du die Änderung
+
+160
+00:17:33,760 --> 00:17:41,760
+eintragen? Wie gehst du vor? Dann würde ich wieder über den Stift gehen, klicke wieder drauf und sehe
+
+161
+00:17:41,760 --> 00:17:48,760
+hier direkt löschen und klicke auf löschen, dann fragte mich, möchten wir wirklich löschen? Kann
+
+162
+00:17:48,760 --> 00:17:55,000
+er scheinen, muss aber nicht unbedingt, klicke dann nochmal auf löschen und dann ist es gelöscht.
+
+163
+00:17:56,000 --> 00:18:06,000
+Sehr gut. Dann geht es jetzt nur darum, ein Rezept zu bestellen. Genau, du willst zwei Rezepte
+
+164
+00:18:06,000 --> 00:18:12,040
+bestellen, einmal für das Medikament Asperin und einmal für Evo Profen. Du willst das Rezept
+
+165
+00:18:12,040 --> 00:18:18,800
+über die App bestellen? Wie gehst du vor? Das heißt, ich würde auch wieder zurückgehen,
+
+166
+00:18:18,800 --> 00:18:30,040
+klicke auf das X, klicke wieder aufs Menü oben und würde dann auf Chat gehen und auf Rezepte. Für
+
+167
+00:18:30,040 --> 00:18:35,280
+mich erschließt sich das aber nur, weil unten Rezepte steht. Chat finde ich knapp,
+
+168
+00:18:35,280 --> 00:18:44,200
+bevor etwas irreführend, aber ich klicke jetzt auf den Chat und klicke auf Rezept bestellen.
+
+169
+00:18:48,800 --> 00:18:56,960
+Dann klicke ich Asperin, welches Medikament möchten wir bestellen und gleichzeitig möchte ich
+
+170
+00:18:56,960 --> 00:19:03,600
+auch Evo Profen, das heißt, ich versuche, das leere Kästchen auch anzuklicken und fülle
+
+171
+00:19:03,600 --> 00:19:17,640
+da rein. Evo Profen bestätige die Auswahl und bestätige noch, wobei ich das jetzt irritiert,
+
+172
+00:19:17,640 --> 00:19:24,560
+dass hier jetzt nicht Evo Profen steht. Hier steht jetzt nur Asperin. Da würde jetzt auch Evo Profen
+
+173
+00:19:24,560 --> 00:19:30,240
+stehen, das ist ein Fehler dann. Also wenn da jetzt stehen würde Rezepte für Asperin und
+
+174
+00:19:30,240 --> 00:19:34,640
+Evo Profen bestellen, dann würde ich auf Bestätigen klicken und dann kommt,
+
+175
+00:19:34,640 --> 00:19:38,960
+ihre Bestätigung ist sehr erfolgreich bei uns eingegangen, also sehr verständlich.
+
+176
+00:19:38,960 --> 00:19:46,960
+Dann sind wir auch damit durch, dann kommen wir schon, das ging jetzt alles sehr schnell,
+
+177
+00:19:46,960 --> 00:19:52,240
+als die Aufgaben gut erledigt, dann würden wir zur Videotelefonie noch eine Aufgabe bestellen.
+
+178
+00:19:52,240 --> 00:19:58,400
+Du hast jetzt mit dem Arzt, du hast der Ursprüngler gesagt, dass du da gerne über Termine vereinbaren
+
+179
+00:19:58,480 --> 00:20:03,360
+würdest oder durchführen würdest über die App, was ja mit dem Arzt ein Termin für eine
+
+180
+00:20:03,360 --> 00:20:08,560
+Videosprechstunde vereinbart. Der Termin beginnt in zwei Minuten, wie gehst du vor?
+
+181
+00:20:08,560 --> 00:20:18,120
+Dann versuche ich wieder ins Menü zu gehen, sehe unten Videotelefonie, Videosprechstunde,
+
+182
+00:20:18,120 --> 00:20:27,960
+klicke da drauf und ja zwei Minuten würde ich einfach schon reingehen, Videotelefonie starten
+
+183
+00:20:27,960 --> 00:20:33,880
+und dann steht da bitte, warten Sie, Arzt oder Ihre Ärztin, wir ziehen gleich an und dann würde
+
+184
+00:20:33,880 --> 00:20:42,040
+ich da drin bleiben bis tatsächlich irgendwas passiert. Genau und dann erscheint der Arzt.
+
+185
+00:20:42,840 --> 00:20:49,480
+Ja genau, das ist natürlich jetzt auch noch sehr prototypisch dargestellt, aber genau,
+
+186
+00:20:49,480 --> 00:20:54,680
+dass dann die Frage jetzt weiter, dann würde in dem Fenster dann ja erscheinen und sie unten
+
+187
+00:20:54,680 --> 00:21:01,080
+reicht, wie das jetzt hier von der Plattform kennen, wo wir gerade telefonieren. Genau,
+
+188
+00:21:01,080 --> 00:21:05,960
+dann sind wir eigentlich schon mit den Aufgaben durch, das ging jetzt sehr schnell und dann würde
+
+189
+00:21:05,960 --> 00:21:10,120
+ich dich fragen, ob du abschließend noch irgendwas sagen willst zur App, hast du noch
+
+190
+00:21:10,200 --> 00:21:14,040
+irgendein Feedback, irgendwas, was du uns mitgeben willst, was vielleicht zu berücksichtigen ist,
+
+191
+00:21:14,040 --> 00:21:18,840
+was dir noch eingefallen ist, aufgefallen ist, könntest du jetzt noch loswerden?
+
+192
+00:21:20,360 --> 00:21:26,040
+Ne, das Einzige, was ich jetzt noch nicht weiß ist, wie ich ein Termin buche, mein Hauptaugenmerk,
+
+193
+00:21:26,040 --> 00:21:31,000
+das habe ich jetzt noch nicht gemacht, aber ich denke, dass das ja ähnlich wäre wie Symptome,
+
+194
+00:21:32,280 --> 00:21:37,560
+also ich glaube, dass das relativ schlüssig auch wäre, wie Rezept bestellen oder ähnlich ist
+
+195
+00:21:37,640 --> 00:21:43,880
+und daher ist für mich alles klar gewesen und verständlich, habe sonst keine Anmerkungen mehr.
+
+196
+00:21:45,080 --> 00:21:49,720
+Ja, genau, tatsächlich, Termina vereinbaren soll auch über die App geschehen,
+
+197
+00:21:49,720 --> 00:21:56,120
+dann auch über diese Chatfunktion tatsächlich so, dass wir jetzt noch nicht genau wissen,
+
+198
+00:21:56,120 --> 00:22:02,600
+wie das mit der Terminvereinbarung funktioniert, weil die Praxen dann ja auch schon ihre eigenen
+
+199
+00:22:02,600 --> 00:22:08,280
+Systeme nutzen für die Terminvergabe, das würde dann wahrscheinlich inkludiert werden oder
+
+200
+00:22:08,280 --> 00:22:13,080
+fusioniert werden mit der Funktionalität der App, deswegen konnten wir da jetzt noch keine konkrete
+
+201
+00:22:13,080 --> 00:22:19,160
+Aufgabe zu stellen, weil wir da noch einfach keine konkrete Lösung zu haben, beziehungsweise die
+
+202
+00:22:19,160 --> 00:22:25,800
+noch nicht kennen oder die noch nicht ausgewählt haben, soll aber möglich sein über diese App.
+
+203
+00:22:26,760 --> 00:22:27,480
+Ja, cool.
+
+204
+00:22:28,120 --> 00:22:30,840
+Genau, dann würde ich an der Stelle die Aufnahme
+

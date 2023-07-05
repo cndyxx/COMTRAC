@@ -876,11 +876,6 @@
                     },
                     {
                         "access": "public",
-                        "name": "getSymptoms",
-                        "returnType": "void"
-                    },
-                    {
-                        "access": "public",
                         "arguments": [
                             {
                                 "name": "name",
