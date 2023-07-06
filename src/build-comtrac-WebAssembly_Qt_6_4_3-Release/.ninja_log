@@ -311,3 +311,17 @@
 2326	2708	7102691142066455	C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-WebAssembly_Qt_6_4_3-Release/meta_types/qt6appcomtrac_release_metatypes.json	83013980144b4a5b
 2709	13314	7102691251553301	CMakeFiles/appcomtrac.dir/Models/symptommodel.cpp.o	ae48286c22421c07
 13315	221983	7102693336721658	appcomtrac.js	b241d2898bcb5562
+286	1227	7103730139398941	appcomtrac_autogen/timestamp	bfec0ebbeb567685
+286	1227	7103730139398941	appcomtrac_autogen/mocs_compilation.cpp	bfec0ebbeb567685
+286	1227	7103730139398941	C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-WebAssembly_Qt_6_4_3-Release/appcomtrac_autogen/timestamp	bfec0ebbeb567685
+286	1227	7103730139398941	C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-WebAssembly_Qt_6_4_3-Release/appcomtrac_autogen/mocs_compilation.cpp	bfec0ebbeb567685
+1272	1460	7103730141720800	meta_types/appcomtrac_json_file_list.txt	111af897176f3172
+1272	1460	7103730141720800	meta_types/appcomtrac_json_file_list.txt.timestamp	111af897176f3172
+1272	1460	7103730141720800	C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-WebAssembly_Qt_6_4_3-Release/meta_types/appcomtrac_json_file_list.txt	111af897176f3172
+1272	1460	7103730141720800	C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-WebAssembly_Qt_6_4_3-Release/meta_types/appcomtrac_json_file_list.txt.timestamp	111af897176f3172
+1461	1736	7103730141720800	meta_types/qt6appcomtrac_release_metatypes.json.gen	83013980144b4a5b
+1461	1736	7103730141720800	meta_types/qt6appcomtrac_release_metatypes.json	83013980144b4a5b
+1461	1736	7103730141720800	C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-WebAssembly_Qt_6_4_3-Release/meta_types/qt6appcomtrac_release_metatypes.json.gen	83013980144b4a5b
+1461	1736	7103730141720800	C:/Users/cindy/Documents/GitHub/COMTRAC/src/build-comtrac-WebAssembly_Qt_6_4_3-Release/meta_types/qt6appcomtrac_release_metatypes.json	83013980144b4a5b
+1738	8802	7103730214785741	CMakeFiles/appcomtrac.dir/Models/symptommodel.cpp.o	ae48286c22421c07
+8802	208413	7103732209355041	appcomtrac.js	b241d2898bcb5562

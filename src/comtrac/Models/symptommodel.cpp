@@ -32,7 +32,7 @@ SymptomModel::SymptomModel(QObject *parent) : QSqlQueryModel(parent)
     m_symptoms.push_back(new Symptom(10, "Fieber", "leicht", 1, "Seit mehr als 24 Stunden", QDate(2023, 6,27) , QTime(9,30,0),  this));
     m_symptoms.push_back(new Symptom(11, "Gliederschmerzen", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023,6,29) , QTime(9,30,0),  this));
     m_symptoms.push_back(new Symptom(12, "Durchfall", "leicht", 6, "Seit weniger als 24 Stunden", QDate(2023,6,30) , QTime(9,30,0),  this));
-    m_symptoms.push_back(new Symptom(13, "Kopfschmerzen", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023, 7,5) , QTime(9,30,0),  this));
+    m_symptoms.push_back(new Symptom(13, "Kopfschmerzen", "leicht", 1, "Seit weniger als 24 Stunden", QDate(2023, 7,7) , QTime(9,30,0),  this));
     for(int i = 1; i < 13; i++){
         primaryKey.push_back(i);
     }
